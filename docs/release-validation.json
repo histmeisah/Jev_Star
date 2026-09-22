@@ -1,0 +1,50 @@
+{
+  "checked_at_utc": "2026-09-22T15:52:02.294371+00:00",
+  "scope": "Clean initial publication tree; no new SC2 matches or paid model requests.",
+  "offline_tests": {
+    "macro": {
+      "passed": 102
+    },
+    "micro": {
+      "passed": 37
+    },
+    "environments": "Two freshly installed isolated Python 3.10 environments",
+    "existing_warning": "Macro event-loop tests emit an existing ResourceWarning."
+  },
+  "pip_check": {
+    "macro": "passed",
+    "micro": "passed"
+  },
+  "dispatcher_help_commands_passed": [
+    "macro",
+    "macro-report",
+    "macro-video",
+    "macro-serve",
+    "micro",
+    "micro-suite",
+    "micro-video",
+    "micro-realtime"
+  ],
+  "original_map_byte_hashes_verified": 41,
+  "map_install_dry_run": "All 41 target files already matched the installed local map files; no game files replaced.",
+  "protoss_base_class_ast_unchanged": true,
+  "python_files_parsed": 173,
+  "local_markdown_links_verified": 53,
+  "paper_figure_and_listing_paths_verified": 9,
+  "paper_pdf": {
+    "pages": 16,
+    "compiled": "Tectonic; compilation succeeded after refreshing author metadata",
+    "first_page_visually_checked": true
+  },
+  "secret_scan": {
+    "findings": [],
+    "checks": [
+      "provider_token",
+      "private_key",
+      "credential_url",
+      "known_local_api_key"
+    ],
+    "limitation": "Targeted source scan, not a guarantee against every possible secret format."
+  },
+  "original_source_files_changed_since_import": []
+}

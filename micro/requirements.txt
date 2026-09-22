@@ -1,0 +1,11 @@
+# Python 3.10. Use the PySC2 source in this directory; do not pip-install pysc2.
+absl-py==2.1.0
+numpy==1.26.4
+scipy==1.12.0
+protobuf==3.20.3
+s2clientprotocol==5.0.12.91115.0
+portpicker==1.6.0
+pygame==2.5.2
+websocket-client==1.7.0
+mpyq==0.2.5
+httpx==0.28.1

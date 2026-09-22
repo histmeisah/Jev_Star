@@ -1,0 +1,28 @@
+[01:34.286] plan_accepted
+  base_target: 2; worker_target: 30
+  guidance (exact sentence):
+    "Start the natural around 19 workers before filling army ceilings."
+
+[02:56.250] request
+  resource.mineral: 400; building.nexus_count: 1
+
+[02:56.786] response
+  answer.choice: "21"  (BUILD NEXUS)
+  answer.confidence: 0.83; latency_ms: 391
+
+[02:56.786] action
+  description: "BUILD NEXUS"
+  orders_submitted: 1
+  orders[0].ability: "PROTOSSBUILD_NEXUS"
+
+[07:32.321] plan_accepted
+  army_posture: "attack"
+  attack_min_army: 44; retreat_below_army: 26
+  min_posture_seconds: 30
+
+[07:33.214] action
+  description: "MULTI-ATTACK"
+  orders_submitted: 24
+
+[12:47.679] end
+  result: "Victory"

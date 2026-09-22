@@ -1,0 +1,12 @@
+# Tested on Python 3.10. Keep separate from the PySC2 micro environment.
+burnysc2==6.5.0
+httpx==0.26.0
+nest-asyncio==1.5.7
+numpy==1.26.2
+aiohttp==3.8.5
+loguru==0.6.0
+protobuf==3.20.3
+s2clientprotocol==5.0.11.90870.0
+scipy==1.11.3
+portpicker==1.6.0
+mpyq==0.2.5

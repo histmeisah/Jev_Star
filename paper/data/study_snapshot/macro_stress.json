@@ -1,0 +1,113 @@
+{
+  "scope": "Frozen macro-v2.2, Altitude LE, seed 1, Protoss vs built-in Zerg, realtime; Astra medium + Jev 1.13.0; 30-minute limit with natural earlier finishes. Cheat tiers are separate pressure tests. Small samples do not establish a win rate or model ceiling. Controlled debug action validation is excluded. All matching trial directories are retained here.",
+  "trials": [
+    {
+      "run": "macro-v22-20260922-cheatvision-001",
+      "difficulty_api": "CheatVision",
+      "difficulty_replay_names": [
+        "Local Player",
+        "Cheater 1 (Vision)"
+      ],
+      "seed": 1,
+      "status": "completed",
+      "result": "Defeat",
+      "game_seconds": 613.8392857142858,
+      "replay_checks_passed": true,
+      "audit_passed": true,
+      "sources_match_start": true,
+      "matches_frozen_sources": true,
+      "worker_samples": 539,
+      "worker_mismatches": 0,
+      "first_attack_seconds": null,
+      "peak_ready_army_supply": 16.0,
+      "peak_workers": 38,
+      "executor_no_order": 0,
+      "completed_archon_orders": 0,
+      "completed_research_orders": 1,
+      "completed_chronoboost_orders": 4,
+      "engine_failures": {
+        "destroyed_during_construction": 3,
+        "CantFindPlacementLocation": 11,
+        "44": 1
+      },
+      "models": {
+        "jev": {
+          "requests": 539,
+          "responses": 539,
+          "errors": 0,
+          "cancelled": 0,
+          "input_tokens": 2450286,
+          "output_tokens": 27125,
+          "cached_input_tokens": 0,
+          "reasoning_output_tokens": 0,
+          "responses_with_usage": 539,
+          "priced_responses": 539,
+          "model": "jev-1.13.0",
+          "latency_ms": {
+            "count": 539,
+            "p50": 375.0,
+            "p95": 453.0,
+            "p99": 515.62,
+            "max": 907.0
+          },
+          "requests_without_usage": 0,
+          "unpriced_requests": 0,
+          "known_cost_usd": 0.102912012,
+          "billing": "input_token_estimate"
+        },
+        "astra": {
+          "requests": 14,
+          "responses": 13,
+          "errors": 0,
+          "cancelled": 1,
+          "input_tokens": 296801,
+          "output_tokens": 4767,
+          "cached_input_tokens": 33280,
+          "reasoning_output_tokens": 536,
+          "responses_with_usage": 13,
+          "priced_responses": 0,
+          "model": "gpt-6-astra",
+          "latency_ms": {
+            "count": 13,
+            "p50": 24640.0,
+            "p95": 30150.2,
+            "p99": 30554.84,
+            "max": 30656.0
+          },
+          "requests_without_usage": 1,
+          "unpriced_requests": 14,
+          "known_cost_usd": null,
+          "billing": "codex_account_not_priced"
+        }
+      },
+      "total_cost_usd": null,
+      "operator_note": {}
+    },
+    {
+      "run": "macro-v22-20260922-cheatmoney-001",
+      "difficulty_api": "CheatMoney",
+      "difficulty_replay_names": null,
+      "seed": 1,
+      "status": "running",
+      "result": null,
+      "game_seconds": null,
+      "replay_checks_passed": null,
+      "audit_passed": null,
+      "sources_match_start": null,
+      "matches_frozen_sources": true,
+      "worker_samples": null,
+      "worker_mismatches": null,
+      "first_attack_seconds": null,
+      "peak_ready_army_supply": 0,
+      "peak_workers": null,
+      "executor_no_order": 0,
+      "completed_archon_orders": 0,
+      "completed_research_orders": 0,
+      "completed_chronoboost_orders": 2,
+      "engine_failures": {},
+      "models": {},
+      "total_cost_usd": null,
+      "operator_note": {}
+    }
+  ]
+}

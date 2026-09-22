@@ -1,0 +1,21 @@
+{
+  "captured_at": "2026-09-22T13:18:36.352471+00:00",
+  "sources": {
+    "micro_comparison.json": {
+      "original_path": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/analysis.json",
+      "sha256": "7e6f698cd431579a0a54365ef9281329ce589299efa7e795cf64f6c080b78d1b"
+    },
+    "macro_games.json": {
+      "original_path": "Large-Language-Models-play-StarCraftII/jev_runs/macro-v2-ladder-20260922/results.json",
+      "sha256": "9b29ff6dd5e8ea04e4a82f5568f9b9299df56677197e22e29a81f8d1263c7abf"
+    },
+    "macro_stress.json": {
+      "original_path": "Large-Language-Models-play-StarCraftII/jev_runs/macro-v22-ladder-20260922/results.json",
+      "sha256": "20193dc694f8ad8d7f53ab9318343dac568e15a984914966de670a1644744e46"
+    },
+    "micro_behavior.json": {
+      "original_path": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/behavior-diagnostics.json",
+      "sha256": "98d77d36e38c9a42be49bc9238affd8e05a1d83e2b4430d1f68084e12ccd7c4f"
+    }
+  }
+}

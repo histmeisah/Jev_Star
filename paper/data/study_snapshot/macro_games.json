@@ -1,0 +1,686 @@
+{
+  "scope": "Frozen macro-v2.1, Altitude LE, Protoss vs Zerg, realtime, Astra medium + Jev 1.13.0. Hard reference has a 20-minute cap; new ladder trials have a 30-minute cap. A Tie is a time-limit result, not a victory or a natural draw. Small samples do not establish win rates. Results describe this configuration, map and opponent race, not an upper bound on model capability.",
+  "outcomes_by_api_difficulty": {
+    "Hard": {
+      "Victory": 1,
+      "Defeat": 0,
+      "Tie": 0
+    },
+    "Harder": {
+      "Victory": 1,
+      "Defeat": 0,
+      "Tie": 0
+    },
+    "VeryHard": {
+      "Victory": 2,
+      "Defeat": 0,
+      "Tie": 0
+    }
+  },
+  "trials": [
+    {
+      "directory": "macro-v2-20260922-hard-002",
+      "difficulty_api": "Hard",
+      "opponent_name": "A.I. 1 (Harder)",
+      "seed": 1,
+      "status": "completed",
+      "result": "Victory",
+      "eligible_for_comparison": true,
+      "game_seconds": 808.0357142857143,
+      "game_time_limit": 1200.0,
+      "source_matches_hard_win": true,
+      "configuration_matches_reference": true,
+      "configuration_differences": [],
+      "map_sha256": "9a9fd7701f2663bf5cf121082c12fa33e61eaa4d2225a3d0040399046a6eb266",
+      "map_matches_reference": true,
+      "first_attack_seconds": 478.92857142857144,
+      "peak_workers_replay": 72,
+      "peak_army_supply": 127,
+      "peak_ready_army_supply": 126.0,
+      "army_resource_trade_ratio": 1.308108108108108,
+      "executor_no_order": 0,
+      "engine_rejections": {
+        "CantFindPlacementLocation": 4,
+        "208": 1,
+        "44": 1,
+        "NotSupported": 1
+      },
+      "worker_samples": 743,
+      "worker_mismatches": 0,
+      "astra_requests": 18,
+      "astra_p50_ms": 24937.5,
+      "astra_errors": 1,
+      "jev_requests": 743,
+      "jev_p50_ms": 407.0,
+      "jev_errors": 0,
+      "checkpoints": [
+        {
+          "target_game_seconds": 180,
+          "ours": {
+            "sample_game_seconds": 178.57142857142858,
+            "workers": 20,
+            "supply": 22.0,
+            "minerals": 70,
+            "army_resource_value": 100
+          },
+          "opponent": {
+            "sample_game_seconds": 178.57142857142858,
+            "workers": 18,
+            "supply": 23.0,
+            "minerals": 325,
+            "army_resource_value": 275
+          }
+        },
+        {
+          "target_game_seconds": 300,
+          "ours": {
+            "sample_game_seconds": 300.0,
+            "workers": 33,
+            "supply": 50.0,
+            "minerals": 155,
+            "army_resource_value": 1050
+          },
+          "opponent": {
+            "sample_game_seconds": 300.0,
+            "workers": 23,
+            "supply": 48.0,
+            "minerals": 215,
+            "army_resource_value": 1275
+          }
+        },
+        {
+          "target_game_seconds": 420,
+          "ours": {
+            "sample_game_seconds": 414.28571428571433,
+            "workers": 42,
+            "supply": 75.0,
+            "minerals": 65,
+            "army_resource_value": 2025
+          },
+          "opponent": {
+            "sample_game_seconds": 414.28571428571433,
+            "workers": 26,
+            "supply": 49.5,
+            "minerals": 460,
+            "army_resource_value": 1000
+          }
+        },
+        {
+          "target_game_seconds": 540,
+          "ours": {
+            "sample_game_seconds": 535.7142857142858,
+            "workers": 60,
+            "supply": 99.0,
+            "minerals": 75,
+            "army_resource_value": 2600
+          },
+          "opponent": {
+            "sample_game_seconds": 535.7142857142858,
+            "workers": 34,
+            "supply": 61.0,
+            "minerals": 215,
+            "army_resource_value": 1775
+          }
+        },
+        {
+          "target_game_seconds": 600,
+          "ours": {
+            "sample_game_seconds": 600.0,
+            "workers": 60,
+            "supply": 111.0,
+            "minerals": 685,
+            "army_resource_value": 3825
+          },
+          "opponent": {
+            "sample_game_seconds": 600.0,
+            "workers": 26,
+            "supply": 30.0,
+            "minerals": 185,
+            "army_resource_value": 50
+          }
+        },
+        {
+          "target_game_seconds": 720,
+          "ours": {
+            "sample_game_seconds": 714.2857142857143,
+            "workers": 72,
+            "supply": 177.0,
+            "minerals": 260,
+            "army_resource_value": 8425
+          },
+          "opponent": {
+            "sample_game_seconds": 714.2857142857143,
+            "workers": 19,
+            "supply": 32.5,
+            "minerals": 320,
+            "army_resource_value": 475
+          }
+        }
+      ],
+      "operator_note": {},
+      "network_route": "inherited"
+    },
+    {
+      "directory": "macro-v2-20260922-harder-001",
+      "difficulty_api": "Harder",
+      "opponent_name": "A.I. 1 (Very Hard)",
+      "seed": 1,
+      "status": "completed",
+      "result": "Victory",
+      "eligible_for_comparison": true,
+      "game_seconds": 648.75,
+      "game_time_limit": 1800.0,
+      "source_matches_hard_win": true,
+      "configuration_matches_reference": true,
+      "configuration_differences": [],
+      "map_sha256": "9a9fd7701f2663bf5cf121082c12fa33e61eaa4d2225a3d0040399046a6eb266",
+      "map_matches_reference": true,
+      "first_attack_seconds": 491.0714285714286,
+      "peak_workers_replay": 66,
+      "peak_army_supply": 77,
+      "peak_ready_army_supply": 74.0,
+      "army_resource_trade_ratio": 1.510204081632653,
+      "executor_no_order": 0,
+      "engine_rejections": {
+        "CantFindPlacementLocation": 2
+      },
+      "worker_samples": 591,
+      "worker_mismatches": 0,
+      "astra_requests": 14,
+      "astra_p50_ms": 26687.0,
+      "astra_errors": 1,
+      "jev_requests": 591,
+      "jev_p50_ms": 391.0,
+      "jev_errors": 1,
+      "checkpoints": [
+        {
+          "target_game_seconds": 180,
+          "ours": {
+            "sample_game_seconds": 178.57142857142858,
+            "workers": 20,
+            "supply": 25.0,
+            "minerals": 35,
+            "army_resource_value": 100
+          },
+          "opponent": {
+            "sample_game_seconds": 178.57142857142858,
+            "workers": 19,
+            "supply": 26.0,
+            "minerals": 365,
+            "army_resource_value": 50
+          }
+        },
+        {
+          "target_game_seconds": 300,
+          "ours": {
+            "sample_game_seconds": 300.0,
+            "workers": 34,
+            "supply": 50.0,
+            "minerals": 115,
+            "army_resource_value": 850
+          },
+          "opponent": {
+            "sample_game_seconds": 300.0,
+            "workers": 19,
+            "supply": 45.0,
+            "minerals": 365,
+            "army_resource_value": 1425
+          }
+        },
+        {
+          "target_game_seconds": 420,
+          "ours": {
+            "sample_game_seconds": 414.28571428571433,
+            "workers": 41,
+            "supply": 76.0,
+            "minerals": 35,
+            "army_resource_value": 2675
+          },
+          "opponent": {
+            "sample_game_seconds": 414.28571428571433,
+            "workers": 25,
+            "supply": 56.5,
+            "minerals": 0,
+            "army_resource_value": 1300
+          }
+        },
+        {
+          "target_game_seconds": 540,
+          "ours": {
+            "sample_game_seconds": 535.7142857142858,
+            "workers": 57,
+            "supply": 92.0,
+            "minerals": 105,
+            "army_resource_value": 2500
+          },
+          "opponent": {
+            "sample_game_seconds": 535.7142857142858,
+            "workers": 31,
+            "supply": 44.0,
+            "minerals": 75,
+            "army_resource_value": 700
+          }
+        },
+        {
+          "target_game_seconds": 600,
+          "ours": {
+            "sample_game_seconds": 600.0,
+            "workers": 57,
+            "supply": 118.0,
+            "minerals": 640,
+            "army_resource_value": 4450
+          },
+          "opponent": {
+            "sample_game_seconds": 600.0,
+            "workers": 22,
+            "supply": 24.5,
+            "minerals": 210,
+            "army_resource_value": 50
+          }
+        }
+      ],
+      "operator_note": {},
+      "network_route": "inherited"
+    },
+    {
+      "directory": "macro-v2-20260922-veryhard-001",
+      "difficulty_api": "VeryHard",
+      "opponent_name": null,
+      "seed": 1,
+      "status": "diagnostic_aborted",
+      "result": "interrupted",
+      "eligible_for_comparison": false,
+      "game_seconds": 95.89285714285715,
+      "game_time_limit": 1800.0,
+      "source_matches_hard_win": true,
+      "configuration_matches_reference": true,
+      "configuration_differences": [],
+      "map_sha256": "9a9fd7701f2663bf5cf121082c12fa33e61eaa4d2225a3d0040399046a6eb266",
+      "map_matches_reference": true,
+      "first_attack_seconds": null,
+      "peak_workers_replay": null,
+      "peak_army_supply": null,
+      "peak_ready_army_supply": null,
+      "army_resource_trade_ratio": null,
+      "executor_no_order": null,
+      "engine_rejections": null,
+      "worker_samples": null,
+      "worker_mismatches": null,
+      "astra_requests": 2,
+      "astra_p50_ms": 28882.5,
+      "astra_errors": 0,
+      "jev_requests": 6,
+      "jev_p50_ms": null,
+      "jev_errors": 6,
+      "checkpoints": [],
+      "operator_note": {
+        "raw_events_rewritten": false,
+        "stopped_pid": 24308,
+        "runtime_code_changed": false,
+        "exclude_outcome_comparison": true,
+        "stopped_port": 55167,
+        "intervention": "Stopped only the SC2 PID recorded by this run after checking executable path and API port.",
+        "reason": "Jev timed out on every opening request; no response or production command occurred during the first minute. This is an interface availability failure, not a competitive loss.",
+        "requested_at_utc": "2026-09-22T10:26:30.7112148Z",
+        "run_status": "diagnostic_aborted"
+      },
+      "network_route": "inherited"
+    },
+    {
+      "directory": "macro-v2-20260922-veryhard-002",
+      "difficulty_api": null,
+      "opponent_name": null,
+      "seed": null,
+      "status": "launch_failed_before_game",
+      "result": null,
+      "eligible_for_comparison": false,
+      "game_seconds": null,
+      "game_time_limit": null,
+      "source_matches_hard_win": false,
+      "configuration_matches_reference": false,
+      "configuration_differences": [
+        "map",
+        "opponent_race",
+        "model",
+        "decision_interval",
+        "request_timeout",
+        "max_decision_age",
+        "max_requests",
+        "planner",
+        "planner_model",
+        "planner_effort",
+        "planner_interval",
+        "planner_execution_window",
+        "planner_min_interval",
+        "planner_event_cooldown",
+        "planner_timeout",
+        "plan_ttl",
+        "max_plan_age",
+        "max_planner_requests",
+        "realtime",
+        "player_race",
+        "macro_contract"
+      ],
+      "map_sha256": null,
+      "map_matches_reference": false,
+      "first_attack_seconds": null,
+      "peak_workers_replay": null,
+      "peak_army_supply": null,
+      "peak_ready_army_supply": null,
+      "army_resource_trade_ratio": null,
+      "executor_no_order": null,
+      "engine_rejections": null,
+      "worker_samples": null,
+      "worker_mismatches": null,
+      "astra_requests": null,
+      "astra_p50_ms": null,
+      "astra_errors": null,
+      "jev_requests": null,
+      "jev_p50_ms": null,
+      "jev_errors": null,
+      "checkpoints": [],
+      "operator_note": {
+        "run_status": "launch_failed_before_game",
+        "exclude_outcome_comparison": true,
+        "reason": "The diagnostic launcher created its metadata directory before run_jev, whose existing safeguard correctly refused to overwrite it. No game or model requests started. The launcher now writes preliminary metadata outside the run directory.",
+        "runtime_code_changed": false
+      },
+      "network_route": "direct_jev"
+    },
+    {
+      "directory": "macro-v2-20260922-veryhard-003",
+      "difficulty_api": "VeryHard",
+      "opponent_name": "A.I. 1 (Elite)",
+      "seed": 1,
+      "status": "completed",
+      "result": "Victory",
+      "eligible_for_comparison": true,
+      "game_seconds": 767.9017857142858,
+      "game_time_limit": 1800.0,
+      "source_matches_hard_win": true,
+      "configuration_matches_reference": true,
+      "configuration_differences": [],
+      "map_sha256": "9a9fd7701f2663bf5cf121082c12fa33e61eaa4d2225a3d0040399046a6eb266",
+      "map_matches_reference": true,
+      "first_attack_seconds": 453.2142857142857,
+      "peak_workers_replay": 70,
+      "peak_army_supply": 129,
+      "peak_ready_army_supply": 120.0,
+      "army_resource_trade_ratio": 1.1294642857142858,
+      "executor_no_order": 2,
+      "engine_rejections": {
+        "CantFindPlacementLocation": 6
+      },
+      "worker_samples": 708,
+      "worker_mismatches": 0,
+      "astra_requests": 14,
+      "astra_p50_ms": 35476.5,
+      "astra_errors": 2,
+      "jev_requests": 708,
+      "jev_p50_ms": 422.0,
+      "jev_errors": 0,
+      "checkpoints": [
+        {
+          "target_game_seconds": 180,
+          "ours": {
+            "sample_game_seconds": 178.57142857142858,
+            "workers": 22,
+            "supply": 27.0,
+            "minerals": 40,
+            "army_resource_value": 200
+          },
+          "opponent": {
+            "sample_game_seconds": 178.57142857142858,
+            "workers": 19,
+            "supply": 26.0,
+            "minerals": 365,
+            "army_resource_value": 50
+          }
+        },
+        {
+          "target_game_seconds": 300,
+          "ours": {
+            "sample_game_seconds": 300.0,
+            "workers": 34,
+            "supply": 49.0,
+            "minerals": 145,
+            "army_resource_value": 675
+          },
+          "opponent": {
+            "sample_game_seconds": 300.0,
+            "workers": 20,
+            "supply": 51.0,
+            "minerals": 285,
+            "army_resource_value": 1575
+          }
+        },
+        {
+          "target_game_seconds": 420,
+          "ours": {
+            "sample_game_seconds": 414.28571428571433,
+            "workers": 44,
+            "supply": 87.0,
+            "minerals": 195,
+            "army_resource_value": 2425
+          },
+          "opponent": {
+            "sample_game_seconds": 414.28571428571433,
+            "workers": 26,
+            "supply": 66.0,
+            "minerals": 100,
+            "army_resource_value": 2125
+          }
+        },
+        {
+          "target_game_seconds": 540,
+          "ours": {
+            "sample_game_seconds": 535.7142857142858,
+            "workers": 58,
+            "supply": 88.0,
+            "minerals": 145,
+            "army_resource_value": 2075
+          },
+          "opponent": {
+            "sample_game_seconds": 535.7142857142858,
+            "workers": 37,
+            "supply": 55.5,
+            "minerals": 370,
+            "army_resource_value": 1025
+          }
+        },
+        {
+          "target_game_seconds": 600,
+          "ours": {
+            "sample_game_seconds": 600.0,
+            "workers": 60,
+            "supply": 111.0,
+            "minerals": 175,
+            "army_resource_value": 3425
+          },
+          "opponent": {
+            "sample_game_seconds": 600.0,
+            "workers": 36,
+            "supply": 47.0,
+            "minerals": 295,
+            "army_resource_value": 200
+          }
+        },
+        {
+          "target_game_seconds": 720,
+          "ours": {
+            "sample_game_seconds": 714.2857142857143,
+            "workers": 70,
+            "supply": 169.0,
+            "minerals": 95,
+            "army_resource_value": 6950
+          },
+          "opponent": {
+            "sample_game_seconds": 714.2857142857143,
+            "workers": 21,
+            "supply": 29.0,
+            "minerals": 395,
+            "army_resource_value": 50
+          }
+        }
+      ],
+      "operator_note": {},
+      "network_route": "direct_jev"
+    },
+    {
+      "directory": "macro-v2-20260922-veryhard-004",
+      "difficulty_api": "VeryHard",
+      "opponent_name": "A.I. 1 (Elite)",
+      "seed": 2,
+      "status": "completed",
+      "result": "Victory",
+      "eligible_for_comparison": true,
+      "game_seconds": 955.2232142857143,
+      "game_time_limit": 1800.0,
+      "source_matches_hard_win": true,
+      "configuration_matches_reference": true,
+      "configuration_differences": [],
+      "map_sha256": "9a9fd7701f2663bf5cf121082c12fa33e61eaa4d2225a3d0040399046a6eb266",
+      "map_matches_reference": true,
+      "first_attack_seconds": 442.14285714285717,
+      "peak_workers_replay": 74,
+      "peak_army_supply": 126,
+      "peak_ready_army_supply": 124.0,
+      "army_resource_trade_ratio": 1.506060606060606,
+      "executor_no_order": 0,
+      "engine_rejections": {
+        "CantFindPlacementLocation": 7
+      },
+      "worker_samples": 865,
+      "worker_mismatches": 0,
+      "astra_requests": 20,
+      "astra_p50_ms": 27625.0,
+      "astra_errors": 0,
+      "jev_requests": 865,
+      "jev_p50_ms": 438.0,
+      "jev_errors": 1,
+      "checkpoints": [
+        {
+          "target_game_seconds": 180,
+          "ours": {
+            "sample_game_seconds": 178.57142857142858,
+            "workers": 20,
+            "supply": 23.0,
+            "minerals": 105,
+            "army_resource_value": 100
+          },
+          "opponent": {
+            "sample_game_seconds": 178.57142857142858,
+            "workers": 19,
+            "supply": 26.0,
+            "minerals": 350,
+            "army_resource_value": 50
+          }
+        },
+        {
+          "target_game_seconds": 300,
+          "ours": {
+            "sample_game_seconds": 300.0,
+            "workers": 33,
+            "supply": 49.0,
+            "minerals": 110,
+            "army_resource_value": 925
+          },
+          "opponent": {
+            "sample_game_seconds": 300.0,
+            "workers": 20,
+            "supply": 44.0,
+            "minerals": 280,
+            "army_resource_value": 1175
+          }
+        },
+        {
+          "target_game_seconds": 420,
+          "ours": {
+            "sample_game_seconds": 414.28571428571433,
+            "workers": 40,
+            "supply": 85.0,
+            "minerals": 15,
+            "army_resource_value": 2725
+          },
+          "opponent": {
+            "sample_game_seconds": 414.28571428571433,
+            "workers": 41,
+            "supply": 80.0,
+            "minerals": 185,
+            "army_resource_value": 1875
+          }
+        },
+        {
+          "target_game_seconds": 540,
+          "ours": {
+            "sample_game_seconds": 535.7142857142858,
+            "workers": 54,
+            "supply": 93.0,
+            "minerals": 520,
+            "army_resource_value": 2925
+          },
+          "opponent": {
+            "sample_game_seconds": 535.7142857142858,
+            "workers": 47,
+            "supply": 62.5,
+            "minerals": 495,
+            "army_resource_value": 375
+          }
+        },
+        {
+          "target_game_seconds": 600,
+          "ours": {
+            "sample_game_seconds": 600.0,
+            "workers": 60,
+            "supply": 126.0,
+            "minerals": 550,
+            "army_resource_value": 4300
+          },
+          "opponent": {
+            "sample_game_seconds": 600.0,
+            "workers": 53,
+            "supply": 69.0,
+            "minerals": 560,
+            "army_resource_value": 875
+          }
+        },
+        {
+          "target_game_seconds": 720,
+          "ours": {
+            "sample_game_seconds": 714.2857142857143,
+            "workers": 71,
+            "supply": 183.0,
+            "minerals": 55,
+            "army_resource_value": 6750
+          },
+          "opponent": {
+            "sample_game_seconds": 714.2857142857143,
+            "workers": 63,
+            "supply": 112.0,
+            "minerals": 905,
+            "army_resource_value": 2425
+          }
+        },
+        {
+          "target_game_seconds": 900,
+          "ours": {
+            "sample_game_seconds": 892.8571428571429,
+            "workers": 74,
+            "supply": 199.0,
+            "minerals": 3555,
+            "army_resource_value": 8750
+          },
+          "opponent": {
+            "sample_game_seconds": 892.8571428571429,
+            "workers": 24,
+            "supply": 34.0,
+            "minerals": 825,
+            "army_resource_value": 625
+          }
+        }
+      ],
+      "operator_note": {},
+      "network_route": "direct_jev"
+    }
+  ]
+}

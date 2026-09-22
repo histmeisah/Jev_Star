@@ -1,0 +1,46 @@
+# Credentials and local configuration
+config.md
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Python environments, tooling and generated caches
+.venvs/
+.venv/
+venv/
+.tools/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+*.egg-info/
+build/
+dist/
+.idea/
+.vscode/
+.playwright-cli/
+
+# Original experiments stay in local archives, not Git history
+**/jev_runs/
+**/output/
+*.SC2Replay
+*.mp4
+*.avi
+*.zip
+*.log
+
+# Paper compilation products (the curated PDF is tracked)
+paper/build*/
+*.aux
+*.bbl
+*.blg
+*.out
+*.fls
+*.fdb_latexmk
+paper/main.pdf
+
+# OS files
+Thumbs.db
+.DS_Store

@@ -1,0 +1,2155 @@
+{
+  "target_repository": "https://github.com/histmeisah/Jev_Star",
+  "macro_version": "macro-v2.2.1",
+  "micro_version": "p0-v1/schema-7",
+  "upstreams": {
+    "Large-Language-Models-play-StarCraftII": {
+      "url": "https://github.com/histmeisah/Large-Language-Models-play-StarCraftII",
+      "commit": "48564d6647c9f39a44d11588f2b9cbefee940fdd"
+    },
+    "smac-hard": {
+      "url": "https://github.com/devindeng94/smac-hard",
+      "commit": "48d77ec8ca2e2769fb81299f298ea438ce54fc9d"
+    }
+  },
+  "retained_files": [
+    {
+      "source": "Large-Language-Models-play-StarCraftII/sc2_rl_agent/starcraftenv_test/run_jev.py",
+      "path": "macro/sc2_rl_agent/starcraftenv_test/run_jev.py",
+      "source_sha256": "be769c4225afab2be5041bc66d49a5b8e61124e1651a691d59447fd1c11dfe23",
+      "bytes": 9190,
+      "release_sha256": "be769c4225afab2be5041bc66d49a5b8e61124e1651a691d59447fd1c11dfe23",
+      "release_bytes": 9190
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/sc2_rl_agent/starcraftenv_test/run_report.py",
+      "path": "macro/sc2_rl_agent/starcraftenv_test/run_report.py",
+      "source_sha256": "6e6402919074b2c42c6276d0923129eef15ef5d88848401156342c6478829bfc",
+      "bytes": 10215,
+      "release_sha256": "6e6402919074b2c42c6276d0923129eef15ef5d88848401156342c6478829bfc",
+      "release_bytes": 10215
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/sc2_rl_agent/starcraftenv_test/serve_replays.py",
+      "path": "macro/sc2_rl_agent/starcraftenv_test/serve_replays.py",
+      "source_sha256": "aed24244d1c971cdaed1c50fefe78deeeccaeee10b842428115bbb5df77950d3",
+      "bytes": 3198,
+      "release_sha256": "aed24244d1c971cdaed1c50fefe78deeeccaeee10b842428115bbb5df77950d3",
+      "release_bytes": 3198
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/sc2_rl_agent/starcraftenv_test/export_replay_video.py",
+      "path": "macro/sc2_rl_agent/starcraftenv_test/export_replay_video.py",
+      "source_sha256": "43cc90577aa8dec72c468ce578b402edf6a2e091d2661d952bfb272eb7008869",
+      "bytes": 21945,
+      "release_sha256": "e22591159a6d255f320b614c1a07dd802745d9847ca34630a2f24ecf1ad28df2",
+      "release_bytes": 22105
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/sc2_rl_agent/starcraftenv_test/agent/jev_agent.py",
+      "path": "macro/sc2_rl_agent/starcraftenv_test/agent/jev_agent.py",
+      "source_sha256": "cef28ebc1dd41d22699d98f205963ec87048ccfb2a340feb31f03251d41c2f39",
+      "bytes": 12308,
+      "release_sha256": "cef28ebc1dd41d22699d98f205963ec87048ccfb2a340feb31f03251d41c2f39",
+      "release_bytes": 12308
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/sc2_rl_agent/starcraftenv_test/agent/astra_planner.py",
+      "path": "macro/sc2_rl_agent/starcraftenv_test/agent/astra_planner.py",
+      "source_sha256": "5acd9d50ed3cae47e4322b542e69944a9a6251952bc8f5bb27d6bb7f983c4d99",
+      "bytes": 27898,
+      "release_sha256": "5acd9d50ed3cae47e4322b542e69944a9a6251952bc8f5bb27d6bb7f983c4d99",
+      "release_bytes": 27898
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/sc2_rl_agent/starcraftenv_test/agent/macro_contract.py",
+      "path": "macro/sc2_rl_agent/starcraftenv_test/agent/macro_contract.py",
+      "source_sha256": "de72eb1563f7f12d27c30ecdf5913ef73a01c9dfbdf5412aea1e92b4482b56ed",
+      "bytes": 1882,
+      "release_sha256": "de72eb1563f7f12d27c30ecdf5913ef73a01c9dfbdf5412aea1e92b4482b56ed",
+      "release_bytes": 1882
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/sc2_rl_agent/starcraftenv_test/agent/strategic_policy.py",
+      "path": "macro/sc2_rl_agent/starcraftenv_test/agent/strategic_policy.py",
+      "source_sha256": "32376b1d89b43912ca63f807b9bc02eb5229bac4a786f4e00e09e395cd5d6466",
+      "bytes": 3812,
+      "release_sha256": "32376b1d89b43912ca63f807b9bc02eb5229bac4a786f4e00e09e395cd5d6466",
+      "release_bytes": 3812
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/sc2_rl_agent/starcraftenv_test/env/bot/Protoss_bot.py",
+      "path": "macro/sc2_rl_agent/starcraftenv_test/env/bot/Protoss_bot.py",
+      "source_sha256": "c2d8fd36b953698487f13a9130e5b2410258cc735ecc5b16d9f836b573dd00f8",
+      "bytes": 110482,
+      "release_sha256": "b4be8a84e13fe33248b29955b6fc36998e98ed9874a12b1f9878a21a6a0db036",
+      "release_bytes": 101937
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/sc2_rl_agent/starcraftenv_test/env/bot/jev_protoss_bot.py",
+      "path": "macro/sc2_rl_agent/starcraftenv_test/env/bot/jev_protoss_bot.py",
+      "source_sha256": "435090a7b0e1c81c95791d34f10735096a9a1315dd9ac7ef1d3af6075664ab76",
+      "bytes": 24008,
+      "release_sha256": "435090a7b0e1c81c95791d34f10735096a9a1315dd9ac7ef1d3af6075664ab76",
+      "release_bytes": 24008
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/sc2_rl_agent/starcraftenv_test/env/bot/hierarchical_protoss_bot.py",
+      "path": "macro/sc2_rl_agent/starcraftenv_test/env/bot/hierarchical_protoss_bot.py",
+      "source_sha256": "2c072f47d46f22f17361cb3f6c37282be085e80de13753e6a50da7b1eda9071f",
+      "bytes": 20655,
+      "release_sha256": "2c072f47d46f22f17361cb3f6c37282be085e80de13753e6a50da7b1eda9071f",
+      "release_bytes": 20655
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/sc2_rl_agent/starcraftenv_test/env/bot/macro_execution.py",
+      "path": "macro/sc2_rl_agent/starcraftenv_test/env/bot/macro_execution.py",
+      "source_sha256": "cd00a723477e4305b22c74da82a7a5cdee2b6bce3f88c0ee472885fb1a70f6d3",
+      "bytes": 17779,
+      "release_sha256": "cd00a723477e4305b22c74da82a7a5cdee2b6bce3f88c0ee472885fb1a70f6d3",
+      "release_bytes": 17779
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/sc2_rl_agent/starcraftenv_test/env/bot/macro_navigation.py",
+      "path": "macro/sc2_rl_agent/starcraftenv_test/env/bot/macro_navigation.py",
+      "source_sha256": "9cb367ae857703b179892de9d9d425eb35d5eaf48cbfcdf0c05e6ce796bc1cbf",
+      "bytes": 11782,
+      "release_sha256": "9cb367ae857703b179892de9d9d425eb35d5eaf48cbfcdf0c05e6ce796bc1cbf",
+      "release_bytes": 11782
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/sc2_rl_agent/starcraftenv_test/utils/action_info.py",
+      "path": "macro/sc2_rl_agent/starcraftenv_test/utils/action_info.py",
+      "source_sha256": "5cb8b8969b45cf260835e8df95c34ff9227b684027d94741c8bceab6c5db79d5",
+      "bytes": 7873,
+      "release_sha256": "8d508f5e9b2487afadc8f4fb6c488df3d22b703a0c48a800f57406cfb8af4891",
+      "release_bytes": 7729
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/sc2_rl_agent/starcraftenv_test/utils/run_logging.py",
+      "path": "macro/sc2_rl_agent/starcraftenv_test/utils/run_logging.py",
+      "source_sha256": "395f0640c3a9de160b7c9efa7f05a57c85d6f4701634a041ab4ae4add470a7ab",
+      "bytes": 15585,
+      "release_sha256": "395f0640c3a9de160b7c9efa7f05a57c85d6f4701634a041ab4ae4add470a7ab",
+      "release_bytes": 15585
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/sc2_rl_agent/starcraftenv_test/utils/run_report.html",
+      "path": "macro/sc2_rl_agent/starcraftenv_test/utils/run_report.html",
+      "source_sha256": "9b5944b694f04db700d84fca13b6bfc42f9a7480e145fecfaac5669d27ba0c8c",
+      "bytes": 15999,
+      "release_sha256": "9b5944b694f04db700d84fca13b6bfc42f9a7480e145fecfaac5669d27ba0c8c",
+      "release_bytes": 15999
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/sc2_rl_agent/starcraftenv_test/utils/sc2_runtime.py",
+      "path": "macro/sc2_rl_agent/starcraftenv_test/utils/sc2_runtime.py",
+      "source_sha256": "171e79fc78b81dd4cbe17726b58c262bd44914c38f639f753a5a129955d68ec6",
+      "bytes": 2266,
+      "release_sha256": "171e79fc78b81dd4cbe17726b58c262bd44914c38f639f753a5a129955d68ec6",
+      "release_bytes": 2266
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/sc2_rl_agent/starcraftenv_test/utils/replay_camera.py",
+      "path": "macro/sc2_rl_agent/starcraftenv_test/utils/replay_camera.py",
+      "source_sha256": "064f5fdc1017676da21027691b9f2e8f1ead346731a549ec771472795a96f08a",
+      "bytes": 3606,
+      "release_sha256": "064f5fdc1017676da21027691b9f2e8f1ead346731a549ec771472795a96f08a",
+      "release_bytes": 3606
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/tests/test_jev_action_completion.py",
+      "path": "macro/tests/test_jev_action_completion.py",
+      "source_sha256": "8d1a5bc03d685252da693b160729110191d17ef703d0cae3c16e32b5a1b262d8",
+      "bytes": 9758,
+      "release_sha256": "8d1a5bc03d685252da693b160729110191d17ef703d0cae3c16e32b5a1b262d8",
+      "release_bytes": 9758
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/tests/test_jev_agent.py",
+      "path": "macro/tests/test_jev_agent.py",
+      "source_sha256": "cb0ef1730c59d6aee40fc465f0e617be571591fc95aee621c91ebbfb92bb951c",
+      "bytes": 8112,
+      "release_sha256": "cb0ef1730c59d6aee40fc465f0e617be571591fc95aee621c91ebbfb92bb951c",
+      "release_bytes": 8112
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/tests/test_jev_hierarchy.py",
+      "path": "macro/tests/test_jev_hierarchy.py",
+      "source_sha256": "2961fbd309b7b3cb7164f84a4ce8eb1b2ba4b039868435fbcfc8a71d268b6443",
+      "bytes": 26790,
+      "release_sha256": "2961fbd309b7b3cb7164f84a4ce8eb1b2ba4b039868435fbcfc8a71d268b6443",
+      "release_bytes": 26790
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/tests/test_jev_logging.py",
+      "path": "macro/tests/test_jev_logging.py",
+      "source_sha256": "fb4c2a4cf9e4321b9200d0df81b31c92c838e832b959bddf779066be37c3a9db",
+      "bytes": 12432,
+      "release_sha256": "fb4c2a4cf9e4321b9200d0df81b31c92c838e832b959bddf779066be37c3a9db",
+      "release_bytes": 12432
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/tests/test_jev_macro_v2.py",
+      "path": "macro/tests/test_jev_macro_v2.py",
+      "source_sha256": "bbe648562e512f5f488a121accd66e3b439fa3ed65eb4498527d746827e5d109",
+      "bytes": 16320,
+      "release_sha256": "bbe648562e512f5f488a121accd66e3b439fa3ed65eb4498527d746827e5d109",
+      "release_bytes": 16320
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/tests/test_jev_protoss.py",
+      "path": "macro/tests/test_jev_protoss.py",
+      "source_sha256": "f3d9580f16fe4848254c254c7e2b5b75b4c32146d4fceb3ecdd090a4a2641882",
+      "bytes": 10117,
+      "release_sha256": "f3d9580f16fe4848254c254c7e2b5b75b4c32146d4fceb3ecdd090a4a2641882",
+      "release_bytes": 10117
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/tests/test_jev_replay_camera.py",
+      "path": "macro/tests/test_jev_replay_camera.py",
+      "source_sha256": "f072e3279cdfca49a4095b6a57f60a0dd649de5e2094655eb30be1ee572d8b55",
+      "bytes": 1652,
+      "release_sha256": "f072e3279cdfca49a4095b6a57f60a0dd649de5e2094655eb30be1ee572d8b55",
+      "release_bytes": 1652
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/tests/test_jev_replay_server.py",
+      "path": "macro/tests/test_jev_replay_server.py",
+      "source_sha256": "242725ff09adc9c029931811d16003d084adef83c6e33c7b817dfa906bf08f06",
+      "bytes": 2105,
+      "release_sha256": "242725ff09adc9c029931811d16003d084adef83c6e33c7b817dfa906bf08f06",
+      "release_bytes": 2105
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/tests/test_jev_runtime.py",
+      "path": "macro/tests/test_jev_runtime.py",
+      "source_sha256": "19f85a3cbf287b3d192e0f107a867fc0bb2a24e0e844ebec252c71356e826f84",
+      "bytes": 1699,
+      "release_sha256": "19f85a3cbf287b3d192e0f107a867fc0bb2a24e0e844ebec252c71356e826f84",
+      "release_bytes": 1699
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/Maps/Altitude LE.SC2Map",
+      "path": "macro/Maps/Altitude LE.SC2Map",
+      "source_sha256": "9a9fd7701f2663bf5cf121082c12fa33e61eaa4d2225a3d0040399046a6eb266",
+      "bytes": 1186232,
+      "release_sha256": "9a9fd7701f2663bf5cf121082c12fa33e61eaa4d2225a3d0040399046a6eb266",
+      "release_bytes": 1186232
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/Maps/Ancient Cistern LE.SC2Map",
+      "path": "macro/Maps/Ancient Cistern LE.SC2Map",
+      "source_sha256": "13d075a466de88ba93aa3d9f3e9f3743606bffac1bf1b5e81f42b0c56d4a9c59",
+      "bytes": 1704216,
+      "release_sha256": "13d075a466de88ba93aa3d9f3e9f3743606bffac1bf1b5e81f42b0c56d4a9c59",
+      "release_bytes": 1704216
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/Maps/Babylon LE.SC2Map",
+      "path": "macro/Maps/Babylon LE.SC2Map",
+      "source_sha256": "3908388d77beee80d79af6dfa93fe12e9931b7a6d57cbb710b31821b33f8638f",
+      "bytes": 1095713,
+      "release_sha256": "3908388d77beee80d79af6dfa93fe12e9931b7a6d57cbb710b31821b33f8638f",
+      "release_bytes": 1095713
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/Maps/Dragon Scales LE.SC2Map",
+      "path": "macro/Maps/Dragon Scales LE.SC2Map",
+      "source_sha256": "26477c0327c343ec1c7ba269a00d7dd0a036033cf4cd708e8364c027a5ec0dfe",
+      "bytes": 963124,
+      "release_sha256": "26477c0327c343ec1c7ba269a00d7dd0a036033cf4cd708e8364c027a5ec0dfe",
+      "release_bytes": 963124
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/Maps/Gresvan LE.SC2Map",
+      "path": "macro/Maps/Gresvan LE.SC2Map",
+      "source_sha256": "e5dbf4b164d0e3002c9320bc18a332ef44d2ed4d957a5645718837ad237b8f8d",
+      "bytes": 845827,
+      "release_sha256": "e5dbf4b164d0e3002c9320bc18a332ef44d2ed4d957a5645718837ad237b8f8d",
+      "release_bytes": 845827
+    },
+    {
+      "source": "Large-Language-Models-play-StarCraftII/Maps/Neohumanity LE.SC2Map",
+      "path": "macro/Maps/Neohumanity LE.SC2Map",
+      "source_sha256": "98aeae9499e7d1154ed93732323c43ada509b159dc9cee100cdbdca7997498af",
+      "bytes": 662234,
+      "release_sha256": "98aeae9499e7d1154ed93732323c43ada509b159dc9cee100cdbdca7997498af",
+      "release_bytes": 662234
+    },
+    {
+      "source": "smac-hard/jev_micro/catalog.py",
+      "path": "micro/jev_micro/catalog.py",
+      "source_sha256": "542f6e11200b8eb6c741d39d7b278755faa2c204613912a918f079b59afe8c22",
+      "bytes": 915,
+      "release_sha256": "fe899c80eaeda424640f77449d6a09f751893e85b232560f470eeafe4441723b",
+      "release_bytes": 815
+    },
+    {
+      "source": "smac-hard/jev_micro/client.py",
+      "path": "micro/jev_micro/client.py",
+      "source_sha256": "52474a4afbeae02962ff0b5a42bdbc5a4ea0dfe01aa0b157e5bc0f082b9a7e6e",
+      "bytes": 3362,
+      "release_sha256": "52474a4afbeae02962ff0b5a42bdbc5a4ea0dfe01aa0b157e5bc0f082b9a7e6e",
+      "release_bytes": 3362
+    },
+    {
+      "source": "smac-hard/jev_micro/environment.py",
+      "path": "micro/jev_micro/environment.py",
+      "source_sha256": "eb70c136bfe0e3dcbd38f957070f860c681a0ab9e8aa83bf79263c040542e01b",
+      "bytes": 7101,
+      "release_sha256": "eb70c136bfe0e3dcbd38f957070f860c681a0ab9e8aa83bf79263c040542e01b",
+      "release_bytes": 7101
+    },
+    {
+      "source": "smac-hard/jev_micro/feedback.py",
+      "path": "micro/jev_micro/feedback.py",
+      "source_sha256": "0e11c3bf70b9e64302687dac41b70225b3d7d08094186e94401b10354068e609",
+      "bytes": 3308,
+      "release_sha256": "0e11c3bf70b9e64302687dac41b70225b3d7d08094186e94401b10354068e609",
+      "release_bytes": 3308
+    },
+    {
+      "source": "smac-hard/jev_micro/planner.py",
+      "path": "micro/jev_micro/planner.py",
+      "source_sha256": "4cc038577c27e1d538923ddd0c0c40ec9a91596dfce704c6e35e7ebd13056c66",
+      "bytes": 15279,
+      "release_sha256": "4cc038577c27e1d538923ddd0c0c40ec9a91596dfce704c6e35e7ebd13056c66",
+      "release_bytes": 15279
+    },
+    {
+      "source": "smac-hard/jev_micro/policy.py",
+      "path": "micro/jev_micro/policy.py",
+      "source_sha256": "1a6a66e7160327ff49fc81902bf87ffab82e4f3b6f4ca03d7e3fc0210f8f6301",
+      "bytes": 21444,
+      "release_sha256": "1a6a66e7160327ff49fc81902bf87ffab82e4f3b6f4ca03d7e3fc0210f8f6301",
+      "release_bytes": 21444
+    },
+    {
+      "source": "smac-hard/jev_micro/realtime.py",
+      "path": "micro/jev_micro/realtime.py",
+      "source_sha256": "50868342e523f2ce452484c95e4e44a8048e9c94b8145628af4484f114927058",
+      "bytes": 25061,
+      "release_sha256": "50868342e523f2ce452484c95e4e44a8048e9c94b8145628af4484f114927058",
+      "release_bytes": 25061
+    },
+    {
+      "source": "smac-hard/jev_micro/replay_video.py",
+      "path": "micro/jev_micro/replay_video.py",
+      "source_sha256": "4f05806b20372d86f7372eff0ebab47f722673b0394a2fe64345b974790241a2",
+      "bytes": 14814,
+      "release_sha256": "4f05806b20372d86f7372eff0ebab47f722673b0394a2fe64345b974790241a2",
+      "release_bytes": 14814
+    },
+    {
+      "source": "smac-hard/jev_micro/run.py",
+      "path": "micro/jev_micro/run.py",
+      "source_sha256": "d12dd5d8669b84fec674e733acc692a548c8ff29bc28f873e8db8077c550a99d",
+      "bytes": 22049,
+      "release_sha256": "d12dd5d8669b84fec674e733acc692a548c8ff29bc28f873e8db8077c550a99d",
+      "release_bytes": 22049
+    },
+    {
+      "source": "smac-hard/jev_micro/scenario.py",
+      "path": "micro/jev_micro/scenario.py",
+      "source_sha256": "d20a390dc42d9c8d93355a1defdf79b2168b5a5646fa4f1c631deb6945aa1efd",
+      "bytes": 11634,
+      "release_sha256": "d20a390dc42d9c8d93355a1defdf79b2168b5a5646fa4f1c631deb6945aa1efd",
+      "release_bytes": 11634
+    },
+    {
+      "source": "smac-hard/jev_micro/suite.py",
+      "path": "micro/jev_micro/suite.py",
+      "source_sha256": "f274f18bda19bb037432b5ea444d75ee278c1314482c59085e0dd9bd1cc17695",
+      "bytes": 13242,
+      "release_sha256": "f274f18bda19bb037432b5ea444d75ee278c1314482c59085e0dd9bd1cc17695",
+      "release_bytes": 13242
+    },
+    {
+      "source": "smac-hard/jev_micro/windows_session.py",
+      "path": "micro/jev_micro/windows_session.py",
+      "source_sha256": "e27bc3992fa069fb5925b7915f711e5c2d3b6ef955fb186830241daa80e6c0e4",
+      "bytes": 1584,
+      "release_sha256": "e27bc3992fa069fb5925b7915f711e5c2d3b6ef955fb186830241daa80e6c0e4",
+      "release_bytes": 1584
+    },
+    {
+      "source": "smac-hard/jev_micro/__init__.py",
+      "path": "micro/jev_micro/__init__.py",
+      "source_sha256": "24690c520c72617fee1d7e2c968f69233822055b70d017694400e364fe338898",
+      "bytes": 77,
+      "release_sha256": "24690c520c72617fee1d7e2c968f69233822055b70d017694400e364fe338898",
+      "release_bytes": 77
+    },
+    {
+      "source": "smac-hard/smac_hard/bin/map_list.py",
+      "path": "micro/smac_hard/bin/map_list.py",
+      "source_sha256": "18e0a0ec32bd50037b75049148e0fb4c448596dd1aa216c66da3c5804b4d3e66",
+      "bytes": 836,
+      "release_sha256": "e4597785f865f64603c92b8d6b5468032dedce275021f6da5a7379f7baafe2f4",
+      "release_bytes": 808
+    },
+    {
+      "source": "smac-hard/smac_hard/bin/__init__.py",
+      "path": "micro/smac_hard/bin/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "release_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "release_bytes": 0
+    },
+    {
+      "source": "smac-hard/smac_hard/env/multiagentenv.py",
+      "path": "micro/smac_hard/env/multiagentenv.py",
+      "source_sha256": "995c3bbb9fa6f15a54dbb4a64fe5e7134c32168c2b48a6ffd5ed589c170dc368",
+      "bytes": 1998,
+      "release_sha256": "3e17a3c78277403654f26fc6ace22cb4d2be4de98dece06b3e6da239cbd77fcf",
+      "release_bytes": 1930
+    },
+    {
+      "source": "smac-hard/smac_hard/env/multiplayer_multiagentenv.py",
+      "path": "micro/smac_hard/env/multiplayer_multiagentenv.py",
+      "source_sha256": "4bf426bf1913977fbaac70ac7b7b8f186eec16e1a32c9978336ea7fe7c73488f",
+      "bytes": 2039,
+      "release_sha256": "4cfbab7259c3decb63c65dc7f78b0f68a6e4e6c6d99eec8c5c7f5462d3f9cacb",
+      "release_bytes": 1973
+    },
+    {
+      "source": "smac-hard/smac_hard/env/__init__.py",
+      "path": "micro/smac_hard/env/__init__.py",
+      "source_sha256": "9a6a72a084f907859d7e2f23e9e57d3d169b5c6e3bcb5b2768d8b1fe1478f70d",
+      "bytes": 290,
+      "release_sha256": "278d70ada5ad798176eed5818137e0f4fe93c1a09d60d25ce22a3d90b64f8c0e",
+      "release_bytes": 282
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/attack_nearest.py",
+      "path": "micro/smac_hard/env/scripts/attack_nearest.py",
+      "source_sha256": "f0a481305c0dd4b0886212168fd643b9127fbdab62987549d23143ff282a2b49",
+      "bytes": 1645,
+      "release_sha256": "e4ba96e60208b7e1fc44c3759639ee118773cb824b2356b93f11ec94e3824a06",
+      "release_bytes": 1544
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/attack_weakest.py",
+      "path": "micro/smac_hard/env/scripts/attack_weakest.py",
+      "source_sha256": "ab60db2fd823d10a316f37666e2be2c2850be43d29f092572a3a5e6c209da3ea",
+      "bytes": 1619,
+      "release_sha256": "db21eef663b8af92d441598d38b9f8dc79cd81d4bd2e364b91948cf9ef3d300b",
+      "release_bytes": 1487
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/base_script.py",
+      "path": "micro/smac_hard/env/scripts/base_script.py",
+      "source_sha256": "d52b7b474cb60f681842e1a3c0aed41513d1229906e560dc6229c411d60c718a",
+      "bytes": 3853,
+      "release_sha256": "4fb72e9d17880f3c48882094b740fea9339fc9ae3ff7fedec9a8961963f0d1c3",
+      "release_bytes": 3677
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/noop.py",
+      "path": "micro/smac_hard/env/scripts/noop.py",
+      "source_sha256": "f5988cf221fa3a4c5a7756af37b43ee573cdd87fd63c807d512fecd56b0b33ad",
+      "bytes": 403,
+      "release_sha256": "c634779c7fe1d667634b4dc4f489925749b8c3968eb32fe73aa2d8e77182d2dd",
+      "release_bytes": 376
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/unit_typeid.py",
+      "path": "micro/smac_hard/env/scripts/unit_typeid.py",
+      "source_sha256": "f507320b487b1d4233bea0599e6f1dad998c51618804c92a232d8665633d135d",
+      "bytes": 67750,
+      "release_sha256": "a4dcd9011bdcd82ff64878c801ca9b217d1bc8cec98e902441371160d6ddaaf7",
+      "release_bytes": 65677
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/__init__.py",
+      "path": "micro/smac_hard/env/scripts/__init__.py",
+      "source_sha256": "a3aac1093a9b3091c797d8a773f60367b76e62f80813aa6a95f6833c3b6118f0",
+      "bytes": 5712,
+      "release_sha256": "a2d9f32840555903c64647959b571311886b6dd3b26a4a263a1bd9710237c86f",
+      "release_bytes": 5583
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_1c3s5z/script_d.py",
+      "path": "micro/smac_hard/env/scripts/s_1c3s5z/script_d.py",
+      "source_sha256": "8d16fd8f727b994a2b8bd12dc364b7c514999b400fcf620fde447579007717a7",
+      "bytes": 3614,
+      "release_sha256": "c83b0c5913c4dd58c4d624365a2b39667ed7aea9eb27bf7ffbd1f70af66b4623",
+      "release_bytes": 3470
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_1c3s5z/script_m.py",
+      "path": "micro/smac_hard/env/scripts/s_1c3s5z/script_m.py",
+      "source_sha256": "0e8fbf85467c7a709c2dd1d7e8f903f640973915c35b3c81bc3fefa145bec6a8",
+      "bytes": 2607,
+      "release_sha256": "94fabb133b0a4975f55663fffe4fa22c5698b77022b2ed087b1217f2f61dc4da",
+      "release_bytes": 2484
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_27m/script_a.py",
+      "path": "micro/smac_hard/env/scripts/s_27m/script_a.py",
+      "source_sha256": "197c65452ed191b5559e53674e41151a91731e9c50f1da9f9939eb14d65abdc4",
+      "bytes": 1565,
+      "release_sha256": "9db3d90b1d49cb7072aae09fcda377a4cc32079107d3ad40d458f78d2da775c1",
+      "release_bytes": 1457
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_27m/script_ap.py",
+      "path": "micro/smac_hard/env/scripts/s_27m/script_ap.py",
+      "source_sha256": "fdea9e1ff56a99f992bf3167f9b8cc9556648c5e12a3ef5684caca1785837e54",
+      "bytes": 1710,
+      "release_sha256": "6baa02c6341bcf8eb4bc3bc296e75d61487500b14f47f32a7fd80ac164119764",
+      "release_bytes": 1616
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_27m/script_l.py",
+      "path": "micro/smac_hard/env/scripts/s_27m/script_l.py",
+      "source_sha256": "0243b21df492c4feba0df0cd9dce04f38e72fe1ae36954a3c27317823e40165a",
+      "bytes": 1680,
+      "release_sha256": "6a825c60f67513a24a7d93927c2b549dccdf21c6eb91985abbb559b4a81e306b",
+      "release_bytes": 1586
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_2c_vs_64zg/script.py",
+      "path": "micro/smac_hard/env/scripts/s_2c_vs_64zg/script.py",
+      "source_sha256": "dbaacff80dd440676da3ca89ebd68f9c42838de765c5d60a17dfe17deb374ae9",
+      "bytes": 5869,
+      "release_sha256": "05ad61612b36ab7e89610b1c5d4e99d382980f4e1364e9edb8e9b33e3d294676",
+      "release_bytes": 5606
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_2m_vs_1z/red_script.py",
+      "path": "micro/smac_hard/env/scripts/s_2m_vs_1z/red_script.py",
+      "source_sha256": "2263c40c0f1dd3efe719974bfc31ed7945942d058c91a9f9c561565c967d4b15",
+      "bytes": 1841,
+      "release_sha256": "bb9b471334da095fe91fec52dc9deb53b2b550f5cf034801367205894d4f5ad7",
+      "release_bytes": 1768
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_2m_vs_1z/script.py",
+      "path": "micro/smac_hard/env/scripts/s_2m_vs_1z/script.py",
+      "source_sha256": "18e0df5e7955f085e8d83e7b3e1ff8a9a798aba6317fee2acfae6c7a1dda0fa9",
+      "bytes": 1145,
+      "release_sha256": "f93bb0dcb81534b4c87dcd22c93ced6d92e682867a42da5fc65696207bc1b7b6",
+      "release_bytes": 1085
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_2s3z/script.py",
+      "path": "micro/smac_hard/env/scripts/s_2s3z/script.py",
+      "source_sha256": "fde7c107010ad519f320ea81eeb64e236a4e19006121743a59ae8ffff6d8cca4",
+      "bytes": 2303,
+      "release_sha256": "57f35166d8cf564142547fffddcb413b1c1c1cddbe906cee3b26397ad672fd79",
+      "release_bytes": 2228
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_2s3z/script_1.py",
+      "path": "micro/smac_hard/env/scripts/s_2s3z/script_1.py",
+      "source_sha256": "395fefb3d348350adcb09524a9c60517a71321200655f606da87cc48978ddeec",
+      "bytes": 2114,
+      "release_sha256": "9160917ff4d4c16397e25148fa472105effc4830fe2741697d5ac439acb50cd4",
+      "release_bytes": 2018
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_2s_vs_1sc/red_script.py",
+      "path": "micro/smac_hard/env/scripts/s_2s_vs_1sc/red_script.py",
+      "source_sha256": "8c24109928228aa415ee23e5bdb985f6af603079f7ff0acdf581847fa50e66a7",
+      "bytes": 3868,
+      "release_sha256": "4b9aadcda3d6375fd193808bc62009953bb6563e031d86d29e848232a2cac8ae",
+      "release_bytes": 3707
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_2s_vs_1sc/script.py",
+      "path": "micro/smac_hard/env/scripts/s_2s_vs_1sc/script.py",
+      "source_sha256": "c77796b764f83e64ce4e7df0fd3a208efeb56f7b7949f458adff872e59b62789",
+      "bytes": 1741,
+      "release_sha256": "4e7ad0f308309cc89026ea7372de820bc669f17732efb59466cb43b301bfac91",
+      "release_bytes": 1664
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_2vr_vs_3sc/walk_aktn.py",
+      "path": "micro/smac_hard/env/scripts/s_2vr_vs_3sc/walk_aktn.py",
+      "source_sha256": "70f859b08f71c686991626098e0b3139d7982f2c6cacc6c9b57e334ec90beed5",
+      "bytes": 1999,
+      "release_sha256": "0b9786d9fa084fa7ed6d41943d3ef579cc269bc1452e798c9b2af9810d10b76c",
+      "release_bytes": 1941
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_2vr_vs_3sc/walk_aktw.py",
+      "path": "micro/smac_hard/env/scripts/s_2vr_vs_3sc/walk_aktw.py",
+      "source_sha256": "4afc2bd363dbe4bc91e106e8f2d2693971a310c4ebd01a74c05df3a9493dc5db",
+      "bytes": 2055,
+      "release_sha256": "5aba8a65b4051229898fffec8dcc9b7a22af2b098f1ee623fad5514abe7626de",
+      "release_bytes": 1997
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_3hl_vs_24zl/attack_group.py",
+      "path": "micro/smac_hard/env/scripts/s_3hl_vs_24zl/attack_group.py",
+      "source_sha256": "fa6e382150cb2251a7cad2978ec10102c138839fd27b2b7d3e4d3fbcc4226bb6",
+      "bytes": 1340,
+      "release_sha256": "ead2ce51affaea6a300091ec840a5922c4d9f3c622a1e670107b27938af96c71",
+      "release_bytes": 1277
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_3hl_vs_24zl/attack_ways.py",
+      "path": "micro/smac_hard/env/scripts/s_3hl_vs_24zl/attack_ways.py",
+      "source_sha256": "d6733412956b89d09a72be518818f186873b1008bffa3a8c0eb7a724eb32d363",
+      "bytes": 1584,
+      "release_sha256": "91421f9e7d78cebe76eccc493d1a9e78df8b52f7604166b090c160581b17299b",
+      "release_bytes": 1514
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_3rp_vs_5zl/script_cliff.py",
+      "path": "micro/smac_hard/env/scripts/s_3rp_vs_5zl/script_cliff.py",
+      "source_sha256": "fdf8cf123dc826127a9c722a1fc2e9160d62bacb4ac22d90291fda860d06a13b",
+      "bytes": 2465,
+      "release_sha256": "e5c369db22495324c24f482c27cb7f5d0f51cf3f30fb3e9faf1b08ee0df16160",
+      "release_bytes": 2371
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_3rp_vs_5zl/script_group.py",
+      "path": "micro/smac_hard/env/scripts/s_3rp_vs_5zl/script_group.py",
+      "source_sha256": "16031d70dc73190b5108c27b86b2c3b8cb490124c46b8533bd27cd9b73f87b3b",
+      "bytes": 1825,
+      "release_sha256": "0a6c2e05fc49d01106fc0c31ee2e45c8e5b6e7fc23f223339603f769c443a095",
+      "release_bytes": 1736
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_3s5z/script.py",
+      "path": "micro/smac_hard/env/scripts/s_3s5z/script.py",
+      "source_sha256": "fde7c107010ad519f320ea81eeb64e236a4e19006121743a59ae8ffff6d8cca4",
+      "bytes": 2303,
+      "release_sha256": "57f35166d8cf564142547fffddcb413b1c1c1cddbe906cee3b26397ad672fd79",
+      "release_bytes": 2228
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_3s5z/script_1.py",
+      "path": "micro/smac_hard/env/scripts/s_3s5z/script_1.py",
+      "source_sha256": "ec9dec83ef2ebb1928664127fc292753c6d91e1b1371ada7baf1e7ac1f213653",
+      "bytes": 3531,
+      "release_sha256": "619faf32d4d6f63bdc9135d1d1607f08e8e9c1bde48d739b4b9e1e875c9fa34f",
+      "release_bytes": 3411
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_3st_vs_5zl/script_attack.py",
+      "path": "micro/smac_hard/env/scripts/s_3st_vs_5zl/script_attack.py",
+      "source_sha256": "31c849111983d9fe9b270cdb21692c0293f384a04543d158366c792d10e5e7aa",
+      "bytes": 4986,
+      "release_sha256": "9cb9fc0064dd3cbf6c285524a7dfd260bb23588045c56cc615e887f19bb80666",
+      "release_bytes": 4743
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_3st_vs_5zl/script_group.py",
+      "path": "micro/smac_hard/env/scripts/s_3st_vs_5zl/script_group.py",
+      "source_sha256": "16031d70dc73190b5108c27b86b2c3b8cb490124c46b8533bd27cd9b73f87b3b",
+      "bytes": 1825,
+      "release_sha256": "0a6c2e05fc49d01106fc0c31ee2e45c8e5b6e7fc23f223339603f769c443a095",
+      "release_bytes": 1736
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_3s_vs_3z/script_attack.py",
+      "path": "micro/smac_hard/env/scripts/s_3s_vs_3z/script_attack.py",
+      "source_sha256": "f944b537a858a741a4df2318dc39fa2e39ed4e181e787299cf3a43f703ae8839",
+      "bytes": 4646,
+      "release_sha256": "2af4257dd57faa18c86a40b8fa225a90e5b57a7086f8491fa6e893bcdf935d9e",
+      "release_bytes": 4418
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_3s_vs_3z/script_group.py",
+      "path": "micro/smac_hard/env/scripts/s_3s_vs_3z/script_group.py",
+      "source_sha256": "504e0b6d6bab9784d4e5f32c1738f43ecf0de51ce134a0e46409377c852cff30",
+      "bytes": 1635,
+      "release_sha256": "114eaea41d147aabc83f00fe10bff2b5a6737a400d5277530968e04faba30707",
+      "release_bytes": 1538
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_3s_vs_4z/script_attack.py",
+      "path": "micro/smac_hard/env/scripts/s_3s_vs_4z/script_attack.py",
+      "source_sha256": "d4c0b63c0ee352af7bf9a5905c5f62cbb2f5238cd724cdcbf01ccdad46f1b411",
+      "bytes": 4935,
+      "release_sha256": "d917898404f098aa8d9369a06dd278f411b6e283b2513f02e3dfe21954989061",
+      "release_bytes": 4694
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_3s_vs_4z/script_group.py",
+      "path": "micro/smac_hard/env/scripts/s_3s_vs_4z/script_group.py",
+      "source_sha256": "be8fd627fa1104089f51cb421988f2fcb6de3fee885ba87be7bf7aa7ab179645",
+      "bytes": 1558,
+      "release_sha256": "8cfa35f9bf44c50f6761e5e2a6611b98c1ba5a1e7fa65b3102c32d2149a388a4",
+      "release_bytes": 1464
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_3s_vs_5z/script_attack.py",
+      "path": "micro/smac_hard/env/scripts/s_3s_vs_5z/script_attack.py",
+      "source_sha256": "14fcf83e8c23d38bc5dbb2e7a0e7368c5597d778d2dd227b9785971d2d84b566",
+      "bytes": 5450,
+      "release_sha256": "055882dfc2d17522f23736586ec19ef8e64ce924f34f9ecd0f98f2ec95ff6fae",
+      "release_bytes": 5195
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_3s_vs_5z/script_group.py",
+      "path": "micro/smac_hard/env/scripts/s_3s_vs_5z/script_group.py",
+      "source_sha256": "503591e2ddf590e61f9b7cf8dabd34384585b04e1af3f4223f79eb288fa8981c",
+      "bytes": 1564,
+      "release_sha256": "8264dd16cf9f416c85efe6afeaeece0b21ea636b7d1c10c34991f2ba32b8c16f",
+      "release_bytes": 1462
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_6h_vs_8z/script_easy.py",
+      "path": "micro/smac_hard/env/scripts/s_6h_vs_8z/script_easy.py",
+      "source_sha256": "5328097698c79c7394778359c1422ff1f968b31ea5a79eeed9ef4bda8ce265f0",
+      "bytes": 1345,
+      "release_sha256": "2e031ac2b01b1fd25cb348cf456f44d3ff9ff2767030830258ea483b451ab702",
+      "release_bytes": 1276
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_6h_vs_8z/script_hard.py",
+      "path": "micro/smac_hard/env/scripts/s_6h_vs_8z/script_hard.py",
+      "source_sha256": "eb005a0aafd1a82c867af620147cfb37ee70e7817e6f1f1bf3458f5b15229bb1",
+      "bytes": 1913,
+      "release_sha256": "3268cfda99f939a5290d38ad8b19fab2c7370cc022055268992df2fba04fb86d",
+      "release_bytes": 1791
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_6m_vs_10m/form_atkn.py",
+      "path": "micro/smac_hard/env/scripts/s_6m_vs_10m/form_atkn.py",
+      "source_sha256": "0c696fb97929f12cc03256907e5e8a2d640f0fc5baaeedf663c0f7b15ff23ba2",
+      "bytes": 2224,
+      "release_sha256": "ddda7856dff64281179574fb758d4ab4847dd49acbea79d7bfdf924b198fe741",
+      "release_bytes": 2128
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_6m_vs_10m/form_atkw.py",
+      "path": "micro/smac_hard/env/scripts/s_6m_vs_10m/form_atkw.py",
+      "source_sha256": "195a8a9577884b818a500bf19238cb8117865c2a914fc74307db731dd0b048b2",
+      "bytes": 2211,
+      "release_sha256": "4cd9c18ed2111b6d00fa1664dccae3d69feee6b39f313c711998787fb70a717c",
+      "release_bytes": 2115
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_7q_vs_2bc/script_cannon.py",
+      "path": "micro/smac_hard/env/scripts/s_7q_vs_2bc/script_cannon.py",
+      "source_sha256": "7ad6c1b77913642405fd3b5efb90a16401972f56b5c4fb0ff73d7f08738ba0ef",
+      "bytes": 1449,
+      "release_sha256": "8a102bb00ee2683471025e02c69c40e190331dce0ceecd71b99d5927aa4d5ab8",
+      "release_bytes": 1325
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_7q_vs_2bc/script_cannon_retreat.py",
+      "path": "micro/smac_hard/env/scripts/s_7q_vs_2bc/script_cannon_retreat.py",
+      "source_sha256": "514239ee8ff01393cc885f8fb5bc7ef1c3f155062c2c57a3ac8f67cb8d4c2c58",
+      "bytes": 1813,
+      "release_sha256": "6b22985d1db51436ee43291d4a751c8e44757cc7e2fb58680d28b7b5eafa96c2",
+      "release_bytes": 1712
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_8m/script.py",
+      "path": "micro/smac_hard/env/scripts/s_8m/script.py",
+      "source_sha256": "8e49c41c53da8925f6884baad7aef2b1f0cbb9c996dc6fc693cfd9eef9b207d9",
+      "bytes": 2268,
+      "release_sha256": "a26b77f223650b2e39605b41006f40c85e8b09425f4ce551a0db60f01b6b8cce",
+      "release_bytes": 2166
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_8m/script_1.py",
+      "path": "micro/smac_hard/env/scripts/s_8m/script_1.py",
+      "source_sha256": "bec5ffa4cd70104c8a46a38d477f8522ee32cc68f6e4024cce17b3f72d78e505",
+      "bytes": 2389,
+      "release_sha256": "486b8dbccce21e23e8f892f6f3beaea195997c27a81f806cd757ceb804bd6638",
+      "release_bytes": 2275
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_bane_vs_bane/red_script.py",
+      "path": "micro/smac_hard/env/scripts/s_bane_vs_bane/red_script.py",
+      "source_sha256": "c2db1455b739f1edcd0f8c6acc2846f9e7af0320052df3f156c04f6201c8e1ec",
+      "bytes": 1762,
+      "release_sha256": "3172b97469826fd8784439d380a5f077217c045b32ca52001647603fe3396888",
+      "release_bytes": 1659
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_bane_vs_bane/script.py",
+      "path": "micro/smac_hard/env/scripts/s_bane_vs_bane/script.py",
+      "source_sha256": "be064571ea9000017cbba19893af985c3f9bdf70a94893a663eefefa14167d9d",
+      "bytes": 2269,
+      "release_sha256": "f6877c434469e8c3584a056c411c6503d2ca1708faf81b1e3dde7e1053fef72b",
+      "release_bytes": 2140
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_corridor/script_d.py",
+      "path": "micro/smac_hard/env/scripts/s_corridor/script_d.py",
+      "source_sha256": "a818d6f3a050374a13e1a41bec70cd3e9d4f8ca9141f2350d543f46c6738dffa",
+      "bytes": 1953,
+      "release_sha256": "bd5e5447b59a04b12c5cce3133e8c549a5b681cbfcbd81e9d7a43a1a82c56168",
+      "release_bytes": 1846
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_corridor/script_y.py",
+      "path": "micro/smac_hard/env/scripts/s_corridor/script_y.py",
+      "source_sha256": "9cdbabf81c6df2b1e895d4bf50c5c7b636a772d92dffb4bb23ae17821ebf2112",
+      "bytes": 3364,
+      "release_sha256": "9916fe04aa1337f4e51e59ee53077e446d7a158d8903db96c68626635904bb70",
+      "release_bytes": 3210
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_MMM/script.py",
+      "path": "micro/smac_hard/env/scripts/s_MMM/script.py",
+      "source_sha256": "4f63f34bff1b0cf236886c6364476ffb21c4c0ba2043d8781834771c2dc0cd8d",
+      "bytes": 4699,
+      "release_sha256": "38b41ae34aacec360c6eb836efd62b06d0243ebf85ceab3f6edae0a50d971cd5",
+      "release_bytes": 4507
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_MMM/script_2.py",
+      "path": "micro/smac_hard/env/scripts/s_MMM/script_2.py",
+      "source_sha256": "4cd51125bbb48526e936a8383b44a268798f64aaf61493cb94f380362add2602",
+      "bytes": 4606,
+      "release_sha256": "ec57dcd460a1a2619e62954536bfd6d0cbed34aae809faab735d8eee9b3ef527",
+      "release_bytes": 4417
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_MMMT/script_form_atkn.py",
+      "path": "micro/smac_hard/env/scripts/s_MMMT/script_form_atkn.py",
+      "source_sha256": "7c9392e3826a94f4c3a23937656e7c3d861512685d33f909d61198ea5ac38ca9",
+      "bytes": 6031,
+      "release_sha256": "7906aa7659ea4e1dbc63b2c078972f9caf0298ee43434d9c9d424ffb2d22ef34",
+      "release_bytes": 5798
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_MMMT/script_form_atkp.py",
+      "path": "micro/smac_hard/env/scripts/s_MMMT/script_form_atkp.py",
+      "source_sha256": "ff875f19697792a5122221be2c21aa63f630117f704c9461d545b51d12f7132e",
+      "bytes": 5772,
+      "release_sha256": "1be20d11c65cced6d15cb786405e98670409b7af8980b1d6d8fa83b86e164cee",
+      "release_bytes": 5539
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_MMMT_vs_ZHB/script_spe_target.py",
+      "path": "micro/smac_hard/env/scripts/s_MMMT_vs_ZHB/script_spe_target.py",
+      "source_sha256": "18f72b8165d9c144dc24279b431a95b15db8327de6a54b609def6d69e9e7167f",
+      "bytes": 3548,
+      "release_sha256": "6be5a7dee3bbac3571c66a2d564e8d7da32e6caa9434e818f10b0eecadc481d8",
+      "release_bytes": 3425
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_MMMT_vs_ZHB/script_surr.py",
+      "path": "micro/smac_hard/env/scripts/s_MMMT_vs_ZHB/script_surr.py",
+      "source_sha256": "12229deebd972dd9d96609aca47b1bdfaa271c663138201b01afdaf196a34d5f",
+      "bytes": 3552,
+      "release_sha256": "e4bcd31f7a4042c9222b8a39a9784ce52c4ffc7d214fe42bb2defa878d149658",
+      "release_bytes": 3438
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_MMMT_vs_ZSPI/script_atk_bio.py",
+      "path": "micro/smac_hard/env/scripts/s_MMMT_vs_ZSPI/script_atk_bio.py",
+      "source_sha256": "215feefe0867660228d2a0c0e6c1ba1f05c81083ff862da005b20fc99b6964cc",
+      "bytes": 3454,
+      "release_sha256": "080ee1fe1a52c4f879361f7cac44be229f86c2dc7d4e53c318d0839bc48fb022",
+      "release_bytes": 3346
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_MMMT_vs_ZSPI/script_spe_target.py",
+      "path": "micro/smac_hard/env/scripts/s_MMMT_vs_ZSPI/script_spe_target.py",
+      "source_sha256": "382d6d188db9c40858173e0631f5b9f6d67fb1b6f3b4093564015fc6d08fe8e9",
+      "bytes": 5593,
+      "release_sha256": "5dd3d81a1c7531e8078218ff545f411f6c9ebc6de09845d036dbf9d5116472ca",
+      "release_bytes": 5447
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/s_so_many_baneling/script.py",
+      "path": "micro/smac_hard/env/scripts/s_so_many_baneling/script.py",
+      "source_sha256": "5952e1f5a6f56b31cfbe6ca0ebd87a30b0bf1bcda1b177c1bbbef13b99cce44b",
+      "bytes": 8424,
+      "release_sha256": "da8ad1fd1c425f3926827fc104d9b9d3ebfefa00e63c4eeddd2c786ca861fa42",
+      "release_bytes": 8049
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/utils/actions_api.py",
+      "path": "micro/smac_hard/env/scripts/utils/actions_api.py",
+      "source_sha256": "c8ef25feae5bac618abda62fb09ae51b10c699c96bc03584cbd3295bd7851709",
+      "bytes": 4296,
+      "release_sha256": "5e6b75a8d9c6c988074471e6b8b183c59e2d799ab20923125402e22e723922a9",
+      "release_bytes": 4137
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/utils/distance_api.py",
+      "path": "micro/smac_hard/env/scripts/utils/distance_api.py",
+      "source_sha256": "aaac06be12f374844ff927f56308897cd436f501a24f641e0a487b73f3d8259e",
+      "bytes": 1416,
+      "release_sha256": "af1b7be393242d0b98ca043a7dd37dd878755f0cbb9d5ab4e11cb8b96e10996d",
+      "release_bytes": 1359
+    },
+    {
+      "source": "smac-hard/smac_hard/env/scripts/utils/units_api.py",
+      "path": "micro/smac_hard/env/scripts/utils/units_api.py",
+      "source_sha256": "1c41fe356f242a0cc21c08771548d484649a879a471c6c883d49ffe363672c23",
+      "bytes": 4152,
+      "release_sha256": "10815ef97adcfd1ac1f6061b4375a35e78c1170a2798f880e7773bddd21621d3",
+      "release_bytes": 3996
+    },
+    {
+      "source": "smac-hard/smac_hard/env/starcraft2/available_action_ability.py",
+      "path": "micro/smac_hard/env/starcraft2/available_action_ability.py",
+      "source_sha256": "b98cc6fd4bf55e6a8ec03027eca7c1085c428232dec0ea9ff349f396bb6739dd",
+      "bytes": 2542,
+      "release_sha256": "f72dc6c7e1e44a89a6c461fd2c4cb50a467c69e556a0f3553e52e71c8c91e347",
+      "release_bytes": 2472
+    },
+    {
+      "source": "smac-hard/smac_hard/env/starcraft2/portspicker.py",
+      "path": "micro/smac_hard/env/starcraft2/portspicker.py",
+      "source_sha256": "862783237d5c4af4161e0b5b0566c88c47ad28defb0749f317704ec2111bd76a",
+      "bytes": 2660,
+      "release_sha256": "57ac34d39f1ddb20f0dfccc343dc9c6dc3896f60ac8213ad258d861423b8a35f",
+      "release_bytes": 2586
+    },
+    {
+      "source": "smac-hard/smac_hard/env/starcraft2/render.py",
+      "path": "micro/smac_hard/env/starcraft2/render.py",
+      "source_sha256": "fddc20606ceb23c1ef90be698ebd5a654c8b9bd673a0edc4de66634b49f257c2",
+      "bytes": 11725,
+      "release_sha256": "e28804a8578a49886b67f1afb79ca0d4f48d599a3747cd5bef87406314549215",
+      "release_bytes": 11378
+    },
+    {
+      "source": "smac-hard/smac_hard/env/starcraft2/run_parallel.py",
+      "path": "micro/smac_hard/env/starcraft2/run_parallel.py",
+      "source_sha256": "d292189d2b57eb34ae63ad16cc929c3e59e5cc19d52dfafa16f7077ab650cb53",
+      "bytes": 3230,
+      "release_sha256": "8a6f589bdb82b83fb795a4f75fcc6763b2be241434172be79f2f90cfe50658b8",
+      "release_bytes": 3144
+    },
+    {
+      "source": "smac-hard/smac_hard/env/starcraft2/starcraft2.py",
+      "path": "micro/smac_hard/env/starcraft2/starcraft2.py",
+      "source_sha256": "bc2ac49bc5b6f18aa09e96e62478b5bd120cd52c7598b54a600a55ebbcd34ecd",
+      "bytes": 68433,
+      "release_sha256": "def72bbd350c00d67692a4734b6987d8d02d607df561a2c42ac8d02f77a76cff",
+      "release_bytes": 66502
+    },
+    {
+      "source": "smac-hard/smac_hard/env/starcraft2/__init__.py",
+      "path": "micro/smac_hard/env/starcraft2/__init__.py",
+      "source_sha256": "50d954716cd99e9c8c6cb19c82a7b25b8883aa98142591f9bee1c030c0cbea61",
+      "bytes": 181,
+      "release_sha256": "0cbb728f9c1e20f653dfa2115be1316cff113468d2ce6f8b2e1fa34a3dfb99c8",
+      "release_bytes": 173
+    },
+    {
+      "source": "smac-hard/smac_hard/env/starcraft2/maps/smac_maps.py",
+      "path": "micro/smac_hard/env/starcraft2/maps/smac_maps.py",
+      "source_sha256": "487405fcc56daf03c4849c6f8d7c2b09e36b6da905ca3041fc8490e960860dae",
+      "bytes": 7913,
+      "release_sha256": "43905ff7decde095927736a1094e2a43576e1e61c32577f3627ca0b62e69efa0",
+      "release_bytes": 7572
+    },
+    {
+      "source": "smac-hard/smac_hard/env/starcraft2/maps/__init__.py",
+      "path": "micro/smac_hard/env/starcraft2/maps/__init__.py",
+      "source_sha256": "8592b7ad08006fdeaf7740d011340b291f8f78fc34520b91ed499d5e60223ab1",
+      "bytes": 275,
+      "release_sha256": "a55db93e97823493106127961e3da294e55f880b34d08a1780e380195db9ae3f",
+      "release_bytes": 265
+    },
+    {
+      "source": "smac-hard/tests/test_jev_micro.py",
+      "path": "micro/tests/test_jev_micro.py",
+      "source_sha256": "32f2dbe60748d4f6df4ec9241b438e16aead8dca602698bcb732563dffe14b40",
+      "bytes": 13929,
+      "release_sha256": "32f2dbe60748d4f6df4ec9241b438e16aead8dca602698bcb732563dffe14b40",
+      "release_bytes": 13929
+    },
+    {
+      "source": "smac-hard/tests/test_jev_p0.py",
+      "path": "micro/tests/test_jev_p0.py",
+      "source_sha256": "71f65752638cab0733eca47a946be32e12a4b400378ed5073539dd0dfc2d7bd4",
+      "bytes": 14133,
+      "release_sha256": "71f65752638cab0733eca47a946be32e12a4b400378ed5073539dd0dfc2d7bd4",
+      "release_bytes": 14133
+    },
+    {
+      "source": "smac-hard/tests/test_jev_planner.py",
+      "path": "micro/tests/test_jev_planner.py",
+      "source_sha256": "572aec09e7e94d8d15926b247923a918681f9a9233accba80e07a451172a2c48",
+      "bytes": 6553,
+      "release_sha256": "572aec09e7e94d8d15926b247923a918681f9a9233accba80e07a451172a2c48",
+      "release_bytes": 6553
+    },
+    {
+      "source": "smac-hard/tests/test_jev_realtime.py",
+      "path": "micro/tests/test_jev_realtime.py",
+      "source_sha256": "bc8c88e6f1d1acce41854e528248c5af041f04eb47934ec5d98c307dc30ce120",
+      "bytes": 3329,
+      "release_sha256": "bc8c88e6f1d1acce41854e528248c5af041f04eb47934ec5d98c307dc30ce120",
+      "release_bytes": 3329
+    },
+    {
+      "source": "smac-hard/pysc2/__init__.py",
+      "path": "micro/pysc2/__init__.py",
+      "source_sha256": "2d609f01f5e1b34e054baaa1a3d5d421e804be4ac1ff7d22c82b062ad2ef9bbd",
+      "bytes": 1002,
+      "release_sha256": "159d3ecbece0d51d845293ebd325d7094b348b83f936d318e435c7acc925ee9e",
+      "release_bytes": 978
+    },
+    {
+      "source": "smac-hard/pysc2/env/available_actions_printer.py",
+      "path": "micro/pysc2/env/available_actions_printer.py",
+      "source_sha256": "059a5611940f32af8717557b6198fa4d9d5c0a245c8fc41757de8f6c8255964d",
+      "bytes": 1382,
+      "release_sha256": "760a81ba59b08910fe1cb126c54092b24e25f10932aa397976bc153ba8f620c2",
+      "release_bytes": 1345
+    },
+    {
+      "source": "smac-hard/pysc2/env/base_env_wrapper.py",
+      "path": "micro/pysc2/env/base_env_wrapper.py",
+      "source_sha256": "46fd9a774f44fc0a20ca84ed7668e24582a029cb0f2974a059a39dc3307137e2",
+      "bytes": 1512,
+      "release_sha256": "6256a4c5f0dca19dce6cbf24953b8431305fb2fd6700699d686a712f0ab92c20",
+      "release_bytes": 1467
+    },
+    {
+      "source": "smac-hard/pysc2/env/enums.py",
+      "path": "micro/pysc2/env/enums.py",
+      "source_sha256": "3506b334917324c4356c6db62ee2201d65378b33a5c1d44dd79f94d75c529ef3",
+      "bytes": 1501,
+      "release_sha256": "984f31f16e7249c75c3d320db8d05ed2b4e0699fe7006066ec3edfb07066ec3e",
+      "release_bytes": 1451
+    },
+    {
+      "source": "smac-hard/pysc2/env/environment.py",
+      "path": "micro/pysc2/env/environment.py",
+      "source_sha256": "9ca16ba040ab6e021df3241d21044635f9244196d843604fcdee3bdd3f6c7755",
+      "bytes": 4858,
+      "release_sha256": "6cd6c8d5de1c769d0c808fe1bf84e7724325d80dfc6665d5e1dd3979eb6471b8",
+      "release_bytes": 4703
+    },
+    {
+      "source": "smac-hard/pysc2/env/host_remote_agent.py",
+      "path": "micro/pysc2/env/host_remote_agent.py",
+      "source_sha256": "7575558d2029645fa95bf830530dded8f6d7a1ff72f24a172efa998b37b40622",
+      "bytes": 8103,
+      "release_sha256": "c4c0dcc42a372ae1af22b725ba693c82dd80ae930db8faa3c441486e3073db01",
+      "release_bytes": 7848
+    },
+    {
+      "source": "smac-hard/pysc2/env/lan_sc2_env.py",
+      "path": "micro/pysc2/env/lan_sc2_env.py",
+      "source_sha256": "2e2bb5694e48813e3b2159e2e7d50cbe05d83b3494f63968db2fc1a81de9cece",
+      "bytes": 12837,
+      "release_sha256": "6b324f6d8f6569fcfc6164e828ae073480fa3331a2202079fd75bd82f2349bc5",
+      "release_bytes": 12474
+    },
+    {
+      "source": "smac-hard/pysc2/env/remote_sc2_env.py",
+      "path": "micro/pysc2/env/remote_sc2_env.py",
+      "source_sha256": "af9b7a8900f466b14d842d04d3fc9d8d7ae7e394d591700a299e26184c1f7616",
+      "bytes": 8506,
+      "release_sha256": "676e2a206c3ba78a1432951ccc9c0b4220142657a5bf5c9d3e4027924040feb7",
+      "release_bytes": 8292
+    },
+    {
+      "source": "smac-hard/pysc2/env/run_loop.py",
+      "path": "micro/pysc2/env/run_loop.py",
+      "source_sha256": "37d99e9ed192221846fac39eb6342390ad5c0d0a92a619da2f9cf57db4843749",
+      "bytes": 1783,
+      "release_sha256": "ef33376fc629636ce1116d1edbe4439f0fd552c2fbcad32368d0bdd3bbc907c4",
+      "release_bytes": 1733
+    },
+    {
+      "source": "smac-hard/pysc2/env/sc2_env.py",
+      "path": "micro/pysc2/env/sc2_env.py",
+      "source_sha256": "5f3b4f1228580109e3931554589087a290871d264643b1721f56cfe02c2dcc85",
+      "bytes": 32797,
+      "release_sha256": "721da0d3bdad11cd1c48d99c40eb08cc859307504135f512193789589ab61773",
+      "release_bytes": 31972
+    },
+    {
+      "source": "smac-hard/pysc2/env/__init__.py",
+      "path": "micro/pysc2/env/__init__.py",
+      "source_sha256": "24a2449107a7b71706522a6fa2469b7d48feced77c41f70cfcc2fc03e66dafca",
+      "bytes": 610,
+      "release_sha256": "4ca61a86c76869fcf6356a0576ecaa3e2fdc32945e12159362c662239bfd726a",
+      "release_bytes": 597
+    },
+    {
+      "source": "smac-hard/pysc2/lib/actions.py",
+      "path": "micro/pysc2/lib/actions.py",
+      "source_sha256": "7144ffd9142378629f02fd0dc5ddbec76cb0f66b5701b0ec6371359cd97678ef",
+      "bytes": 115452,
+      "release_sha256": "c6ea590816349b18b2946d8d11068a8780a3c32946daba456617d37b27aebe62",
+      "release_bytes": 113588
+    },
+    {
+      "source": "smac-hard/pysc2/lib/buffs.py",
+      "path": "micro/pysc2/lib/buffs.py",
+      "source_sha256": "338cbe564898a0c6185a148f8e41f1188a8416ab43290673d4fb0bd11fa83881",
+      "bytes": 2072,
+      "release_sha256": "84e55bd01f94a045618cf4b88cb34831206a075ddbbf8a2237595893df550f29",
+      "release_bytes": 2004
+    },
+    {
+      "source": "smac-hard/pysc2/lib/colors.py",
+      "path": "micro/pysc2/lib/colors.py",
+      "source_sha256": "5def70bdeb2fa8e920b2c7da113766f03d688d1d4487cf1022c5d508a8d5045f",
+      "bytes": 14862,
+      "release_sha256": "a685308867fdc4b952ebd5b48f0e14e97719a79d59d4e585325a286e262f197d",
+      "release_bytes": 14258
+    },
+    {
+      "source": "smac-hard/pysc2/lib/features.py",
+      "path": "micro/pysc2/lib/features.py",
+      "source_sha256": "c08404c0cc98450152529a3c31dbfb8b38e3eca31850ad61590265325e2f92f8",
+      "bytes": 71132,
+      "release_sha256": "b6d57403265c8a96725251ff83fd47262c6bfa7fbe8663013dad39e13676753a",
+      "release_bytes": 69238
+    },
+    {
+      "source": "smac-hard/pysc2/lib/gfile.py",
+      "path": "micro/pysc2/lib/gfile.py",
+      "source_sha256": "081f5525d08bc99679142cb22691befb18cc0238be1b1bec3742b9b9f2f412ce",
+      "bytes": 968,
+      "release_sha256": "2a790f3e881f70dca00c2bdb2c1367a5e09c3680a62aa98b3b00f33a72434050",
+      "release_bytes": 941
+    },
+    {
+      "source": "smac-hard/pysc2/lib/image_differencer.py",
+      "path": "micro/pysc2/lib/image_differencer.py",
+      "source_sha256": "3219b2809ad884dc97e540344bc30a0e67a6172704cd4c2d9d3fa6dce3dc71cc",
+      "bytes": 1402,
+      "release_sha256": "b1bc3c6bc471db3b5017ca31826ae75a527f4ac483ba6f230c1288864d1723b8",
+      "release_bytes": 1367
+    },
+    {
+      "source": "smac-hard/pysc2/lib/memoize.py",
+      "path": "micro/pysc2/lib/memoize.py",
+      "source_sha256": "74ab84651109c4dd3233d3ea7d05fea30574df733ea77f3de7c0709dca1026e4",
+      "bytes": 1018,
+      "release_sha256": "58a9404cfd152113ae0d38cef754ebc43575a29b9119dcc2e0199e6d6d04f12a",
+      "release_bytes": 985
+    },
+    {
+      "source": "smac-hard/pysc2/lib/metrics.py",
+      "path": "micro/pysc2/lib/metrics.py",
+      "source_sha256": "622b22625d5c1262931410e2155aedc56a280c724fb8a348e378aefefabbee53",
+      "bytes": 1555,
+      "release_sha256": "c16a621d78f65155c00a6f49c8387cd5ab90f4d08afe8b4780805d19a132b1a9",
+      "release_bytes": 1503
+    },
+    {
+      "source": "smac-hard/pysc2/lib/named_array.py",
+      "path": "micro/pysc2/lib/named_array.py",
+      "source_sha256": "2f351660e0ce2fb40a6b349140b15496fd420251dbcde0ac9cfc6d0acd599156",
+      "bytes": 11039,
+      "release_sha256": "4972dcd0933fbe7c125c2723aee09ebf95dcfb590266222a76a2208a7892a048",
+      "release_bytes": 10767
+    },
+    {
+      "source": "smac-hard/pysc2/lib/np_util.py",
+      "path": "micro/pysc2/lib/np_util.py",
+      "source_sha256": "688cef31088c3a7df88add44a50e6c0523fcf7c03c10163d0c681ac438b32aac",
+      "bytes": 1268,
+      "release_sha256": "8a390596c8f85b2dd2f977b8399e2f96f28e27e0d6bfba1d48d725665a0a8d6e",
+      "release_bytes": 1235
+    },
+    {
+      "source": "smac-hard/pysc2/lib/point.py",
+      "path": "micro/pysc2/lib/point.py",
+      "source_sha256": "7fe6599442d151d506f1d96c1ce4ee9028f4865249faafcdffa8b340b17e189c",
+      "bytes": 8372,
+      "release_sha256": "51c0a72ee891b38893ce6e81f0bacf1f64b6dabb177585bc8b09ebf2732c194a",
+      "release_bytes": 8090
+    },
+    {
+      "source": "smac-hard/pysc2/lib/point_flag.py",
+      "path": "micro/pysc2/lib/point_flag.py",
+      "source_sha256": "d4d0b902877d5df68a6b2e5f3cb877f86d11cba8110969542ee28136a6f457fb",
+      "bytes": 2103,
+      "release_sha256": "f6d1f90aa42bae8f0e4195a53a02f5490ef35d33880b99167fefdd4dacf7b72f",
+      "release_bytes": 2039
+    },
+    {
+      "source": "smac-hard/pysc2/lib/portspicker.py",
+      "path": "micro/pysc2/lib/portspicker.py",
+      "source_sha256": "862783237d5c4af4161e0b5b0566c88c47ad28defb0749f317704ec2111bd76a",
+      "bytes": 2660,
+      "release_sha256": "57ac34d39f1ddb20f0dfccc343dc9c6dc3896f60ac8213ad258d861423b8a35f",
+      "release_bytes": 2586
+    },
+    {
+      "source": "smac-hard/pysc2/lib/protocol.py",
+      "path": "micro/pysc2/lib/protocol.py",
+      "source_sha256": "83229f123f2efd0bd28cca633ba483ea63710aa313d432af88551261236718a4",
+      "bytes": 6786,
+      "release_sha256": "2ccb302c6cfed3727491acb4cb7c7b4c13a28974935dec45f1b2f32ea2fac2aa",
+      "release_bytes": 6593
+    },
+    {
+      "source": "smac-hard/pysc2/lib/proto_diff.py",
+      "path": "micro/pysc2/lib/proto_diff.py",
+      "source_sha256": "929adb3e9153b1f3a6968d1f423aef54c817007045f4a1f09bdb01d991cb6b22",
+      "bytes": 6864,
+      "release_sha256": "30fe66bc25e354b69b6a1410fa7b2e8ecf6ede183125a7f1a04cf66e19ff8159",
+      "release_bytes": 6631
+    },
+    {
+      "source": "smac-hard/pysc2/lib/remote_controller.py",
+      "path": "micro/pysc2/lib/remote_controller.py",
+      "source_sha256": "939476535795fe642a995d952cf4eacd6e853fb8dfa372aa35b7ba60613fdc8d",
+      "bytes": 14571,
+      "release_sha256": "ccd3897831cfb258548b17a14a58cbd512e4cc91900953b6226f42c5c0b2360c",
+      "release_bytes": 14178
+    },
+    {
+      "source": "smac-hard/pysc2/lib/renderer_ascii.py",
+      "path": "micro/pysc2/lib/renderer_ascii.py",
+      "source_sha256": "c6990f5608e38a28f063b4546cc0f6531276c80d538ee0c32f1b7de4993048f1",
+      "bytes": 3631,
+      "release_sha256": "847fa083d40b02063f46ca930ed9b83ff19bfeccb074302c24ff83d21b4356df",
+      "release_bytes": 3509
+    },
+    {
+      "source": "smac-hard/pysc2/lib/renderer_human.py",
+      "path": "micro/pysc2/lib/renderer_human.py",
+      "source_sha256": "4930cd2746889065cc0304c81d99f2421e85337227566afe5a1ea4cfd61d4a1c",
+      "bytes": 74841,
+      "release_sha256": "8126d8941b9907813a7c5ca5bb2e64b0a46b4d40b19fff4b303fd7d175622ceb",
+      "release_bytes": 73033
+    },
+    {
+      "source": "smac-hard/pysc2/lib/replay.py",
+      "path": "micro/pysc2/lib/replay.py",
+      "source_sha256": "28e311b0649ca99ed7dd088f10f956dea6b047a8644bb060041f7fe2bd6001c8",
+      "bytes": 1267,
+      "release_sha256": "368f1863b31a4c4f7e99fad6a00d386013e2ecc3146efdc5488a4ce08abd4c22",
+      "release_bytes": 1233
+    },
+    {
+      "source": "smac-hard/pysc2/lib/resources.py",
+      "path": "micro/pysc2/lib/resources.py",
+      "source_sha256": "3492dfa7040ac696d939432fd29651117c67bffec086ec737a8212746891daab",
+      "bytes": 745,
+      "release_sha256": "07b222c10668034a29cd6ea70705fad0b8e100d0098e209d4d9f082ff102b62d",
+      "release_bytes": 727
+    },
+    {
+      "source": "smac-hard/pysc2/lib/run_parallel.py",
+      "path": "micro/pysc2/lib/run_parallel.py",
+      "source_sha256": "d292189d2b57eb34ae63ad16cc929c3e59e5cc19d52dfafa16f7077ab650cb53",
+      "bytes": 3230,
+      "release_sha256": "8a6f589bdb82b83fb795a4f75fcc6763b2be241434172be79f2f90cfe50658b8",
+      "release_bytes": 3144
+    },
+    {
+      "source": "smac-hard/pysc2/lib/sc_process.py",
+      "path": "micro/pysc2/lib/sc_process.py",
+      "source_sha256": "b2a1962759fdeffd058a69389c3210fcfae6280a0045e007a1af618b225b2655",
+      "bytes": 7725,
+      "release_sha256": "4029673914ac3fd7389a3366eb15a4faffb9b6bfcbd28fd9174a656e3544a774",
+      "release_bytes": 7493
+    },
+    {
+      "source": "smac-hard/pysc2/lib/static_data.py",
+      "path": "micro/pysc2/lib/static_data.py",
+      "source_sha256": "8f3ae9de1d2cbce4544a73b8eddece5a6cef6b6da0f6d89192825f2257da3fc6",
+      "bytes": 6701,
+      "release_sha256": "8c9d56dbb24b3a85eac35b7c36416d4b2cbf4dd0e92633ccd519f6074204507c",
+      "release_bytes": 6573
+    },
+    {
+      "source": "smac-hard/pysc2/lib/stopwatch.py",
+      "path": "micro/pysc2/lib/stopwatch.py",
+      "source_sha256": "0693b8d9ff04eeede293794a9175c55d2d0430660939a00cf693f76b2ac03b1e",
+      "bytes": 8022,
+      "release_sha256": "9b50dfe19872c6134f76c6b25c00ddbf632595b94d6adb22cf55e2b3848a7c28",
+      "release_bytes": 7728
+    },
+    {
+      "source": "smac-hard/pysc2/lib/transform.py",
+      "path": "micro/pysc2/lib/transform.py",
+      "source_sha256": "13c06d5808a98e778b69be7595ceaa1751d4a6323fea7803d37f4b3d11c35c75",
+      "bytes": 3377,
+      "release_sha256": "986b0d78a916d9bfe0f2633041ce36ad074dbfe006f1c1c67fec12c0032b7486",
+      "release_bytes": 3253
+    },
+    {
+      "source": "smac-hard/pysc2/lib/units.py",
+      "path": "micro/pysc2/lib/units.py",
+      "source_sha256": "5600470ee623c87a7ad7cf702eb0623a560283ca306fb56eaa6387967930afe9",
+      "bytes": 7478,
+      "release_sha256": "49aa76e91870bb5e07564868dc50e863c54b70cd510bcac290b5eb505d454792",
+      "release_bytes": 7178
+    },
+    {
+      "source": "smac-hard/pysc2/lib/upgrades.py",
+      "path": "micro/pysc2/lib/upgrades.py",
+      "source_sha256": "2870cdeb8c658e6b33f91fef1ccb90d82387da1f14b13fd9579e4a7445516dc2",
+      "bytes": 3336,
+      "release_sha256": "0fb97963bdba7e7072a5eee2e389fff952940fd5d977bc204d5431dd17bb2481",
+      "release_bytes": 3226
+    },
+    {
+      "source": "smac-hard/pysc2/lib/video_writer.py",
+      "path": "micro/pysc2/lib/video_writer.py",
+      "source_sha256": "b2e0db0d7bfa94464c871e2d27c111d332e2565289a1906e2387216b8791d3a7",
+      "bytes": 1160,
+      "release_sha256": "fc1118bbc0c6711331219cd63f7dde66dec94ab7ed86e2131c48d5be62ecc4f1",
+      "release_bytes": 1124
+    },
+    {
+      "source": "smac-hard/pysc2/lib/__init__.py",
+      "path": "micro/pysc2/lib/__init__.py",
+      "source_sha256": "24a2449107a7b71706522a6fa2469b7d48feced77c41f70cfcc2fc03e66dafca",
+      "bytes": 610,
+      "release_sha256": "4ca61a86c76869fcf6356a0576ecaa3e2fdc32945e12159362c662239bfd726a",
+      "release_bytes": 597
+    },
+    {
+      "source": "smac-hard/pysc2/maps/ladder.py",
+      "path": "micro/pysc2/maps/ladder.py",
+      "source_sha256": "a21fa13ed07e17ce544a5bd6481b7c2a48acb8c16256000f316db6af19078248",
+      "bytes": 4363,
+      "release_sha256": "574cd20b348e863d0a2b999a66c9033cc50f41ce07fe57f054710ba85f40d1f7",
+      "release_bytes": 4248
+    },
+    {
+      "source": "smac-hard/pysc2/maps/lib.py",
+      "path": "micro/pysc2/maps/lib.py",
+      "source_sha256": "42fb3b6a2e27f249aa2c7e88a1d9bb4127c9dd9ca26f478306315cdb48420c91",
+      "bytes": 4617,
+      "release_sha256": "72ec9f6191773e67f3dd9d5c927e824510384ead2a0b197850abe82d5b3f6b0a",
+      "release_bytes": 4478
+    },
+    {
+      "source": "smac-hard/pysc2/maps/melee.py",
+      "path": "micro/pysc2/maps/melee.py",
+      "source_sha256": "b49ba412ca08a72522b66a57085590623a1311ea294112a6ad8fcdeb6f00917b",
+      "bytes": 1185,
+      "release_sha256": "cad80cc1e100550bc0f9878fa5aaffa309e2da61696557fef9650956ab90f301",
+      "release_bytes": 1146
+    },
+    {
+      "source": "smac-hard/pysc2/maps/mini_games.py",
+      "path": "micro/pysc2/maps/mini_games.py",
+      "source_sha256": "22c8e03577eb23c96dbd1cc588a3cd567288a4ba690cdc3b8133498e1bafb11d",
+      "bytes": 1275,
+      "release_sha256": "37b358917159433e4db0638d6a88771f8a5f86ca1c6cb6a23c85a4d02ca21e3c",
+      "release_bytes": 1235
+    },
+    {
+      "source": "smac-hard/pysc2/maps/new_maps.py",
+      "path": "micro/pysc2/maps/new_maps.py",
+      "source_sha256": "1a6b3da57a7dfde0e322baf1735f4b86bbc5cef0bfa56a83cd793759b47eab6b",
+      "bytes": 1070,
+      "release_sha256": "b49c5c5ce40fd5188ed8cd32c0ed513b3a09a89a74e59bf36f7f6da981ad6693",
+      "release_bytes": 1038
+    },
+    {
+      "source": "smac-hard/pysc2/maps/__init__.py",
+      "path": "micro/pysc2/maps/__init__.py",
+      "source_sha256": "11023c9b776c50fabaf7a3de6d0b8c0e64ec7e94d11c297eec9a6cecc313848d",
+      "bytes": 1209,
+      "release_sha256": "8a31c64d7de61037cf3bd37356bf5992862da2ddaf887471c39ba74e0556fa36",
+      "release_bytes": 1174
+    },
+    {
+      "source": "smac-hard/pysc2/run_configs/lib.py",
+      "path": "micro/pysc2/run_configs/lib.py",
+      "source_sha256": "c6ec5f2416d318bbf6ca90c35ec47c6530511e38f1587bb43b352f3442eebbf9",
+      "bytes": 11092,
+      "release_sha256": "c3d76ae9e43a866e68cccf7f8f2a3898f1b757855d7d244ece28ea87575b1b40",
+      "release_bytes": 10855
+    },
+    {
+      "source": "smac-hard/pysc2/run_configs/platforms.py",
+      "path": "micro/pysc2/run_configs/platforms.py",
+      "source_sha256": "1d97905a4d1792ef8b10db3aa9501189ba8e35584399022f3d93f177978949e1",
+      "bytes": 7732,
+      "release_sha256": "9649522e3588c3ebb05ec01673e63fab39187195b8592acb858875f3d05cf1b7",
+      "release_bytes": 7531
+    },
+    {
+      "source": "smac-hard/pysc2/run_configs/__init__.py",
+      "path": "micro/pysc2/run_configs/__init__.py",
+      "source_sha256": "ef60d37b2b1b875730ccc37d4a3871deda6313c51f3eacc576a3501f7e4aa628",
+      "bytes": 1549,
+      "release_sha256": "46fe55a853b608d941cf870a93887832ba5697f085524d8299f2637f9c01ca80",
+      "release_bytes": 1506
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/3m.SC2Map",
+      "path": "micro/SMAC_HARD_maps/3m.SC2Map",
+      "source_sha256": "bc52ecddb347746dbf0236f02835d1a44415f2e04917d9cff9fd01c46cc4d767",
+      "bytes": 16057,
+      "release_sha256": "bc52ecddb347746dbf0236f02835d1a44415f2e04917d9cff9fd01c46cc4d767",
+      "release_bytes": 16057
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/8m.SC2Map",
+      "path": "micro/SMAC_HARD_maps/8m.SC2Map",
+      "source_sha256": "a7e79282ba7d75bd4c1a39b34f73c5483c5e2e9071e53f05e752b1c52f1b8b27",
+      "bytes": 16054,
+      "release_sha256": "a7e79282ba7d75bd4c1a39b34f73c5483c5e2e9071e53f05e752b1c52f1b8b27",
+      "release_bytes": 16054
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/25m.SC2Map",
+      "path": "micro/SMAC_HARD_maps/25m.SC2Map",
+      "source_sha256": "a63c89256a22f1fcc606b4c6430295e35e50115b354efaa83b0e4b5e98808ef6",
+      "bytes": 16056,
+      "release_sha256": "a63c89256a22f1fcc606b4c6430295e35e50115b354efaa83b0e4b5e98808ef6",
+      "release_bytes": 16056
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/5m_vs_6m.SC2Map",
+      "path": "micro/SMAC_HARD_maps/5m_vs_6m.SC2Map",
+      "source_sha256": "856ae6c26746b856a71e1dc422eaf08dab803f2bc4e2fefb37f2e6c5ed30d137",
+      "bytes": 16057,
+      "release_sha256": "856ae6c26746b856a71e1dc422eaf08dab803f2bc4e2fefb37f2e6c5ed30d137",
+      "release_bytes": 16057
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/8m_vs_9m.SC2Map",
+      "path": "micro/SMAC_HARD_maps/8m_vs_9m.SC2Map",
+      "source_sha256": "1e3d942859f446e44b15cca3bf28c83d2d48feae43b2477b10220f26817d2b3b",
+      "bytes": 16055,
+      "release_sha256": "1e3d942859f446e44b15cca3bf28c83d2d48feae43b2477b10220f26817d2b3b",
+      "release_bytes": 16055
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/10m_vs_11m.SC2Map",
+      "path": "micro/SMAC_HARD_maps/10m_vs_11m.SC2Map",
+      "source_sha256": "426a2457f81d7c76ec0cba5eac1ed79b255e57341e71db6065b852104d3c04eb",
+      "bytes": 16059,
+      "release_sha256": "426a2457f81d7c76ec0cba5eac1ed79b255e57341e71db6065b852104d3c04eb",
+      "release_bytes": 16059
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/27m_vs_30m.SC2Map",
+      "path": "micro/SMAC_HARD_maps/27m_vs_30m.SC2Map",
+      "source_sha256": "15e5a594bfffd75954ec16cf24dffe78bb7389c7e5fab4556c670af996a25d75",
+      "bytes": 16061,
+      "release_sha256": "15e5a594bfffd75954ec16cf24dffe78bb7389c7e5fab4556c670af996a25d75",
+      "release_bytes": 16061
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/MMM.SC2Map",
+      "path": "micro/SMAC_HARD_maps/MMM.SC2Map",
+      "source_sha256": "d446d1b24269d3d50414ca35693d198296b1621a3f310c989b7cab3f11d01f48",
+      "bytes": 16462,
+      "release_sha256": "d446d1b24269d3d50414ca35693d198296b1621a3f310c989b7cab3f11d01f48",
+      "release_bytes": 16462
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/MMM2.SC2Map",
+      "path": "micro/SMAC_HARD_maps/MMM2.SC2Map",
+      "source_sha256": "af5c05816249775b8bd3bff3d537cd4a743879898e8041d460d8d78d8596ba20",
+      "bytes": 16466,
+      "release_sha256": "af5c05816249775b8bd3bff3d537cd4a743879898e8041d460d8d78d8596ba20",
+      "release_bytes": 16466
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/2s3z.SC2Map",
+      "path": "micro/SMAC_HARD_maps/2s3z.SC2Map",
+      "source_sha256": "ae8be29fb2837e3c6eb66c21bb6e7f829d83f24ac7dc8d5dd0a31c4360985d32",
+      "bytes": 16267,
+      "release_sha256": "ae8be29fb2837e3c6eb66c21bb6e7f829d83f24ac7dc8d5dd0a31c4360985d32",
+      "release_bytes": 16267
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/3s5z.SC2Map",
+      "path": "micro/SMAC_HARD_maps/3s5z.SC2Map",
+      "source_sha256": "e404c9be2b78be8b21f5445cb0ab44533a958bc4cfb6619ac182f6ec81915c33",
+      "bytes": 16267,
+      "release_sha256": "e404c9be2b78be8b21f5445cb0ab44533a958bc4cfb6619ac182f6ec81915c33",
+      "release_bytes": 16267
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/3s5z_vs_3s6z.SC2Map",
+      "path": "micro/SMAC_HARD_maps/3s5z_vs_3s6z.SC2Map",
+      "source_sha256": "51306555cf6fcdd105165121183b988c0769bdd7614e478111b5b7c3eb2209e3",
+      "bytes": 16271,
+      "release_sha256": "51306555cf6fcdd105165121183b988c0769bdd7614e478111b5b7c3eb2209e3",
+      "release_bytes": 16271
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/3s_vs_3z.SC2Map",
+      "path": "micro/SMAC_HARD_maps/3s_vs_3z.SC2Map",
+      "source_sha256": "49d28383ad5ba4e45a0c23854dd1d64a525f0a454dd63669b8dd751eadd18859",
+      "bytes": 15172,
+      "release_sha256": "49d28383ad5ba4e45a0c23854dd1d64a525f0a454dd63669b8dd751eadd18859",
+      "release_bytes": 15172
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/3s_vs_4z.SC2Map",
+      "path": "micro/SMAC_HARD_maps/3s_vs_4z.SC2Map",
+      "source_sha256": "2e10e6b3c053e4bdc0700e5277c1a44d86a2ace6dfe59641f25ba3ebd64b3c0b",
+      "bytes": 15172,
+      "release_sha256": "2e10e6b3c053e4bdc0700e5277c1a44d86a2ace6dfe59641f25ba3ebd64b3c0b",
+      "release_bytes": 15172
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/3s_vs_5z.SC2Map",
+      "path": "micro/SMAC_HARD_maps/3s_vs_5z.SC2Map",
+      "source_sha256": "33d1f1ecc540948c059b232a8f7e815f359efd8a8621cef4090f4bd5801d3cbd",
+      "bytes": 15172,
+      "release_sha256": "33d1f1ecc540948c059b232a8f7e815f359efd8a8621cef4090f4bd5801d3cbd",
+      "release_bytes": 15172
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/1c3s5z.SC2Map",
+      "path": "micro/SMAC_HARD_maps/1c3s5z.SC2Map",
+      "source_sha256": "02e6e494ecb49657bd4ab54aa95b4d3e467d8c42390c4685ddacd0553f8def14",
+      "bytes": 16460,
+      "release_sha256": "02e6e494ecb49657bd4ab54aa95b4d3e467d8c42390c4685ddacd0553f8def14",
+      "release_bytes": 16460
+    },
+    {
+      "source": "smac-hard/previous-versions/v1/SMAC_HARD_maps/2m_vs_1z.SC2Map",
+      "path": "micro/SMAC_HARD_maps/2m_vs_1z.SC2Map",
+      "source_sha256": "aced68f74d09ddfd41c4f5d565e4d3809d5a4e243f9b44f7131f3431778f2d02",
+      "bytes": 15075,
+      "release_sha256": "aced68f74d09ddfd41c4f5d565e4d3809d5a4e243f9b44f7131f3431778f2d02",
+      "release_bytes": 15075
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/corridor.SC2Map",
+      "path": "micro/SMAC_HARD_maps/corridor.SC2Map",
+      "source_sha256": "b768406ed480281db96ae52df94f92a7768cd58ff46cb9a9735b94d139299c68",
+      "bytes": 18704,
+      "release_sha256": "b768406ed480281db96ae52df94f92a7768cd58ff46cb9a9735b94d139299c68",
+      "release_bytes": 18704
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/6h_vs_8z.SC2Map",
+      "path": "micro/SMAC_HARD_maps/6h_vs_8z.SC2Map",
+      "source_sha256": "7f0c708b1bc5e405600873d25f0ee7829e795e21f237d07d3b8d0e879437ddb2",
+      "bytes": 15487,
+      "release_sha256": "7f0c708b1bc5e405600873d25f0ee7829e795e21f237d07d3b8d0e879437ddb2",
+      "release_bytes": 15487
+    },
+    {
+      "source": "smac-hard/previous-versions/v1/SMAC_HARD_maps/2s_vs_1sc.SC2Map",
+      "path": "micro/SMAC_HARD_maps/2s_vs_1sc.SC2Map",
+      "source_sha256": "9379d0ce62a7b75ac6054f3492f3519e5da2ea4310b31d9d817baeaab08a3083",
+      "bytes": 14388,
+      "release_sha256": "9379d0ce62a7b75ac6054f3492f3519e5da2ea4310b31d9d817baeaab08a3083",
+      "release_bytes": 14388
+    },
+    {
+      "source": "smac-hard/previous-versions/v1/SMAC_HARD_maps/so_many_baneling.SC2Map",
+      "path": "micro/SMAC_HARD_maps/so_many_baneling.SC2Map",
+      "source_sha256": "6cf35a97130ce8079f1621b110abbb14e2dadf4f5d13f1cd4f70a8fd2ca47058",
+      "bytes": 17955,
+      "release_sha256": "6cf35a97130ce8079f1621b110abbb14e2dadf4f5d13f1cd4f70a8fd2ca47058",
+      "release_bytes": 17955
+    },
+    {
+      "source": "smac-hard/previous-versions/v1/SMAC_HARD_maps/bane_vs_bane.SC2Map",
+      "path": "micro/SMAC_HARD_maps/bane_vs_bane.SC2Map",
+      "source_sha256": "b0ddcdb49281bf0387c87c5d632d48b62f9964ff4e69b57c625f12ae278fb525",
+      "bytes": 16356,
+      "release_sha256": "b0ddcdb49281bf0387c87c5d632d48b62f9964ff4e69b57c625f12ae278fb525",
+      "release_bytes": 16356
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/2c_vs_64zg.SC2Map",
+      "path": "micro/SMAC_HARD_maps/2c_vs_64zg.SC2Map",
+      "source_sha256": "0bf08df1ff70204f384cec45161a5d3fd9a8ca1945a46f06dd89fef4a60a9cfd",
+      "bytes": 17452,
+      "release_sha256": "0bf08df1ff70204f384cec45161a5d3fd9a8ca1945a46f06dd89fef4a60a9cfd",
+      "release_bytes": 17452
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/2vr_vs_3sc.SC2Map",
+      "path": "micro/SMAC_HARD_maps/2vr_vs_3sc.SC2Map",
+      "source_sha256": "62c8802cd01d2c9dc5b8f0a9f6b02991e5b0a54d2ded7b88dbafc0f1e8fbf182",
+      "bytes": 19924,
+      "release_sha256": "62c8802cd01d2c9dc5b8f0a9f6b02991e5b0a54d2ded7b88dbafc0f1e8fbf182",
+      "release_bytes": 19924
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/3hl_vs_24zl.SC2Map",
+      "path": "micro/SMAC_HARD_maps/3hl_vs_24zl.SC2Map",
+      "source_sha256": "80792f3ab9a0705f04fa791212dbdcf01f34796fef9be8254328252d82bbcb32",
+      "bytes": 16875,
+      "release_sha256": "80792f3ab9a0705f04fa791212dbdcf01f34796fef9be8254328252d82bbcb32",
+      "release_bytes": 16875
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/3rp_vs_5zl.SC2Map",
+      "path": "micro/SMAC_HARD_maps/3rp_vs_5zl.SC2Map",
+      "source_sha256": "8a1a159796066cfb62f994c3ac21af5a18f6f7a029634aa605190557871a54f9",
+      "bytes": 19566,
+      "release_sha256": "8a1a159796066cfb62f994c3ac21af5a18f6f7a029634aa605190557871a54f9",
+      "release_bytes": 19566
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/3rp_vs_24zl.SC2Map",
+      "path": "micro/SMAC_HARD_maps/3rp_vs_24zl.SC2Map",
+      "source_sha256": "6f097012659db064d54c1ca815c520b516f3b3d98a3203b611cd6afa53cdddd7",
+      "bytes": 16913,
+      "release_sha256": "6f097012659db064d54c1ca815c520b516f3b3d98a3203b611cd6afa53cdddd7",
+      "release_bytes": 16913
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/7q_vs_2bc.SC2Map",
+      "path": "micro/SMAC_HARD_maps/7q_vs_2bc.SC2Map",
+      "source_sha256": "32fcf0de937adf62edd9d0f6d5295455f40792925f6b924a4d709332a76fabd7",
+      "bytes": 15341,
+      "release_sha256": "32fcf0de937adf62edd9d0f6d5295455f40792925f6b924a4d709332a76fabd7",
+      "release_bytes": 15341
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/3st_vs_5zl.SC2Map",
+      "path": "micro/SMAC_HARD_maps/3st_vs_5zl.SC2Map",
+      "source_sha256": "2a904814e73bebd9886ca6bd63894137a8559b4a6332143ede8936b1d5c76028",
+      "bytes": 19341,
+      "release_sha256": "2a904814e73bebd9886ca6bd63894137a8559b4a6332143ede8936b1d5c76028",
+      "release_bytes": 19341
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/6m_vs_10m.SC2Map",
+      "path": "micro/SMAC_HARD_maps/6m_vs_10m.SC2Map",
+      "source_sha256": "885a344bd6a1dae27b1366f5d95ba9eda73cff438938598a609d8a4f0bbc3a90",
+      "bytes": 17059,
+      "release_sha256": "885a344bd6a1dae27b1366f5d95ba9eda73cff438938598a609d8a4f0bbc3a90",
+      "release_bytes": 17059
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/mmmt_vs_zspi.SC2Map",
+      "path": "micro/SMAC_HARD_maps/mmmt_vs_zspi.SC2Map",
+      "source_sha256": "91181df7704ae5ee730a11df0580a946c8a30346ecd2f4ae56ddb95e49c4ba21",
+      "bytes": 16818,
+      "release_sha256": "91181df7704ae5ee730a11df0580a946c8a30346ecd2f4ae56ddb95e49c4ba21",
+      "release_bytes": 16818
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/unit_test.SC2Map",
+      "path": "micro/SMAC_HARD_maps/unit_test.SC2Map",
+      "source_sha256": "b2279675785b02deb4dbc39db0da96fa373e2f5b66db85ba8a307db457de1b5c",
+      "bytes": 16472,
+      "release_sha256": "b2279675785b02deb4dbc39db0da96fa373e2f5b66db85ba8a307db457de1b5c",
+      "release_bytes": 16472
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/mmmt.SC2Map",
+      "path": "micro/SMAC_HARD_maps/mmmt.SC2Map",
+      "source_sha256": "161cb777114bed15932bf8d12aec04306055b37f422effef965b7eabb1e80d3d",
+      "bytes": 16746,
+      "release_sha256": "161cb777114bed15932bf8d12aec04306055b37f422effef965b7eabb1e80d3d",
+      "release_bytes": 16746
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/mmmt_vs_zhb.SC2Map",
+      "path": "micro/SMAC_HARD_maps/mmmt_vs_zhb.SC2Map",
+      "source_sha256": "c7c6c0d9680aa9d41527baa950586c855502d842102c75ad9b9d27a52ddd099b",
+      "bytes": 16737,
+      "release_sha256": "c7c6c0d9680aa9d41527baa950586c855502d842102c75ad9b9d27a52ddd099b",
+      "release_bytes": 16737
+    },
+    {
+      "source": "smac-hard/SMAC_HARD_maps/pvt_large.SC2Map",
+      "path": "micro/SMAC_HARD_maps/pvt_large.SC2Map",
+      "source_sha256": "f92eed114080a76212265c7d4d95c0d8ceaa31cf0cb6d0627d849bf100b78fc4",
+      "bytes": 17092,
+      "release_sha256": "f92eed114080a76212265c7d4d95c0d8ceaa31cf0cb6d0627d849bf100b78fc4",
+      "release_bytes": 17092
+    },
+    {
+      "source": "smac-hard/LISCENCE",
+      "path": "licenses/SMAC-Hard-MIT.txt",
+      "source_sha256": "320ea8a1194006c948b1c97cc4ac542ceacb30efbff0ee81b20982df567c1226",
+      "bytes": 1081,
+      "release_sha256": "6c6c9756bc7b33934bfc32b3e2e8721cbb2ef24fc12383f225b3a1fed5121a9c",
+      "release_bytes": 1062
+    },
+    {
+      "source": "setup/sync_sc2_ids.py",
+      "path": "scripts/sync_sc2_ids.py",
+      "source_sha256": "46930af550c2753a609032762ec5c58e62ce36524e80979a53ecdff78d2f3bc5",
+      "bytes": 3057,
+      "release_sha256": "46930af550c2753a609032762ec5c58e62ce36524e80979a53ecdff78d2f3bc5",
+      "release_bytes": 3057
+    },
+    {
+      "source": "paper/arxiv/main.tex",
+      "path": "paper/main.tex",
+      "source_sha256": "1f1f85b8418bdeda93225931831caaf09c212b5cab16bbf078f3c39d7a41e61d",
+      "bytes": 35248,
+      "release_sha256": "1f1f85b8418bdeda93225931831caaf09c212b5cab16bbf078f3c39d7a41e61d",
+      "release_bytes": 35248
+    },
+    {
+      "source": "paper/arxiv/references.bib",
+      "path": "paper/references.bib",
+      "source_sha256": "24cf3ebbd69078964987915ce7ea53372267dd2173beecff91ccbd16c3069975",
+      "bytes": 12454,
+      "release_sha256": "b2bdd9f8718aa546601a4bf90bd9e2ade8321532162bc5caeb186191d88f8228",
+      "release_bytes": 12242
+    },
+    {
+      "source": "paper/arxiv/abstract.txt",
+      "path": "paper/abstract.txt",
+      "source_sha256": "8c9685aa07869155a039e873b1ecd56e8023e59afc43d4370bf31917ffa84258",
+      "bytes": 1212,
+      "release_sha256": "8c9685aa07869155a039e873b1ecd56e8023e59afc43d4370bf31917ffa84258",
+      "release_bytes": 1212
+    },
+    {
+      "source": "paper/arxiv/neurips_2026.sty",
+      "path": "paper/neurips_2026.sty",
+      "source_sha256": "c3fc2894e83d2517ca18b66741d6c595986d97957dc08ec08bb2125a7ec4555a",
+      "bytes": 13704,
+      "release_sha256": "44e434a8686f64e7f79ab7c2cbf6eeb3d47576bed75b6bb1f60ee1ea47140cf2",
+      "release_bytes": 13703
+    },
+    {
+      "source": "paper/arxiv/jev-star-v6-neurips.pdf",
+      "path": "paper/JEV-Star.pdf",
+      "source_sha256": "fd8224a08421927c0a7a82e3c91a24271c368bd3c681fbf957777bddccada906",
+      "bytes": 5049219,
+      "release_sha256": "93b0ffe90815913057a13d6f900082c3e3853f96006c6258255b07bc0af60203",
+      "release_bytes": 5050381,
+      "transformation": "Recompiled from the release paper source after refreshing author metadata."
+    },
+    {
+      "source": "paper/arxiv/figures/architecture.pdf",
+      "path": "paper/figures/architecture.pdf",
+      "source_sha256": "8f6c9d88217a8a177ee05ceb6042ecc31bfbc8d1d9b8f297097388f5fc8752b8",
+      "bytes": 23445,
+      "release_sha256": "8f6c9d88217a8a177ee05ceb6042ecc31bfbc8d1d9b8f297097388f5fc8752b8",
+      "release_bytes": 23445
+    },
+    {
+      "source": "paper/arxiv/figures/game_costs.pdf",
+      "path": "paper/figures/game_costs.pdf",
+      "source_sha256": "4f294eb75dc948f6ec2802b635c648d0fefc0587267b724d46ddd8150475fa8f",
+      "bytes": 25010,
+      "release_sha256": "4f294eb75dc948f6ec2802b635c648d0fefc0587267b724d46ddd8150475fa8f",
+      "release_bytes": 25010
+    },
+    {
+      "source": "paper/arxiv/figures/lv7_replay.pdf",
+      "path": "paper/figures/lv7_replay.pdf",
+      "source_sha256": "eaa85a700a0910eb80ca4919aaa60928a53dc8e72f4911d8089c043cf51bd152",
+      "bytes": 2381321,
+      "release_sha256": "eaa85a700a0910eb80ca4919aaa60928a53dc8e72f4911d8089c043cf51bd152",
+      "release_bytes": 2381321
+    },
+    {
+      "source": "paper/arxiv/figures/micro_comparison.pdf",
+      "path": "paper/figures/micro_comparison.pdf",
+      "source_sha256": "d8ae3c5f41266594bb3847a3a5f13aac547c292d87897e598a646e083465567b",
+      "bytes": 32598,
+      "release_sha256": "d8ae3c5f41266594bb3847a3a5f13aac547c292d87897e598a646e083465567b",
+      "release_bytes": 32598
+    },
+    {
+      "source": "paper/arxiv/figures/micro_replay.pdf",
+      "path": "paper/figures/micro_replay.pdf",
+      "source_sha256": "57eba8bc221671b749870dd46d6bf4b6d91d19766a73159bf18bb91a72a43fca",
+      "bytes": 2463917,
+      "release_sha256": "57eba8bc221671b749870dd46d6bf4b6d91d19766a73159bf18bb91a72a43fca",
+      "release_bytes": 2463917
+    },
+    {
+      "source": "paper/arxiv/figures/planning_behavior.pdf",
+      "path": "paper/figures/planning_behavior.pdf",
+      "source_sha256": "1967ff4ca7de52dada54e7e5f1dd52b25c10e732b0440f07933237cd4088bd33",
+      "bytes": 22558,
+      "release_sha256": "1967ff4ca7de52dada54e7e5f1dd52b25c10e732b0440f07933237cd4088bd33",
+      "release_bytes": 22558
+    },
+    {
+      "source": "paper/arxiv/figures/response_latency.pdf",
+      "path": "paper/figures/response_latency.pdf",
+      "source_sha256": "f6108d45d13e3890a1c9802e14f9779623982a5154e5199c64555ad9294a3e96",
+      "bytes": 24089,
+      "release_sha256": "f6108d45d13e3890a1c9802e14f9779623982a5154e5199c64555ad9294a3e96",
+      "release_bytes": 24089
+    },
+    {
+      "source": "paper/arxiv/listings/macro_trace.txt",
+      "path": "paper/listings/macro_trace.txt",
+      "source_sha256": "3d8425e95049e06771016205651a860498c9839f59f322464093f3d6131a50ef",
+      "bytes": 710,
+      "release_sha256": "cf7a51a3dd3e585711713dc1d2aa23af4713b4af8ff304dc1f047c86543fa0b9",
+      "release_bytes": 682
+    },
+    {
+      "source": "paper/arxiv/listings/micro_trace.txt",
+      "path": "paper/listings/micro_trace.txt",
+      "source_sha256": "94e09d07cf26f6936cfb19aa5af9bc2c7c1d4b692fd72e0f7a1de7d3fdd1b370",
+      "bytes": 551,
+      "release_sha256": "2159a934b597f140bd37aa203433ecd9166fddd79dfbb168e6944d9fd3335b97",
+      "release_bytes": 540
+    },
+    {
+      "source": "paper/arxiv/tables/replay_macro_trace.tex",
+      "path": "paper/tables/replay_macro_trace.tex",
+      "source_sha256": "4790e5114c460540a6820943010e760d95dbafbe111d95ff2f6f51299bb748a7",
+      "bytes": 557,
+      "release_sha256": "8f63d3c7415aa10bc81bd0218ce2d961c174a69e5e68555e22f2324aea46608d",
+      "release_bytes": 550
+    },
+    {
+      "source": "paper/arxiv/tables/study_costs.tex",
+      "path": "paper/tables/study_costs.tex",
+      "source_sha256": "8c34ac9d24ef7f2210b50d1862da3c580234fa1545d6c6f3c8b2e44688be6bff",
+      "bytes": 249,
+      "release_sha256": "80adeb8eeecb3eb6843ac1b97d107b5b00b47fe99f832898a9813b9ce3bbe0ff",
+      "release_bytes": 245
+    },
+    {
+      "source": "paper/arxiv/tables/study_latency.tex",
+      "path": "paper/tables/study_latency.tex",
+      "source_sha256": "077c1a6386df88fbe8f8314d7cb2e5968c346b863f0c8f63447d2df184dd7998",
+      "bytes": 238,
+      "release_sha256": "ca34717e6cebe55a4bfbc729ae4383e33c8530ea8257b44f966ca8ff86baefc9",
+      "release_bytes": 234
+    },
+    {
+      "source": "paper/arxiv/tables/study_macro_costs.tex",
+      "path": "paper/tables/study_macro_costs.tex",
+      "source_sha256": "3efde7a57e4e75f7d3075804d1e02c0d89dfc90d130504467ddb59e44de242ff",
+      "bytes": 315,
+      "release_sha256": "3190ec468ecc18cb685825df6601163395f69737f4c5d553415be4ed0e76d2ea",
+      "release_bytes": 309
+    },
+    {
+      "source": "paper/arxiv/tables/study_macro_results.tex",
+      "path": "paper/tables/study_macro_results.tex",
+      "source_sha256": "43a668debddec224ad3e757b8b4f0c2f3d8eb918c9d69e76a887ec1cb45e12bf",
+      "bytes": 293,
+      "release_sha256": "095e4cc36462eec50d2346c8edae5007c000c83cc7e33c5c64ba65d8f94a9d98",
+      "release_bytes": 287
+    },
+    {
+      "source": "paper/arxiv/tables/study_micro_maps.tex",
+      "path": "paper/tables/study_micro_maps.tex",
+      "source_sha256": "cd781c69a609c24294112e0573d54535fe902d58fcf158f425cc979fcdf20e86",
+      "bytes": 1271,
+      "release_sha256": "e1416fc4d3150b175fdcc662d94a526a89a800a93cfb0ca4bc4564df82d6b456",
+      "release_bytes": 1236
+    },
+    {
+      "source": "paper/arxiv/tables/study_micro_results.tex",
+      "path": "paper/tables/study_micro_results.tex",
+      "source_sha256": "c23c1d8ff897d86d990e7152e53d1f0ca5b045e1bd63a65279a7f76bc5e253b8",
+      "bytes": 102,
+      "release_sha256": "6fd194ac39801d42e4c39469869c904746e86f115794a040b0d7d3b412e7c55d",
+      "release_bytes": 100
+    },
+    {
+      "source": "paper/arxiv/tables/study_tokens.tex",
+      "path": "paper/tables/study_tokens.tex",
+      "source_sha256": "9159906930b0332efc2ddf7e9dd30e7ce29eb624985bcf1390ed56aa78aeeeef",
+      "bytes": 251,
+      "release_sha256": "4e7eecd19a3408b6285effa3a411d67310b0369537a25d6e506003c9e094a5d4",
+      "release_bytes": 247
+    },
+    {
+      "source": "paper/arxiv/data/study/game_costs.csv",
+      "path": "paper/data/study/game_costs.csv",
+      "source_sha256": "da862b995af16d434b3e11d1ec30fc9276d3d40fbc5fffbec86d67b4a09b4e29",
+      "bytes": 47275,
+      "release_sha256": "4ce1a1b02309f130236f241b40e589be70a84af48d35e36c9498b18b69b4304a",
+      "release_bytes": 47058
+    },
+    {
+      "source": "paper/arxiv/data/study/macro_actions.csv",
+      "path": "paper/data/study/macro_actions.csv",
+      "source_sha256": "2904565f5c479e141871c171aab4f070ad728fd9e088b2364d3139da250140b0",
+      "bytes": 476491,
+      "release_sha256": "ca4170eb2279a16cf1f28c7c3e093d67e81a2432463794b78481eae18581a895",
+      "release_bytes": 472065
+    },
+    {
+      "source": "paper/arxiv/data/study/macro_plans.csv",
+      "path": "paper/data/study/macro_plans.csv",
+      "source_sha256": "1cdec39b94dfb7eea661289059fcc861a0bb86f6e7e8b8f39caf5bb12a1fb9e7",
+      "bytes": 47939,
+      "release_sha256": "ece50f57818a075237670c222c80811519c6d6bff6b5b603e4c1680efbb3e7a0",
+      "release_bytes": 47876
+    },
+    {
+      "source": "paper/arxiv/data/study/macro_trajectories.csv",
+      "path": "paper/data/study/macro_trajectories.csv",
+      "source_sha256": "ed2dbf2d2aff65eb7b276188e5d71c2be1e64527c79df326a9464cc31db90084",
+      "bytes": 121364,
+      "release_sha256": "9540ce3086061f892e76b35c4fe984bc070e6a876e19f2ab71030da013fa1421",
+      "release_bytes": 120363
+    },
+    {
+      "source": "paper/arxiv/data/study/method_summary.csv",
+      "path": "paper/data/study/method_summary.csv",
+      "source_sha256": "48ddc79283b99c85b87245844da49aaa7ca53aeeebe7945a7bde18acb4d93b45",
+      "bytes": 2074,
+      "release_sha256": "1ece54bca6856a44a1932faf7ca4abc94896f6b6b88de02fe9183f3bf8311582",
+      "release_bytes": 2069
+    },
+    {
+      "source": "paper/arxiv/data/study/micro_episodes.csv",
+      "path": "paper/data/study/micro_episodes.csv",
+      "source_sha256": "fe415f12db61fac9682640460c0197aeffca645d7095b6ecd60dfd1c75e9cbf0",
+      "bytes": 27115,
+      "release_sha256": "65c2fd44be708a637e82635d38d3c0f0ead38c7968285e5ce99136ffc82b44ab",
+      "release_bytes": 26904
+    },
+    {
+      "source": "paper/arxiv/data/study/responses.csv",
+      "path": "paper/data/study/responses.csv",
+      "source_sha256": "41010dc59d7c78df068bad5c3c455d9a60d23c7da289dc4ba5ca4a30a717c7de",
+      "bytes": 3375704,
+      "release_sha256": "6ae1fc9f7b8b801bd284b9546330ca227a2808779438a7eafa0a39b7e29d4d4c",
+      "release_bytes": 3353194
+    },
+    {
+      "source": "paper/arxiv/data/study/results.json",
+      "path": "paper/data/study/results.json",
+      "source_sha256": "a1f68aa9c0b7aae1f2550c0230c3c8634ebb48b19d3c4ad8778f264b41e21c3c",
+      "bytes": 118665,
+      "release_sha256": "2803c11499b421e04eaee7c485166afa10e132e0eed7f75ce91e7614b3d4cda8",
+      "release_bytes": 116381
+    },
+    {
+      "source": "paper/arxiv/data/study/runs.json",
+      "path": "paper/data/study/runs.json",
+      "source_sha256": "3fb0ea0d3d7823ca3e93f9ad28014211718eed808a4e773c62607ac6fc9befaa",
+      "bytes": 110418,
+      "release_sha256": "f4aba714fcd65d8e732d0a8ecf3c55ee79c75bf613875d9a6f1c5979c777c518",
+      "release_bytes": 106387
+    },
+    {
+      "source": "paper/arxiv/data/study/run_costs.csv",
+      "path": "paper/data/study/run_costs.csv",
+      "source_sha256": "daf35d1cc9e26be4c76276c718bdaa0e741c782199fcd9662629b5bf8c45107b",
+      "bytes": 27389,
+      "release_sha256": "f59c501fad9400eeec420f7be821724263f935483b72aa86e8e4c5dc5c97a4c5",
+      "release_bytes": 27312
+    },
+    {
+      "source": "paper/arxiv/data/study/team_decisions.csv",
+      "path": "paper/data/study/team_decisions.csv",
+      "source_sha256": "2f5e849f23c27bde6721e53156baf04b93e82b3215814f00593f31de3b736e65",
+      "bytes": 659995,
+      "release_sha256": "1f7de018d46ae8740c4e26cbb186868e903df8bc447cf11335f8117a8b44b368",
+      "release_bytes": 652531
+    },
+    {
+      "source": "paper/arxiv/data/study_snapshot/macro_games.json",
+      "path": "paper/data/study_snapshot/macro_games.json",
+      "source_sha256": "9b29ff6dd5e8ea04e4a82f5568f9b9299df56677197e22e29a81f8d1263c7abf",
+      "bytes": 21386,
+      "release_sha256": "d715f830a1dbbd00087f80460a38967f96d570ddb2f2929893a260822b28f654",
+      "release_bytes": 20701
+    },
+    {
+      "source": "paper/arxiv/data/study_snapshot/macro_stress.json",
+      "path": "paper/data/study_snapshot/macro_stress.json",
+      "source_sha256": "20193dc694f8ad8d7f53ab9318343dac568e15a984914966de670a1644744e46",
+      "bytes": 3680,
+      "release_sha256": "dc2b7c08114b96860464effe54c95a46752846d46f74d0cffa2b1bdd277434dd",
+      "release_bytes": 3568
+    },
+    {
+      "source": "paper/arxiv/data/study_snapshot/manifest.json",
+      "path": "paper/data/study_snapshot/manifest.json",
+      "source_sha256": "c7df891c92f50b2d47853a139be5ce234d83f0fc6ffa216d71054dd57a630782",
+      "bytes": 986,
+      "release_sha256": "dae010906a4a850a8698a79264caa24cbc557ce94cb19cb600332114337bdd79",
+      "release_bytes": 965
+    },
+    {
+      "source": "paper/arxiv/data/study_snapshot/micro_behavior.json",
+      "path": "paper/data/study_snapshot/micro_behavior.json",
+      "source_sha256": "98d77d36e38c9a42be49bc9238affd8e05a1d83e2b4430d1f68084e12ccd7c4f",
+      "bytes": 852315,
+      "release_sha256": "529661c23e7fadc8ef4a2dc1f4794b8f5e8041d5cfbdededf1e7a92a0550a249",
+      "release_bytes": 819251
+    },
+    {
+      "source": "paper/arxiv/data/study_snapshot/micro_comparison.json",
+      "path": "paper/data/study_snapshot/micro_comparison.json",
+      "source_sha256": "7e6f698cd431579a0a54365ef9281329ce589299efa7e795cf64f6c080b78d1b",
+      "bytes": 195747,
+      "release_sha256": "c28b9b796215def8874129160e3f68246b7e9522c70cd26ec534e9a32cbaa399",
+      "release_bytes": 180700
+    }
+  ],
+  "excluded": [
+    "credentials/config.md and legacy provider configuration",
+    "virtual environments and downloaded SDK/tools",
+    "nested .git histories",
+    "EvoCurr and VLM-Play-StarCraft2",
+    "legacy chat agents, Gym entrypoints, memory/vector databases and rule bots",
+    "SMAC old training stacks and unused PySC2 converters/test fixtures",
+    "raw experiment events/replays/videos and host diagnostics",
+    "old paper drafts, duplicate figures, archives and build products"
+  ],
+  "local_archive_policy": "Original working trees and original chronological experiment data remain in the research workspace. They are not deleted or rewritten by this release preparation.",
+  "packaging_changes": [
+    "macro package initialization no longer registers unused Gym environments",
+    "unused Protoss process launch helpers and their legacy config imports removed",
+    "35 registered SMAC maps consolidated into one directory",
+    "Refreshed the paper source with concurrent author metadata edits before compiling the release PDF",
+    "Public text files use LF line endings; source hashes describe the originally imported files.",
+    "Macro replay decoder default uses DISTAR_ROOT or external/di-star instead of a workstation-specific directory.",
+    "Derived paper snapshot paths are relative; original chronological experiment logs are not rewritten.",
+    "Removed redundant final blank lines and trailing whitespace outside multiline strings; every changed Python file retained an identical AST during this formatting pass.",
+    "Also cleaned whitespace in one upstream non-executing comment string (identical compiled Python code) and the TeX style, preserving license notices."
+  ],
+  "modified_release_copies": [
+    "macro/sc2_rl_agent/starcraftenv_test/export_replay_video.py",
+    "macro/sc2_rl_agent/starcraftenv_test/env/bot/Protoss_bot.py",
+    "macro/sc2_rl_agent/starcraftenv_test/utils/action_info.py",
+    "micro/jev_micro/catalog.py",
+    "micro/smac_hard/bin/map_list.py",
+    "micro/smac_hard/env/multiagentenv.py",
+    "micro/smac_hard/env/multiplayer_multiagentenv.py",
+    "micro/smac_hard/env/__init__.py",
+    "micro/smac_hard/env/scripts/attack_nearest.py",
+    "micro/smac_hard/env/scripts/attack_weakest.py",
+    "micro/smac_hard/env/scripts/base_script.py",
+    "micro/smac_hard/env/scripts/noop.py",
+    "micro/smac_hard/env/scripts/unit_typeid.py",
+    "micro/smac_hard/env/scripts/__init__.py",
+    "micro/smac_hard/env/scripts/s_1c3s5z/script_d.py",
+    "micro/smac_hard/env/scripts/s_1c3s5z/script_m.py",
+    "micro/smac_hard/env/scripts/s_27m/script_a.py",
+    "micro/smac_hard/env/scripts/s_27m/script_ap.py",
+    "micro/smac_hard/env/scripts/s_27m/script_l.py",
+    "micro/smac_hard/env/scripts/s_2c_vs_64zg/script.py",
+    "micro/smac_hard/env/scripts/s_2m_vs_1z/red_script.py",
+    "micro/smac_hard/env/scripts/s_2m_vs_1z/script.py",
+    "micro/smac_hard/env/scripts/s_2s3z/script.py",
+    "micro/smac_hard/env/scripts/s_2s3z/script_1.py",
+    "micro/smac_hard/env/scripts/s_2s_vs_1sc/red_script.py",
+    "micro/smac_hard/env/scripts/s_2s_vs_1sc/script.py",
+    "micro/smac_hard/env/scripts/s_2vr_vs_3sc/walk_aktn.py",
+    "micro/smac_hard/env/scripts/s_2vr_vs_3sc/walk_aktw.py",
+    "micro/smac_hard/env/scripts/s_3hl_vs_24zl/attack_group.py",
+    "micro/smac_hard/env/scripts/s_3hl_vs_24zl/attack_ways.py",
+    "micro/smac_hard/env/scripts/s_3rp_vs_5zl/script_cliff.py",
+    "micro/smac_hard/env/scripts/s_3rp_vs_5zl/script_group.py",
+    "micro/smac_hard/env/scripts/s_3s5z/script.py",
+    "micro/smac_hard/env/scripts/s_3s5z/script_1.py",
+    "micro/smac_hard/env/scripts/s_3st_vs_5zl/script_attack.py",
+    "micro/smac_hard/env/scripts/s_3st_vs_5zl/script_group.py",
+    "micro/smac_hard/env/scripts/s_3s_vs_3z/script_attack.py",
+    "micro/smac_hard/env/scripts/s_3s_vs_3z/script_group.py",
+    "micro/smac_hard/env/scripts/s_3s_vs_4z/script_attack.py",
+    "micro/smac_hard/env/scripts/s_3s_vs_4z/script_group.py",
+    "micro/smac_hard/env/scripts/s_3s_vs_5z/script_attack.py",
+    "micro/smac_hard/env/scripts/s_3s_vs_5z/script_group.py",
+    "micro/smac_hard/env/scripts/s_6h_vs_8z/script_easy.py",
+    "micro/smac_hard/env/scripts/s_6h_vs_8z/script_hard.py",
+    "micro/smac_hard/env/scripts/s_6m_vs_10m/form_atkn.py",
+    "micro/smac_hard/env/scripts/s_6m_vs_10m/form_atkw.py",
+    "micro/smac_hard/env/scripts/s_7q_vs_2bc/script_cannon.py",
+    "micro/smac_hard/env/scripts/s_7q_vs_2bc/script_cannon_retreat.py",
+    "micro/smac_hard/env/scripts/s_8m/script.py",
+    "micro/smac_hard/env/scripts/s_8m/script_1.py",
+    "micro/smac_hard/env/scripts/s_bane_vs_bane/red_script.py",
+    "micro/smac_hard/env/scripts/s_bane_vs_bane/script.py",
+    "micro/smac_hard/env/scripts/s_corridor/script_d.py",
+    "micro/smac_hard/env/scripts/s_corridor/script_y.py",
+    "micro/smac_hard/env/scripts/s_MMM/script.py",
+    "micro/smac_hard/env/scripts/s_MMM/script_2.py",
+    "micro/smac_hard/env/scripts/s_MMMT/script_form_atkn.py",
+    "micro/smac_hard/env/scripts/s_MMMT/script_form_atkp.py",
+    "micro/smac_hard/env/scripts/s_MMMT_vs_ZHB/script_spe_target.py",
+    "micro/smac_hard/env/scripts/s_MMMT_vs_ZHB/script_surr.py",
+    "micro/smac_hard/env/scripts/s_MMMT_vs_ZSPI/script_atk_bio.py",
+    "micro/smac_hard/env/scripts/s_MMMT_vs_ZSPI/script_spe_target.py",
+    "micro/smac_hard/env/scripts/s_so_many_baneling/script.py",
+    "micro/smac_hard/env/scripts/utils/actions_api.py",
+    "micro/smac_hard/env/scripts/utils/distance_api.py",
+    "micro/smac_hard/env/scripts/utils/units_api.py",
+    "micro/smac_hard/env/starcraft2/available_action_ability.py",
+    "micro/smac_hard/env/starcraft2/portspicker.py",
+    "micro/smac_hard/env/starcraft2/render.py",
+    "micro/smac_hard/env/starcraft2/run_parallel.py",
+    "micro/smac_hard/env/starcraft2/starcraft2.py",
+    "micro/smac_hard/env/starcraft2/__init__.py",
+    "micro/smac_hard/env/starcraft2/maps/smac_maps.py",
+    "micro/smac_hard/env/starcraft2/maps/__init__.py",
+    "micro/pysc2/__init__.py",
+    "micro/pysc2/env/available_actions_printer.py",
+    "micro/pysc2/env/base_env_wrapper.py",
+    "micro/pysc2/env/enums.py",
+    "micro/pysc2/env/environment.py",
+    "micro/pysc2/env/host_remote_agent.py",
+    "micro/pysc2/env/lan_sc2_env.py",
+    "micro/pysc2/env/remote_sc2_env.py",
+    "micro/pysc2/env/run_loop.py",
+    "micro/pysc2/env/sc2_env.py",
+    "micro/pysc2/env/__init__.py",
+    "micro/pysc2/lib/actions.py",
+    "micro/pysc2/lib/buffs.py",
+    "micro/pysc2/lib/colors.py",
+    "micro/pysc2/lib/features.py",
+    "micro/pysc2/lib/gfile.py",
+    "micro/pysc2/lib/image_differencer.py",
+    "micro/pysc2/lib/memoize.py",
+    "micro/pysc2/lib/metrics.py",
+    "micro/pysc2/lib/named_array.py",
+    "micro/pysc2/lib/np_util.py",
+    "micro/pysc2/lib/point.py",
+    "micro/pysc2/lib/point_flag.py",
+    "micro/pysc2/lib/portspicker.py",
+    "micro/pysc2/lib/protocol.py",
+    "micro/pysc2/lib/proto_diff.py",
+    "micro/pysc2/lib/remote_controller.py",
+    "micro/pysc2/lib/renderer_ascii.py",
+    "micro/pysc2/lib/renderer_human.py",
+    "micro/pysc2/lib/replay.py",
+    "micro/pysc2/lib/resources.py",
+    "micro/pysc2/lib/run_parallel.py",
+    "micro/pysc2/lib/sc_process.py",
+    "micro/pysc2/lib/static_data.py",
+    "micro/pysc2/lib/stopwatch.py",
+    "micro/pysc2/lib/transform.py",
+    "micro/pysc2/lib/units.py",
+    "micro/pysc2/lib/upgrades.py",
+    "micro/pysc2/lib/video_writer.py",
+    "micro/pysc2/lib/__init__.py",
+    "micro/pysc2/maps/ladder.py",
+    "micro/pysc2/maps/lib.py",
+    "micro/pysc2/maps/melee.py",
+    "micro/pysc2/maps/mini_games.py",
+    "micro/pysc2/maps/new_maps.py",
+    "micro/pysc2/maps/__init__.py",
+    "micro/pysc2/run_configs/lib.py",
+    "micro/pysc2/run_configs/platforms.py",
+    "micro/pysc2/run_configs/__init__.py",
+    "licenses/SMAC-Hard-MIT.txt",
+    "paper/references.bib",
+    "paper/neurips_2026.sty",
+    "paper/JEV-Star.pdf",
+    "paper/listings/macro_trace.txt",
+    "paper/listings/micro_trace.txt",
+    "paper/tables/replay_macro_trace.tex",
+    "paper/tables/study_costs.tex",
+    "paper/tables/study_latency.tex",
+    "paper/tables/study_macro_costs.tex",
+    "paper/tables/study_macro_results.tex",
+    "paper/tables/study_micro_maps.tex",
+    "paper/tables/study_micro_results.tex",
+    "paper/tables/study_tokens.tex",
+    "paper/data/study/game_costs.csv",
+    "paper/data/study/macro_actions.csv",
+    "paper/data/study/macro_plans.csv",
+    "paper/data/study/macro_trajectories.csv",
+    "paper/data/study/method_summary.csv",
+    "paper/data/study/micro_episodes.csv",
+    "paper/data/study/responses.csv",
+    "paper/data/study/results.json",
+    "paper/data/study/runs.json",
+    "paper/data/study/run_costs.csv",
+    "paper/data/study/team_decisions.csv",
+    "paper/data/study_snapshot/macro_games.json",
+    "paper/data/study_snapshot/macro_stress.json",
+    "paper/data/study_snapshot/manifest.json",
+    "paper/data/study_snapshot/micro_behavior.json",
+    "paper/data/study_snapshot/micro_comparison.json"
+  ]
+}

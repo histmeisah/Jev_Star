@@ -1,0 +1,11 @@
+plan_accepted | map: "mmmt"
+opening (exact sentences):
+  "Advance together east through the central corridor, y in [11,21), toward the raised center."
+  "Keep infantry screening tanks and Medivacs behind infantry."
+movement_and_cooldowns (exact sentences):
+  "Ready, in-range shooters normally fire."
+  "Withdraw a badly wounded unit taking recent damage toward healing while healthy allies maintain fire."
+episode_end
+  episode: 1; status: "win"
+  final_game_loop: 480; game_seconds: 21.429
+  final.allies_alive: 9; final.enemies_alive: 2

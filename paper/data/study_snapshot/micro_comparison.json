@@ -1,0 +1,5327 @@
+{
+  "status": "complete",
+  "generated_at_utc": "2026-09-22T13:02:59.211709+00:00",
+  "suite": "micro/jev_runs/p0-astra-all-maps-20260922-001",
+  "planned_maps": 35,
+  "completed_maps": 35,
+  "totals_on_completed_maps": {
+    "A": {
+      "maps": 35,
+      "episodes": 105,
+      "results": {
+        "win": 3,
+        "draw": 2,
+        "loss": 100,
+        "timeout": 0
+      },
+      "nondevelopment_results": {
+        "win": 3,
+        "draw": 2,
+        "loss": 94,
+        "timeout": 0
+      },
+      "development_results": {
+        "win": 0,
+        "draw": 0,
+        "loss": 6,
+        "timeout": 0
+      },
+      "nondevelopment_episodes": 99,
+      "estimated_jev_usd": 4.700458434,
+      "mean_enemy_kill_fraction": 0.165,
+      "requests": 8189,
+      "successful_responses": 8189,
+      "api_errors": 0,
+      "sc2_action_errors": 620,
+      "input_tokens": 111915677,
+      "output_tokens": 2916047,
+      "fixed_step_checks": 3374,
+      "planner_fixed_step_checks": 0,
+      "planner_requests": 0,
+      "planner_usage": {
+        "input_tokens": 0,
+        "cached_input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0
+      },
+      "planner_latency_median_ms": null
+    },
+    "B": {
+      "maps": 35,
+      "episodes": 105,
+      "results": {
+        "win": 6,
+        "draw": 1,
+        "loss": 98,
+        "timeout": 0
+      },
+      "nondevelopment_results": {
+        "win": 3,
+        "draw": 1,
+        "loss": 95,
+        "timeout": 0
+      },
+      "development_results": {
+        "win": 3,
+        "draw": 0,
+        "loss": 3,
+        "timeout": 0
+      },
+      "nondevelopment_episodes": 99,
+      "estimated_jev_usd": 5.915399826,
+      "mean_enemy_kill_fraction": 0.3094,
+      "requests": 10865,
+      "successful_responses": 10864,
+      "api_errors": 1,
+      "sc2_action_errors": 749,
+      "input_tokens": 140842853,
+      "output_tokens": 2888993,
+      "fixed_step_checks": 3930,
+      "planner_fixed_step_checks": 35,
+      "planner_requests": 35,
+      "planner_usage": {
+        "input_tokens": 687439,
+        "cached_input_tokens": 69120,
+        "output_tokens": 23581,
+        "reasoning_output_tokens": 410
+      },
+      "planner_latency_median_ms": 25812.999999994645
+    },
+    "C": {
+      "maps": 35,
+      "episodes": 105,
+      "results": {
+        "win": 7,
+        "draw": 0,
+        "loss": 98,
+        "timeout": 0
+      },
+      "nondevelopment_results": {
+        "win": 7,
+        "draw": 0,
+        "loss": 92,
+        "timeout": 0
+      },
+      "development_results": {
+        "win": 0,
+        "draw": 0,
+        "loss": 6,
+        "timeout": 0
+      },
+      "nondevelopment_episodes": 99,
+      "estimated_jev_usd": 6.17861706,
+      "mean_enemy_kill_fraction": 0.3769,
+      "requests": 9759,
+      "successful_responses": 9743,
+      "api_errors": 16,
+      "sc2_action_errors": 510,
+      "input_tokens": 147109930,
+      "output_tokens": 2704161,
+      "fixed_step_checks": 4089,
+      "planner_fixed_step_checks": 35,
+      "planner_requests": 35,
+      "planner_usage": {
+        "input_tokens": 847569,
+        "cached_input_tokens": 30720,
+        "output_tokens": 24498,
+        "reasoning_output_tokens": 622
+      },
+      "planner_latency_median_ms": 37172.00000000594
+    }
+  },
+  "historical_full_totals": {
+    "A": {
+      "maps": 35,
+      "episodes": 105,
+      "results": {
+        "win": 3,
+        "draw": 2,
+        "loss": 100,
+        "timeout": 0
+      },
+      "nondevelopment_results": {
+        "win": 3,
+        "draw": 2,
+        "loss": 94,
+        "timeout": 0
+      },
+      "development_results": {
+        "win": 0,
+        "draw": 0,
+        "loss": 6,
+        "timeout": 0
+      },
+      "nondevelopment_episodes": 99,
+      "estimated_jev_usd": 4.700458434,
+      "mean_enemy_kill_fraction": 0.165,
+      "requests": 8189,
+      "successful_responses": 8189,
+      "api_errors": 0,
+      "sc2_action_errors": 620,
+      "input_tokens": 111915677,
+      "output_tokens": 2916047,
+      "fixed_step_checks": 3374,
+      "planner_fixed_step_checks": 0,
+      "planner_requests": 0,
+      "planner_usage": {
+        "input_tokens": 0,
+        "cached_input_tokens": 0,
+        "output_tokens": 0,
+        "reasoning_output_tokens": 0
+      },
+      "planner_latency_median_ms": null
+    },
+    "B": {
+      "maps": 35,
+      "episodes": 105,
+      "results": {
+        "win": 6,
+        "draw": 1,
+        "loss": 98,
+        "timeout": 0
+      },
+      "nondevelopment_results": {
+        "win": 3,
+        "draw": 1,
+        "loss": 95,
+        "timeout": 0
+      },
+      "development_results": {
+        "win": 3,
+        "draw": 0,
+        "loss": 3,
+        "timeout": 0
+      },
+      "nondevelopment_episodes": 99,
+      "estimated_jev_usd": 5.915399826,
+      "mean_enemy_kill_fraction": 0.3094,
+      "requests": 10865,
+      "successful_responses": 10864,
+      "api_errors": 1,
+      "sc2_action_errors": 749,
+      "input_tokens": 140842853,
+      "output_tokens": 2888993,
+      "fixed_step_checks": 3930,
+      "planner_fixed_step_checks": 35,
+      "planner_requests": 35,
+      "planner_usage": {
+        "input_tokens": 687439,
+        "cached_input_tokens": 69120,
+        "output_tokens": 23581,
+        "reasoning_output_tokens": 410
+      },
+      "planner_latency_median_ms": 25812.999999994645
+    }
+  },
+  "maps": [
+    {
+      "map": "3m",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 79.0,
+          "mean_steps": 20.6667,
+          "requests": 62,
+          "successful_responses": 62,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 219645,
+          "output_tokens": 9321,
+          "estimated_jev_usd": 0.00922509,
+          "jev_latency_median_ms": 382.49999999970896,
+          "jev_latency_max_ms": 2155.9999999990396,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/3m/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/3m/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 2,
+          "mean_enemy_kill_fraction": 0.6667,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 33.0,
+          "mean_steps": 26,
+          "requests": 78,
+          "successful_responses": 78,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 313058,
+          "output_tokens": 9987,
+          "estimated_jev_usd": 0.013148436,
+          "jev_latency_median_ms": 375.0,
+          "jev_latency_max_ms": 1750.0,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 12425,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 635,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 24233.99999999674,
+            "plan_sha256": "f3cc9df10da12fff26d6531d0b7f174e8f87691a736970c49e206471b2247a80",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/3m/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/3m/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/3m/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 2,
+          "mean_enemy_kill_fraction": 0.6667,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 15.0,
+          "mean_steps": 30,
+          "requests": 91,
+          "successful_responses": 90,
+          "api_errors": 1,
+          "sc2_action_errors": 0,
+          "input_tokens": 462072,
+          "output_tokens": 10666,
+          "estimated_jev_usd": 0.019407024,
+          "jev_latency_median_ms": 406.00000000267755,
+          "jev_latency_max_ms": 5656.000000002678,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 14565,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 633,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 38875.0,
+            "plan_sha256": "036977de042c8317d4f1640335d8148913ea0621662a36b577e1ea7bc5b9fe1a",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3m/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3m/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3m/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 0,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "8m",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 1.3333,
+          "mean_enemy_kill_fraction": 0.1667,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 258.0,
+          "mean_steps": 21.3333,
+          "requests": 64,
+          "successful_responses": 64,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 650007,
+          "output_tokens": 30535,
+          "estimated_jev_usd": 0.027300294,
+          "jev_latency_median_ms": 468.99999999914144,
+          "jev_latency_max_ms": 1265.9999999996217,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/8m/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/8m/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 4,
+          "mean_enemy_kill_fraction": 0.5,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 156.0,
+          "mean_steps": 25,
+          "requests": 75,
+          "successful_responses": 75,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 782923,
+          "output_tokens": 31452,
+          "estimated_jev_usd": 0.032882766,
+          "jev_latency_median_ms": 437.9999999946449,
+          "jev_latency_max_ms": 953.9999999979045,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 15755,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 638,
+              "reasoning_output_tokens": 16
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 24453.000000008615,
+            "plan_sha256": "377d95e20e5c3f4418c3e05b65e05c3d697447fba343f41b101bac7d8e84ac82",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/8m/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/8m/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/8m/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "win"
+          ],
+          "results": {
+            "win": 1,
+            "draw": 0,
+            "loss": 2,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 5.6667,
+          "mean_enemy_kill_fraction": 0.7083,
+          "mean_allies_alive": 1,
+          "mean_allied_hp_shield": 25.0,
+          "mean_enemy_hp_shield": 49.0,
+          "mean_steps": 29.3333,
+          "requests": 90,
+          "successful_responses": 88,
+          "api_errors": 2,
+          "sc2_action_errors": 0,
+          "input_tokens": 1020505,
+          "output_tokens": 33716,
+          "estimated_jev_usd": 0.04286121,
+          "jev_latency_median_ms": 468.50000000267755,
+          "jev_latency_max_ms": 1843.9999999973224,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 18322,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 664,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 36844.000000011874,
+            "plan_sha256": "6380b1423ad4b2efb496014d8b44f3ffae45c6df32c6f284258c86b3be573714",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/8m/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/8m/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/8m/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 1.6667,
+      "C_minus_B_wins": 1
+    },
+    {
+      "map": "25m",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0.3333,
+          "mean_enemy_kill_fraction": 0.0133,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 1046.0,
+          "mean_steps": 20.6667,
+          "requests": 235,
+          "successful_responses": 235,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 3940184,
+          "output_tokens": 151416,
+          "estimated_jev_usd": 0.165487728,
+          "jev_latency_median_ms": 500.0,
+          "jev_latency_max_ms": 1405.9999999990396,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/25m/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/25m/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 7.3333,
+          "mean_enemy_kill_fraction": 0.2933,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 779.0,
+          "mean_steps": 23.6667,
+          "requests": 307,
+          "successful_responses": 307,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 4491094,
+          "output_tokens": 133536,
+          "estimated_jev_usd": 0.188625948,
+          "jev_latency_median_ms": 469.00000001187436,
+          "jev_latency_max_ms": 1218.9999999973224,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 27077,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 686,
+              "reasoning_output_tokens": 43
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 26032.00000000652,
+            "plan_sha256": "a159391baca98925d78c2ea024a427a76d75984a67664236f8b52bac88205273",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/25m/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/25m/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/25m/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 13.6667,
+          "mean_enemy_kill_fraction": 0.5467,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 444.0,
+          "mean_steps": 32.6667,
+          "requests": 269,
+          "successful_responses": 268,
+          "api_errors": 1,
+          "sc2_action_errors": 0,
+          "input_tokens": 4681158,
+          "output_tokens": 114081,
+          "estimated_jev_usd": 0.196608636,
+          "jev_latency_median_ms": 500.0,
+          "jev_latency_max_ms": 5875.0,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 31017,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 693,
+              "reasoning_output_tokens": 22
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 42625.0,
+            "plan_sha256": "4d6b36e56089d8098ddf62124fe885482f14ed768dea358487bac85c4c85371d",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/25m/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/25m/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/25m/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 6.3334,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "5m_vs_6m",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0.3333,
+          "mean_enemy_kill_fraction": 0.0556,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 203.0,
+          "mean_steps": 18.3333,
+          "requests": 55,
+          "successful_responses": 55,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 356251,
+          "output_tokens": 16005,
+          "estimated_jev_usd": 0.014962542,
+          "jev_latency_median_ms": 422.0000000022992,
+          "jev_latency_max_ms": 967.9999999971187,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/5m_vs_6m/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/5m_vs_6m/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 2,
+          "mean_enemy_kill_fraction": 0.3333,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 156.0,
+          "mean_steps": 20.6667,
+          "requests": 62,
+          "successful_responses": 62,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 429597,
+          "output_tokens": 16205,
+          "estimated_jev_usd": 0.018043074,
+          "jev_latency_median_ms": 422.0000000059372,
+          "jev_latency_max_ms": 1000.0,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 13793,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 615,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 23813.000000009197,
+            "plan_sha256": "1127aa2ca478103f80ceab669a74ea69ae873a8ac00a87fea2e670954a25a28f",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/5m_vs_6m/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/5m_vs_6m/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/5m_vs_6m/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 2,
+          "mean_enemy_kill_fraction": 0.3333,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 140.0,
+          "mean_steps": 21.6667,
+          "requests": 65,
+          "successful_responses": 65,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 576419,
+          "output_tokens": 15939,
+          "estimated_jev_usd": 0.024209598,
+          "jev_latency_median_ms": 422.0000000059372,
+          "jev_latency_max_ms": 4922.000000005937,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 16111,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 669,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 46906.99999999197,
+            "plan_sha256": "1f4b97e395cafde35e44d0c51079eafa663c8bd67c9f48897cb973b91aff978e",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/5m_vs_6m/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/5m_vs_6m/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/5m_vs_6m/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 0,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "8m_vs_9m",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 359.0,
+          "mean_steps": 19,
+          "requests": 57,
+          "successful_responses": 57,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 612770,
+          "output_tokens": 28434,
+          "estimated_jev_usd": 0.02573634,
+          "jev_latency_median_ms": 452.9999999977008,
+          "jev_latency_max_ms": 1046.9999999986612,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/8m_vs_9m/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/8m_vs_9m/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 3.6667,
+          "mean_enemy_kill_fraction": 0.4074,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 204.0,
+          "mean_steps": 23,
+          "requests": 69,
+          "successful_responses": 69,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 754484,
+          "output_tokens": 29381,
+          "estimated_jev_usd": 0.031688328,
+          "jev_latency_median_ms": 452.9999999940628,
+          "jev_latency_max_ms": 1016.0000000032596,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 15803,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 634,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 24108.99999999674,
+            "plan_sha256": "3d1054a7f0bb660178e24cbaf2431574740097557bedf99aa79e0261a35d4fc5",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/8m_vs_9m/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/8m_vs_9m/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/8m_vs_9m/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 3.6667,
+          "mean_enemy_kill_fraction": 0.4074,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 212.0,
+          "mean_steps": 23.6667,
+          "requests": 73,
+          "successful_responses": 71,
+          "api_errors": 2,
+          "sc2_action_errors": 0,
+          "input_tokens": 865452,
+          "output_tokens": 28320,
+          "estimated_jev_usd": 0.036348984,
+          "jev_latency_median_ms": 453.9999999979045,
+          "jev_latency_max_ms": 3281.0000000026776,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 18374,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 692,
+              "reasoning_output_tokens": 55
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 37172.00000000594,
+            "plan_sha256": "ba8b18385dbcffdbf32f0ac55a9b1cc755c51d81900da8a06cb281bea25dd9ee",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/8m_vs_9m/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/8m_vs_9m/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/8m_vs_9m/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 0.0,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "10m_vs_11m",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 1,
+          "mean_enemy_kill_fraction": 0.0909,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 406.0,
+          "mean_steps": 20,
+          "requests": 68,
+          "successful_responses": 68,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 861836,
+          "output_tokens": 40129,
+          "estimated_jev_usd": 0.036197112,
+          "jev_latency_median_ms": 469.0000000009604,
+          "jev_latency_max_ms": 1218.9999999973224,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/10m_vs_11m/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/10m_vs_11m/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 4.3333,
+          "mean_enemy_kill_fraction": 0.3939,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 292.0,
+          "mean_steps": 22.6667,
+          "requests": 81,
+          "successful_responses": 81,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 966886,
+          "output_tokens": 37597,
+          "estimated_jev_usd": 0.040609212,
+          "jev_latency_median_ms": 438.0000000091968,
+          "jev_latency_max_ms": 1062.000000005355,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 17143,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 651,
+              "reasoning_output_tokens": 23
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 25702.999999994063,
+            "plan_sha256": "88718061d23d076a0ae5e11882d6c1244496f360bcecccacd0ad1d5f9742c5a6",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/10m_vs_11m/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/10m_vs_11m/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/10m_vs_11m/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 5.3333,
+          "mean_enemy_kill_fraction": 0.4848,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 247.0,
+          "mean_steps": 25,
+          "requests": 75,
+          "successful_responses": 75,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1059943,
+          "output_tokens": 35815,
+          "estimated_jev_usd": 0.044517606,
+          "jev_latency_median_ms": 500.0,
+          "jev_latency_max_ms": 1343.9999999973224,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 19870,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 665,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 35343.99999999732,
+            "plan_sha256": "e253ee8834b4fd78779fe052e2b8e6307e3a4ff414404a1194c9cc40c33bacd5",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/10m_vs_11m/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/10m_vs_11m/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/10m_vs_11m/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 1.0,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "27m_vs_30m",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0.6667,
+          "mean_enemy_kill_fraction": 0.0222,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 1270.0,
+          "mean_steps": 19,
+          "requests": 312,
+          "successful_responses": 312,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 4994031,
+          "output_tokens": 160259,
+          "estimated_jev_usd": 0.209749302,
+          "jev_latency_median_ms": 485.0000000005821,
+          "jev_latency_max_ms": 1389.999999999418,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/27m_vs_30m/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/27m_vs_30m/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 3.3333,
+          "mean_enemy_kill_fraction": 0.1111,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 1160.0,
+          "mean_steps": 19.6667,
+          "requests": 394,
+          "successful_responses": 394,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 5698892,
+          "output_tokens": 151380,
+          "estimated_jev_usd": 0.239353464,
+          "jev_latency_median_ms": 468.99999999732245,
+          "jev_latency_max_ms": 1156.0000000026776,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 30310,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 696,
+              "reasoning_output_tokens": 37
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 25891.00000000326,
+            "plan_sha256": "f104b202b1bd94d074d034fb046118f16c7a3065181fca43fda0b28ee4424dc6",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/27m_vs_30m/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/27m_vs_30m/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/27m_vs_30m/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 8.3333,
+          "mean_enemy_kill_fraction": 0.2778,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 839.0,
+          "mean_steps": 31,
+          "requests": 331,
+          "successful_responses": 331,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 5679613,
+          "output_tokens": 104205,
+          "estimated_jev_usd": 0.238543746,
+          "jev_latency_median_ms": 515.9999999887077,
+          "jev_latency_max_ms": 5702.999999994063,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 35667,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 714,
+              "reasoning_output_tokens": 20
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 43171.999999991385,
+            "plan_sha256": "df4ddb6bc48b5e493c8ebedec215afd91f140605830a6d9177d8437dc5098593",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/27m_vs_30m/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/27m_vs_30m/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/27m_vs_30m/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 5.0,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "MMM",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 1,
+          "mean_enemy_kill_fraction": 0.1,
+          "mean_allies_alive": 1,
+          "mean_allied_hp_shield": 143.3333,
+          "mean_enemy_hp_shield": 637.7133,
+          "mean_steps": 29.6667,
+          "requests": 89,
+          "successful_responses": 89,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1178680,
+          "output_tokens": 48702,
+          "estimated_jev_usd": 0.04950456,
+          "jev_latency_median_ms": 468.0000000007567,
+          "jev_latency_max_ms": 1530.9999999990396,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/MMM/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/MMM/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 4.3333,
+          "mean_enemy_kill_fraction": 0.4333,
+          "mean_allies_alive": 1,
+          "mean_allied_hp_shield": 138.3333,
+          "mean_enemy_hp_shield": 340.5767,
+          "mean_steps": 46.6667,
+          "requests": 156,
+          "successful_responses": 156,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1751748,
+          "output_tokens": 57030,
+          "estimated_jev_usd": 0.073573416,
+          "jev_latency_median_ms": 437.0000000053551,
+          "jev_latency_max_ms": 1952.9999999940628,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 17184,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 662,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 25483.99999999674,
+            "plan_sha256": "3185fcfa4c988bf9a13453c9dad36b79428237f85aef9c511d002225eb2f66eb",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/MMM/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/MMM/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/MMM/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "win",
+            "loss"
+          ],
+          "results": {
+            "win": 1,
+            "draw": 0,
+            "loss": 2,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 7.3333,
+          "mean_enemy_kill_fraction": 0.7333,
+          "mean_allies_alive": 2.6667,
+          "mean_allied_hp_shield": 208.7967,
+          "mean_enemy_hp_shield": 133.98,
+          "mean_steps": 58.3333,
+          "requests": 175,
+          "successful_responses": 175,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 2381983,
+          "output_tokens": 75009,
+          "estimated_jev_usd": 0.100043286,
+          "jev_latency_median_ms": 468.99999999732245,
+          "jev_latency_max_ms": 5718.999999997322,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 20160,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 692,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 39672.00000000594,
+            "plan_sha256": "fe0521caf197fe1a276219a12c404b416dbbd259f485ef6298c7eedafa2f4f02",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/MMM/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/MMM/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/MMM/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 3.0,
+      "C_minus_B_wins": 1
+    },
+    {
+      "map": "MMM2",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0.3333,
+          "mean_enemy_kill_fraction": 0.0278,
+          "mean_allies_alive": 1,
+          "mean_allied_hp_shield": 145.0,
+          "mean_enemy_hp_shield": 841.9933,
+          "mean_steps": 24,
+          "requests": 84,
+          "successful_responses": 84,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1077340,
+          "output_tokens": 43160,
+          "estimated_jev_usd": 0.04524828,
+          "jev_latency_median_ms": 469.0000000009604,
+          "jev_latency_max_ms": 1219.0000000009604,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/MMM2/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/MMM2/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 2.3333,
+          "mean_enemy_kill_fraction": 0.1944,
+          "mean_allies_alive": 1,
+          "mean_allied_hp_shield": 146.6667,
+          "mean_enemy_hp_shield": 719.1367,
+          "mean_steps": 27.3333,
+          "requests": 101,
+          "successful_responses": 101,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1296666,
+          "output_tokens": 47060,
+          "estimated_jev_usd": 0.054459972,
+          "jev_latency_median_ms": 452.9999999940628,
+          "jev_latency_max_ms": 952.9999999940628,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 17198,
+              "cached_input_tokens": 7680,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 709,
+              "reasoning_output_tokens": 21
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 26453.000000008615,
+            "plan_sha256": "3fa7172ec61fe7b5a1eb1477c069ab4d4f961854174a4c712096d640b0ee7805",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/MMM2/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/MMM2/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/MMM2/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 3.6667,
+          "mean_enemy_kill_fraction": 0.3056,
+          "mean_allies_alive": 1,
+          "mean_allied_hp_shield": 150.0,
+          "mean_enemy_hp_shield": 614.62,
+          "mean_steps": 32,
+          "requests": 105,
+          "successful_responses": 105,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1487396,
+          "output_tokens": 45489,
+          "estimated_jev_usd": 0.062470632,
+          "jev_latency_median_ms": 485.0000000005821,
+          "jev_latency_max_ms": 3389.999999999418,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 20170,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 746,
+              "reasoning_output_tokens": 43
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 45016.00000000326,
+            "plan_sha256": "e3dc635994078a0851bc04cf2f41603cca61528a47824a0ffb70da03de6e3e6d",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/MMM2/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/MMM2/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/MMM2/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 1.3334,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "2s3z",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "win",
+            "win"
+          ],
+          "results": {
+            "win": 2,
+            "draw": 0,
+            "loss": 1,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 4.3333,
+          "mean_enemy_kill_fraction": 0.8667,
+          "mean_allies_alive": 1.3333,
+          "mean_allied_hp_shield": 49.75,
+          "mean_enemy_hp_shield": 106.6667,
+          "mean_steps": 60.6667,
+          "requests": 182,
+          "successful_responses": 182,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1009807,
+          "output_tokens": 44339,
+          "estimated_jev_usd": 0.042411894,
+          "jev_latency_median_ms": 421.9999999986612,
+          "jev_latency_max_ms": 984.0000000003783,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/2s3z/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/2s3z/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "win"
+          ],
+          "results": {
+            "win": 1,
+            "draw": 0,
+            "loss": 2,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 3,
+          "mean_enemy_kill_fraction": 0.6,
+          "mean_allies_alive": 0.6667,
+          "mean_allied_hp_shield": 72.0833,
+          "mean_enemy_hp_shield": 195.3333,
+          "mean_steps": 51.6667,
+          "requests": 155,
+          "successful_responses": 155,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1021602,
+          "output_tokens": 37978,
+          "estimated_jev_usd": 0.042907284,
+          "jev_latency_median_ms": 406.00000000267755,
+          "jev_latency_max_ms": 968.9999999973224,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 13853,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 685,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 25766.00000000326,
+            "plan_sha256": "cfc7de32c3ecaa641b3c1e3a4e725aeb6a0dc2044f0f6a969d599e27d6236c54",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/2s3z/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/2s3z/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/2s3z/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "win",
+            "loss"
+          ],
+          "results": {
+            "win": 1,
+            "draw": 0,
+            "loss": 2,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 3.3333,
+          "mean_enemy_kill_fraction": 0.6667,
+          "mean_allies_alive": 0.6667,
+          "mean_allied_hp_shield": 55.5833,
+          "mean_enemy_hp_shield": 144.5433,
+          "mean_steps": 51,
+          "requests": 153,
+          "successful_responses": 153,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1354003,
+          "output_tokens": 37647,
+          "estimated_jev_usd": 0.056868126,
+          "jev_latency_median_ms": 437.0000000053551,
+          "jev_latency_max_ms": 2281.9999999919673,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 16300,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 688,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 31031.000000002678,
+            "plan_sha256": "37354c0d2a30a02b49796a67921e4e618f768c0f2d1b6078f37a82379b95f90f",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/2s3z/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/2s3z/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/2s3z/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 0.3333,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "3s5z",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 3.3333,
+          "mean_enemy_kill_fraction": 0.4167,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 552.25,
+          "mean_steps": 47.3333,
+          "requests": 142,
+          "successful_responses": 142,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1489882,
+          "output_tokens": 67354,
+          "estimated_jev_usd": 0.062575044,
+          "jev_latency_median_ms": 468.4999999990396,
+          "jev_latency_max_ms": 1360.000000000582,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/3s5z/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/3s5z/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "win"
+          ],
+          "results": {
+            "win": 1,
+            "draw": 0,
+            "loss": 2,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 6.6667,
+          "mean_enemy_kill_fraction": 0.8333,
+          "mean_allies_alive": 0.6667,
+          "mean_allied_hp_shield": 82.6667,
+          "mean_enemy_hp_shield": 146.6667,
+          "mean_steps": 66,
+          "requests": 198,
+          "successful_responses": 198,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1934749,
+          "output_tokens": 76131,
+          "estimated_jev_usd": 0.081259458,
+          "jev_latency_median_ms": 422.0000000059372,
+          "jev_latency_max_ms": 1047.0000000059372,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 15862,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 755,
+              "reasoning_output_tokens": 32
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 27687.999999994645,
+            "plan_sha256": "3d08a2476fa63c7856b530fc3c9720a7f0427e5ae1ec1a7a4a179b84658af6ca",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/3s5z/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/3s5z/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/3s5z/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 5,
+          "mean_enemy_kill_fraction": 0.625,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 383.3333,
+          "mean_steps": 64.3333,
+          "requests": 193,
+          "successful_responses": 193,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 2198493,
+          "output_tokens": 66114,
+          "estimated_jev_usd": 0.092336706,
+          "jev_latency_median_ms": 467.99999999348074,
+          "jev_latency_max_ms": 1250.0,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 18540,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 724,
+              "reasoning_output_tokens": 26
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 41031.00000000268,
+            "plan_sha256": "75ab6e447a9f6afba19761fa67efae535bad5d0454c77e44f9677d2460a20d53",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3s5z/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3s5z/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3s5z/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": -1.6667,
+      "C_minus_B_wins": -1
+    },
+    {
+      "map": "3s5z_vs_3s6z",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 2.3333,
+          "mean_enemy_kill_fraction": 0.2593,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 802.4167,
+          "mean_steps": 40.3333,
+          "requests": 121,
+          "successful_responses": 121,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1391609,
+          "output_tokens": 63763,
+          "estimated_jev_usd": 0.058447578,
+          "jev_latency_median_ms": 469.0000000009604,
+          "jev_latency_max_ms": 2077.999999997701,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/3s5z_vs_3s6z/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/3s5z_vs_3s6z/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 2.3333,
+          "mean_enemy_kill_fraction": 0.2593,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 745.8733,
+          "mean_steps": 42.6667,
+          "requests": 128,
+          "successful_responses": 128,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1525186,
+          "output_tokens": 59045,
+          "estimated_jev_usd": 0.064057812,
+          "jev_latency_median_ms": 437.9999999946449,
+          "jev_latency_max_ms": 953.0000000086147,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 16535,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 667,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 25000.0,
+            "plan_sha256": "50553bdfb32fc471ac37a84d911a646ad4c5c87ceea2a3a3b92d3e257371a2b4",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/3s5z_vs_3s6z/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/3s5z_vs_3s6z/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/3s5z_vs_3s6z/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 2.3333,
+          "mean_enemy_kill_fraction": 0.2593,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 744.5833,
+          "mean_steps": 44.3333,
+          "requests": 133,
+          "successful_responses": 133,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1781186,
+          "output_tokens": 59890,
+          "estimated_jev_usd": 0.074809812,
+          "jev_latency_median_ms": 468.99999999732245,
+          "jev_latency_max_ms": 5657.000000006519,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 19610,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 763,
+              "reasoning_output_tokens": 25
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 39968.99999999732,
+            "plan_sha256": "f02825c0b5f5d8e9eaea8e8bb1a9ad62c8f0eaf78b74a57125406d0194f64fec",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3s5z_vs_3s6z/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3s5z_vs_3s6z/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3s5z_vs_3s6z/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 0.0,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "3s_vs_3z",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0.3333,
+          "mean_enemy_kill_fraction": 0.1111,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 243.0,
+          "mean_steps": 36.6667,
+          "requests": 110,
+          "successful_responses": 110,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 437540,
+          "output_tokens": 18671,
+          "estimated_jev_usd": 0.01837668,
+          "jev_latency_median_ms": 407.0000000028813,
+          "jev_latency_max_ms": 1077.9999999977008,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/3s_vs_3z/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/3s_vs_3z/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0.6667,
+          "mean_enemy_kill_fraction": 0.2222,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 206.96,
+          "mean_steps": 44,
+          "requests": 132,
+          "successful_responses": 132,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 642245,
+          "output_tokens": 23036,
+          "estimated_jev_usd": 0.02697429,
+          "jev_latency_median_ms": 405.9999999954016,
+          "jev_latency_max_ms": 827.9999999940628,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 12458,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 654,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 25047.000000005937,
+            "plan_sha256": "00266b189eba11b790c660d941b8da5ee329ab50ca18265cf34af609d4078ac0",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/3s_vs_3z/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/3s_vs_3z/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/3s_vs_3z/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 1,
+          "mean_enemy_kill_fraction": 0.3333,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 143.6667,
+          "mean_steps": 43,
+          "requests": 129,
+          "successful_responses": 129,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 831880,
+          "output_tokens": 22560,
+          "estimated_jev_usd": 0.03493896,
+          "jev_latency_median_ms": 421.99999999138527,
+          "jev_latency_max_ms": 1233.9999999967404,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 14543,
+              "cached_input_tokens": 7680,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 650,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 34453.000000008615,
+            "plan_sha256": "1e502810c8a71403aa93109525bafea4bd7c001a72c3c01a0553878a075df896",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_3z/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_3z/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_3z/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 0.3333,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "3s_vs_4z",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 444.04,
+          "mean_steps": 30,
+          "requests": 90,
+          "successful_responses": 90,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 400935,
+          "output_tokens": 17222,
+          "estimated_jev_usd": 0.01683927,
+          "jev_latency_median_ms": 405.9999999990396,
+          "jev_latency_max_ms": 891.0000000032596,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/3s_vs_4z/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/3s_vs_4z/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0.3333,
+          "mean_enemy_kill_fraction": 0.0833,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 408.3333,
+          "mean_steps": 31.3333,
+          "requests": 94,
+          "successful_responses": 94,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 474010,
+          "output_tokens": 16406,
+          "estimated_jev_usd": 0.01990842,
+          "jev_latency_median_ms": 391.00000000325963,
+          "jev_latency_max_ms": 766.0000000032596,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 12458,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 621,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 23843.999999997322,
+            "plan_sha256": "b1269a29daec639f40d37444edbe200d7de2bd43680054cb91b60285b53af8b6",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/3s_vs_4z/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/3s_vs_4z/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/3s_vs_4z/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 1,
+          "mean_enemy_kill_fraction": 0.25,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 365.8733,
+          "mean_steps": 37,
+          "requests": 111,
+          "successful_responses": 111,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 745065,
+          "output_tokens": 19519,
+          "estimated_jev_usd": 0.03129273,
+          "jev_latency_median_ms": 422.0000000059372,
+          "jev_latency_max_ms": 4266.00000000326,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 14569,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 660,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 35750.0,
+            "plan_sha256": "61203a3d176b03933865c75af2942962848cae92a1ca4d469f5ac4cd9df5552a",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_4z/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_4z/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_4z/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 0.6667,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "3s_vs_5z",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 643.6667,
+          "mean_steps": 26.3333,
+          "requests": 79,
+          "successful_responses": 79,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 385461,
+          "output_tokens": 16531,
+          "estimated_jev_usd": 0.016189362,
+          "jev_latency_median_ms": 421.9999999986612,
+          "jev_latency_max_ms": 905.9999999990396,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/3s_vs_5z/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/3s_vs_5z/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 1,
+          "mean_enemy_kill_fraction": 0.2,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 587.0,
+          "mean_steps": 30,
+          "requests": 90,
+          "successful_responses": 90,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 486649,
+          "output_tokens": 16665,
+          "estimated_jev_usd": 0.020439258,
+          "jev_latency_median_ms": 391.00000000325963,
+          "jev_latency_max_ms": 828.0000000086147,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 12458,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 663,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 24985.000000000582,
+            "plan_sha256": "4d2f7eb4ebcc9b283ac60ec1ef905ae9509077a22bcdb8fb68a46083949e899b",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/3s_vs_5z/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/3s_vs_5z/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/3s_vs_5z/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 1,
+          "mean_enemy_kill_fraction": 0.2,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 578.3333,
+          "mean_steps": 29,
+          "requests": 87,
+          "successful_responses": 87,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 626982,
+          "output_tokens": 16519,
+          "estimated_jev_usd": 0.026333244,
+          "jev_latency_median_ms": 452.9999999940628,
+          "jev_latency_max_ms": 1202.9999999940628,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 14549,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 666,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 41688.0000000092,
+            "plan_sha256": "e59d195b7d2acdf98d7e2a77a344b550172ba2878160af533be6f66788561302",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_5z/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_5z/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_5z/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 0,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "1c3s5z",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 3.6667,
+          "mean_enemy_kill_fraction": 0.4074,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 742.0,
+          "mean_steps": 44,
+          "requests": 132,
+          "successful_responses": 132,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1588773,
+          "output_tokens": 73125,
+          "estimated_jev_usd": 0.066728466,
+          "jev_latency_median_ms": 468.99999999732245,
+          "jev_latency_max_ms": 1063.0000000019209,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/1c3s5z/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/1c3s5z/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 3.6667,
+          "mean_enemy_kill_fraction": 0.4074,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 417.6667,
+          "mean_steps": 40.6667,
+          "requests": 122,
+          "successful_responses": 122,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1570596,
+          "output_tokens": 62804,
+          "estimated_jev_usd": 0.065965032,
+          "jev_latency_median_ms": 452.9999999940628,
+          "jev_latency_max_ms": 1968.0000000080327,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 16622,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 690,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 26921.999999991385,
+            "plan_sha256": "26d98b7d144efb95a46d9a572cef7efbad7fc7bb11300b4d53b8418132b10d2c",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/1c3s5z/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/1c3s5z/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/1c3s5z/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 5,
+          "mean_enemy_kill_fraction": 0.5556,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 361.5833,
+          "mean_steps": 48.3333,
+          "requests": 147,
+          "successful_responses": 145,
+          "api_errors": 2,
+          "sc2_action_errors": 0,
+          "input_tokens": 1940418,
+          "output_tokens": 61620,
+          "estimated_jev_usd": 0.081497556,
+          "jev_latency_median_ms": 531.0000000026776,
+          "jev_latency_max_ms": 6937.000000005355,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 19516,
+              "cached_input_tokens": 7680,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 702,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 35014.99999999942,
+            "plan_sha256": "aa7521972b0bbcf36f7598c87b85ea170fa215add7258093dc8b22b31dc53e25",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/1c3s5z/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/1c3s5z/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/1c3s5z/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 1.3333,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "2m_vs_1z",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 90.3333,
+          "mean_steps": 18.3333,
+          "requests": 55,
+          "successful_responses": 55,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 129934,
+          "output_tokens": 5040,
+          "estimated_jev_usd": 0.005457228,
+          "jev_latency_median_ms": 375.0,
+          "jev_latency_max_ms": 1000.0,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/2m_vs_1z/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/2m_vs_1z/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 15.3333,
+          "mean_steps": 46.6667,
+          "requests": 140,
+          "successful_responses": 140,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 458961,
+          "output_tokens": 13443,
+          "estimated_jev_usd": 0.019276362,
+          "jev_latency_median_ms": 375.0,
+          "jev_latency_max_ms": 1733.9999999967404,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 12082,
+              "cached_input_tokens": 7680,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 667,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 26281.000000002678,
+            "plan_sha256": "19cabbfc2b883aa50c106eb17a2e62ad6d8cafd088d7ec38aae69987d8cbd577",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/2m_vs_1z/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/2m_vs_1z/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/2m_vs_1z/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 42.0,
+          "mean_steps": 25,
+          "requests": 75,
+          "successful_responses": 75,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 323666,
+          "output_tokens": 7024,
+          "estimated_jev_usd": 0.013593972,
+          "jev_latency_median_ms": 391.00000000325963,
+          "jev_latency_max_ms": 1250.0,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 14783,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 665,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 33358.99999999674,
+            "plan_sha256": "8743efb82e602fec96c3f80f88c14779de4d049aba7b99d6669ac7f7e2d34984",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/2m_vs_1z/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/2m_vs_1z/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/2m_vs_1z/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 0,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "corridor",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 12,
+          "mean_enemy_kill_fraction": 0.5,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 353.1733,
+          "mean_steps": 38.3333,
+          "requests": 164,
+          "successful_responses": 164,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 2065131,
+          "output_tokens": 98655,
+          "estimated_jev_usd": 0.086735502,
+          "jev_latency_median_ms": 485.0000000005821,
+          "jev_latency_max_ms": 1062.000000005355,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/corridor/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/corridor/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 16,
+          "mean_enemy_kill_fraction": 0.6667,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 240.6233,
+          "mean_steps": 43,
+          "requests": 177,
+          "successful_responses": 177,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 2142303,
+          "output_tokens": 94387,
+          "estimated_jev_usd": 0.089976726,
+          "jev_latency_median_ms": 467.99999999348074,
+          "jev_latency_max_ms": 1046.9999999913853,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 14965,
+              "cached_input_tokens": 7680,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 677,
+              "reasoning_output_tokens": 27
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 27203.999999997905,
+            "plan_sha256": "0dfc214cd363ec5551d21b1d5d1ac4ad3acefecebb2ae44ba9f77199928a115f",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/corridor/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/corridor/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/corridor/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 14.6667,
+          "mean_enemy_kill_fraction": 0.6111,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 292.0033,
+          "mean_steps": 63,
+          "requests": 210,
+          "successful_responses": 208,
+          "api_errors": 2,
+          "sc2_action_errors": 0,
+          "input_tokens": 2633623,
+          "output_tokens": 93464,
+          "estimated_jev_usd": 0.110612166,
+          "jev_latency_median_ms": 468.99999999732245,
+          "jev_latency_max_ms": 5656.000000002678,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 18415,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 674,
+              "reasoning_output_tokens": 33
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 38891.00000000326,
+            "plan_sha256": "c799bec0b154f2dee8aa4b92175b633ca85d4159d7ba6cea8eb4e859499ff062",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/corridor/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/corridor/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/corridor/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": -1.3333,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "6h_vs_8z",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0.3333,
+          "mean_enemy_kill_fraction": 0.0417,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 1004.0,
+          "mean_steps": 19,
+          "requests": 57,
+          "successful_responses": 57,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 549295,
+          "output_tokens": 26238,
+          "estimated_jev_usd": 0.02307039,
+          "jev_latency_median_ms": 453.0000000013388,
+          "jev_latency_max_ms": 1328.0000000013388,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/6h_vs_8z/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/6h_vs_8z/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 1,
+          "mean_enemy_kill_fraction": 0.125,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 800.6667,
+          "mean_steps": 21.6667,
+          "requests": 65,
+          "successful_responses": 65,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 645161,
+          "output_tokens": 27054,
+          "estimated_jev_usd": 0.027096762,
+          "jev_latency_median_ms": 437.0000000053551,
+          "jev_latency_max_ms": 968.9999999973224,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 18775,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 622,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 24483.99999999674,
+            "plan_sha256": "5aa02207b34abb6b120b8dde45a070ae6aaa9278de0a8db37b697d68da687ff9",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/6h_vs_8z/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/6h_vs_8z/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/6h_vs_8z/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 3,
+          "mean_enemy_kill_fraction": 0.375,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 624.6667,
+          "mean_steps": 25,
+          "requests": 75,
+          "successful_responses": 75,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 824239,
+          "output_tokens": 28813,
+          "estimated_jev_usd": 0.034618038,
+          "jev_latency_median_ms": 437.9999999946449,
+          "jev_latency_max_ms": 2359.0000000112923,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 23717,
+              "cached_input_tokens": 7680,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 683,
+              "reasoning_output_tokens": 29
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 41610.00000000058,
+            "plan_sha256": "dfb931f932d4cbf1c128824cff2cb255086d58cad7ef417c8df14e90a84da6c5",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/6h_vs_8z/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/6h_vs_8z/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/6h_vs_8z/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 2,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "2s_vs_1sc",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 49.3867,
+          "mean_steps": 44.6667,
+          "requests": 134,
+          "successful_responses": 134,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 313034,
+          "output_tokens": 11691,
+          "estimated_jev_usd": 0.013147428,
+          "jev_latency_median_ms": 375.0,
+          "jev_latency_max_ms": 1046.9999999986612,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/2s_vs_1sc/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/2s_vs_1sc/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 92.2833,
+          "mean_steps": 46.3333,
+          "requests": 139,
+          "successful_responses": 139,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 476724,
+          "output_tokens": 14223,
+          "estimated_jev_usd": 0.020022408,
+          "jev_latency_median_ms": 389.9999999994179,
+          "jev_latency_max_ms": 781.9999999919673,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 12086,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 692,
+              "reasoning_output_tokens": 42
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 25781.000000002678,
+            "plan_sha256": "e9a05083acb458b5369b0c547519847d6925028e2099d100d76abb41bb667050",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/2s_vs_1sc/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/2s_vs_1sc/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/2s_vs_1sc/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 1.43,
+          "mean_steps": 45,
+          "requests": 136,
+          "successful_responses": 135,
+          "api_errors": 1,
+          "sc2_action_errors": 0,
+          "input_tokens": 627933,
+          "output_tokens": 14460,
+          "estimated_jev_usd": 0.026373186,
+          "jev_latency_median_ms": 406.00000000267755,
+          "jev_latency_max_ms": 4280.999999988126,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 14601,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 771,
+              "reasoning_output_tokens": 68
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 42889.99999999942,
+            "plan_sha256": "3ececed247b2c1708b821293b55081b78ffafbd76a5dfbfa78f705d3eeb58691",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/2s_vs_1sc/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/2s_vs_1sc/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/2s_vs_1sc/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 0,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "so_many_baneling",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 15.3333,
+          "mean_enemy_kill_fraction": 0.4792,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 500.0,
+          "mean_steps": 17.3333,
+          "requests": 137,
+          "successful_responses": 137,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1684879,
+          "output_tokens": 26318,
+          "estimated_jev_usd": 0.070764918,
+          "jev_latency_median_ms": 484.00000000401633,
+          "jev_latency_max_ms": 1125.0,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/so_many_baneling/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/so_many_baneling/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 17,
+          "mean_enemy_kill_fraction": 0.5312,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 450.0,
+          "mean_steps": 17,
+          "requests": 136,
+          "successful_responses": 136,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1797965,
+          "output_tokens": 26005,
+          "estimated_jev_usd": 0.07551453,
+          "jev_latency_median_ms": 468.99999999732245,
+          "jev_latency_max_ms": 1156.0000000026776,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 34416,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 650,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 25014.999999999418,
+            "plan_sha256": "c998bd5d0f38a2e6ae18285451560241e9d8fd4d28ef7b8f59b96a8ddfad679f",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/so_many_baneling/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/so_many_baneling/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/so_many_baneling/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 19,
+          "mean_enemy_kill_fraction": 0.5938,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 390.0,
+          "mean_steps": 17.6667,
+          "requests": 96,
+          "successful_responses": 96,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1510693,
+          "output_tokens": 24085,
+          "estimated_jev_usd": 0.063449106,
+          "jev_latency_median_ms": 500.0,
+          "jev_latency_max_ms": 1389.999999999418,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 48531,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 695,
+              "reasoning_output_tokens": 19
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 31422.000000005937,
+            "plan_sha256": "597865b4d8851d1929219181ffde9ab798461e89f880c9b2a14b9ab1fa12d8aa",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/so_many_baneling/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/so_many_baneling/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/so_many_baneling/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 2,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "bane_vs_bane",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "draw",
+            "win",
+            "draw"
+          ],
+          "results": {
+            "win": 1,
+            "draw": 2,
+            "loss": 0,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 24,
+          "mean_enemy_kill_fraction": 1.0,
+          "mean_allies_alive": 1,
+          "mean_allied_hp_shield": 11.17,
+          "mean_enemy_hp_shield": 0.0,
+          "mean_steps": 27.6667,
+          "requests": 302,
+          "successful_responses": 302,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 5036173,
+          "output_tokens": 199156,
+          "estimated_jev_usd": 0.211519266,
+          "jev_latency_median_ms": 531.0000000026776,
+          "jev_latency_max_ms": 1516.0000000032596,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/bane_vs_bane/jev-retry-20260922-003027-436916/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/bane_vs_bane/jev-retry-20260922-003027-436916/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "draw",
+            "win",
+            "loss"
+          ],
+          "results": {
+            "win": 1,
+            "draw": 1,
+            "loss": 1,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 22.6667,
+          "mean_enemy_kill_fraction": 0.9444,
+          "mean_allies_alive": 0.3333,
+          "mean_allied_hp_shield": 5.57,
+          "mean_enemy_hp_shield": 43.5733,
+          "mean_steps": 21.6667,
+          "requests": 344,
+          "successful_responses": 344,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 5108300,
+          "output_tokens": 168329,
+          "estimated_jev_usd": 0.2145486,
+          "jev_latency_median_ms": 469.00000001187436,
+          "jev_latency_max_ms": 1031.0000000026776,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 69916,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 715,
+              "reasoning_output_tokens": 24
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 27639.999999999418,
+            "plan_sha256": "3d27b65cf604f3b7eb2714ae94308045af176d4451e3f678268165774e4173fd",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/bane_vs_bane/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/bane_vs_bane/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/bane_vs_bane/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "win",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 1,
+            "draw": 0,
+            "loss": 2,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 18.6667,
+          "mean_enemy_kill_fraction": 0.7778,
+          "mean_allies_alive": 0.3333,
+          "mean_allied_hp_shield": 11.6667,
+          "mean_enemy_hp_shield": 146.5867,
+          "mean_steps": 17,
+          "requests": 237,
+          "successful_responses": 237,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 4392807,
+          "output_tokens": 162572,
+          "estimated_jev_usd": 0.184497894,
+          "jev_latency_median_ms": 531.0000000026776,
+          "jev_latency_max_ms": 5828.9999999979045,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 102297,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 744,
+              "reasoning_output_tokens": 34
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 35375.0,
+            "plan_sha256": "391a694cb593fee61547507219ec2161fbbf245613fa23ce13b62a1f1bd4d92f",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/bane_vs_bane/jev-retry-20260922-201819-687502/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/bane_vs_bane/jev-retry-20260922-201819-687502/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/bane_vs_bane/jev-retry-20260922-201819-687502/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": -4.0,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "2c_vs_64zg",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 14.6667,
+          "mean_enemy_kill_fraction": 0.2292,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 1371.4533,
+          "mean_steps": 20.6667,
+          "requests": 94,
+          "successful_responses": 94,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1242285,
+          "output_tokens": 42977,
+          "estimated_jev_usd": 0.05217597,
+          "jev_latency_median_ms": 500.0,
+          "jev_latency_max_ms": 2343.9999999973224,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/2c_vs_64zg/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/2c_vs_64zg/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 21.6667,
+          "mean_enemy_kill_fraction": 0.3385,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 1032.15,
+          "mean_steps": 37,
+          "requests": 168,
+          "successful_responses": 168,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 2176006,
+          "output_tokens": 45492,
+          "estimated_jev_usd": 0.091392252,
+          "jev_latency_median_ms": 468.00000000803266,
+          "jev_latency_max_ms": 1968.9999999973224,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 28572,
+              "cached_input_tokens": 7680,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 664,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 26750.0,
+            "plan_sha256": "3ea3eb83f1ca53e4b036d0fc95191bd2f61cb0c195855e763a65d0d95d87b513",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/2c_vs_64zg/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/2c_vs_64zg/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/2c_vs_64zg/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "win",
+            "loss"
+          ],
+          "results": {
+            "win": 1,
+            "draw": 0,
+            "loss": 2,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 48.3333,
+          "mean_enemy_kill_fraction": 0.7552,
+          "mean_allies_alive": 0.3333,
+          "mean_allied_hp_shield": 30.0,
+          "mean_enemy_hp_shield": 312.0667,
+          "mean_steps": 50.3333,
+          "requests": 151,
+          "successful_responses": 151,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1770020,
+          "output_tokens": 64092,
+          "estimated_jev_usd": 0.07434084,
+          "jev_latency_median_ms": 467.99999999348074,
+          "jev_latency_max_ms": 1343.9999999973224,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 37109,
+              "cached_input_tokens": 7680,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 692,
+              "reasoning_output_tokens": 18
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 29921.000000002095,
+            "plan_sha256": "98946f35ccf8b546e67571512180474c69ae72af504244f8a0c3b690f00f3052",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/2c_vs_64zg/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/2c_vs_64zg/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/2c_vs_64zg/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 26.6666,
+      "C_minus_B_wins": 1
+    },
+    {
+      "map": "2vr_vs_3sc",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 859.8367,
+          "mean_steps": 22.3333,
+          "requests": 67,
+          "successful_responses": 67,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 188285,
+          "output_tokens": 6217,
+          "estimated_jev_usd": 0.00790797,
+          "jev_latency_median_ms": 406.00000000267755,
+          "jev_latency_max_ms": 1030.9999999954016,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/2vr_vs_3sc/jev-retry-20260922-003154-123594/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/2vr_vs_3sc/jev-retry-20260922-003154-123594/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 790.4733,
+          "mean_steps": 22.3333,
+          "requests": 67,
+          "successful_responses": 67,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 247819,
+          "output_tokens": 6638,
+          "estimated_jev_usd": 0.010408398,
+          "jev_latency_median_ms": 390.9999999887077,
+          "jev_latency_max_ms": 766.0000000032596,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 11753,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 710,
+              "reasoning_output_tokens": 44
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 27358.99999999674,
+            "plan_sha256": "0a1fea80d60a9559bc2e27d8e62d28b21a28b7e948a2fa5239a5fbc38002fa49",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/2vr_vs_3sc/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/2vr_vs_3sc/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/2vr_vs_3sc/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 726.2867,
+          "mean_steps": 22.6667,
+          "requests": 68,
+          "successful_responses": 68,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 332000,
+          "output_tokens": 6368,
+          "estimated_jev_usd": 0.013944,
+          "jev_latency_median_ms": 406.00000000267755,
+          "jev_latency_max_ms": 1233.9999999967404,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 14204,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 661,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 25968.000000008033,
+            "plan_sha256": "ef20e24eccd7cb0b65775387ce92ce089b21af9b454e74c72245866e7e50bfca",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/2vr_vs_3sc/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/2vr_vs_3sc/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/2vr_vs_3sc/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 0,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "3hl_vs_24zl",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 719.66,
+          "mean_steps": 18.6667,
+          "requests": 56,
+          "successful_responses": 56,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 474939,
+          "output_tokens": 22254,
+          "estimated_jev_usd": 0.019947438,
+          "jev_latency_median_ms": 468.4999999990396,
+          "jev_latency_max_ms": 875.0,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/3hl_vs_24zl/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/3hl_vs_24zl/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 3.6667,
+          "mean_enemy_kill_fraction": 0.1528,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 534.64,
+          "mean_steps": 22.3333,
+          "requests": 67,
+          "successful_responses": 67,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 621359,
+          "output_tokens": 25735,
+          "estimated_jev_usd": 0.026097078,
+          "jev_latency_median_ms": 421.99999999138527,
+          "jev_latency_max_ms": 906.9999999919673,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 12456,
+              "cached_input_tokens": 7680,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 675,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 27062.000000005355,
+            "plan_sha256": "f97b5534c82fc56622f8a334cb39afd3e8391ec8798d4a280255f1194b118e67",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/3hl_vs_24zl/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/3hl_vs_24zl/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/3hl_vs_24zl/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 3.6667,
+          "mean_enemy_kill_fraction": 0.1528,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 479.12,
+          "mean_steps": 20.6667,
+          "requests": 62,
+          "successful_responses": 62,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 595494,
+          "output_tokens": 22888,
+          "estimated_jev_usd": 0.025010748,
+          "jev_latency_median_ms": 453.00000000861473,
+          "jev_latency_max_ms": 1233.9999999967404,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 15572,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 736,
+              "reasoning_output_tokens": 51
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 43016.00000000326,
+            "plan_sha256": "5d3988c3ca5ec41a9f59d500e06cab6cf01ee5b43d723e517d056738a52d9bb5",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3hl_vs_24zl/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3hl_vs_24zl/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3hl_vs_24zl/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 0.0,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "3rp_vs_5zl",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 621.5,
+          "mean_steps": 26.6667,
+          "requests": 80,
+          "successful_responses": 80,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 303609,
+          "output_tokens": 10217,
+          "estimated_jev_usd": 0.012751578,
+          "jev_latency_median_ms": 406.9999999992433,
+          "jev_latency_max_ms": 921.9999999986612,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/3rp_vs_5zl/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/3rp_vs_5zl/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 659.4567,
+          "mean_steps": 38.6667,
+          "requests": 116,
+          "successful_responses": 116,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 584293,
+          "output_tokens": 16471,
+          "estimated_jev_usd": 0.024540306,
+          "jev_latency_median_ms": 391.00000000325963,
+          "jev_latency_max_ms": 952.9999999940628,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 14103,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 670,
+              "reasoning_output_tokens": 11
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 25750.0,
+            "plan_sha256": "31a44d5517cdfba319a0dfcd6d0990d5e045f1adbd42a3fff19483938e2e6918",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/3rp_vs_5zl/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/3rp_vs_5zl/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/3rp_vs_5zl/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 626.75,
+          "mean_steps": 24.6667,
+          "requests": 74,
+          "successful_responses": 74,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 452270,
+          "output_tokens": 8515,
+          "estimated_jev_usd": 0.01899534,
+          "jev_latency_median_ms": 421.49999999674037,
+          "jev_latency_max_ms": 5671.0000000020955,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 17707,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 709,
+              "reasoning_output_tokens": 38
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 41235.00000000058,
+            "plan_sha256": "26dfcc8c4a6b03110d8fcadba0f46fe0e7ec2b85619ab0f4f95e2a678ae91070",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3rp_vs_5zl/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3rp_vs_5zl/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3rp_vs_5zl/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 0,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "3rp_vs_24zl",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 809.34,
+          "mean_steps": 14.6667,
+          "requests": 44,
+          "successful_responses": 44,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 488816,
+          "output_tokens": 20565,
+          "estimated_jev_usd": 0.020530272,
+          "jev_latency_median_ms": 485.0000000005821,
+          "jev_latency_max_ms": 875.0,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/3rp_vs_24zl/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/3rp_vs_24zl/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 1,
+          "mean_enemy_kill_fraction": 0.0417,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 765.7433,
+          "mean_steps": 14.6667,
+          "requests": 44,
+          "successful_responses": 44,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 508508,
+          "output_tokens": 19430,
+          "estimated_jev_usd": 0.021357336,
+          "jev_latency_median_ms": 468.0000000007567,
+          "jev_latency_max_ms": 812.0000000053551,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 12456,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 633,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 24625.0,
+            "plan_sha256": "f33943046d7a9257fb2d5abed39c635ca3bc357591991862b70465033830cedd",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/3rp_vs_24zl/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/3rp_vs_24zl/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/3rp_vs_24zl/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 1.3333,
+          "mean_enemy_kill_fraction": 0.0556,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 746.2133,
+          "mean_steps": 16,
+          "requests": 48,
+          "successful_responses": 48,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 505816,
+          "output_tokens": 21468,
+          "estimated_jev_usd": 0.021244272,
+          "jev_latency_median_ms": 453.00000000861473,
+          "jev_latency_max_ms": 1343.9999999973224,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 14549,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 708,
+              "reasoning_output_tokens": 21
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 30656.000000002678,
+            "plan_sha256": "95a5a964e81dfbcc575d9608467e7993c4bfa2bf6f0918caa0aa96e2df8ba9a5",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3rp_vs_24zl/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3rp_vs_24zl/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3rp_vs_24zl/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 0.3333,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "7q_vs_2bc",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 746.0,
+          "mean_steps": 62.6667,
+          "requests": 188,
+          "successful_responses": 188,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1134267,
+          "output_tokens": 45382,
+          "estimated_jev_usd": 0.047639214,
+          "jev_latency_median_ms": 438.00000000192085,
+          "jev_latency_max_ms": 1046.9999999986612,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/7q_vs_2bc/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/7q_vs_2bc/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 960.0,
+          "mean_steps": 63.3333,
+          "requests": 190,
+          "successful_responses": 190,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1337943,
+          "output_tokens": 45226,
+          "estimated_jev_usd": 0.056193606,
+          "jev_latency_median_ms": 406.49999999732245,
+          "jev_latency_max_ms": 937.9999999946449,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 15166,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 637,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 25984.000000011292,
+            "plan_sha256": "0c55daf33eb5d0d762ac3f092755d621045459155a3b2b5681aff025fe929ce1",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/7q_vs_2bc/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/7q_vs_2bc/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/7q_vs_2bc/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 736.0,
+          "mean_steps": 60.6667,
+          "requests": 182,
+          "successful_responses": 182,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 1642552,
+          "output_tokens": 44435,
+          "estimated_jev_usd": 0.068987184,
+          "jev_latency_median_ms": 445.5000000016298,
+          "jev_latency_max_ms": 1281.0000000026776,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 18276,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 636,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 38093.99999999732,
+            "plan_sha256": "c833ad722b57903fea4ed6ddb8da29964ec3ba62eb76d45016bfbaaf529664d0",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/7q_vs_2bc/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/7q_vs_2bc/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/7q_vs_2bc/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 0,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "3st_vs_5zl",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0.3333,
+          "mean_enemy_kill_fraction": 0.0667,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 529.7067,
+          "mean_steps": 36.6667,
+          "requests": 110,
+          "successful_responses": 110,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 501319,
+          "output_tokens": 19178,
+          "estimated_jev_usd": 0.021055398,
+          "jev_latency_median_ms": 437.0000000053551,
+          "jev_latency_max_ms": 889.9999999994179,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/3st_vs_5zl/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/3st_vs_5zl/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 525.8733,
+          "mean_steps": 37.6667,
+          "requests": 113,
+          "successful_responses": 113,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 628876,
+          "output_tokens": 20186,
+          "estimated_jev_usd": 0.026412792,
+          "jev_latency_median_ms": 406.99999999196734,
+          "jev_latency_max_ms": 983.9999999967404,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 13813,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 689,
+              "reasoning_output_tokens": 30
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 26421.999999991385,
+            "plan_sha256": "fdc5f79644801321b237284b1a268349830866320db024e6aefa3e7af4756cb1",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/3st_vs_5zl/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/3st_vs_5zl/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/3st_vs_5zl/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 1,
+          "mean_enemy_kill_fraction": 0.2,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 505.2933,
+          "mean_steps": 38,
+          "requests": 114,
+          "successful_responses": 114,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 829427,
+          "output_tokens": 19367,
+          "estimated_jev_usd": 0.034835934,
+          "jev_latency_median_ms": 422.0000000059372,
+          "jev_latency_max_ms": 5093.999999997322,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 18143,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 705,
+              "reasoning_output_tokens": 16
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 31250.0,
+            "plan_sha256": "a30b0d834def32c9a1368322ff8f3985a258ef989f2af49ef3bb6dc4e4e756f7",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3st_vs_5zl/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3st_vs_5zl/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/3st_vs_5zl/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 1,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "6m_vs_10m",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 402.0,
+          "mean_steps": 19.6667,
+          "requests": 59,
+          "successful_responses": 59,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 443687,
+          "output_tokens": 21833,
+          "estimated_jev_usd": 0.018634854,
+          "jev_latency_median_ms": 469.0000000045984,
+          "jev_latency_max_ms": 1093.9999999973224,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/6m_vs_10m/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/6m_vs_10m/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0.6667,
+          "mean_enemy_kill_fraction": 0.0667,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 382.0,
+          "mean_steps": 20.3333,
+          "requests": 61,
+          "successful_responses": 61,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 525164,
+          "output_tokens": 22742,
+          "estimated_jev_usd": 0.022056888,
+          "jev_latency_median_ms": 422.0000000059372,
+          "jev_latency_max_ms": 969.0000000118744,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 14463,
+              "cached_input_tokens": 7680,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 617,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 24092.99999999348,
+            "plan_sha256": "11243b6c2897888b22cfb70f9d8e3d354372c4e4d5c825fd6b0df3d65ad5c262",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/6m_vs_10m/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/6m_vs_10m/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/6m_vs_10m/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 2,
+          "mean_enemy_kill_fraction": 0.2,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 332.0,
+          "mean_steps": 28.6667,
+          "requests": 86,
+          "successful_responses": 86,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 872181,
+          "output_tokens": 26429,
+          "estimated_jev_usd": 0.036631602,
+          "jev_latency_median_ms": 438.0000000091968,
+          "jev_latency_max_ms": 1312.000000005355,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 17539,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 633,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 34375.0,
+            "plan_sha256": "c0fdf8358e235644c7c4005fe4d63086b5bc05e9a3bd1d51fbebb1a9e005d535",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/6m_vs_10m/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/6m_vs_10m/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/6m_vs_10m/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 1.3333,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "mmmt_vs_zspi",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 2.6667,
+          "mean_enemy_kill_fraction": 0.1667,
+          "mean_allies_alive": 2,
+          "mean_allied_hp_shield": 180.0,
+          "mean_enemy_hp_shield": 2003.8733,
+          "mean_steps": 39.6667,
+          "requests": 303,
+          "successful_responses": 303,
+          "api_errors": 0,
+          "sc2_action_errors": 46,
+          "input_tokens": 5049595,
+          "output_tokens": 204160,
+          "estimated_jev_usd": 0.21208299,
+          "jev_latency_median_ms": 531.0000000026776,
+          "jev_latency_max_ms": 13764.999999999418,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/mmmt_vs_zspi/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/mmmt_vs_zspi/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 3.3333,
+          "mean_enemy_kill_fraction": 0.2083,
+          "mean_allies_alive": 2,
+          "mean_allied_hp_shield": 196.0,
+          "mean_enemy_hp_shield": 1917.33,
+          "mean_steps": 40.6667,
+          "requests": 366,
+          "successful_responses": 366,
+          "api_errors": 0,
+          "sc2_action_errors": 44,
+          "input_tokens": 5475498,
+          "output_tokens": 183113,
+          "estimated_jev_usd": 0.229970916,
+          "jev_latency_median_ms": 485.0000000005821,
+          "jev_latency_max_ms": 2125.0,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 24964,
+              "cached_input_tokens": 7680,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 766,
+              "reasoning_output_tokens": 36
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 31391.00000000326,
+            "plan_sha256": "dfab709e05e712c25aab29105facbbed79e9e812c8164a0b29d9016e87f84dec",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/mmmt_vs_zspi/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/mmmt_vs_zspi/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/mmmt_vs_zspi/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 7.6667,
+          "mean_enemy_kill_fraction": 0.4792,
+          "mean_allies_alive": 2,
+          "mean_allied_hp_shield": 232.6667,
+          "mean_enemy_hp_shield": 1240.0,
+          "mean_steps": 52.3333,
+          "requests": 376,
+          "successful_responses": 376,
+          "api_errors": 0,
+          "sc2_action_errors": 60,
+          "input_tokens": 6449335,
+          "output_tokens": 185705,
+          "estimated_jev_usd": 0.27087207,
+          "jev_latency_median_ms": 516.0000000032596,
+          "jev_latency_max_ms": 2391.0000000032596,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 29599,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 781,
+              "reasoning_output_tokens": 14
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 35265.99999998871,
+            "plan_sha256": "f7643d1473c2f7f2253a53fd52a5e14c92b34ccd4759c8b694b19aa39f1da006",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/mmmt_vs_zspi/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/mmmt_vs_zspi/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/mmmt_vs_zspi/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 4.3334,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "unit_test",
+      "development_map": true,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 1350.0,
+          "mean_steps": 9.3333,
+          "requests": 28,
+          "successful_responses": 28,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 77604,
+          "output_tokens": 1756,
+          "estimated_jev_usd": 0.003259368,
+          "jev_latency_median_ms": 367.00000000200816,
+          "jev_latency_max_ms": 1938.0000000019209,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/unit_test/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/unit_test/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 1344.0,
+          "mean_steps": 10,
+          "requests": 30,
+          "successful_responses": 30,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 118039,
+          "output_tokens": 1958,
+          "estimated_jev_usd": 0.004957638,
+          "jev_latency_median_ms": 390.99999999598367,
+          "jev_latency_max_ms": 764.9999999994179,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 11091,
+              "cached_input_tokens": 7680,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 639,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 25812.999999994645,
+            "plan_sha256": "ebdad48ba81f1f42b22a251d6cca0d7a376c5c8f56d8220f6926f8f714f65728",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/unit_test/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/unit_test/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/unit_test/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0,
+          "mean_enemy_kill_fraction": 0.0,
+          "mean_allies_alive": 0,
+          "mean_allied_hp_shield": 0.0,
+          "mean_enemy_hp_shield": 1346.0,
+          "mean_steps": 21.3333,
+          "requests": 64,
+          "successful_responses": 64,
+          "api_errors": 0,
+          "sc2_action_errors": 0,
+          "input_tokens": 214826,
+          "output_tokens": 3529,
+          "estimated_jev_usd": 0.009022692,
+          "jev_latency_median_ms": 391.00000000325963,
+          "jev_latency_max_ms": 5233.99999999674,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 13620,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 672,
+              "reasoning_output_tokens": 37
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 36718.99999999732,
+            "plan_sha256": "75b0449e564581442fe454a9ebf20c09c0765d2f0e8ad8898150a5da59b0c351",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/unit_test/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/unit_test/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/unit_test/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 0,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "mmmt",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 0.6667,
+          "mean_enemy_kill_fraction": 0.0303,
+          "mean_allies_alive": 2,
+          "mean_allied_hp_shield": 283.3333,
+          "mean_enemy_hp_shield": 1466.6367,
+          "mean_steps": 34.3333,
+          "requests": 323,
+          "successful_responses": 323,
+          "api_errors": 0,
+          "sc2_action_errors": 38,
+          "input_tokens": 5174444,
+          "output_tokens": 188915,
+          "estimated_jev_usd": 0.217326648,
+          "jev_latency_median_ms": 530.9999999954016,
+          "jev_latency_max_ms": 1421.9999999986612,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/mmmt/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/mmmt/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 12.6667,
+          "mean_enemy_kill_fraction": 0.5758,
+          "mean_allies_alive": 2,
+          "mean_allied_hp_shield": 300.0,
+          "mean_enemy_hp_shield": 711.0767,
+          "mean_steps": 60,
+          "requests": 487,
+          "successful_responses": 487,
+          "api_errors": 0,
+          "sc2_action_errors": 93,
+          "input_tokens": 7155292,
+          "output_tokens": 173450,
+          "estimated_jev_usd": 0.300522264,
+          "jev_latency_median_ms": 485.0000000005821,
+          "jev_latency_max_ms": 1296.9999999913853,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 24886,
+              "cached_input_tokens": 7680,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 701,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 27047.000000005937,
+            "plan_sha256": "8f673f3b67f4a35e585b12a6093be6ca1f814650bbf4a1bc55c3fa605d5c6aaa",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/mmmt/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/mmmt/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/mmmt/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "win",
+            "win",
+            "loss"
+          ],
+          "results": {
+            "win": 2,
+            "draw": 0,
+            "loss": 1,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 19.3333,
+          "mean_enemy_kill_fraction": 0.8788,
+          "mean_allies_alive": 7.3333,
+          "mean_allied_hp_shield": 536.2567,
+          "mean_enemy_hp_shield": 241.0233,
+          "mean_steps": 78.6667,
+          "requests": 527,
+          "successful_responses": 526,
+          "api_errors": 1,
+          "sc2_action_errors": 87,
+          "input_tokens": 8910008,
+          "output_tokens": 223510,
+          "estimated_jev_usd": 0.374220336,
+          "jev_latency_median_ms": 530.9999999881256,
+          "jev_latency_max_ms": 5875.0,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 29509,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 711,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 32468.999999997322,
+            "plan_sha256": "c23eac6cc55eca02c4a79a20dc2817882ba859424d38d73d5f0166579165413c",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/mmmt/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/mmmt/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/mmmt/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 6.6666,
+      "C_minus_B_wins": 2
+    },
+    {
+      "map": "mmmt_vs_zhb",
+      "development_map": false,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 3.6667,
+          "mean_enemy_kill_fraction": 0.0797,
+          "mean_allies_alive": 1.6667,
+          "mean_allied_hp_shield": 202.3333,
+          "mean_enemy_hp_shield": 1761.16,
+          "mean_steps": 33.6667,
+          "requests": 740,
+          "successful_responses": 740,
+          "api_errors": 0,
+          "sc2_action_errors": 28,
+          "input_tokens": 11874016,
+          "output_tokens": 357671,
+          "estimated_jev_usd": 0.498708672,
+          "jev_latency_median_ms": 514.9999999994179,
+          "jev_latency_max_ms": 1328.0000000013388,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/mmmt_vs_zhb/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/mmmt_vs_zhb/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 11,
+          "mean_enemy_kill_fraction": 0.2391,
+          "mean_allies_alive": 2,
+          "mean_allied_hp_shield": 208.3333,
+          "mean_enemy_hp_shield": 1393.66,
+          "mean_steps": 29.3333,
+          "requests": 912,
+          "successful_responses": 912,
+          "api_errors": 0,
+          "sc2_action_errors": 26,
+          "input_tokens": 11717733,
+          "output_tokens": 247590,
+          "estimated_jev_usd": 0.492144786,
+          "jev_latency_median_ms": 468.99999999732245,
+          "jev_latency_max_ms": 1391.0000000032596,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 24990,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 729,
+              "reasoning_output_tokens": 24
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 27608.99999999674,
+            "plan_sha256": "bd90023253c24043146b22b25a7f3d8629e7c7b48451eb759bd67a0a0591f5dc",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/mmmt_vs_zhb/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/mmmt_vs_zhb/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/mmmt_vs_zhb/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 22.6667,
+          "mean_enemy_kill_fraction": 0.4928,
+          "mean_allies_alive": 1,
+          "mean_allied_hp_shield": 139.0,
+          "mean_enemy_hp_shield": 1057.7533,
+          "mean_steps": 43,
+          "requests": 547,
+          "successful_responses": 545,
+          "api_errors": 2,
+          "sc2_action_errors": 21,
+          "input_tokens": 9390649,
+          "output_tokens": 277664,
+          "estimated_jev_usd": 0.394407258,
+          "jev_latency_median_ms": 515.9999999887077,
+          "jev_latency_max_ms": 5889.999999999418,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 29567,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 782,
+              "reasoning_output_tokens": 21
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 37656.00000000268,
+            "plan_sha256": "99baf25ea88153ab04fb87d424d727528ed05387e29fc593c68e817933c16125",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/mmmt_vs_zhb/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/mmmt_vs_zhb/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/mmmt_vs_zhb/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": 11.6667,
+      "C_minus_B_wins": 0
+    },
+    {
+      "map": "pvt_large",
+      "development_map": true,
+      "versions": {
+        "A": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 19.3333,
+          "mean_enemy_kill_fraction": 0.6444,
+          "mean_allies_alive": 3,
+          "mean_allied_hp_shield": 311.6667,
+          "mean_enemy_hp_shield": 1335.9167,
+          "mean_steps": 142.3333,
+          "requests": 3366,
+          "successful_responses": 3366,
+          "api_errors": 0,
+          "sc2_action_errors": 508,
+          "input_tokens": 54589614,
+          "output_tokens": 778858,
+          "estimated_jev_usd": 2.292763788,
+          "jev_latency_median_ms": 485.0000000005821,
+          "jev_latency_max_ms": 2578.000000001339,
+          "planner": null,
+          "schema_version": 3,
+          "summary_file": "micro/jev_runs/all-maps-20260921-001/pvt_large/jev/summary.json",
+          "events_file": "micro/jev_runs/all-maps-20260921-001/pvt_large/jev/events.jsonl"
+        },
+        "B": {
+          "statuses": [
+            "win",
+            "win",
+            "win"
+          ],
+          "results": {
+            "win": 3,
+            "draw": 0,
+            "loss": 0,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 30,
+          "mean_enemy_kill_fraction": 1.0,
+          "mean_allies_alive": 13.3333,
+          "mean_allied_hp_shield": 900.2667,
+          "mean_enemy_hp_shield": 0.0,
+          "mean_steps": 176.3333,
+          "requests": 5001,
+          "successful_responses": 5000,
+          "api_errors": 1,
+          "sc2_action_errors": 586,
+          "input_tokens": 74976524,
+          "output_tokens": 931828,
+          "estimated_jev_usd": 3.149014008,
+          "jev_latency_median_ms": 483.99999999674037,
+          "jev_latency_max_ms": 2171.9999999913853,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 49552,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 767,
+              "reasoning_output_tokens": 0
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 30312.999999994645,
+            "plan_sha256": "c769ff425b4e410c558870a7b51bec7aab02a4da0d774b4892d2cc2c48dcbe98",
+            "plan_file": "micro/jev_runs/astra-plans-20260922-001/pvt_large/jev/planner/plan.json"
+          },
+          "schema_version": 5,
+          "summary_file": "micro/jev_runs/astra-plans-20260922-001/pvt_large/jev/summary.json",
+          "events_file": "micro/jev_runs/astra-plans-20260922-001/pvt_large/jev/events.jsonl"
+        },
+        "C": {
+          "statuses": [
+            "loss",
+            "loss",
+            "loss"
+          ],
+          "results": {
+            "win": 0,
+            "draw": 0,
+            "loss": 3,
+            "timeout": 0
+          },
+          "mean_enemy_kills": 8,
+          "mean_enemy_kill_fraction": 0.2667,
+          "mean_allies_alive": 2,
+          "mean_allied_hp_shield": 117.0,
+          "mean_enemy_hp_shield": 2964.7533,
+          "mean_steps": 112.6667,
+          "requests": 4404,
+          "successful_responses": 4402,
+          "api_errors": 2,
+          "sc2_action_errors": 342,
+          "input_tokens": 77139823,
+          "output_tokens": 722664,
+          "estimated_jev_usd": 3.239872566,
+          "jev_latency_median_ms": 500.0,
+          "jev_latency_max_ms": 6672.000000005937,
+          "planner": {
+            "model": "gpt-6-astra",
+            "effort": "medium",
+            "requests": 1,
+            "successful_responses": 1,
+            "errors": 0,
+            "usage": {
+              "input_tokens": 57948,
+              "cached_input_tokens": 0,
+              "cache_write_input_tokens": 0,
+              "output_tokens": 819,
+              "reasoning_output_tokens": 32
+            },
+            "scope": "one plan per map, reused across episodes",
+            "latency_ms": 42547.00000000594,
+            "plan_sha256": "01aa81e30ee7f0fbe93ab2b4dcc616ff8b4738b02f660b9f84878d8c79b7b2d0",
+            "plan_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/pvt_large/jev/planner/plan.json"
+          },
+          "schema_version": 7,
+          "summary_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/pvt_large/jev/summary.json",
+          "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/pvt_large/jev/events.jsonl"
+        }
+      },
+      "C_minus_B_mean_enemy_kills": -22,
+      "C_minus_B_wins": -3
+    }
+  ],
+  "excluded_attempts": [],
+  "interrupted_attempts_without_summary": [
+    {
+      "map": "bane_vs_bane",
+      "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/bane_vs_bane/jev/events.jsonl",
+      "event_counts": {
+        "scenario_brief": 1,
+        "episode_start": 1,
+        "planner_request": 1
+      },
+      "jev_usage": {},
+      "planner_usage": {},
+      "estimated_jev_usd": 0.0,
+      "planner_requests_without_response_usage": 1
+    }
+  ],
+  "C_vs_B_kill_change_maps": {
+    "improved": 19,
+    "same": 12,
+    "worse": 4
+  },
+  "total_jev_usd_including_excluded": 6.17861706,
+  "source_summary_sha256": {
+    "A": "d35042bd76d4711ae11adbc65ee1fa8637085c9973767874842c92003bfdbefd",
+    "B": "ad5226bed3967a403834b787b4d85f1aae3eb22d7615eda98c2b7fdde0437e91",
+    "C": "ebdf64b056ad341f4720ea18b85d49eb0462f37ab15466d0bae4e6f2cca9f79d"
+  },
+  "verification": {
+    "planned_maps": 35,
+    "verified_maps": 35,
+    "verified_episodes": 105,
+    "replays_readable": 105,
+    "errors": [],
+    "all_sources_match_frozen_snapshot": true,
+    "native_action_feedback": {
+      "AlreadyTargeted": 500,
+      "NotEnoughEnergy": 10
+    },
+    "decision_metrics": {
+      "unit_choices": 35650,
+      "move_choices": 8377,
+      "duplicate_heal_target_groups": 468,
+      "units_selecting_shared_heal_target": 1125,
+      "attack_choices": 13098,
+      "ready_with_legal_in_range_target": 2662,
+      "ready_with_legal_in_range_target_attack": 2629,
+      "ready_with_legal_in_range_target_attack_in_range": 2629,
+      "stop_choices": 12389,
+      "ready_with_legal_in_range_target_stop": 17,
+      "ready_with_legal_in_range_target_move": 16,
+      "ready_in_native_range_without_legal_in_range_target": 1658,
+      "heal_choices": 1786,
+      "choices_with_legal_unknown_range_target": 210
+    }
+  },
+  "cross_version_controls": {
+    "fields": [
+      "seed",
+      "step_mul",
+      "episode_limit",
+      "model",
+      "request_timeout",
+      "batch_concurrency",
+      "api_retries",
+      "realtime",
+      "visibility",
+      "use_ability",
+      "opponent",
+      "map_sha256",
+      "client_branch",
+      "installed_version"
+    ],
+    "all_matched": true,
+    "maps": [
+      {
+        "map": "3m",
+        "differences": {}
+      },
+      {
+        "map": "8m",
+        "differences": {}
+      },
+      {
+        "map": "25m",
+        "differences": {}
+      },
+      {
+        "map": "5m_vs_6m",
+        "differences": {}
+      },
+      {
+        "map": "8m_vs_9m",
+        "differences": {}
+      },
+      {
+        "map": "10m_vs_11m",
+        "differences": {}
+      },
+      {
+        "map": "27m_vs_30m",
+        "differences": {}
+      },
+      {
+        "map": "MMM",
+        "differences": {}
+      },
+      {
+        "map": "MMM2",
+        "differences": {}
+      },
+      {
+        "map": "2s3z",
+        "differences": {}
+      },
+      {
+        "map": "3s5z",
+        "differences": {}
+      },
+      {
+        "map": "3s5z_vs_3s6z",
+        "differences": {}
+      },
+      {
+        "map": "3s_vs_3z",
+        "differences": {}
+      },
+      {
+        "map": "3s_vs_4z",
+        "differences": {}
+      },
+      {
+        "map": "3s_vs_5z",
+        "differences": {}
+      },
+      {
+        "map": "1c3s5z",
+        "differences": {}
+      },
+      {
+        "map": "2m_vs_1z",
+        "differences": {}
+      },
+      {
+        "map": "corridor",
+        "differences": {}
+      },
+      {
+        "map": "6h_vs_8z",
+        "differences": {}
+      },
+      {
+        "map": "2s_vs_1sc",
+        "differences": {}
+      },
+      {
+        "map": "so_many_baneling",
+        "differences": {}
+      },
+      {
+        "map": "bane_vs_bane",
+        "differences": {}
+      },
+      {
+        "map": "2c_vs_64zg",
+        "differences": {}
+      },
+      {
+        "map": "2vr_vs_3sc",
+        "differences": {}
+      },
+      {
+        "map": "3hl_vs_24zl",
+        "differences": {}
+      },
+      {
+        "map": "3rp_vs_5zl",
+        "differences": {}
+      },
+      {
+        "map": "3rp_vs_24zl",
+        "differences": {}
+      },
+      {
+        "map": "7q_vs_2bc",
+        "differences": {}
+      },
+      {
+        "map": "3st_vs_5zl",
+        "differences": {}
+      },
+      {
+        "map": "6m_vs_10m",
+        "differences": {}
+      },
+      {
+        "map": "mmmt_vs_zspi",
+        "differences": {}
+      },
+      {
+        "map": "unit_test",
+        "differences": {}
+      },
+      {
+        "map": "mmmt",
+        "differences": {}
+      },
+      {
+        "map": "mmmt_vs_zhb",
+        "differences": {}
+      },
+      {
+        "map": "pvt_large",
+        "differences": {}
+      }
+    ]
+  },
+  "pause_snapshot": {
+    "status": "resumed",
+    "reason": "user_requested",
+    "recorded_at_utc": "2026-09-22T11:18:24.955703+00:00",
+    "completed_maps": 21,
+    "completed_episodes": 63,
+    "wins": 3,
+    "last_completed_map": "so_many_baneling",
+    "unfinished_maps": [
+      "bane_vs_bane",
+      "2c_vs_64zg",
+      "2vr_vs_3sc",
+      "3hl_vs_24zl",
+      "3rp_vs_5zl",
+      "3rp_vs_24zl",
+      "7q_vs_2bc",
+      "3st_vs_5zl",
+      "6m_vs_10m",
+      "mmmt_vs_zspi",
+      "unit_test",
+      "mmmt",
+      "mmmt_vs_zhb",
+      "pvt_large"
+    ],
+    "interrupted_attempts": [
+      {
+        "map": "bane_vs_bane",
+        "directory": "micro/jev_runs/p0-astra-all-maps-20260922-001/bane_vs_bane/jev",
+        "events_file": "micro/jev_runs/p0-astra-all-maps-20260922-001/bane_vs_bane/jev/events.jsonl",
+        "event_counts": {
+          "scenario_brief": 1,
+          "episode_start": 1,
+          "planner_request": 1
+        },
+        "last_event": "planner_request",
+        "events_sha256": "16f5bae04cbcffadcf18d2079da55971547dabecc058c591a97a1fb4e08a73b8",
+        "completed_episodes": 0,
+        "jev_requests": 0,
+        "planner_requests": 1,
+        "planner_responses": 0,
+        "planner_usage_known": false
+      }
+    ],
+    "runtime_observation": "No Python or SC2 processes were present when the pause was confirmed; original exec session no longer exists.",
+    "retention": "Original events, plans and replays are unchanged. Interrupted planning is not a loss. Resume must keep completed maps and preserve incomplete attempt directories.",
+    "resumed_at_utc": "2026-09-22T12:18:17.205273+00:00",
+    "resume_reason": "User requested continuing experiments and optimization; frozen P0 full-map baseline resumes first."
+  },
+  "total_requests_including_excluded": 9759,
+  "total_planner_requests_including_excluded": 36,
+  "planner_requests_with_unknown_usage": 1,
+  "total_planner_usage_including_excluded": {
+    "input_tokens": 847569,
+    "cached_input_tokens": 30720,
+    "output_tokens": 24498,
+    "reasoning_output_tokens": 622
+  },
+  "jev_latency_ms": {
+    "median": 500.0,
+    "mean": 526.0204249203773,
+    "p90": 562.9999999946449,
+    "max": 6937.000000005355
+  }
+}

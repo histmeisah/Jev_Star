@@ -1,0 +1,2284 @@
+{
+  "created_at": "2026-09-22T13:46:46.012687+00:00",
+  "methods": {
+    "jev_only": "JEV-only",
+    "jev_gpt6": "JEV + GPT-6"
+  },
+  "groups": {
+    "micro": {
+      "jev_only": {
+        "track": "micro",
+        "method": "jev_only",
+        "method_name": "JEV-only",
+        "runs": 35,
+        "run_ids": [
+          "smac-hard/jev_runs/all-maps-20260921-001/10m_vs_11m/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/1c3s5z/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/25m/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/27m_vs_30m/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/2c_vs_64zg/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/2m_vs_1z/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/2s3z/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/2s_vs_1sc/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/2vr_vs_3sc/jev-retry-20260922-003154-123594",
+          "smac-hard/jev_runs/all-maps-20260921-001/3hl_vs_24zl/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/3m/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/3rp_vs_24zl/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/3rp_vs_5zl/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/3s5z/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/3s5z_vs_3s6z/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_3z/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_4z/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_5z/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/3st_vs_5zl/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/5m_vs_6m/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/6h_vs_8z/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/6m_vs_10m/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/7q_vs_2bc/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/8m/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/8m_vs_9m/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/MMM/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/MMM2/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/bane_vs_bane/jev-retry-20260922-003027-436916",
+          "smac-hard/jev_runs/all-maps-20260921-001/corridor/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/mmmt/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/mmmt_vs_zhb/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/mmmt_vs_zspi/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/pvt_large/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/so_many_baneling/jev",
+          "smac-hard/jev_runs/all-maps-20260921-001/unit_test/jev"
+        ],
+        "episodes": 105,
+        "results": {
+          "loss": 100,
+          "win": 3,
+          "draw": 2
+        },
+        "enemy_elimination": 0.16501047744526004,
+        "JEV_requests": 8189,
+        "GPT6_requests": 0,
+        "JEV_known_responses": 8189,
+        "GPT6_known_responses": 0,
+        "JEV_input": 111915677,
+        "JEV_output": 2916047,
+        "GPT6_input": 0,
+        "GPT6_output": 0,
+        "GPT6_cached": 0,
+        "GPT6_cache_write": 0,
+        "JEV_unknown_attempts": 0,
+        "GPT6_unknown_attempts": 0,
+        "JEV_usd": 4.700458433999999,
+        "GPT6_usd": 0.0,
+        "total_usd": 4.700458433999999,
+        "wall_seconds": 2706.678,
+        "game_seconds": 1205.005,
+        "JEV_latency": {
+          "n": 8189,
+          "median_ms": 485.0000000005821,
+          "p95_ms": 688.0000000019209,
+          "p90_ms": 625.0,
+          "max_ms": 13764.999999999418,
+          "mean_ms": 512.3118817926256
+        },
+        "GPT6_latency": {
+          "n": 0,
+          "median_ms": null,
+          "p95_ms": null,
+          "p90_ms": null,
+          "max_ms": null,
+          "mean_ms": null
+        },
+        "team_latency": {
+          "n": 3374,
+          "median_ms": 483.99999999674037,
+          "p95_ms": 1536.9000000002402,
+          "p90_ms": 1031.0000000026776,
+          "max_ms": 13764.999999999418,
+          "mean_ms": 634.6007705986517
+        },
+        "JEV_usd_per_episode": 0.04476627079999999,
+        "GPT6_usd_per_episode": 0.0,
+        "total_usd_per_episode": 0.04476627079999999,
+        "wall_seconds_per_episode": 25.777885714285713,
+        "game_seconds_per_episode": 11.476238095238097
+      },
+      "jev_gpt6": {
+        "track": "micro",
+        "method": "jev_gpt6",
+        "method_name": "JEV + GPT-6",
+        "runs": 35,
+        "run_ids": [
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/10m_vs_11m/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/1c3s5z/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/25m/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/27m_vs_30m/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2c_vs_64zg/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2m_vs_1z/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2s3z/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2s_vs_1sc/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2vr_vs_3sc/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3hl_vs_24zl/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3m/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3rp_vs_24zl/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3rp_vs_5zl/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s5z/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s5z_vs_3s6z/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_3z/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_4z/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_5z/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3st_vs_5zl/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/5m_vs_6m/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/6h_vs_8z/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/6m_vs_10m/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/7q_vs_2bc/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/8m/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/8m_vs_9m/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/MMM/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/MMM2/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/bane_vs_bane/jev-retry-20260922-201819-687502",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/corridor/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt_vs_zhb/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt_vs_zspi/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/pvt_large/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/so_many_baneling/jev",
+          "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/unit_test/jev"
+        ],
+        "episodes": 105,
+        "results": {
+          "loss": 98,
+          "win": 7
+        },
+        "enemy_elimination": 0.3769226504172156,
+        "JEV_requests": 9759,
+        "GPT6_requests": 35,
+        "JEV_known_responses": 9743,
+        "GPT6_known_responses": 35,
+        "JEV_input": 147109930,
+        "JEV_output": 2704161,
+        "GPT6_input": 847569,
+        "GPT6_output": 24498,
+        "GPT6_cached": 30720,
+        "GPT6_cache_write": 0,
+        "JEV_unknown_attempts": 16,
+        "GPT6_unknown_attempts": 0,
+        "JEV_usd": 6.178617059999994,
+        "GPT6_usd": 9.42411,
+        "total_usd": 15.602727059999994,
+        "wall_seconds": 4854.521,
+        "game_seconds": 1460.349,
+        "JEV_latency": {
+          "n": 9743,
+          "median_ms": 500.0,
+          "p95_ms": 593.9999999973224,
+          "p90_ms": 562.9999999946449,
+          "max_ms": 6937.000000005355,
+          "mean_ms": 526.0204249203773
+        },
+        "GPT6_latency": {
+          "n": 35,
+          "median_ms": 37172.00000000594,
+          "p95_ms": 43725.19999999494,
+          "p90_ms": 42965.60000000172,
+          "max_ms": 46906.99999999197,
+          "mean_ms": 37350.942857143986
+        },
+        "team_latency": {
+          "n": 4089,
+          "median_ms": 468.99999999732245,
+          "p95_ms": 1953.5999999963678,
+          "p90_ms": 1016.0000000032596,
+          "max_ms": 20328.999999997905,
+          "mean_ms": 684.8087551967035
+        },
+        "JEV_usd_per_episode": 0.058843971999999946,
+        "GPT6_usd_per_episode": 0.08975342857142858,
+        "total_usd_per_episode": 0.1485974005714285,
+        "wall_seconds_per_episode": 46.233533333333334,
+        "game_seconds_per_episode": 13.908085714285713
+      }
+    },
+    "macro": {
+      "jev_only": {
+        "track": "macro",
+        "method": "jev_only",
+        "method_name": "JEV-only",
+        "runs": 1,
+        "run_ids": [
+          "Large-Language-Models-play-StarCraftII/jev_runs/long-20m-001"
+        ],
+        "episodes": 1,
+        "results": {
+          "Tie": 1
+        },
+        "enemy_elimination": null,
+        "JEV_requests": 1024,
+        "GPT6_requests": 0,
+        "JEV_known_responses": 1023,
+        "GPT6_known_responses": 0,
+        "JEV_input": 2544622,
+        "JEV_output": 43880,
+        "GPT6_input": 0,
+        "GPT6_output": 0,
+        "GPT6_cached": 0,
+        "GPT6_cache_write": 0,
+        "JEV_unknown_attempts": 1,
+        "GPT6_unknown_attempts": 0,
+        "JEV_usd": 0.10687412400000007,
+        "GPT6_usd": 0.0,
+        "total_usd": 0.10687412400000007,
+        "wall_seconds": 1239.8439999999973,
+        "game_seconds": 1200.0,
+        "JEV_latency": {
+          "n": 1023,
+          "median_ms": 405.9999999990396,
+          "p95_ms": 579.0000000015425,
+          "p90_ms": 530.9999999990396,
+          "max_ms": 1796.9999999986612,
+          "mean_ms": 424.64516129031927
+        },
+        "GPT6_latency": {
+          "n": 0,
+          "median_ms": null,
+          "p95_ms": null,
+          "p90_ms": null,
+          "max_ms": null,
+          "mean_ms": null
+        },
+        "team_latency": {
+          "n": 0,
+          "median_ms": null,
+          "p95_ms": null,
+          "p90_ms": null,
+          "max_ms": null,
+          "mean_ms": null
+        },
+        "JEV_usd_per_episode": 0.10687412400000007,
+        "GPT6_usd_per_episode": 0.0,
+        "total_usd_per_episode": 0.10687412400000007,
+        "wall_seconds_per_episode": 1239.8439999999973,
+        "game_seconds_per_episode": 1200.0
+      },
+      "jev_gpt6": {
+        "track": "macro",
+        "method": "jev_gpt6",
+        "method_name": "JEV + GPT-6",
+        "runs": 4,
+        "run_ids": [
+          "Large-Language-Models-play-StarCraftII/jev_runs/macro-v2-20260922-hard-002",
+          "Large-Language-Models-play-StarCraftII/jev_runs/macro-v2-20260922-harder-001",
+          "Large-Language-Models-play-StarCraftII/jev_runs/macro-v2-20260922-veryhard-003",
+          "Large-Language-Models-play-StarCraftII/jev_runs/macro-v2-20260922-veryhard-004"
+        ],
+        "episodes": 4,
+        "results": {
+          "Victory": 4
+        },
+        "enemy_elimination": null,
+        "JEV_requests": 2907,
+        "GPT6_requests": 66,
+        "JEV_known_responses": 2905,
+        "GPT6_known_responses": 62,
+        "JEV_input": 14278950,
+        "JEV_output": 152960,
+        "GPT6_input": 1437426,
+        "GPT6_output": 27297,
+        "GPT6_cached": 166400,
+        "GPT6_cache_write": 0,
+        "JEV_unknown_attempts": 2,
+        "GPT6_unknown_attempts": 4,
+        "JEV_usd": 0.5997159000000001,
+        "GPT6_usd": 14.24151,
+        "total_usd": 14.8412259,
+        "wall_seconds": 3314.561999999991,
+        "game_seconds": 3179.107142857143,
+        "JEV_latency": {
+          "n": 2905,
+          "median_ms": 421.99999999138527,
+          "p95_ms": 531.0000000026776,
+          "p90_ms": 485.0000000005821,
+          "max_ms": 1781.0000000026776,
+          "mean_ms": 437.3690189327644
+        },
+        "GPT6_latency": {
+          "n": 62,
+          "median_ms": 27601.49999999703,
+          "p95_ms": 36492.199999999866,
+          "p90_ms": 35920.59999999765,
+          "max_ms": 47952.99999999406,
+          "mean_ms": 27449.000000000055
+        },
+        "team_latency": {
+          "n": 0,
+          "median_ms": null,
+          "p95_ms": null,
+          "p90_ms": null,
+          "max_ms": null,
+          "mean_ms": null
+        },
+        "JEV_usd_per_episode": 0.14992897500000002,
+        "GPT6_usd_per_episode": 3.5603775,
+        "total_usd_per_episode": 3.710306475,
+        "wall_seconds_per_episode": 828.6404999999977,
+        "game_seconds_per_episode": 794.7767857142858
+      }
+    }
+  },
+  "micro_nondevelopment": {
+    "jev_only": {
+      "track": "micro",
+      "method": "jev_only",
+      "method_name": "JEV-only",
+      "runs": 33,
+      "run_ids": [
+        "smac-hard/jev_runs/all-maps-20260921-001/10m_vs_11m/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/1c3s5z/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/25m/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/27m_vs_30m/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/2c_vs_64zg/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/2m_vs_1z/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/2s3z/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/2s_vs_1sc/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/2vr_vs_3sc/jev-retry-20260922-003154-123594",
+        "smac-hard/jev_runs/all-maps-20260921-001/3hl_vs_24zl/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/3m/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/3rp_vs_24zl/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/3rp_vs_5zl/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/3s5z/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/3s5z_vs_3s6z/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_3z/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_4z/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_5z/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/3st_vs_5zl/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/5m_vs_6m/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/6h_vs_8z/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/6m_vs_10m/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/7q_vs_2bc/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/8m/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/8m_vs_9m/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/MMM/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/MMM2/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/bane_vs_bane/jev-retry-20260922-003027-436916",
+        "smac-hard/jev_runs/all-maps-20260921-001/corridor/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/mmmt/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/mmmt_vs_zhb/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/mmmt_vs_zspi/jev",
+        "smac-hard/jev_runs/all-maps-20260921-001/so_many_baneling/jev"
+      ],
+      "episodes": 99,
+      "results": {
+        "loss": 94,
+        "win": 3,
+        "draw": 2
+      },
+      "enemy_elimination": 0.15548249291332294,
+      "JEV_requests": 4795,
+      "GPT6_requests": 0,
+      "JEV_known_responses": 4795,
+      "GPT6_known_responses": 0,
+      "JEV_input": 57248459,
+      "JEV_output": 2135433,
+      "GPT6_input": 0,
+      "GPT6_output": 0,
+      "GPT6_cached": 0,
+      "GPT6_cache_write": 0,
+      "JEV_unknown_attempts": 0,
+      "GPT6_unknown_attempts": 0,
+      "JEV_usd": 2.4044352780000002,
+      "GPT6_usd": 0.0,
+      "total_usd": 2.4044352780000002,
+      "wall_seconds": 2108.397,
+      "game_seconds": 1042.506,
+      "JEV_latency": {
+        "n": 4795,
+        "median_ms": 484.00000000401633,
+        "p95_ms": 702.9999999977008,
+        "p90_ms": 625.0,
+        "max_ms": 13764.999999999418,
+        "mean_ms": 510.55974973929017
+      },
+      "GPT6_latency": {
+        "n": 0,
+        "median_ms": null,
+        "p95_ms": null,
+        "p90_ms": null,
+        "max_ms": null,
+        "mean_ms": null
+      },
+      "team_latency": {
+        "n": 2919,
+        "median_ms": 468.0000000007567,
+        "p95_ms": 1063.0000000019209,
+        "p90_ms": 797.0000000022992,
+        "max_ms": 13764.999999999418,
+        "mean_ms": 546.9986296676491
+      },
+      "JEV_usd_per_episode": 0.024287225030303033,
+      "GPT6_usd_per_episode": 0.0,
+      "total_usd_per_episode": 0.024287225030303033,
+      "wall_seconds_per_episode": 21.296939393939393,
+      "game_seconds_per_episode": 10.530363636363637
+    },
+    "jev_gpt6": {
+      "track": "micro",
+      "method": "jev_gpt6",
+      "method_name": "JEV + GPT-6",
+      "runs": 33,
+      "run_ids": [
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/10m_vs_11m/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/1c3s5z/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/25m/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/27m_vs_30m/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2c_vs_64zg/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2m_vs_1z/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2s3z/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2s_vs_1sc/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2vr_vs_3sc/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3hl_vs_24zl/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3m/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3rp_vs_24zl/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3rp_vs_5zl/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s5z/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s5z_vs_3s6z/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_3z/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_4z/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_5z/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3st_vs_5zl/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/5m_vs_6m/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/6h_vs_8z/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/6m_vs_10m/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/7q_vs_2bc/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/8m/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/8m_vs_9m/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/MMM/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/MMM2/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/bane_vs_bane/jev-retry-20260922-201819-687502",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/corridor/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt_vs_zhb/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt_vs_zspi/jev",
+        "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/so_many_baneling/jev"
+      ],
+      "episodes": 99,
+      "results": {
+        "loss": 92,
+        "win": 7
+      },
+      "enemy_elimination": 0.39168563933139033,
+      "JEV_requests": 5291,
+      "GPT6_requests": 33,
+      "JEV_known_responses": 5277,
+      "GPT6_known_responses": 33,
+      "JEV_input": 69755281,
+      "JEV_output": 1977968,
+      "GPT6_input": 776001,
+      "GPT6_output": 23007,
+      "GPT6_cached": 30720,
+      "GPT6_cache_write": 0,
+      "JEV_unknown_attempts": 14,
+      "GPT6_unknown_attempts": 0,
+      "JEV_usd": 2.929721802,
+      "GPT6_usd": 8.63388,
+      "total_usd": 11.563601801999999,
+      "wall_seconds": 4016.099,
+      "game_seconds": 1316.777,
+      "JEV_latency": {
+        "n": 5277,
+        "median_ms": 483.99999999674037,
+        "p95_ms": 608.9999999967404,
+        "p90_ms": 562.9999999946449,
+        "max_ms": 6937.000000005355,
+        "mean_ms": 533.6854273259727
+      },
+      "GPT6_latency": {
+        "n": 33,
+        "median_ms": 37172.00000000594,
+        "p95_ms": 43909.599999996135,
+        "p90_ms": 42990.80000000249,
+        "max_ms": 46906.99999999197,
+        "mean_ms": 37212.63636363746
+      },
+      "team_latency": {
+        "n": 3687,
+        "median_ms": 468.00000000803266,
+        "p95_ms": 1000.0,
+        "p90_ms": 593.9999999973224,
+        "max_ms": 20328.999999997905,
+        "mean_ms": 575.1643612691533
+      },
+      "JEV_usd_per_episode": 0.029593149515151514,
+      "GPT6_usd_per_episode": 0.08721090909090909,
+      "total_usd_per_episode": 0.11680405860606059,
+      "wall_seconds_per_episode": 40.566656565656565,
+      "game_seconds_per_episode": 13.300777777777778
+    }
+  },
+  "micro_map_changes": {
+    "improved": 25,
+    "worse": 3,
+    "unchanged": 7
+  },
+  "micro_maps": [
+    {
+      "map": "3m",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.0,
+        "mean_kills": 0,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/3m/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.6666666666666666,
+        "mean_kills": 2,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3m/jev/summary.json"
+      }
+    },
+    {
+      "map": "8m",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.16666666666666666,
+        "mean_kills": 1.3333333333333333,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/8m/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 1,
+        "draws": 0,
+        "losses": 2,
+        "enemy_elimination": 0.7083333333333334,
+        "mean_kills": 5.666666666666667,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/8m/jev/summary.json"
+      }
+    },
+    {
+      "map": "25m",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.013333333333333334,
+        "mean_kills": 0.3333333333333333,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/25m/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.5466666666666666,
+        "mean_kills": 13.666666666666666,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/25m/jev/summary.json"
+      }
+    },
+    {
+      "map": "5m_vs_6m",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.05555555555555555,
+        "mean_kills": 0.3333333333333333,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/5m_vs_6m/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.3333333333333333,
+        "mean_kills": 2,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/5m_vs_6m/jev/summary.json"
+      }
+    },
+    {
+      "map": "8m_vs_9m",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.0,
+        "mean_kills": 0,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/8m_vs_9m/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.4074074074074074,
+        "mean_kills": 3.6666666666666665,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/8m_vs_9m/jev/summary.json"
+      }
+    },
+    {
+      "map": "10m_vs_11m",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.09090909090909091,
+        "mean_kills": 1,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/10m_vs_11m/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.4848484848484848,
+        "mean_kills": 5.333333333333333,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/10m_vs_11m/jev/summary.json"
+      }
+    },
+    {
+      "map": "27m_vs_30m",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.022222222222222223,
+        "mean_kills": 0.6666666666666666,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/27m_vs_30m/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.2777777777777778,
+        "mean_kills": 8.333333333333334,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/27m_vs_30m/jev/summary.json"
+      }
+    },
+    {
+      "map": "MMM",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.1,
+        "mean_kills": 1,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/MMM/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 1,
+        "draws": 0,
+        "losses": 2,
+        "enemy_elimination": 0.7333333333333333,
+        "mean_kills": 7.333333333333333,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/MMM/jev/summary.json"
+      }
+    },
+    {
+      "map": "MMM2",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.027777777777777776,
+        "mean_kills": 0.3333333333333333,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/MMM2/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.3055555555555555,
+        "mean_kills": 3.6666666666666665,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/MMM2/jev/summary.json"
+      }
+    },
+    {
+      "map": "2s3z",
+      "development_map": false,
+      "jev_only": {
+        "wins": 2,
+        "draws": 0,
+        "losses": 1,
+        "enemy_elimination": 0.8666666666666667,
+        "mean_kills": 4.333333333333333,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/2s3z/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 1,
+        "draws": 0,
+        "losses": 2,
+        "enemy_elimination": 0.6666666666666666,
+        "mean_kills": 3.3333333333333335,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2s3z/jev/summary.json"
+      }
+    },
+    {
+      "map": "3s5z",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.4166666666666667,
+        "mean_kills": 3.3333333333333335,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/3s5z/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.625,
+        "mean_kills": 5,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s5z/jev/summary.json"
+      }
+    },
+    {
+      "map": "3s5z_vs_3s6z",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.25925925925925924,
+        "mean_kills": 2.3333333333333335,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/3s5z_vs_3s6z/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.25925925925925924,
+        "mean_kills": 2.3333333333333335,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s5z_vs_3s6z/jev/summary.json"
+      }
+    },
+    {
+      "map": "3s_vs_3z",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.1111111111111111,
+        "mean_kills": 0.3333333333333333,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_3z/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.3333333333333333,
+        "mean_kills": 1,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_3z/jev/summary.json"
+      }
+    },
+    {
+      "map": "3s_vs_4z",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.0,
+        "mean_kills": 0,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_4z/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.25,
+        "mean_kills": 1,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_4z/jev/summary.json"
+      }
+    },
+    {
+      "map": "3s_vs_5z",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.0,
+        "mean_kills": 0,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_5z/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.2,
+        "mean_kills": 1,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_5z/jev/summary.json"
+      }
+    },
+    {
+      "map": "1c3s5z",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.4074074074074074,
+        "mean_kills": 3.6666666666666665,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/1c3s5z/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.5555555555555556,
+        "mean_kills": 5,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/1c3s5z/jev/summary.json"
+      }
+    },
+    {
+      "map": "2m_vs_1z",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.0,
+        "mean_kills": 0,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/2m_vs_1z/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.0,
+        "mean_kills": 0,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2m_vs_1z/jev/summary.json"
+      }
+    },
+    {
+      "map": "corridor",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.5,
+        "mean_kills": 12,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/corridor/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.6111111111111112,
+        "mean_kills": 14.666666666666666,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/corridor/jev/summary.json"
+      }
+    },
+    {
+      "map": "6h_vs_8z",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.041666666666666664,
+        "mean_kills": 0.3333333333333333,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/6h_vs_8z/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.375,
+        "mean_kills": 3,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/6h_vs_8z/jev/summary.json"
+      }
+    },
+    {
+      "map": "2s_vs_1sc",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.0,
+        "mean_kills": 0,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/2s_vs_1sc/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.0,
+        "mean_kills": 0,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2s_vs_1sc/jev/summary.json"
+      }
+    },
+    {
+      "map": "so_many_baneling",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.4791666666666667,
+        "mean_kills": 15.333333333333334,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/so_many_baneling/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.59375,
+        "mean_kills": 19,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/so_many_baneling/jev/summary.json"
+      }
+    },
+    {
+      "map": "bane_vs_bane",
+      "development_map": false,
+      "jev_only": {
+        "wins": 1,
+        "draws": 2,
+        "losses": 0,
+        "enemy_elimination": 1.0,
+        "mean_kills": 24,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/bane_vs_bane/jev-retry-20260922-003027-436916/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 1,
+        "draws": 0,
+        "losses": 2,
+        "enemy_elimination": 0.7777777777777778,
+        "mean_kills": 18.666666666666668,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/bane_vs_bane/jev-retry-20260922-201819-687502/summary.json"
+      }
+    },
+    {
+      "map": "2c_vs_64zg",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.22916666666666666,
+        "mean_kills": 14.666666666666666,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/2c_vs_64zg/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 1,
+        "draws": 0,
+        "losses": 2,
+        "enemy_elimination": 0.7552083333333334,
+        "mean_kills": 48.333333333333336,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2c_vs_64zg/jev/summary.json"
+      }
+    },
+    {
+      "map": "2vr_vs_3sc",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.0,
+        "mean_kills": 0,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/2vr_vs_3sc/jev-retry-20260922-003154-123594/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.0,
+        "mean_kills": 0,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2vr_vs_3sc/jev/summary.json"
+      }
+    },
+    {
+      "map": "3hl_vs_24zl",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.0,
+        "mean_kills": 0,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/3hl_vs_24zl/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.1527777777777778,
+        "mean_kills": 3.6666666666666665,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3hl_vs_24zl/jev/summary.json"
+      }
+    },
+    {
+      "map": "3rp_vs_5zl",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.0,
+        "mean_kills": 0,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/3rp_vs_5zl/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.0,
+        "mean_kills": 0,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3rp_vs_5zl/jev/summary.json"
+      }
+    },
+    {
+      "map": "3rp_vs_24zl",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.0,
+        "mean_kills": 0,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/3rp_vs_24zl/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.05555555555555555,
+        "mean_kills": 1.3333333333333333,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3rp_vs_24zl/jev/summary.json"
+      }
+    },
+    {
+      "map": "7q_vs_2bc",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.0,
+        "mean_kills": 0,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/7q_vs_2bc/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.0,
+        "mean_kills": 0,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/7q_vs_2bc/jev/summary.json"
+      }
+    },
+    {
+      "map": "3st_vs_5zl",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.06666666666666667,
+        "mean_kills": 0.3333333333333333,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/3st_vs_5zl/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.2,
+        "mean_kills": 1,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3st_vs_5zl/jev/summary.json"
+      }
+    },
+    {
+      "map": "6m_vs_10m",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.0,
+        "mean_kills": 0,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/6m_vs_10m/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.2,
+        "mean_kills": 2,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/6m_vs_10m/jev/summary.json"
+      }
+    },
+    {
+      "map": "mmmt_vs_zspi",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.16666666666666666,
+        "mean_kills": 2.6666666666666665,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/mmmt_vs_zspi/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.4791666666666667,
+        "mean_kills": 7.666666666666667,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt_vs_zspi/jev/summary.json"
+      }
+    },
+    {
+      "map": "unit_test",
+      "development_map": true,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.0,
+        "mean_kills": 0,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/unit_test/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.0,
+        "mean_kills": 0,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/unit_test/jev/summary.json"
+      }
+    },
+    {
+      "map": "mmmt",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.030303030303030304,
+        "mean_kills": 0.6666666666666666,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/mmmt/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 2,
+        "draws": 0,
+        "losses": 1,
+        "enemy_elimination": 0.8787878787878788,
+        "mean_kills": 19.333333333333332,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt/jev/summary.json"
+      }
+    },
+    {
+      "map": "mmmt_vs_zhb",
+      "development_map": false,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.07971014492753623,
+        "mean_kills": 3.6666666666666665,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/mmmt_vs_zhb/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.49275362318840576,
+        "mean_kills": 22.666666666666668,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt_vs_zhb/jev/summary.json"
+      }
+    },
+    {
+      "map": "pvt_large",
+      "development_map": true,
+      "jev_only": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.6444444444444444,
+        "mean_kills": 19.333333333333332,
+        "summary": "smac-hard/jev_runs/all-maps-20260921-001/pvt_large/jev/summary.json"
+      },
+      "jev_gpt6": {
+        "wins": 0,
+        "draws": 0,
+        "losses": 3,
+        "enemy_elimination": 0.26666666666666666,
+        "mean_kills": 8,
+        "summary": "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/pvt_large/jev/summary.json"
+      }
+    }
+  ],
+  "macro_games": [
+    {
+      "track": "macro",
+      "method": "jev_only",
+      "scope": "main",
+      "level": 2,
+      "seed": 1,
+      "run": "Large-Language-Models-play-StarCraftII/jev_runs/long-20m-001",
+      "method_name": "JEV-only",
+      "episodes": 1,
+      "result": "Tie",
+      "wall_seconds": 1239.8439999999973,
+      "game_seconds": 1200.0,
+      "JEV_requests": 1024,
+      "GPT6_requests": 0,
+      "JEV_usd": 0.10687412400000007,
+      "GPT6_usd": 0.0,
+      "JEV_input": 2544622,
+      "JEV_output": 43880,
+      "GPT6_input": 0,
+      "GPT6_output": 0,
+      "GPT6_cached": 0,
+      "GPT6_cache_write": 0,
+      "JEV_known_responses": 1023,
+      "GPT6_known_responses": 0,
+      "macro_request_metrics": {
+        "peak_workers": 68,
+        "peak_minerals": 335,
+        "peak_army_supply": 58,
+        "peak_bases": 1,
+        "requests_with_expansion": 0,
+        "attack_commands": 6,
+        "retreat_commands": 7,
+        "attack_to_retreat_within_2s": 5,
+        "second_base_observed_s": null
+      },
+      "first_attack_seconds": 614.2857142857143,
+      "JEV_latency": {
+        "n": 1023,
+        "median_ms": 405.9999999990396,
+        "p95_ms": 579.0000000015425,
+        "p90_ms": 530.9999999990396,
+        "max_ms": 1796.9999999986612,
+        "mean_ms": 424.64516129031927
+      },
+      "JEV_unknown_attempts": 1,
+      "GPT6_latency": {
+        "n": 0,
+        "median_ms": null,
+        "p95_ms": null,
+        "p90_ms": null,
+        "max_ms": null,
+        "mean_ms": null
+      },
+      "GPT6_unknown_attempts": 0,
+      "total_usd": 0.10687412400000007,
+      "team_latency": {
+        "n": 0,
+        "median_ms": null,
+        "p95_ms": null,
+        "p90_ms": null,
+        "max_ms": null,
+        "mean_ms": null
+      }
+    },
+    {
+      "track": "macro",
+      "method": "jev_gpt6",
+      "scope": "main",
+      "level": 5,
+      "seed": 1,
+      "replay_game_seconds": 808.0357142857143,
+      "first_attack_seconds": 478.92857142857144,
+      "run": "Large-Language-Models-play-StarCraftII/jev_runs/macro-v2-20260922-hard-002",
+      "method_name": "JEV + GPT-6",
+      "episodes": 1,
+      "result": "Victory",
+      "wall_seconds": 839.9219999999914,
+      "game_seconds": 807.8571428571429,
+      "JEV_requests": 743,
+      "GPT6_requests": 18,
+      "JEV_usd": 0.1550859660000001,
+      "GPT6_usd": 4.368259999999999,
+      "JEV_input": 3692523,
+      "JEV_output": 37423,
+      "GPT6_input": 419240,
+      "GPT6_output": 8010,
+      "GPT6_cached": 24960,
+      "GPT6_cache_write": 0,
+      "JEV_known_responses": 743,
+      "GPT6_known_responses": 18,
+      "macro_request_metrics": {
+        "peak_workers": 72,
+        "peak_minerals": 2640,
+        "peak_army_supply": 127,
+        "peak_bases": 5,
+        "requests_with_expansion": 9,
+        "attack_commands": 3,
+        "retreat_commands": 1,
+        "attack_to_retreat_within_2s": 0,
+        "second_base_observed_s": 170.17857142857144
+      },
+      "JEV_latency": {
+        "n": 743,
+        "median_ms": 407.00000000651926,
+        "p95_ms": 531.9000000061351,
+        "p90_ms": 485.0000000005821,
+        "max_ms": 1781.0000000026776,
+        "mean_ms": 428.0134589499609
+      },
+      "JEV_unknown_attempts": 0,
+      "GPT6_latency": {
+        "n": 18,
+        "median_ms": 24937.5,
+        "p95_ms": 29159.699999996516,
+        "p90_ms": 28270.300000005227,
+        "max_ms": 31656.999999991967,
+        "mean_ms": 24340.88888888881
+      },
+      "GPT6_unknown_attempts": 0,
+      "total_usd": 4.523345965999999,
+      "team_latency": {
+        "n": 0,
+        "median_ms": null,
+        "p95_ms": null,
+        "p90_ms": null,
+        "max_ms": null,
+        "mean_ms": null
+      }
+    },
+    {
+      "track": "macro",
+      "method": "jev_gpt6",
+      "scope": "main",
+      "level": 6,
+      "seed": 1,
+      "replay_game_seconds": 648.75,
+      "first_attack_seconds": 491.0714285714286,
+      "run": "Large-Language-Models-play-StarCraftII/jev_runs/macro-v2-20260922-harder-001",
+      "method_name": "JEV + GPT-6",
+      "episodes": 1,
+      "result": "Victory",
+      "wall_seconds": 678.125,
+      "game_seconds": 648.5714285714287,
+      "JEV_requests": 591,
+      "GPT6_requests": 14,
+      "JEV_usd": 0.11688944400000005,
+      "GPT6_usd": 2.88845,
+      "JEV_input": 2783082,
+      "JEV_output": 30737,
+      "GPT6_input": 297820,
+      "GPT6_output": 5693,
+      "GPT6_cached": 41600,
+      "GPT6_cache_write": 0,
+      "JEV_known_responses": 590,
+      "GPT6_known_responses": 13,
+      "macro_request_metrics": {
+        "peak_workers": 66,
+        "peak_minerals": 810,
+        "peak_army_supply": 79,
+        "peak_bases": 4,
+        "requests_with_expansion": 3,
+        "attack_commands": 1,
+        "retreat_commands": 0,
+        "attack_to_retreat_within_2s": 0,
+        "second_base_observed_s": 170.17857142857144
+      },
+      "JEV_latency": {
+        "n": 590,
+        "median_ms": 391.00000000325963,
+        "p95_ms": 468.99999999732245,
+        "p90_ms": 438.0000000091968,
+        "max_ms": 1750.0,
+        "mean_ms": 403.1813559321671
+      },
+      "JEV_unknown_attempts": 1,
+      "GPT6_latency": {
+        "n": 13,
+        "median_ms": 26687.000000005355,
+        "p95_ms": 39908.79999999886,
+        "p90_ms": 33902.4000000034,
+        "max_ms": 47952.99999999406,
+        "mean_ms": 25902.615384616252
+      },
+      "GPT6_unknown_attempts": 1,
+      "total_usd": 3.005339444,
+      "team_latency": {
+        "n": 0,
+        "median_ms": null,
+        "p95_ms": null,
+        "p90_ms": null,
+        "max_ms": null,
+        "mean_ms": null
+      }
+    },
+    {
+      "track": "macro",
+      "method": "jev_gpt6",
+      "scope": "main",
+      "level": 7,
+      "seed": 1,
+      "replay_game_seconds": 767.9017857142858,
+      "first_attack_seconds": 453.2142857142857,
+      "run": "Large-Language-Models-play-StarCraftII/jev_runs/macro-v2-20260922-veryhard-003",
+      "method_name": "JEV + GPT-6",
+      "episodes": 1,
+      "result": "Victory",
+      "wall_seconds": 805.9529999999941,
+      "game_seconds": 767.6785714285714,
+      "JEV_requests": 708,
+      "GPT6_requests": 14,
+      "JEV_usd": 0.14485522799999984,
+      "GPT6_usd": 2.6842499999999996,
+      "JEV_input": 3448934,
+      "JEV_output": 37944,
+      "GPT6_input": 278215,
+      "GPT6_output": 5530,
+      "GPT6_cached": 41600,
+      "GPT6_cache_write": 0,
+      "JEV_known_responses": 708,
+      "GPT6_known_responses": 12,
+      "macro_request_metrics": {
+        "peak_workers": 70,
+        "peak_minerals": 730,
+        "peak_army_supply": 129,
+        "peak_bases": 4,
+        "requests_with_expansion": 4,
+        "attack_commands": 3,
+        "retreat_commands": 0,
+        "attack_to_retreat_within_2s": 0,
+        "second_base_observed_s": 185.17857142857144
+      },
+      "JEV_latency": {
+        "n": 708,
+        "median_ms": 422.0000000059372,
+        "p95_ms": 500.0,
+        "p90_ms": 483.99999999674037,
+        "max_ms": 1108.9999999967404,
+        "mean_ms": 432.6539548022027
+      },
+      "JEV_unknown_attempts": 0,
+      "GPT6_latency": {
+        "n": 12,
+        "median_ms": 35476.49999999703,
+        "p95_ms": 39714.89999999612,
+        "p90_ms": 38412.5,
+        "max_ms": 41046.999999991385,
+        "mean_ms": 33141.999999999825
+      },
+      "GPT6_unknown_attempts": 2,
+      "total_usd": 2.8291052279999995,
+      "team_latency": {
+        "n": 0,
+        "median_ms": null,
+        "p95_ms": null,
+        "p90_ms": null,
+        "max_ms": null,
+        "mean_ms": null
+      }
+    },
+    {
+      "track": "macro",
+      "method": "jev_gpt6",
+      "scope": "main",
+      "level": 7,
+      "seed": 2,
+      "replay_game_seconds": 955.2232142857143,
+      "first_attack_seconds": 442.14285714285717,
+      "run": "Large-Language-Models-play-StarCraftII/jev_runs/macro-v2-20260922-veryhard-004",
+      "method_name": "JEV + GPT-6",
+      "episodes": 1,
+      "result": "Victory",
+      "wall_seconds": 990.5620000000054,
+      "game_seconds": 955.0000000000001,
+      "JEV_requests": 865,
+      "GPT6_requests": 20,
+      "JEV_usd": 0.18288526200000013,
+      "GPT6_usd": 4.30055,
+      "JEV_input": 4354411,
+      "JEV_output": 46856,
+      "GPT6_input": 442151,
+      "GPT6_output": 8064,
+      "GPT6_cached": 58240,
+      "GPT6_cache_write": 0,
+      "JEV_known_responses": 864,
+      "GPT6_known_responses": 19,
+      "macro_request_metrics": {
+        "peak_workers": 74,
+        "peak_minerals": 5750,
+        "peak_army_supply": 126,
+        "peak_bases": 6,
+        "requests_with_expansion": 6,
+        "attack_commands": 4,
+        "retreat_commands": 3,
+        "attack_to_retreat_within_2s": 0,
+        "second_base_observed_s": 175.17857142857144
+      },
+      "JEV_latency": {
+        "n": 864,
+        "median_ms": 437.9999999946449,
+        "p95_ms": 869.5000000064965,
+        "p90_ms": 514.9999999994179,
+        "max_ms": 1281.0000000026776,
+        "mean_ms": 472.6238425925018
+      },
+      "JEV_unknown_attempts": 1,
+      "GPT6_latency": {
+        "n": 19,
+        "median_ms": 27625.0,
+        "p95_ms": 35428.299999992305,
+        "p90_ms": 34046.79999999353,
+        "max_ms": 35485.00000000058,
+        "mean_ms": 27855.999999999767
+      },
+      "GPT6_unknown_attempts": 1,
+      "total_usd": 4.483435262,
+      "team_latency": {
+        "n": 0,
+        "median_ms": null,
+        "p95_ms": null,
+        "p90_ms": null,
+        "max_ms": null,
+        "mean_ms": null
+      }
+    },
+    {
+      "track": "macro",
+      "method": "jev_gpt6",
+      "scope": "stress",
+      "level": 8,
+      "seed": 1,
+      "replay_game_seconds": 613.8392857142858,
+      "first_attack_seconds": null,
+      "run": "Large-Language-Models-play-StarCraftII/jev_runs/macro-v22-20260922-cheatvision-001",
+      "method_name": "JEV + GPT-6",
+      "episodes": 1,
+      "result": "Defeat",
+      "wall_seconds": 642.625,
+      "game_seconds": 613.6607142857143,
+      "JEV_requests": 539,
+      "GPT6_requests": 14,
+      "JEV_usd": 0.10291201199999996,
+      "GPT6_usd": 2.9068400000000003,
+      "JEV_input": 2450286,
+      "JEV_output": 27125,
+      "GPT6_input": 296801,
+      "GPT6_output": 4767,
+      "GPT6_cached": 33280,
+      "GPT6_cache_write": 0,
+      "JEV_known_responses": 539,
+      "GPT6_known_responses": 13,
+      "macro_request_metrics": {
+        "peak_workers": 38,
+        "peak_minerals": 405,
+        "peak_army_supply": 17,
+        "peak_bases": 2,
+        "requests_with_expansion": 1,
+        "attack_commands": 0,
+        "retreat_commands": 3,
+        "attack_to_retreat_within_2s": 0,
+        "second_base_observed_s": 170.17857142857144
+      },
+      "JEV_latency": {
+        "n": 539,
+        "median_ms": 375.0,
+        "p95_ms": 452.9999999940628,
+        "p90_ms": 422.0000000059372,
+        "max_ms": 906.9999999919673,
+        "mean_ms": 379.26901669746564
+      },
+      "JEV_unknown_attempts": 0,
+      "GPT6_latency": {
+        "n": 13,
+        "median_ms": 24639.999999999418,
+        "p95_ms": 30150.199999997858,
+        "p90_ms": 29791.199999995297,
+        "max_ms": 30656.000000002678,
+        "mean_ms": 24354.53846153821
+      },
+      "GPT6_unknown_attempts": 1,
+      "total_usd": 3.0097520120000003,
+      "team_latency": {
+        "n": 0,
+        "median_ms": null,
+        "p95_ms": null,
+        "p90_ms": null,
+        "max_ms": null,
+        "mean_ms": null
+      }
+    }
+  ],
+  "micro_behavior": {
+    "decisions": 4089,
+    "unit_choices": 35650,
+    "move": 8377,
+    "attack": 13098,
+    "ready_attack_available": 2662,
+    "ready_attack_available_attack": 2629,
+    "stop": 12389,
+    "ready_attack_available_stop": 17,
+    "ready_attack_available_move": 16,
+    "heal": 1786,
+    "melee_pressure_retreat_available": 930,
+    "melee_pressure_retreat_available_attack": 794,
+    "melee_pressure_retreat_available_selected_separating_endpoint": 63,
+    "melee_pressure_retreat_available_move": 87,
+    "melee_pressure_retreat_available_stop": 49,
+    "after_already_targeted_live_choices": 496,
+    "after_already_targeted_repeat_legal": 400,
+    "after_already_targeted_repeated_choice": 265,
+    "after_already_targeted_alternative_heal_exists": 378,
+    "after_already_targeted_alternative_exists_but_repeat": 243
+  },
+  "micro_verification": {
+    "planned_maps": 35,
+    "verified_maps": 35,
+    "verified_episodes": 105,
+    "replays_readable": 105,
+    "errors": [],
+    "all_sources_match_frozen_snapshot": true,
+    "native_action_feedback": {
+      "AlreadyTargeted": 500,
+      "NotEnoughEnergy": 10
+    },
+    "decision_metrics": {
+      "unit_choices": 35650,
+      "move_choices": 8377,
+      "duplicate_heal_target_groups": 468,
+      "units_selecting_shared_heal_target": 1125,
+      "attack_choices": 13098,
+      "ready_with_legal_in_range_target": 2662,
+      "ready_with_legal_in_range_target_attack": 2629,
+      "ready_with_legal_in_range_target_attack_in_range": 2629,
+      "stop_choices": 12389,
+      "ready_with_legal_in_range_target_stop": 17,
+      "ready_with_legal_in_range_target_move": 16,
+      "ready_in_native_range_without_legal_in_range_target": 1658,
+      "heal_choices": 1786,
+      "choices_with_legal_unknown_range_target": 210
+    }
+  },
+  "source_sha256": {
+    "paper/arxiv/data/study_snapshot/micro_comparison.json": "7e6f698cd431579a0a54365ef9281329ce589299efa7e795cf64f6c080b78d1b",
+    "paper/arxiv/data/study_snapshot/macro_games.json": "9b29ff6dd5e8ea04e4a82f5568f9b9299df56677197e22e29a81f8d1263c7abf",
+    "paper/arxiv/data/study_snapshot/macro_stress.json": "20193dc694f8ad8d7f53ab9318343dac568e15a984914966de670a1644744e46",
+    "paper/arxiv/data/study_snapshot/micro_behavior.json": "98d77d36e38c9a42be49bc9238affd8e05a1d83e2b4430d1f68084e12ccd7c4f",
+    "smac-hard/jev_runs/all-maps-20260921-001/3m/jev/summary.json": "1870c27e2729cf3e81da55a9900832f982b3502e5fa8ebd6c1082b814a4d3a42",
+    "smac-hard/jev_runs/all-maps-20260921-001/3m/jev/episode-001/summary.json": "bd4f6af6e9c700dad67a675e76ac5b24aa3de12d66595f2bee280383b2ac0ab4",
+    "smac-hard/jev_runs/all-maps-20260921-001/3m/jev/episode-002/summary.json": "e4b05c98fb33f7b9f91646223f89a0fbf00f8134818e451980c310610edcda1d",
+    "smac-hard/jev_runs/all-maps-20260921-001/3m/jev/episode-003/summary.json": "d049cd7b58340046d106b0a4493e90c539b1d7aba189b45c66e4341174ef1d07",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3m/jev/summary.json": "7558a3ca5c62a79d3f60560d096dba134ba56a51420e366ad5381ea8c14a8b64",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3m/jev/episode-001/summary.json": "ea92d9268e462710c532c81cec1f77e44028fc2d44febeb4c98fb61e27f41d6c",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3m/jev/episode-002/summary.json": "a9e8da47b338d0914caba38d3ab38737ce7cff0c171b65269e10055aa8c986dc",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3m/jev/episode-003/summary.json": "ceefc47bffa45463ec17d9f092484bb11def592c4f64720585d00e51f7cdf1e8",
+    "smac-hard/jev_runs/all-maps-20260921-001/8m/jev/summary.json": "5d7fcdebcac6f3460e07c08c5a65d60d6e5878b4a2afd0e965f71c2fc3f91725",
+    "smac-hard/jev_runs/all-maps-20260921-001/8m/jev/episode-001/summary.json": "22c6dcd318fa7d8c76a63e23f05f61a7d75eb172737ec30c2b1b28c3b37a599b",
+    "smac-hard/jev_runs/all-maps-20260921-001/8m/jev/episode-002/summary.json": "5d1ca97a92bbde36afae2f390b87b57571575272bfa2d733beb2ad8249fa5ae4",
+    "smac-hard/jev_runs/all-maps-20260921-001/8m/jev/episode-003/summary.json": "3ea70aa4329cf0f54934c900ad8e0c1938d2f530855aa52415e4bc49fed9e355",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/8m/jev/summary.json": "f090f647fe7f730ae4daa237fbd55bfa2247b1d4f062d29a6ad511fe987b4ae1",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/8m/jev/episode-001/summary.json": "8a20201638178d345de16015223151345608c7f340ace1dd2aad82620c792066",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/8m/jev/episode-002/summary.json": "8588cc3d7e1633e9cafc42d6fa3b1b2ab70613f1001b0db89593a87f15d25a52",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/8m/jev/episode-003/summary.json": "81d23df64945b93a7131abf689ad3ab8ab371c07906eaa3a0e4b20a1c2d974b6",
+    "smac-hard/jev_runs/all-maps-20260921-001/25m/jev/summary.json": "e332f13024314145b641b45718ed2c4e858bb87134178fc546e9241cce2c30e7",
+    "smac-hard/jev_runs/all-maps-20260921-001/25m/jev/episode-001/summary.json": "7500d5f3772903fac2aed8a681e9fc5afc3952aeace59e656a45d1cccb935603",
+    "smac-hard/jev_runs/all-maps-20260921-001/25m/jev/episode-002/summary.json": "0cbbcdb435b5e5a67ee09848c1a4cb835a669bb525b0cbfae17bee25149c24c8",
+    "smac-hard/jev_runs/all-maps-20260921-001/25m/jev/episode-003/summary.json": "6b88d8ca51df6679e5e42407b6369bf4ba479f599b435d2f245d7eadce9d5d98",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/25m/jev/summary.json": "257e352eea9b6653a18cd0ba4c3e70cea1a74dd70b61691a78e00c526ede0329",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/25m/jev/episode-001/summary.json": "819e400edeb768d14bfb8f97761c52d53c73c5a6b26c4913fcac8bcd838a8e64",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/25m/jev/episode-002/summary.json": "f24db773eeebbfa86852d2812162eb937f07d80e75887f2ed08c05391e3013f7",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/25m/jev/episode-003/summary.json": "aa27ca7275a9d72e1a24a7e85121edb8b8beed935db5bc6a0ad5eb54a5bc4b7d",
+    "smac-hard/jev_runs/all-maps-20260921-001/5m_vs_6m/jev/summary.json": "aa72cba69360aecd8234b72968df1af458e21f40dc6da5df13607249a2c67d0c",
+    "smac-hard/jev_runs/all-maps-20260921-001/5m_vs_6m/jev/episode-001/summary.json": "f2342c30c69ce4c4395184ae10aaaa3bee8713942587b55d47f932c1df91c629",
+    "smac-hard/jev_runs/all-maps-20260921-001/5m_vs_6m/jev/episode-002/summary.json": "cfdeda965d5aeef862a19156342776a07b837c15fd7da03ed5a78667bd4d2073",
+    "smac-hard/jev_runs/all-maps-20260921-001/5m_vs_6m/jev/episode-003/summary.json": "56ed1217ef658c7cabc03b88067cc4f59ade9eb4ee66768765f14d9781ab331f",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/5m_vs_6m/jev/summary.json": "9c2f40a437e3e1bb0be82097b0d6523b296d851b413dfb88577e8d03f673e72a",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/5m_vs_6m/jev/episode-001/summary.json": "37a4582acbbf0a89682b15b5b65bf8de27d28a5b6c7d0e448047487f543573a0",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/5m_vs_6m/jev/episode-002/summary.json": "bb7c5d2a004b233851f56ac11d0aeff8a8465a8310741dab30bbf2208fde65fe",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/5m_vs_6m/jev/episode-003/summary.json": "40b9cc83d38f7817b273e21e1e6df609c407c773e4a2754f0133e7be0b89cfba",
+    "smac-hard/jev_runs/all-maps-20260921-001/8m_vs_9m/jev/summary.json": "d2d052721a7e974b39d5c9f3e46c973c56fcef34f3d8c5597ebb243ab95860b5",
+    "smac-hard/jev_runs/all-maps-20260921-001/8m_vs_9m/jev/episode-001/summary.json": "0fbd6770047fbe0317358f4e496fac12d41278df5a82b9e87b1d7590817bfccf",
+    "smac-hard/jev_runs/all-maps-20260921-001/8m_vs_9m/jev/episode-002/summary.json": "0298a95015fafd24eeb08c89caa0553237c50ac74a274cbc569ad95606ccd576",
+    "smac-hard/jev_runs/all-maps-20260921-001/8m_vs_9m/jev/episode-003/summary.json": "4402eec0293371251085f4bf7cf4cd01d73f2433f7c1e656edd296b484572bdf",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/8m_vs_9m/jev/summary.json": "c157e562f88cdd0940a400c2e9bdfd4ad49006bb19a01a65c75102f4953752df",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/8m_vs_9m/jev/episode-001/summary.json": "16112ee794d3da9c37aa34d76693f30ba82b17b7ea5de293fc42b852ef68ca76",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/8m_vs_9m/jev/episode-002/summary.json": "bf095f4b9b44390752d4139062c8f1e439df1378a76a6eb47c3afbcb21c77c36",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/8m_vs_9m/jev/episode-003/summary.json": "45a3b23f9a22d77390ff820c9cec071cada6499a12823601c110b6ca8ac8bd97",
+    "smac-hard/jev_runs/all-maps-20260921-001/10m_vs_11m/jev/summary.json": "cc2e5938b49fa710aa51de8493bb4be4981cab888890c10ca46f154a7481eaa3",
+    "smac-hard/jev_runs/all-maps-20260921-001/10m_vs_11m/jev/episode-001/summary.json": "89870dbd2c27056dabb01a320cf235f1b53995498f7b756a1a325f7ae463e253",
+    "smac-hard/jev_runs/all-maps-20260921-001/10m_vs_11m/jev/episode-002/summary.json": "2f5b0f8a1866ee2f9b7bde0eee3a736ff44f252aa545a8aee1dfb16869f68672",
+    "smac-hard/jev_runs/all-maps-20260921-001/10m_vs_11m/jev/episode-003/summary.json": "9cc27d76e23e0469d326003691f7ba7814bced81927ec8a240f5a7bfd09fe127",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/10m_vs_11m/jev/summary.json": "973aa79d816c3ab57f15e50025ea574cc75e591ba6dc91e6cab218ffca6ed093",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/10m_vs_11m/jev/episode-001/summary.json": "f8806203a556a1397321b69dc23d5558899bacbcd2c4a9b9e514a278e4abcf1a",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/10m_vs_11m/jev/episode-002/summary.json": "945a2a500861a787cd9ebf5c7e35f11417ad7a60e724b52c8d76862f761099cc",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/10m_vs_11m/jev/episode-003/summary.json": "354472d43df0012cb139642deb5895eef1874e58bd378a165c297a1e271e3fc4",
+    "smac-hard/jev_runs/all-maps-20260921-001/27m_vs_30m/jev/summary.json": "db60b0697bdd3a2e789cf893c4c700b7a6457183399292fd6a0e38efed0470c4",
+    "smac-hard/jev_runs/all-maps-20260921-001/27m_vs_30m/jev/episode-001/summary.json": "a7fe17664826a9c9ec2f1b30b74c55a4288f8c4eba8ea1f670c09f40717d0914",
+    "smac-hard/jev_runs/all-maps-20260921-001/27m_vs_30m/jev/episode-002/summary.json": "11cfaeb7e565f9840cd7a641a254302aa479349077f434dec6461e9809a0d7c9",
+    "smac-hard/jev_runs/all-maps-20260921-001/27m_vs_30m/jev/episode-003/summary.json": "ff93fc68737fa4264825d4f587831c2553adf9aa607d5af781aadd9ae59f25cc",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/27m_vs_30m/jev/summary.json": "d762677e542478c6c621f063dfced26196cd2b51722babf8cc99b53b98d9ca43",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/27m_vs_30m/jev/episode-001/summary.json": "ed55a6a91ca5c2d7843e2ff3c08b522a601c1822bd33a280fbb0c4ab9a6c1946",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/27m_vs_30m/jev/episode-002/summary.json": "abdcb61da5d0774f328675b000bb8606bb7a655ee5ea2c6c10787adba456c75a",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/27m_vs_30m/jev/episode-003/summary.json": "aedffba9f53c687f1c72325436ec7a220eca62dd0ee447b91f5a5fbc0e901e63",
+    "smac-hard/jev_runs/all-maps-20260921-001/MMM/jev/summary.json": "7b9c650bc6f202ef548fb63f9356608b92267954223639fed1663616c08975d5",
+    "smac-hard/jev_runs/all-maps-20260921-001/MMM/jev/episode-001/summary.json": "e959202c262afcb85e663b4c25cd5d80558ccf15a2cf49da2761b617570d1403",
+    "smac-hard/jev_runs/all-maps-20260921-001/MMM/jev/episode-002/summary.json": "586d08131eb92a45d4b51fb2902a2a6057fa1abd69f0fe5606415579bae46e37",
+    "smac-hard/jev_runs/all-maps-20260921-001/MMM/jev/episode-003/summary.json": "e9d42208c70dd4329c0a47f7d1fa5588aff882218dd6729ba21283bf71430f67",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/MMM/jev/summary.json": "c65904597e8c22b50a2742768b7815eae3427cef32c35f35703eab528912b976",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/MMM/jev/episode-001/summary.json": "37266826f791152da60ae1d6591aa8a050a3fd38185b6966fb130e35beb89712",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/MMM/jev/episode-002/summary.json": "86206b01dba9207a55f5b4a95ae8f62311e74127f4b78bd357f9ff3046e5b323",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/MMM/jev/episode-003/summary.json": "68d0dc40db0c1a9a0e7a2a7c37dc2764c2b1d35690dcfa79e6c35bd5bc452d86",
+    "smac-hard/jev_runs/all-maps-20260921-001/MMM2/jev/summary.json": "1ff0f9f62015cc1ac2742c0b5bccfab4206f0491abdb0cc28779031b25a9831f",
+    "smac-hard/jev_runs/all-maps-20260921-001/MMM2/jev/episode-001/summary.json": "198652a05dce6954a3a761ac69072236cb5656cb14df60e179e68b8d3d8c620c",
+    "smac-hard/jev_runs/all-maps-20260921-001/MMM2/jev/episode-002/summary.json": "f702bf93307c487387db45cb295e2881b872c11c57f2c24462a10ca8880755ec",
+    "smac-hard/jev_runs/all-maps-20260921-001/MMM2/jev/episode-003/summary.json": "c2fb4d171e88eb1ef25358c2314cc3465ddb19e95f08d961b6eeb240755ec80e",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/MMM2/jev/summary.json": "27d492f689b8859fe61af4692d20bb341907918d80101c5b81bc60e95b930742",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/MMM2/jev/episode-001/summary.json": "c5ca52e719aa6975ce88a2560bc99aec1dcb1cdf72be0bbf9b49e725fd1c642c",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/MMM2/jev/episode-002/summary.json": "e979a3b58f5b4bdefa0946e9d8f0034b31a03f1601863b3322c73881ffe5f784",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/MMM2/jev/episode-003/summary.json": "5cd4c693726b6c16a71e590f11cd5084d02ab1f6ba47f43521c2d1b87ff32cdb",
+    "smac-hard/jev_runs/all-maps-20260921-001/2s3z/jev/summary.json": "c4a97d4e9972e391e3d4d42fed5f1ea212a0eef40a903aec5afc516a37c5112e",
+    "smac-hard/jev_runs/all-maps-20260921-001/2s3z/jev/episode-001/summary.json": "3cd886e86edbec99f00fd7d099ea8191ebd0759e452f2920c38caa7b78527359",
+    "smac-hard/jev_runs/all-maps-20260921-001/2s3z/jev/episode-002/summary.json": "3f6dab0f79b506575966f94a11ed58f6cdcedadc923f20c7763cfef43c758081",
+    "smac-hard/jev_runs/all-maps-20260921-001/2s3z/jev/episode-003/summary.json": "abb6718fd00b998f311c058e8e9a78790a018c8c92337181eb6ec344e6cef15e",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2s3z/jev/summary.json": "cf5c49debedf2cd3904c731fbb09f2725f0cf339e37810bbdd35c9d56455ab85",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2s3z/jev/episode-001/summary.json": "28920ad174fc145325818f9981a5aa04fb07b154cf8f9b0022999bc08708130e",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2s3z/jev/episode-002/summary.json": "0eb66ab4fc93d02ac70636dce4c6babca87e67d73c3f3a5b680a902fe574f3e4",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2s3z/jev/episode-003/summary.json": "c9aedfdafd7eae1b1a3edfd51c904e02f2ee1fca781df18e1e5593b6e5f804c2",
+    "smac-hard/jev_runs/all-maps-20260921-001/3s5z/jev/summary.json": "4ae0934b465021d27fc57349486dcc5a711f6dc6d81e9a0093d4eba2ea038150",
+    "smac-hard/jev_runs/all-maps-20260921-001/3s5z/jev/episode-001/summary.json": "b3fe0d06525957bc31151eb404e84d52ced10ad129343effa4312c039633a634",
+    "smac-hard/jev_runs/all-maps-20260921-001/3s5z/jev/episode-002/summary.json": "6315cd41bbe5a98f248d13e3206bb5e7e518555c0c504c77400b3445e13b008e",
+    "smac-hard/jev_runs/all-maps-20260921-001/3s5z/jev/episode-003/summary.json": "50a1cfa1a94bbb69d75fb88c502c761d7fb4a7b05e33093cd769c0dd71200b61",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s5z/jev/summary.json": "b5986736b40da1722d33ff1101aa44b027c0f689c9b8b3ce3b27b4bc088d28ef",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s5z/jev/episode-001/summary.json": "fb64c7f0606c7d156e69b2c7cf4d613382a4bf792c592f02a043c1a0477136ed",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s5z/jev/episode-002/summary.json": "b63ca2b2d530f1841681bc91c7423a4e8162dbab0498c2a2be8b7fbd4db20651",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s5z/jev/episode-003/summary.json": "9bb78c2772fdb57f536be7cd047ab34d554706d4133053eb2feffe3a695170aa",
+    "smac-hard/jev_runs/all-maps-20260921-001/3s5z_vs_3s6z/jev/summary.json": "5b3790cf637598bd548b4839faab7d4af6d7d3f6ed6df239c93f18aaae7223ee",
+    "smac-hard/jev_runs/all-maps-20260921-001/3s5z_vs_3s6z/jev/episode-001/summary.json": "ee304ae212b444df1fc943f06897422dbd078a8d4dc4d6f446c7c4b45ece2682",
+    "smac-hard/jev_runs/all-maps-20260921-001/3s5z_vs_3s6z/jev/episode-002/summary.json": "f92a3ee7ffa8f8bf9062d4117fe85f227565edede69c73bfa76b7cfc230fb842",
+    "smac-hard/jev_runs/all-maps-20260921-001/3s5z_vs_3s6z/jev/episode-003/summary.json": "3706dab2a273b77bd2755a0f28bc2699a2d730f12cf5835d601bf06185f54711",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s5z_vs_3s6z/jev/summary.json": "5e592d2c0591a762bab1d45badcfa0ac5f7e930005223bc5d596cf16b1f2c102",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s5z_vs_3s6z/jev/episode-001/summary.json": "196df00b50cb61f913c4ea2b53ffc2f04d512b4c4b48c2009862e040c6adbf70",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s5z_vs_3s6z/jev/episode-002/summary.json": "da165b156467de235d17a7372cd482064902baa1d1a70bc67e62c18035c9676d",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s5z_vs_3s6z/jev/episode-003/summary.json": "5fc4be2336dc8e9dbeebb4310936a95e043ddeb56e4044b16907876fad4bcfc9",
+    "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_3z/jev/summary.json": "36207da0cb9b543ffe0abee1f7327a37c31cd0305a5b5ba599f47dd79a8d7ac4",
+    "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_3z/jev/episode-001/summary.json": "b351534bad46f891cd9c1a8d0ce1b633c3b1f722cb798fb8f375406011ac30dc",
+    "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_3z/jev/episode-002/summary.json": "974cb8311593948739865b2a3c3290d42eed562b46329b5720febafe3be4b242",
+    "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_3z/jev/episode-003/summary.json": "40a947cc3aa091ea047a3955e3a1fb8a219fe6276877379eae24ba4599253c4f",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_3z/jev/summary.json": "2925d0b0c71818e46b6f08c7202a46ee6c1ed95b5c0118e751fb89956dc24eb1",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_3z/jev/episode-001/summary.json": "fd9f6b2516dfb76aa8022621f4db56a4ac8d7b0d07eb747f8690d63d2b797961",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_3z/jev/episode-002/summary.json": "a46e4a356ecc8b9f4c8194cf9267f903b4e7ff6e8db9a04626b8a4a8c4b4c0ba",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_3z/jev/episode-003/summary.json": "a7ee93454fa02588ba887fbab83a9122e4c3f870c17625ee83a8f7353b0a208a",
+    "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_4z/jev/summary.json": "a844119b2e103f242d7eb62b15340534c32ef8e2f3be5458d00717235fcb635e",
+    "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_4z/jev/episode-001/summary.json": "b855f8edb587399c8caec6a540e5efe7e42ea58c86501e26cd4430bf55c89306",
+    "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_4z/jev/episode-002/summary.json": "7d222565cfc43837ab12d8b8b78696d03fd496ca6e0984b4f8b4358b8dfeb140",
+    "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_4z/jev/episode-003/summary.json": "aae5180eab771ab3311319c8d935255968f3da9960e754825c35d9b03665a38f",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_4z/jev/summary.json": "a8d5251173e8e32d3b83ba66b8b314b0f3172927892c9c07bf2bf7a8e257343f",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_4z/jev/episode-001/summary.json": "cdbe1c9ca05985e187772ff192fb4fb0e836a11bbdf35540529eddacda83042d",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_4z/jev/episode-002/summary.json": "6d912a9ce3238a3c542bab7287bdef781b9a321a58c0847101f06f4d5db89817",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_4z/jev/episode-003/summary.json": "14a60d7c897357df0e391c60de1ead43cc22eff391a0a88132f44671b058209f",
+    "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_5z/jev/summary.json": "daa733db180470f6bb29b53ee52166c6d28f5adfa24edef506daba8529322f59",
+    "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_5z/jev/episode-001/summary.json": "479493fda56e0db771af57c9bc35f3990614a9f49906edb37d1e1000e71f34ef",
+    "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_5z/jev/episode-002/summary.json": "85d7dc87a4dbe4a04aaa37e730807c71cc62cdf83fcdc37bdcebc30d5122c3d3",
+    "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_5z/jev/episode-003/summary.json": "917b80358fe49cb8ca8ce0922903a0e726a0f2b39a131e176e0d2d3d49d69b13",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_5z/jev/summary.json": "c8151ac2f8340572c76ee78a7e74ddfd8b4411632ec2bdf0aa72e2ae02d4ebf2",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_5z/jev/episode-001/summary.json": "3ae36d45ac14a7d071ca639e22b5bbaa52fd679b1105c5543e5623db6ac11271",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_5z/jev/episode-002/summary.json": "d0fce4bf230c29afe98d9ad1fb79c6ffd33d3c08381fdf541d6f0485c00a43ef",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_5z/jev/episode-003/summary.json": "50376e7e817507c96881ef2129e2e9973e00059338e57949c0789ead0bbda119",
+    "smac-hard/jev_runs/all-maps-20260921-001/1c3s5z/jev/summary.json": "a430fe48a4fcafd39cf85dfee1d4d88073b8d7d8663f829875864ca3fc7114ea",
+    "smac-hard/jev_runs/all-maps-20260921-001/1c3s5z/jev/episode-001/summary.json": "d9252f6c4f50b6b005c53cb5d507615329240dc864c7dc640eac037d82d66a6d",
+    "smac-hard/jev_runs/all-maps-20260921-001/1c3s5z/jev/episode-002/summary.json": "d7de6766e98f1ef561e55e8ca9aee302b3353e260a9558c788a4d62fcada3ea5",
+    "smac-hard/jev_runs/all-maps-20260921-001/1c3s5z/jev/episode-003/summary.json": "7aaac502856ccfd5c0a58d8e42e8597bb76d6092cf42303a8ce690d6f53e1e8a",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/1c3s5z/jev/summary.json": "bac6a38e64ad4f45ef26e7b5bcba0aa40cc4ad43b2092643425fc9d49b635c7c",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/1c3s5z/jev/episode-001/summary.json": "1c4b40375bea00296eea460c5b1bc1fc8024351b8cf81f9f9360fb822d813995",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/1c3s5z/jev/episode-002/summary.json": "e66aba25f1ca17c0e223a6886db9201a2a51555c3fe6dc44a5cce7895d69c13c",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/1c3s5z/jev/episode-003/summary.json": "591af015b2814f7471bf1ebcef1e83d789f62826a6ea62b1a957b6036c5584a5",
+    "smac-hard/jev_runs/all-maps-20260921-001/2m_vs_1z/jev/summary.json": "be3b30871e2f104fc2cdb7926369ea4668cfc89798f6fdb5de25ee2ec34c8417",
+    "smac-hard/jev_runs/all-maps-20260921-001/2m_vs_1z/jev/episode-001/summary.json": "cce61a2368fd7f46449f71b3523296781b19a5c9e363c831bc0c46c77a51ef55",
+    "smac-hard/jev_runs/all-maps-20260921-001/2m_vs_1z/jev/episode-002/summary.json": "ea3dae2eb3e7ac38db52d6e3c97ba71f0a4d177e2b08d34892d1458bb9dd4349",
+    "smac-hard/jev_runs/all-maps-20260921-001/2m_vs_1z/jev/episode-003/summary.json": "c919d25690feb42fbadf808dafe3a0b9575d2773afc21bfdeba5aa8f1f80718c",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2m_vs_1z/jev/summary.json": "424399f06363c41b6eacbea1554048fe179af585e217947a645ab329d9988a75",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2m_vs_1z/jev/episode-001/summary.json": "7ee32cf326aa18e2c8535c042f561d888f4f81eda51f9984ce018e897d510404",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2m_vs_1z/jev/episode-002/summary.json": "3c08c90f4c9e7a0706598d1d7a069e84b3ae9f19c4c4b66b6fcaee508492d5dd",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2m_vs_1z/jev/episode-003/summary.json": "007ee4383e63e3751e27c9b767c46745766b8e3670ed97c133a93d9e5d963cf7",
+    "smac-hard/jev_runs/all-maps-20260921-001/corridor/jev/summary.json": "70b0a362fe4ddf506513f9c5c72fd3e14b6a0b5695351b263bc29e653dfc044e",
+    "smac-hard/jev_runs/all-maps-20260921-001/corridor/jev/episode-001/summary.json": "fecdff918eea3dfdf72211ce87eb3eb878f66a07f282acbf2c5126af2739d933",
+    "smac-hard/jev_runs/all-maps-20260921-001/corridor/jev/episode-002/summary.json": "1a37048bcaf166efebc130da25b74fdcb7c7f4e35248a2acce26dc85c8eed6c0",
+    "smac-hard/jev_runs/all-maps-20260921-001/corridor/jev/episode-003/summary.json": "2936306b03902f476d013fa1cbb50bddaca18303c5b35964b6f946ec20525e36",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/corridor/jev/summary.json": "11848acf82fb55ba2bd5ebe00fe4cfd94654083c53b1aab01836cd6446af0c99",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/corridor/jev/episode-001/summary.json": "94ebc30f2ed18f2da5c069dafdc85a8c15052d056a52032508a40ee8e05dce44",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/corridor/jev/episode-002/summary.json": "a63f5c5a25784ec16169040b2591f1f4dfb468b0f4948bdae2fd61ee0cc9460c",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/corridor/jev/episode-003/summary.json": "0d1065b4a7e84d7f7f98960c36d1ba56217165a187c16aa3a39bfd69500dcd83",
+    "smac-hard/jev_runs/all-maps-20260921-001/6h_vs_8z/jev/summary.json": "9f491c5f8aa95ae88278f8a01620c19bf2e165224e22ee9bec0234792af13537",
+    "smac-hard/jev_runs/all-maps-20260921-001/6h_vs_8z/jev/episode-001/summary.json": "9aba32b395c371a7b1bcbf51c372a0ac80dce278cc8c3f5519802db20b1be0a8",
+    "smac-hard/jev_runs/all-maps-20260921-001/6h_vs_8z/jev/episode-002/summary.json": "3ece26fbb3b715ff261c02e573b40c2c21d570638eb1506cce1901abbd7b2f42",
+    "smac-hard/jev_runs/all-maps-20260921-001/6h_vs_8z/jev/episode-003/summary.json": "8ccc23ea87661f9d3b86dfe90f249c8e0a33ea3af24440936b7fe20d4d23feea",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/6h_vs_8z/jev/summary.json": "7600b11b6b62d75338b793f8bf71eb47b3613598a0797c303e77a4f66efb113a",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/6h_vs_8z/jev/episode-001/summary.json": "4508e5b4c76dd3520232afa478e7a08e0d50da8949b9990b82ae68a999fdf7d9",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/6h_vs_8z/jev/episode-002/summary.json": "032a11a5df103203c258eef028180e4d92f623fad3ef0eb04f78186e5056e665",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/6h_vs_8z/jev/episode-003/summary.json": "b592d81aac2f8eb3407d5b63a2d435d60b9b2607b7e725e63be3a1c94ced935b",
+    "smac-hard/jev_runs/all-maps-20260921-001/2s_vs_1sc/jev/summary.json": "367e8441daf5774defbe46ca1dd39b2326db9f0357e0aabb4c5c4976ec40c448",
+    "smac-hard/jev_runs/all-maps-20260921-001/2s_vs_1sc/jev/episode-001/summary.json": "35cdbfd648c9efe29ade6e169fa7ea1fb3259de7139e9729699bae946fa1d69b",
+    "smac-hard/jev_runs/all-maps-20260921-001/2s_vs_1sc/jev/episode-002/summary.json": "ba681d97ac65c29131c92e759c979a50a553b1b9a00d99daebaee4c68d76437b",
+    "smac-hard/jev_runs/all-maps-20260921-001/2s_vs_1sc/jev/episode-003/summary.json": "047678cb89e6a8a664b56773e45767e37eb138db2dba5d1f17ee4dfed8b5b491",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2s_vs_1sc/jev/summary.json": "f7c4bd51ae599fb7a4f6c17734c086ea6ef2b411675b021404ae9523b2aa5c7e",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2s_vs_1sc/jev/episode-001/summary.json": "e141d049cf680755038b727ae1a0fdbfd87ac4a5da583a1020831ca7b47dcd1f",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2s_vs_1sc/jev/episode-002/summary.json": "2becf47828c40f722f06d0390e9b784964a6e5a84882f763bf85a38e188566f4",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2s_vs_1sc/jev/episode-003/summary.json": "195608c6d6534830e4aea84e2e4bb0c2e96a2cd2b63af78ccbbd6eff57a6d507",
+    "smac-hard/jev_runs/all-maps-20260921-001/so_many_baneling/jev/summary.json": "ef75cb8e8eb20101333bc8a07c25aafbfd76eb9d5a1e39b343064175c510f844",
+    "smac-hard/jev_runs/all-maps-20260921-001/so_many_baneling/jev/episode-001/summary.json": "5c79c8ece0707365620f1f2b95cfcd2a90ba75f11e7a605cbaef3a845b23f522",
+    "smac-hard/jev_runs/all-maps-20260921-001/so_many_baneling/jev/episode-002/summary.json": "df6c83bb08a040f79e23b7c5321cba6c53d7c22fc340bb94cc026cce2ed967eb",
+    "smac-hard/jev_runs/all-maps-20260921-001/so_many_baneling/jev/episode-003/summary.json": "81e35d20ee2ed160ed7ece38bf0ee6fce95a6020006508e115f84e46b8836c79",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/so_many_baneling/jev/summary.json": "880c73d7ea772040da5d1b8b6e221cc6615038d9df7753de54f73f167831f883",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/so_many_baneling/jev/episode-001/summary.json": "d158aaa34e3bf1447a2d0a6542c9d61a0a66cc86eb8836e4b6bd06b8395794d6",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/so_many_baneling/jev/episode-002/summary.json": "f9fbe869148724ece222b72a0effee2bae49164f4f9ae6afcb988f5bc0fc38c5",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/so_many_baneling/jev/episode-003/summary.json": "85da1a72c31a5b77add8c04237d6c7ff6d59219956df72b248d423b2a3b792f4",
+    "smac-hard/jev_runs/all-maps-20260921-001/bane_vs_bane/jev-retry-20260922-003027-436916/summary.json": "2fda51fa4681c0a250840740a9749d727b2da0fc8d0ef035981f29b4fe289806",
+    "smac-hard/jev_runs/all-maps-20260921-001/bane_vs_bane/jev-retry-20260922-003027-436916/episode-001/summary.json": "c419e1a364c71f1bc1dfde76d45134cad389ebf8c6c16acbe16989655673bdcb",
+    "smac-hard/jev_runs/all-maps-20260921-001/bane_vs_bane/jev-retry-20260922-003027-436916/episode-002/summary.json": "227802237f465085c4e5a335601e42daddb36a5aedd409cd65565c9a8c5f4260",
+    "smac-hard/jev_runs/all-maps-20260921-001/bane_vs_bane/jev-retry-20260922-003027-436916/episode-003/summary.json": "16e399fa5282d6a902b7a45f61037868881ee2a89550d57a71aa58e7ae745859",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/bane_vs_bane/jev-retry-20260922-201819-687502/summary.json": "6d0a2cf90726180ea0c66f6b9fc9ba92fe2fb54ffdd57a874855b6ee78cff2be",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/bane_vs_bane/jev-retry-20260922-201819-687502/episode-001/summary.json": "80bddc1b5aed7dafe82bfbb323187ebf2009999f22ba7a58a4afe360160292ec",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/bane_vs_bane/jev-retry-20260922-201819-687502/episode-002/summary.json": "7d4e9047d5506b588f802d413625fc6eb3d89ac46865ee2a5a99e61a53608d98",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/bane_vs_bane/jev-retry-20260922-201819-687502/episode-003/summary.json": "b623e436e78b44176fdfe9409691c7f6ed8ad2afa3ea6d299503d93ce7219d96",
+    "smac-hard/jev_runs/all-maps-20260921-001/2c_vs_64zg/jev/summary.json": "4d363092c6241b6f26850a468070f620fab5007aa4d928f72125cb254190ea6e",
+    "smac-hard/jev_runs/all-maps-20260921-001/2c_vs_64zg/jev/episode-001/summary.json": "edcd8af61e56446888cc4df858e2d70913c8cdc3761b9e353ada29682aa22aa6",
+    "smac-hard/jev_runs/all-maps-20260921-001/2c_vs_64zg/jev/episode-002/summary.json": "7fa93ca5ff8e07c4843806260d0ec60b01e7dc5ce428c224451dec1c062dbc90",
+    "smac-hard/jev_runs/all-maps-20260921-001/2c_vs_64zg/jev/episode-003/summary.json": "c0b4fea5bfc0933689b99cd11f03af408bdcb3ddcaf7864ac2838fdf5624774f",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2c_vs_64zg/jev/summary.json": "8135961e6a09a21d12a5723673c2bb01d096b2a0146d4483c69ff5b1cb46c3c8",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2c_vs_64zg/jev/episode-001/summary.json": "0b9a91afa0d209367b9189fa1e9dddcbe7e6360691157d9885c1ad8cc4a5bcf6",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2c_vs_64zg/jev/episode-002/summary.json": "8b28e5f3e05131ce05ef344d687a6922e07abbd3b7b5ccef42db7c914603c4af",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2c_vs_64zg/jev/episode-003/summary.json": "adffc4c2dce5c17e51da46dd2dc501238f6b36d8354fadbcedd63be5e3f18420",
+    "smac-hard/jev_runs/all-maps-20260921-001/2vr_vs_3sc/jev-retry-20260922-003154-123594/summary.json": "764e065019f4ad06963d6a237f0270ad4448ab26fd7850f812ae558799a3ba2b",
+    "smac-hard/jev_runs/all-maps-20260921-001/2vr_vs_3sc/jev-retry-20260922-003154-123594/episode-001/summary.json": "428924a2a7e19b42bea8e60b8823500cdf8b2c672b627fb4e6fa2d3f0ac9cb7a",
+    "smac-hard/jev_runs/all-maps-20260921-001/2vr_vs_3sc/jev-retry-20260922-003154-123594/episode-002/summary.json": "2ed99c39e44aa9236c417b0101be96238e62ff3a148abb11e1c65c17005cd00b",
+    "smac-hard/jev_runs/all-maps-20260921-001/2vr_vs_3sc/jev-retry-20260922-003154-123594/episode-003/summary.json": "9ab5e6947f6cc85e98fb29003a6043fa406bb59bc1db23b4633ab2a9dd0e6522",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2vr_vs_3sc/jev/summary.json": "a689e7151ada9a245f7d548bc0c0081ea46eac4d4f1e8acae838b20f9c71b142",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2vr_vs_3sc/jev/episode-001/summary.json": "dae8aad145374e5fd70cbd059b3778aae84049ff06956223f1f8a8dc3a4a2a31",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2vr_vs_3sc/jev/episode-002/summary.json": "9c7d2bb000b99d6a2149ddc956e962ab7cd0db623a341db616692969b0d62606",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2vr_vs_3sc/jev/episode-003/summary.json": "3818bb14d67536b2bd06d723d7e3af79f9a0adf528af8b5b3bd7a2eb93962ccf",
+    "smac-hard/jev_runs/all-maps-20260921-001/3hl_vs_24zl/jev/summary.json": "66ca029f1915c4d864536d018249d85d1cf485cc9a04e7556ad43cd5819e78ae",
+    "smac-hard/jev_runs/all-maps-20260921-001/3hl_vs_24zl/jev/episode-001/summary.json": "607839828c12e12ba7cc8506f4333b595060634ec2c38c9cd53e36d90ce98675",
+    "smac-hard/jev_runs/all-maps-20260921-001/3hl_vs_24zl/jev/episode-002/summary.json": "536f5283e80b30e95ec433b137b0a5e92e829431eaaeae46ea11ba90a2162ab2",
+    "smac-hard/jev_runs/all-maps-20260921-001/3hl_vs_24zl/jev/episode-003/summary.json": "973989700006e3a111aa10dec82d97407a363a6e582aafa97a10b8a5cfea8435",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3hl_vs_24zl/jev/summary.json": "054c1be3363b380b91b23c1c1a7cc4c641597bfa5df911e4056f0e466ac7e744",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3hl_vs_24zl/jev/episode-001/summary.json": "5cbcb8fccdaf8dd202b4515977937ad6ba43f2215ed391480855b83204ca6cc8",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3hl_vs_24zl/jev/episode-002/summary.json": "d957df6b0fb47a900691e40bbddbca094e969d4d6c1cf75fa8ed8a91f172da3b",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3hl_vs_24zl/jev/episode-003/summary.json": "79480915ff0ffdaafc4e1401fe91a778397fae91d2d93b09e05f74fbce2971f8",
+    "smac-hard/jev_runs/all-maps-20260921-001/3rp_vs_5zl/jev/summary.json": "012a503de2e6ebe6f743e900392df800c21647142a2d64838893101ba8f6155f",
+    "smac-hard/jev_runs/all-maps-20260921-001/3rp_vs_5zl/jev/episode-001/summary.json": "fb4d7ac2e46640ddb34018eb259fa9bcf26fedc635b0bfa8f92709b508c03ae7",
+    "smac-hard/jev_runs/all-maps-20260921-001/3rp_vs_5zl/jev/episode-002/summary.json": "76037051d10ef4ff729360969a451afd6f7614f35dec27b91b98fa7ff417a00b",
+    "smac-hard/jev_runs/all-maps-20260921-001/3rp_vs_5zl/jev/episode-003/summary.json": "90452606df4dc027175063046427167c1982e21fc5b596b2b86fa82829fda86f",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3rp_vs_5zl/jev/summary.json": "83374981219748c200e71ca05b04cec72bd191219679660407cf78a3fa9683d9",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3rp_vs_5zl/jev/episode-001/summary.json": "8bd91f896c13daac09063d113073b113f961c58fc41783273795bbf3b8fefed8",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3rp_vs_5zl/jev/episode-002/summary.json": "d437a5763aa1b1a2b2016efea427124ccc80664475f33b1b848b4652f9072bab",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3rp_vs_5zl/jev/episode-003/summary.json": "712ff9f0caf16c7eeca9e4d192765e15d0fe0fe3b4e7d29c3d6b86f174c70e15",
+    "smac-hard/jev_runs/all-maps-20260921-001/3rp_vs_24zl/jev/summary.json": "5df26732a6b7233b76cba51b7c34db83729b57dd30df72b90540cf152b36fb29",
+    "smac-hard/jev_runs/all-maps-20260921-001/3rp_vs_24zl/jev/episode-001/summary.json": "b1d49c2a3784d123a7d54bc2fde0b1b15dda8c9653d9b73473c8d79d5290ea93",
+    "smac-hard/jev_runs/all-maps-20260921-001/3rp_vs_24zl/jev/episode-002/summary.json": "fb9d1d78f34a19fa82a01d43440cea62ca2ea2806b9217840efc5d5aa1d172e9",
+    "smac-hard/jev_runs/all-maps-20260921-001/3rp_vs_24zl/jev/episode-003/summary.json": "8cd7427004563eddbee13a41a0bc3be1540b7a57762a44a1db56598cfe82d508",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3rp_vs_24zl/jev/summary.json": "a905c433e50529b17463186c42bda8ff4c42b59e994b3a3a5270cade488ad141",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3rp_vs_24zl/jev/episode-001/summary.json": "c3ad144fba3005e5b9a581f4c160fe178e281577cee241c46b7d3b3acdad4bd9",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3rp_vs_24zl/jev/episode-002/summary.json": "f654cc5a96ef8e67fef0619e87c975c0dc4e1b06e7cbad589914863a8ede16ab",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3rp_vs_24zl/jev/episode-003/summary.json": "68c8ac9cde7aff823a6de7bc3e3d4000e2c454d5c328b90cda905f2c8bf28766",
+    "smac-hard/jev_runs/all-maps-20260921-001/7q_vs_2bc/jev/summary.json": "87b398737088f611cddf1c9d4104ef011daad516021455eabeb5e180746f4437",
+    "smac-hard/jev_runs/all-maps-20260921-001/7q_vs_2bc/jev/episode-001/summary.json": "0f7a0a1b10fe5e60bafad3151bf341f31321189d4461fc64fd337b7b3e4c3602",
+    "smac-hard/jev_runs/all-maps-20260921-001/7q_vs_2bc/jev/episode-002/summary.json": "8174501516a59c4010d9b121365a5c179c9720255f77c6152baca232f9424afe",
+    "smac-hard/jev_runs/all-maps-20260921-001/7q_vs_2bc/jev/episode-003/summary.json": "2c42113fa9b18dd3efb048dd2e0233a6cfcfe0b5b589f9828688d685461adc61",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/7q_vs_2bc/jev/summary.json": "da6afa64e3ea6962b313bce8b3d31473f804cd5cb8a08f4c6701cff6b4d65b5d",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/7q_vs_2bc/jev/episode-001/summary.json": "63b9910d5a119ff8f86d88c402f1ee5307557fda35f052b45a56acc35fa578ae",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/7q_vs_2bc/jev/episode-002/summary.json": "306bfc04bf89b3a39c8395d7e91182deee79b597ab86f987a03593338c17d8d7",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/7q_vs_2bc/jev/episode-003/summary.json": "bd6628d23a12f4974e489d8e550816ec91c6a7702d9c8d350e6cf3d60ffd8ac6",
+    "smac-hard/jev_runs/all-maps-20260921-001/3st_vs_5zl/jev/summary.json": "0668533c2b3fe8b130ba8bede1d0a3b5bd2e9870ae0c876605f5b8fdb2d1d36e",
+    "smac-hard/jev_runs/all-maps-20260921-001/3st_vs_5zl/jev/episode-001/summary.json": "f18914ef78afb56c8b236aabf71c5f93ad299c5fff0904f03acc43ed35f6a7f5",
+    "smac-hard/jev_runs/all-maps-20260921-001/3st_vs_5zl/jev/episode-002/summary.json": "1adb739df3e79444bf8767ddaaf67a12de7b47c66e20c56950ab0bae794255b9",
+    "smac-hard/jev_runs/all-maps-20260921-001/3st_vs_5zl/jev/episode-003/summary.json": "fc25d97cc16d0cae70840f44245b5593d230e59b5d61701e6eac71f7d7e3c7cf",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3st_vs_5zl/jev/summary.json": "95ec6f6b9686fcdd5a398b27d4d0a58d4899c3bf726ba2dc55a8dd2e0ecdd373",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3st_vs_5zl/jev/episode-001/summary.json": "9b7c874222d110dd2a9ee96a28085e552cef657ae535b5e1d1d106a3fa7c0774",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3st_vs_5zl/jev/episode-002/summary.json": "457cca0d63d1638bf50de201602b902163b3d2668edecfbbff062976d89da1e3",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3st_vs_5zl/jev/episode-003/summary.json": "dcbbca50ae1b157e3d65973ba16b7bc8825c624b0c3a75cf21601a99ea52250c",
+    "smac-hard/jev_runs/all-maps-20260921-001/6m_vs_10m/jev/summary.json": "e7f1d33b4575225dd219fafa3aa12e03766c2991ef0ba5efe3b21c4814c54c5b",
+    "smac-hard/jev_runs/all-maps-20260921-001/6m_vs_10m/jev/episode-001/summary.json": "aed79c347ef42f463810bb85af9b240c6cdc9025e742a93e15044fb077607fca",
+    "smac-hard/jev_runs/all-maps-20260921-001/6m_vs_10m/jev/episode-002/summary.json": "43e415b87acf4476333cb159010e50d43a115d98dd3187b067607ee332cb7248",
+    "smac-hard/jev_runs/all-maps-20260921-001/6m_vs_10m/jev/episode-003/summary.json": "4f06a7672799541f2c8e35fc58c310cfdf418634e5863fad12f5f5d571272d20",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/6m_vs_10m/jev/summary.json": "2c35042d787ae3c813b81521e0e7f400cbc5eb47bd34a086c7a495d8d76ee168",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/6m_vs_10m/jev/episode-001/summary.json": "ddd5ea2c4d005d92bacf7529ed2df279fd6f10f5944be67b6956fadfa788b3d9",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/6m_vs_10m/jev/episode-002/summary.json": "83e768c04f09784ee6456fe098e27f3ff7695834971fa94a31b4a18fe13a2982",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/6m_vs_10m/jev/episode-003/summary.json": "ed41b87fd36422673a68e540d243e049ed237d05f566171b6c9831d9730b2314",
+    "smac-hard/jev_runs/all-maps-20260921-001/mmmt_vs_zspi/jev/summary.json": "f431357618468e9bb6d735178bc2bbb0fcefa0e99a7c8676bf245e0e05015b76",
+    "smac-hard/jev_runs/all-maps-20260921-001/mmmt_vs_zspi/jev/episode-001/summary.json": "c1ea8045ee71f0d26300c7b3207999636cbd399afd28839d3e4c2b8f327813de",
+    "smac-hard/jev_runs/all-maps-20260921-001/mmmt_vs_zspi/jev/episode-002/summary.json": "d4302660c14a09b214846a8ee7da3416c5ebed23a7721ca9e402a6bafe149053",
+    "smac-hard/jev_runs/all-maps-20260921-001/mmmt_vs_zspi/jev/episode-003/summary.json": "5e41effa8c068a623f624c1ba789ab6ca7ff3d36f6c5fd1428a8c7359c5cfc67",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt_vs_zspi/jev/summary.json": "66158068b6b260d6dde309cea4a90698d4d03b60009f9c77884daa5da48450d8",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt_vs_zspi/jev/episode-001/summary.json": "0f1d535eb8ae2d13ca462c6b71af4814e5be574faaf02b9b7d690082a3c88fa9",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt_vs_zspi/jev/episode-002/summary.json": "f02f97cca25495cd8b395c28c9ea75cc6ad1d30072a86cdafaad209c8a5f70c6",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt_vs_zspi/jev/episode-003/summary.json": "865582220c67df4dfb8c73a48cb66b490af5925d6f6deacbe87a8699856df92e",
+    "smac-hard/jev_runs/all-maps-20260921-001/unit_test/jev/summary.json": "00a2cf689152824f78bfb901e99645c16dd43af65abe80eaf62ff19d6e29bad9",
+    "smac-hard/jev_runs/all-maps-20260921-001/unit_test/jev/episode-001/summary.json": "4b58e1083018c9243572cea287f02e28d4c885192a717b33c8a28e8686c5e932",
+    "smac-hard/jev_runs/all-maps-20260921-001/unit_test/jev/episode-002/summary.json": "4ee3c4decce9d525d8799603ae45b97660b226336097ec491e70ca6138e4251c",
+    "smac-hard/jev_runs/all-maps-20260921-001/unit_test/jev/episode-003/summary.json": "dca4146069e7ac10d4ceee05b3e3869e3b3765f22ade6ba1b1f801f8a760bb89",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/unit_test/jev/summary.json": "6c43434a10ccc3f4226b4f69c35be512d487ece709f71600dd89f3a42c044680",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/unit_test/jev/episode-001/summary.json": "3085e7318a3d6f5ebd2e3cc994d031fb078ef3f5dcf4f79f5557d06b13a17ecc",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/unit_test/jev/episode-002/summary.json": "8cdc89a04dddbca695a640d190675b3f5e0566fe08383b211fbbc41a050e431b",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/unit_test/jev/episode-003/summary.json": "2842b37afb85782d9f33d1afed37ec80ec8adecf0bca1a5a03fed2d5faa44be0",
+    "smac-hard/jev_runs/all-maps-20260921-001/mmmt/jev/summary.json": "a2b35e5a0bc9df20214209dcd7566cef23eb95d33f413648ea83b0ce4a08c0dc",
+    "smac-hard/jev_runs/all-maps-20260921-001/mmmt/jev/episode-001/summary.json": "9ab8df7ece07e81aa224647b6d24aaa702b1e3de6566ab2c11681cfa95966c8d",
+    "smac-hard/jev_runs/all-maps-20260921-001/mmmt/jev/episode-002/summary.json": "a70513da00001c272d31fc79823896da11e60f317c5c46bff096f9f50cd699e7",
+    "smac-hard/jev_runs/all-maps-20260921-001/mmmt/jev/episode-003/summary.json": "6643e560084ffc822bd3dff0949a504a22df5b086a94c5d8ba2fe57b41b55548",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt/jev/summary.json": "2a7a7a4d9d56edf2a6d27bd53e579927fa4e0170eb0fa777ae090b1a3332e928",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt/jev/episode-001/summary.json": "c577971c29f84caee2d5b9d84060577a3285402c9b45a9e6932be4127388264d",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt/jev/episode-002/summary.json": "0ef7e7cb0ee4f3c1b3e0dd0985d407e70608692bbbcf1e5854ff6f326a568afc",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt/jev/episode-003/summary.json": "a4d669297c13850c0b04c09fcd8cf6b3f3486c7dc46ad92f49be98735710b7fa",
+    "smac-hard/jev_runs/all-maps-20260921-001/mmmt_vs_zhb/jev/summary.json": "f5a8c95e8647fcfeebbf83b0f917d935eb1dbe3b000e0981d96d31f9de676e03",
+    "smac-hard/jev_runs/all-maps-20260921-001/mmmt_vs_zhb/jev/episode-001/summary.json": "79d031362c96ed7086c3ae7a181814db06a83af49abc94cc4a98842cc52e9a4e",
+    "smac-hard/jev_runs/all-maps-20260921-001/mmmt_vs_zhb/jev/episode-002/summary.json": "c072c30542b4dc1e8c45ab474907c97faab9b9b3a8bfeb9702cc03c7424815cc",
+    "smac-hard/jev_runs/all-maps-20260921-001/mmmt_vs_zhb/jev/episode-003/summary.json": "0ca4e16aad29ec3916d28e5c5efcc3dd53eff7852dc82819009d3647b2773210",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt_vs_zhb/jev/summary.json": "7b5744d8b4cfca7541536018e063e327ee1e95d788c18ded6ee988e643fdaf43",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt_vs_zhb/jev/episode-001/summary.json": "1368d71692dc25ec5f83088c89e8f0294ec5a25820896f556fb009013619e617",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt_vs_zhb/jev/episode-002/summary.json": "f4096ae789cb44c0d54438554d9ed319b7fd51202864301596629aca0f8b368d",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt_vs_zhb/jev/episode-003/summary.json": "d2ecb0b7d52da36ad804fa5a66e1cc8751d84257975f2e9b9d2739b5634de69f",
+    "smac-hard/jev_runs/all-maps-20260921-001/pvt_large/jev/summary.json": "8e0a7bb1c4083781fdc6150985b52da85e5824ab2672f8e9151cf30aa512ca3d",
+    "smac-hard/jev_runs/all-maps-20260921-001/pvt_large/jev/episode-001/summary.json": "402da647bd9d5b21275ec7deb57985835def3ccdc81b3a187c6b447797c0431a",
+    "smac-hard/jev_runs/all-maps-20260921-001/pvt_large/jev/episode-002/summary.json": "1e57e2ae8de20a428dbc8f6f4dd83931417aa5ab618b0468f0dc686a19c725e1",
+    "smac-hard/jev_runs/all-maps-20260921-001/pvt_large/jev/episode-003/summary.json": "bc6bec6e4e9c62999c4332ac7b2c0b469dc2c814cbd4d153797c781d6a840646",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/pvt_large/jev/summary.json": "2fa148453b66afd2ccce13c909639660dbcb5b3d8b630cd0c93d152f993db9ed",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/pvt_large/jev/episode-001/summary.json": "6626e78d00860f455075d07e832b4f080269a17ff862432238cd38ae5382965d",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/pvt_large/jev/episode-002/summary.json": "551fc996d5fec275042c60782fa65bfb29a7709a8ce79f776fa3fc1ce333cee6",
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/pvt_large/jev/episode-003/summary.json": "7b7ca0e7f5881f9a11dbe5fef3398e2e49f8b602dcace038ed3cd89d72c063a4",
+    "Large-Language-Models-play-StarCraftII/jev_runs/long-20m-001/summary.json": "dcc88204acc7fb0450544b3368d09a51f89f1564f546c73907a8efbcd25129bc",
+    "Large-Language-Models-play-StarCraftII/jev_runs/macro-v2-20260922-hard-002/summary.json": "d26a328e0c2bd39abff9756f5ead2e8bdb96ed90cdb4b59e4bead679ce07e914",
+    "Large-Language-Models-play-StarCraftII/jev_runs/macro-v2-20260922-harder-001/summary.json": "cdd07288db073e5eceb0f5e98a2f1e064af6e5a00f40c225435a618258f13470",
+    "Large-Language-Models-play-StarCraftII/jev_runs/macro-v2-20260922-veryhard-003/summary.json": "b7026aed4aa30964413cfe73d071eb5e3f95c4f53853beeafe70b806e6586a31",
+    "Large-Language-Models-play-StarCraftII/jev_runs/macro-v2-20260922-veryhard-004/summary.json": "6f5eec8f936b363586c2834f3b61226590d596e8c96bb03eefe2407734e836c6",
+    "Large-Language-Models-play-StarCraftII/jev_runs/macro-v22-20260922-cheatvision-001/summary.json": "7951f8c0567540166250b97bff1cea1bd8ded4755a45b7f127cd826690eb1d3e"
+  },
+  "event_prefixes": {
+    "smac-hard/jev_runs/all-maps-20260921-001/3m/jev/events.jsonl": {
+      "bytes": 1130483,
+      "sha256": "8f4a3b0a86322b5f63bd3fa9a623325774de9c02427eccae75ce197368566059"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3m/jev/events.jsonl": {
+      "bytes": 2932966,
+      "sha256": "29d348e0432968daad0c47ab904289767934c402465ad00bdc0f903bb3105b8e"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/8m/jev/events.jsonl": {
+      "bytes": 3235062,
+      "sha256": "9dba31009afdd4c0bdf311da87eb557a486abfe3d1c3b05820561df827bbfa8d"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/8m/jev/events.jsonl": {
+      "bytes": 6384098,
+      "sha256": "ea15199df054d6a4d8f0f2de8e6f36508a2a2ce4d42d45fccf8ce1016df1b3e6"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/25m/jev/events.jsonl": {
+      "bytes": 16371863,
+      "sha256": "f5f0cc8cd6953a69aabd83a2519f604b21b2debf93e7958d56f8295962dcdee7"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/25m/jev/events.jsonl": {
+      "bytes": 26639967,
+      "sha256": "f76b7054573c4bd7e04ef452c640014d7e50ff4e5b2ff7758039edbfbb1bbff5"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/5m_vs_6m/jev/events.jsonl": {
+      "bytes": 1793242,
+      "sha256": "163ac68bb6ec18d91a4e60c7cd0a1083c379e12333a761765b5c90767bac2890"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/5m_vs_6m/jev/events.jsonl": {
+      "bytes": 3469349,
+      "sha256": "ea16cc4d13b3e7c2e2badc54ff40de177fd230635c89ec90610b6314ae89e4ee"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/8m_vs_9m/jev/events.jsonl": {
+      "bytes": 3027282,
+      "sha256": "e306ffd6c562517d74c79a42d92a9f5e9f3b33d33cc8340859271d7a7e310a94"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/8m_vs_9m/jev/events.jsonl": {
+      "bytes": 5447334,
+      "sha256": "b0a3868abf0bd00b50c749f818d00ec7c4a4b2f8339f7ee916be21154363a213"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/10m_vs_11m/jev/events.jsonl": {
+      "bytes": 4175709,
+      "sha256": "663f233da4a87615595bd773791947382ae9640987d96c9cabeef649f85d76f4"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/10m_vs_11m/jev/events.jsonl": {
+      "bytes": 6792114,
+      "sha256": "06d41465b2b3cefb9bfdd19b357cbcc3ae9cd86736ed92b4706cd986922322f7"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/27m_vs_30m/jev/events.jsonl": {
+      "bytes": 19514987,
+      "sha256": "99941735c80be72dd445751b9b3b0aac3405498eaab7f77c63b3a76138f37074"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/27m_vs_30m/jev/events.jsonl": {
+      "bytes": 31383647,
+      "sha256": "8a02e78c6367d4e5cd0879a954d62faba084943192f42e40665adf6d674e6973"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/MMM/jev/events.jsonl": {
+      "bytes": 5698243,
+      "sha256": "dfc5fb6cbde0e4de43b0b067a754f78c09c89858716bfb3375bf887fec3dd275"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/MMM/jev/events.jsonl": {
+      "bytes": 14819394,
+      "sha256": "1988fb4d68e91a84659cd07accc31007fbc1bc7ff4bab97f0db03e84ccde56c5"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/MMM2/jev/events.jsonl": {
+      "bytes": 5097144,
+      "sha256": "654c040a3d0e1f45434989d78b8f593cb69ac4f46be7f9bbd2702e5332359f44"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/MMM2/jev/events.jsonl": {
+      "bytes": 9402047,
+      "sha256": "6e59c3967b7d0c97941b7707c9aca2aa88e78ae4fe7f6bcbb4abc2b5871e6042"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/2s3z/jev/events.jsonl": {
+      "bytes": 5093761,
+      "sha256": "a0809a46b87df2e93dbb84b41622b6c744a6602933ebd30bcb6416f1de60be47"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2s3z/jev/events.jsonl": {
+      "bytes": 7972421,
+      "sha256": "17ee9e2b26a237f098bc7814f3014e29f3b9a27ca0867e9e9839060420004531"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/3s5z/jev/events.jsonl": {
+      "bytes": 7281881,
+      "sha256": "98a37a7160b20e8c51d426f4a9e10622469da00f2439b58be89b9b7ef0542877"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s5z/jev/events.jsonl": {
+      "bytes": 13222020,
+      "sha256": "7ce92f1379ab48be7e809ccfd2479dcbde35b0751a3ec616bf789e5b6103ff8a"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/3s5z_vs_3s6z/jev/events.jsonl": {
+      "bytes": 6745555,
+      "sha256": "f189029d569cf7b90d82c11188a61df584b5da946be03487dc801bd776a76cb3"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s5z_vs_3s6z/jev/events.jsonl": {
+      "bytes": 10805752,
+      "sha256": "6846e8389d22216d4ac0bf8a3f5330fb77dc1e0ced3b6d5f9c198e04a3b25418"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_3z/jev/events.jsonl": {
+      "bytes": 2213380,
+      "sha256": "476864d4c025c4968ffbf61ffa2e6ad727f575d0d582a05aced4862da38ee2a6"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_3z/jev/events.jsonl": {
+      "bytes": 5089730,
+      "sha256": "b2a9503614ab2dd357e8884e980ab8e5c32013a7c5fd476843c4d4fba8ae6750"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_4z/jev/events.jsonl": {
+      "bytes": 2003415,
+      "sha256": "39dd20e46214168793795101c2f9daa4dc876a5aa1b452febab2cad1d6f24c44"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_4z/jev/events.jsonl": {
+      "bytes": 4488971,
+      "sha256": "4ebfcbe9132967a8ef1dddad5cfe183dcbbc44aecee9024440f8a77dae4c246d"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/3s_vs_5z/jev/events.jsonl": {
+      "bytes": 1900898,
+      "sha256": "b85f640b346d37861c6d85636b9347fcc43611f7e42fcba2e43eff82b240e18c"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3s_vs_5z/jev/events.jsonl": {
+      "bytes": 3718141,
+      "sha256": "76326bfe2bd47d0e00ac614fb0a7f7fb4c7a2ec31203383ddf2badc918b45fad"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/1c3s5z/jev/events.jsonl": {
+      "bytes": 7742204,
+      "sha256": "984032287211469fc51a93f0e1121df2d3449b131fc44d027c85a9b7f32e3913"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/1c3s5z/jev/events.jsonl": {
+      "bytes": 11879413,
+      "sha256": "3818517d6123deb028d321f635f7150d0638ea40e722ae1b4d49367cf6d090e7"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/2m_vs_1z/jev/events.jsonl": {
+      "bytes": 675968,
+      "sha256": "9b052ace6fec343d71828db4cbe2f1517f49bedbe85732a844aefa481852b569"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2m_vs_1z/jev/events.jsonl": {
+      "bytes": 2114908,
+      "sha256": "ce0f0e573f6621b999ba010fd98dd9ce2741fb0595bdea354d7c4f28944e93a2"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/corridor/jev/events.jsonl": {
+      "bytes": 9254770,
+      "sha256": "cd7fbe58898ff625ca0a1fa0ba57457622a5d2d6d0e6fc2dae9af4f1c8c25735"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/corridor/jev/events.jsonl": {
+      "bytes": 15827802,
+      "sha256": "764bf6a2f9ff2a997c0ef1b6b1e59ce2190a9f6685481e4dbbdd3632db6e2a37"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/6h_vs_8z/jev/events.jsonl": {
+      "bytes": 2656150,
+      "sha256": "646b97291c072ad37c305dd4ed8ed2f2fc44bf1cc7528caa62da8a782bdb4217"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/6h_vs_8z/jev/events.jsonl": {
+      "bytes": 4982727,
+      "sha256": "3e4516d4fbbf27facfeb101c06c4aba6559e6369c3c09ddec44d22d59f43eb9c"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/2s_vs_1sc/jev/events.jsonl": {
+      "bytes": 1604558,
+      "sha256": "f609c64efe728c2c1cb3950ac0e1d21b3bf7e229a4d69297f6bb30344cee496f"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2s_vs_1sc/jev/events.jsonl": {
+      "bytes": 4079742,
+      "sha256": "caafc783a6d3a13f9e333907c5b21f22bbba15e2bf19c3f0c713951e7cb5a5a7"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/so_many_baneling/jev/events.jsonl": {
+      "bytes": 6602078,
+      "sha256": "e23d2dea0afe7488d1f63d6822d9df124282459eaf9418598e2b1b24431c7f0e"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/so_many_baneling/jev/events.jsonl": {
+      "bytes": 8895515,
+      "sha256": "74127ae130f690f714304808ea6abb9a82b97ed7814c6e65e5a7aae87da9e585"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/bane_vs_bane/jev-retry-20260922-003027-436916/events.jsonl": {
+      "bytes": 20572208,
+      "sha256": "f6e9f3ba722e355f28189d688a6a8eb1f0a7a07ec2e87447805029913c0ca4c4"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/bane_vs_bane/jev-retry-20260922-201819-687502/events.jsonl": {
+      "bytes": 22865686,
+      "sha256": "8c9019e56ea55b7a8f0313d7262f1d82de42dde4758f2b0b27e7bbe955fa2264"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/2c_vs_64zg/jev/events.jsonl": {
+      "bytes": 5073561,
+      "sha256": "c1597f12f837d561571b31dac5ae646c51142987822f727ea9a80822effd1c9a"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2c_vs_64zg/jev/events.jsonl": {
+      "bytes": 10910476,
+      "sha256": "b5e3637cdd9a2987f63f4b44036540a0d761487bde00c1486c475e5603e4533e"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/2vr_vs_3sc/jev-retry-20260922-003154-123594/events.jsonl": {
+      "bytes": 934692,
+      "sha256": "95cf0fb7b5a6661afd980a0949313980fdb719b5c53799097b7144eb85fae3a6"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/2vr_vs_3sc/jev/events.jsonl": {
+      "bytes": 2092669,
+      "sha256": "60a4cd82a2c14857d8bb94e1edff8fcfbaf6c2682a49aad64151c01cefb0accc"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/3hl_vs_24zl/jev/events.jsonl": {
+      "bytes": 2184723,
+      "sha256": "4bdcb435825bf92e553d13b853ed8dd6bc3033ce050cf7db46c967505ed78555"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3hl_vs_24zl/jev/events.jsonl": {
+      "bytes": 3589250,
+      "sha256": "88474823854ab8f6775d4148a80ce9a2b4330958515604f3477cad09df470404"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/3rp_vs_5zl/jev/events.jsonl": {
+      "bytes": 1485644,
+      "sha256": "989ce21fe84d905ec506d5c0a5feecb5a574b6c051d57b130de4fd731e1c7382"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3rp_vs_5zl/jev/events.jsonl": {
+      "bytes": 2736992,
+      "sha256": "e384365aa7a46a9484c11482e0582afd5c65a870da2c31bc23e95ff28f283c63"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/3rp_vs_24zl/jev/events.jsonl": {
+      "bytes": 2183482,
+      "sha256": "c7e56174cab1dc04a671f7af5e4682900e426bd66fbc80361ce6edd4152763c4"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3rp_vs_24zl/jev/events.jsonl": {
+      "bytes": 3227846,
+      "sha256": "130fc1f6068b048590cd6cdb3c59c4ff4b8e894cde9b5b356398e911938fbb62"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/7q_vs_2bc/jev/events.jsonl": {
+      "bytes": 5881173,
+      "sha256": "d6674197376b7ad98ab49749b8d246a90848722e814d23033592e601a8b3e3de"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/7q_vs_2bc/jev/events.jsonl": {
+      "bytes": 10093941,
+      "sha256": "9172b60f58ac774fb8ae4237a53f6115784d7a296a19fb3e2f2dbcb9726addfb"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/3st_vs_5zl/jev/events.jsonl": {
+      "bytes": 2459882,
+      "sha256": "462cd6c83225a89a02f0875a3926f261c3f712a3b544aeb174772714080557bf"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/3st_vs_5zl/jev/events.jsonl": {
+      "bytes": 4948106,
+      "sha256": "1a988c8a6007c5b8f40fb4a645ff7f7916ef8b5c55248f9798e78f1eb0ab3be6"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/6m_vs_10m/jev/events.jsonl": {
+      "bytes": 2245282,
+      "sha256": "a343fc715b8c1555136ebda97086a89346d8b557153210b857fb5c243cdc1df4"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/6m_vs_10m/jev/events.jsonl": {
+      "bytes": 5391723,
+      "sha256": "848c47e13f98a8a1547fc804ff1f6526895aa48a5de35064dfffe4ff32ed4b74"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/mmmt_vs_zspi/jev/events.jsonl": {
+      "bytes": 22352452,
+      "sha256": "39aa1edcb0190502b19ea7cfaf74026111f48a6503c155716dca4e0cf7be8b18"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt_vs_zspi/jev/events.jsonl": {
+      "bytes": 36163116,
+      "sha256": "82c6298ab90f5f1df91a523f77c07fced264fc2c7aad2efda164e7dd18a7fd97"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/unit_test/jev/events.jsonl": {
+      "bytes": 360304,
+      "sha256": "74943fb0daf5975d5a802c021eace86fe847639732a001623d1de21ef8e01ebf"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/unit_test/jev/events.jsonl": {
+      "bytes": 1427007,
+      "sha256": "a6d0b9af6f8e4284c97769cfdd8e15d462183e327b6c10527c53a6ef185d41ec"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/mmmt/jev/events.jsonl": {
+      "bytes": 21964272,
+      "sha256": "87bf269869c8ef259245c49a9ae34cfda8f108832181949515b4e9b2100e16c6"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt/jev/events.jsonl": {
+      "bytes": 50510876,
+      "sha256": "0425656d0a620fa04bbbd97ef4415c37662730adddb0f150b5e42e7bbc01a3fd"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/mmmt_vs_zhb/jev/events.jsonl": {
+      "bytes": 42931411,
+      "sha256": "ceee4ec88197b6653315a8ac2e9d6995bfb537ccf2881faf9bd7043e2d3fe4a8"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/mmmt_vs_zhb/jev/events.jsonl": {
+      "bytes": 47913521,
+      "sha256": "c37b06e18eeaefb630d6fb0a573fa0b7362b8bf4193edebd8e3547d5ff0fc22b"
+    },
+    "smac-hard/jev_runs/all-maps-20260921-001/pvt_large/jev/events.jsonl": {
+      "bytes": 189611151,
+      "sha256": "ac8e15a02ee786343f141ed2552647982f0400442f2304540dc6ed139a6576d1"
+    },
+    "smac-hard/jev_runs/p0-astra-all-maps-20260922-001/pvt_large/jev/events.jsonl": {
+      "bytes": 294514929,
+      "sha256": "63e9ea0210c87f9ce711d67550d9190e6cc1df8863af8992622938a26bb51adb"
+    },
+    "Large-Language-Models-play-StarCraftII/jev_runs/long-20m-001/events.jsonl": {
+      "bytes": 9548510,
+      "sha256": "135e501f66ad338fbc67b2314f94524396dad8cc267091a005dd059a1f8fdc19"
+    },
+    "Large-Language-Models-play-StarCraftII/jev_runs/macro-v2-20260922-hard-002/events.jsonl": {
+      "bytes": 12839731,
+      "sha256": "6ef70eb22c396bdfaed3f265b3482cf9641e6f6cc1552a8693ae877b87b887a5"
+    },
+    "Large-Language-Models-play-StarCraftII/jev_runs/macro-v2-20260922-harder-001/events.jsonl": {
+      "bytes": 9912650,
+      "sha256": "b102354e89e67ac4fc1dc2f8e54c2c84248b16b889e4e210596ce7d10645b51f"
+    },
+    "Large-Language-Models-play-StarCraftII/jev_runs/macro-v2-20260922-veryhard-003/events.jsonl": {
+      "bytes": 11976113,
+      "sha256": "9b5200de16dbb84a9bb5d9bb6930d1f110e9e5317e7798da9c0af41b1c7851b5"
+    },
+    "Large-Language-Models-play-StarCraftII/jev_runs/macro-v2-20260922-veryhard-004/events.jsonl": {
+      "bytes": 15016796,
+      "sha256": "c0a4c912a816c59db9f327e0a9455a3b51a16eaf68450c1f965b663d377f811a"
+    },
+    "Large-Language-Models-play-StarCraftII/jev_runs/macro-v22-20260922-cheatvision-001/events.jsonl": {
+      "bytes": 8869815,
+      "sha256": "e8b37ba3939b57be2e6a00615d974e8ea2285e9920726cfa6a4ff4335a751a33"
+    }
+  },
+  "selected_micro_episodes": 210,
+  "accounting": {
+    "currency": "USD",
+    "JEV_input_per_million": 0.042,
+    "JEV_output_per_million": 0,
+    "GPT6_input_per_million": 10,
+    "GPT6_cached_per_million": 1,
+    "GPT6_write_per_million": 12.5,
+    "GPT6_output_per_million": 50,
+    "basis": "Known token usage at standard API rates; GPT-6 is an equivalent estimate, not a Codex invoice.",
+    "unknown_usage": "Unpriced; never assigned zero cost."
+  },
+  "prior_work": {
+    "url": "https://arxiv.org/html/2312.11865v3",
+    "main_evaluation_level": 5,
+    "GPT4_Turbo_level5_wins": 12,
+    "GPT4_Turbo_level5_games": 20,
+    "GPT35_level6_win_percent": 8.33,
+    "level7_reported": false,
+    "per_game_cost_reported": false,
+    "response_latency_reported": false
+  }
+}

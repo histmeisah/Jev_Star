@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:,">
+<title>SC2 对局复盘 · __RUN_TITLE__</title>
+<style>
+:root{color-scheme:dark;--bg:#101720;--panel:#18222e;--line:#304152;--text:#e7eef5;--muted:#b0c0ce;--accent:#66dbbb;--warn:#f9bd68}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.6 system-ui,sans-serif}main{max-width:1450px;margin:auto;padding:28px}h1{font-size:26px;margin:0}h2{font-size:18px;margin:0 0 12px}p{margin:8px 0}a{color:var(--accent)}.muted,small{color:var(--muted)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:22px 0}.card,section{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px}.card strong{display:block;font-size:25px;color:var(--accent)}section{margin:16px 0}.warning{color:var(--warn)}.charts{display:grid;grid-template-columns:1fr 1fr;gap:16px}.charts section{min-width:0}svg{width:100%;height:auto;display:block}input,select,button{background:#101720;color:var(--text);border:1px solid #567086;border-radius:5px;padding:9px;font:inherit}button{cursor:pointer}button:disabled{opacity:.4;cursor:default}.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:14px}.filters input[type=search]{flex:1;min-width:230px}.scroll{overflow:auto}table{width:100%;border-collapse:collapse;white-space:nowrap}th,td{text-align:left;padding:10px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-weight:500}tbody tr:hover{background:#223240}pre{white-space:pre-wrap;word-break:break-word;font:13px/1.6 ui-monospace,monospace;background:#101720;padding:12px;border-radius:6px}details{margin:10px 0}summary{cursor:pointer}.pager{display:flex;align-items:center;gap:14px;margin-top:15px}dialog{background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:10px;width:min(1050px,94vw);max-height:90vh;padding:22px}dialog::backdrop{background:#000a}.modal-head{display:flex;justify-content:space-between;gap:20px;position:sticky;top:0;background:var(--panel);padding-bottom:10px}.legend{display:flex;gap:20px;color:var(--muted);font-size:13px}.legend span:before{content:'●';margin-right:7px;color:var(--color)}.empty{padding:25px;color:var(--muted)}@media(max-width:800px){main{padding:14px}.charts{grid-template-columns:1fr}.card strong{font-size:21px}}
+</style>
+<style>td:nth-child(3){white-space:normal;min-width:180px;max-width:330px}th:nth-child(3){white-space:normal}</style>
+<main>
+<h1>SC2 对局复盘</h1><p id="meta" class="muted"></p>
+<div id="cards" class="cards"></div>
+<p id="notes" class="muted"></p><p id="artifacts"></p>
+<details><summary>运行参数与计价依据</summary><pre id="configuration"></pre></details>
+<div class="charts"><section><h2>工人与军队人口</h2><div id="army-chart"></div></section><section><h2>资源变化</h2><div id="resource-chart"></div></section></div>
+<section><h2>决策与执行</h2>
+<div class="filters">
+<input id="search" type="search" aria-label="搜索动作、计划、错误" placeholder="搜索动作、计划编号、错误原因">
+<select id="owner" aria-label="模型"><option value="">全部模型</option><option value="jev">Jev</option><option value="astra">Astra</option></select>
+<select id="outcome" aria-label="结果"><option value="">全部结果</option><option value="problems">错误 / 丢弃 / 未完成</option><option value="orders_submitted">已提交指令</option><option value="wait">等待</option><option value="plan_accepted">已采用计划</option></select>
+<label>从 <input id="from" type="number" min="0" step="1" style="width:85px" aria-label="开始游戏秒"> 秒</label>
+<label>到 <input id="to" type="number" min="0" step="1" style="width:85px" aria-label="结束游戏秒"> 秒</label>
+</div>
+<div class="scroll"><table><thead><tr><th>游戏时间</th><th>请求</th><th>动作 / 目标</th><th>结果</th><th>计划（请求 → 执行）</th><th>延迟</th><th>输入 tokens</th><th>费用 USD</th><th>详情</th></tr></thead><tbody id="rows"></tbody></table></div>
+<div class="pager"><button id="prev">上一页</button><span id="count"></span><button id="next">下一页</button></div>
+<p class="muted">“已提交指令”表示执行器提交命令，不代表单位已产出或建筑已完成。详情保留当时的状态、候选动作、计划、返回概率与指令。</p>
+</section>
+<section><h2>Astra 计划与战术变化</h2><div id="plans"></div></section>
+<section><h2>日志完整性检查</h2><div id="issues"></div></section>
+</main>
+<dialog id="detail"><div class="modal-head"><h2 id="detail-title"></h2><button id="close-detail">关闭</button></div><div id="detail-body"></div></dialog>
+<script id="report-data" type="application/json">__REPORT_DATA__</script>
+<script>
+'use strict';
+const data=JSON.parse(document.getElementById('report-data').textContent), $=id=>document.getElementById(id);
+const text=(tag,value,cls)=>{const e=document.createElement(tag);e.textContent=value;if(cls)e.className=cls;return e};
+const fmt=(x,d=0)=>x===null||x===undefined?'—':Number(x).toLocaleString('zh-CN',{maximumFractionDigits:d});
+const clock=s=>s===null?'—':`${Math.floor(s/60).toString().padStart(2,'0')}:${Math.floor(s%60).toString().padStart(2,'0')}`;
+const labels={wait:'等待',orders_submitted:'已提交指令',orders_submitted_with_failures:'已提交 / 有拒绝',executor_no_order:'执行器未提交指令',action_discarded:'执行前失效',api_error:'API 错误',planner_error:'规划错误',request_cancelled:'退出时取消',planner_cancelled:'退出时取消',decision_discarded:'决策未执行',planner_discarded:'计划未采用',planner_stale:'计划过期丢弃',stale:'观察过期',plan_accepted:'计划已采用',response_received:'返回 / 未记录执行',pending:'未记录返回'};
+Object.assign(labels,{planner_trigger:'请求重评',planner_trigger_cleared:'旧目标通知已清除',checkpoint_deferred:'进度快照稍后重试',plan_progress:'目标进展',plan_expired:'计划过期',army_intent_changed:'部队指令变化'});
+const reasons={opening:'开局规划',periodic:'定时重评',base_attacked:'基地受到威胁',base_lost:'基地丢失',base_count_changed:'基地数量变化',army_losses:'军队明显损失',new_enemy_composition:'发现新敌军类型',new_enemy_threat:'发现关键敌方兵种',mineral_depletion:'矿区接近枯竭',goal_completed:'目标数量达到（含在建）',executor_no_order:'执行器未提交指令',invalid_plan:'计划校验失败',plan_expired:'计划已过期',battlefield_changed_during_planning:'推理期间战况发生紧急变化',plan_changed_during_inference:'推理期间高层计划已更新'};
+const settings=data.settings,m=data.metrics.models,j=m.jev,a=m.astra;
+$('configuration').textContent=JSON.stringify({settings,pricing_basis:data.pricing_basis,usage:m},null,2);
+$('meta').textContent=`${data.run_id} · ${settings.map||'未知地图'} · ${settings.player_race||'Protoss'} vs ${settings.difficulty||'?'} ${settings.opponent_race||'?'} · ${settings.model||j.model||''}`;
+const result=data.summary.result||'未知';
+const cards=[['状态 / 结果',`${data.status} / ${result}`],['游戏时间',clock(data.game_seconds)],['Jev 返回 / 请求',`${j.responses} / ${j.requests}`],['Jev 延迟 P50 / P95',`${fmt(j.latency_ms.p50)} / ${fmt(j.latency_ms.p95)} ms`],['Jev 已记录费用',j.requests&&!j.priced_responses?'未估算':`$${fmt(j.known_cost_usd,6)}`],['Astra 返回 / 请求',`${a.responses} / ${a.requests}`]];
+if(a.requests)cards.push(['Astra 已采用 / 错误',`${data.metrics.events.plan_accepted||0} / ${a.errors}`],['Astra 延迟 P50 / P95',`${fmt(a.latency_ms.p50==null?null:a.latency_ms.p50/1000,1)} / ${fmt(a.latency_ms.p95==null?null:a.latency_ms.p95/1000,1)} s`]);
+cards.forEach(([label,value])=>{const box=text('div','', 'card');box.append(text('span',label,'muted'),text('strong',value));$('cards').append(box)});
+$('notes').textContent=`费用为输入/输出 token 标价估算，非账单；未取得用量的请求：Jev ${j.requests_without_usage}、Astra ${a.requests_without_usage}。Jev 未计价请求：${j.unpriced_requests}。${a.requests?'Astra 通过 Codex 账户调用，费用未折算，不能当作免费。':''}${data.legacy?'旧日志没有统一墙钟时间；页面只显示可恢复的信息。':''}${result==='Tie'?'本局 Tie 不是胜利；达到设定时限也会记为 Tie。':''}`;
+Object.entries(data.artifacts).forEach(([name,path])=>{const link=text('a',name);link.href=path;$('artifacts').append(link,document.createTextNode('　'))});
+const csv=text('a','导出 decisions.csv');csv.href='decisions.csv';$('artifacts').append(csv);
+function chart(id,series){
+ const box=$(id);if(!data.heartbeats.length){box.append(text('p','没有战况心跳数据','empty'));return;}
+ const ns='http://www.w3.org/2000/svg',svg=document.createElementNS(ns,'svg');svg.setAttribute('viewBox','0 0 620 235');svg.setAttribute('role','img');svg.setAttribute('aria-label',series.map(s=>s[1]).join('、')+'随游戏时间变化');
+ const width=548,height=170,left=52,top=12,maxT=Math.max(1,data.game_seconds),maxV=Math.max(1,...data.heartbeats.flatMap(p=>series.map(s=>Number(p.economy[s[0]])||0)));
+ function el(tag,attrs,label){const e=document.createElementNS(ns,tag);Object.entries(attrs).forEach(([k,v])=>e.setAttribute(k,v));if(label!==undefined)e.textContent=label;svg.append(e);return e}
+ for(let i=0;i<=4;i++){const y=top+height*(1-i/4);el('line',{x1:left,x2:left+width,y1:y,y2:y,stroke:'#304152'});el('text',{x:left-8,y:y+4,fill:'#b0c0ce','text-anchor':'end','font-size':12},fmt(maxV*i/4));el('text',{x:left+width*i/4,y:top+height+24,fill:'#b0c0ce','text-anchor':'middle','font-size':12},clock(maxT*i/4));}
+ series.forEach(([key,label,color])=>{let path='',gap=true;data.heartbeats.forEach(p=>{const v=p.economy[key];if(typeof v!=='number'){gap=true;return;}const x=left+width*p.game_seconds/maxT,y=top+height*(1-v/maxV);path+=`${gap?'M':'L'}${x.toFixed(2)},${y.toFixed(2)} `;gap=false;});el('path',{d:path,fill:'none',stroke:color,'stroke-width':2});});
+ box.append(svg);const legend=text('div','','legend');series.forEach(([,label,color])=>{const e=text('span',label);e.style.setProperty('--color',color);legend.append(e)});box.append(legend);
+}
+chart('army-chart',[['worker_supply','工人人口','#66dbbb'],['army_supply','军队人口','#91b8ff']]);chart('resource-chart',[['mineral','矿物','#66dbbb'],['gas','瓦斯','#f9bd68']]);
+let page=0,filtered=[],pageSize=50;
+function show(row){
+ $('detail-title').textContent=`${row.id} · ${clock(row.game_seconds)} · ${row.description}`;$('detail-body').replaceChildren();
+ const req=row.records.find(r=>['request','planner_request'].includes(r.event)),res=row.records.find(r=>['response','planner_response'].includes(r.event)),action=row.records.find(r=>r.event==='action'),state=req?.payload?.state||{},resource=state.resource||{},plan=state.strategic_plan;
+ const brief=document.createElement('section');brief.append(text('h3','这次决策发生了什么'));
+ brief.append(text('p',`战况：矿物 ${fmt(resource.mineral)}，瓦斯 ${fmt(resource.gas)}，工人人口 ${fmt(resource.worker_supply)}，军队人口 ${fmt(resource.army_supply)}。`));
+ if(row.owner==='jev'){
+  brief.append(text('p',plan?`Astra #${plan.plan_id}：${plan.objective||''}。${plan.guidance||''}`:'Astra 指导：请求中没有有效战略计划，Jev 自主选择。'));
+  if(plan)brief.append(text('p',`计划依据 ${clock(plan.observation_game_seconds??null)} 的观察，于 ${clock(plan.accepted_game_seconds??null)} 采用，有效至 ${clock(plan.expires_game_seconds??null)}。${state.strategy_status?.planner_inflight?'Astra 正在后台重评；本次使用仍有效的现有计划。':''}`,'muted'));
+  const confidence=res?.answer?.confidence;brief.append(text('p',`Jev 选择：${row.description||'未记录返回'}${confidence===undefined?'':`；confidence=${confidence}（分布集中度）`}。`));
+  brief.append(text('p',`执行：${labels[row.status]||row.status}；提交 ${row.orders_submitted} 条指令。${row.reason||''}${action?.failures?.length?' 拒绝信息：'+action.failures.join('；'):''}`));
+  if(row.plan_id!==row.execution_plan_id&&row.execution_plan_id!==null)brief.append(text('p',`执行前计划已更新：${row.plan_id??'无'} → ${row.execution_plan_id}。${row.reason==='plan_changed_during_inference'?'旧结果已丢弃，后续请求使用新计划。':'动作按执行时计划重新检查。'}`,'warning'));
+ }else{
+  const accepted=row.records.find(r=>r.event==='plan_accepted'),p=accepted?.plan||res?.plan;
+  brief.append(text('p',`触发原因：${req?.payload?.triggers?.map(r=>reasons[r]||r).join('、')||'周期规划'}。`));
+  brief.append(text('p',p?`Astra 指导：${p.objective||''}。${p.guidance||''}`:'尚未记录有效计划。'));
+  brief.append(text('p',`处理结果：${labels[row.status]||row.status}。${row.reason||''}`));
+ }
+ $('detail-body').append(brief,text('h3','完整原始记录'));
+ row.records.forEach(record=>{const section=document.createElement('details');section.append(text('summary',`${record.event} · 原日志第 ${record.line} 行`),text('pre',JSON.stringify(record,null,2)));$('detail-body').append(section)});$('detail').showModal();
+}
+function render(){
+ const q=$('search').value.toLowerCase(),owner=$('owner').value,outcome=$('outcome').value,from=$('from').value,to=$('to').value;
+ filtered=data.decisions.filter(r=>(!owner||r.owner===owner)&&(!outcome||(outcome==='problems'?!['wait','orders_submitted','plan_accepted'].includes(r.status):r.status===outcome))&&(!q||`${r.id} ${r.description} ${r.reason||''} ${r.plan_id??''} ${r.execution_plan_id??''}`.toLowerCase().includes(q))&&(from===''||r.game_seconds>=Number(from))&&(to===''||r.game_seconds<=Number(to)));
+ page=Math.min(page,Math.max(0,Math.ceil(filtered.length/pageSize)-1));$('rows').replaceChildren();
+ filtered.slice(page*pageSize,(page+1)*pageSize).forEach(r=>{const tr=document.createElement('tr');[clock(r.game_seconds),r.id,r.description||r.action_id||'—',labels[r.status]||r.status,`${r.plan_id??'—'} → ${r.execution_plan_id??'—'}`,r.latency_ms===null?'—':`${fmt(r.latency_ms)} ms`,fmt(r.input_tokens),r.cost_usd===null?'未估算':fmt(r.cost_usd,7)].forEach(v=>tr.append(text('td',v)));const td=document.createElement('td'),button=text('button','查看');button.addEventListener('click',()=>show(r));td.append(button);tr.append(td);$('rows').append(tr)});
+ $('count').textContent=`${filtered.length} 条 · 第 ${page+1} / ${Math.max(1,Math.ceil(filtered.length/pageSize))} 页`;$('prev').disabled=page===0;$('next').disabled=(page+1)*pageSize>=filtered.length;
+}
+['search','owner','outcome','from','to'].forEach(id=>$(id).addEventListener('input',()=>{page=0;render()}));$('prev').onclick=()=>{page--;render()};$('next').onclick=()=>{page++;render()};$('close-detail').onclick=()=>$('detail').close();render();
+if(!data.plans.length)$('plans').append(text('p','本局未记录 Astra 计划或军队姿态变化。','muted'));
+data.plans.forEach(p=>{const d=document.createElement('details');d.append(text('summary',`${clock((p.game_loop||0)/22.4)} · ${labels[p.event]||p.event} · ${p.plan?.objective||p.intent||reasons[p.reason]||p.reason||''}`),text('pre',JSON.stringify(p,null,2)));$('plans').append(d)});
+$('issues').append(text('p',data.issues.length?`发现 ${data.issues.length} 个日志完整性问题，见下方。`:'未发现重复执行、候选表外选择或日志序号异常。未返回/未执行请求可在上方筛选查看。',data.issues.length?'warning':'muted'));
+if(data.issues.length)$('issues').append(text('pre',JSON.stringify(data.issues,null,2)));
+if(data.summary.failure)$('issues').append(text('h3','运行异常'),text('pre',JSON.stringify(data.summary.failure,null,2)));
+</script>
+</html>
