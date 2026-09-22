@@ -1,6 +1,12 @@
-# JEV-Star paper
+# JEV-Star paper / JEV-Star 论文
+
+[English](#english) | [简体中文](#简体中文)
 
 **JEV-Star: Fast, Low-Cost StarCraft II Control with Language-Model Planning**
+
+**JEV-Star：语言模型规划驱动的快速、低成本星际争霸 II 控制**
+
+## English
 
 [Current PDF](JEV-Star.pdf) · [LaTeX source](main.tex) · [References](references.bib) · [Abstract](abstract.txt)
 
@@ -16,7 +22,7 @@ and one pressure-test loss. See the [experiment boundaries](../docs/experiments.
 for intermediate versions and incomplete trials that are not pooled into the
 paper's comparison.
 
-## Data
+### Data
 
 - [Per-episode micro results](data/study/micro_episodes.csv)
 - [Per-game cost estimates](data/study/game_costs.csv)
@@ -37,7 +43,7 @@ Cost figures in the paper are estimates from known usage under its recorded
 price assumptions, including an API-equivalent estimate for GPT-6. They are not
 account invoices, and missing usage is not assumed free.
 
-## Compile
+### Compile
 
 The original `neurips_2026.sty` and its notices are retained. With a TeX
 distribution installed, run in this directory:
@@ -52,3 +58,39 @@ pdflatex main.tex
 The seven vector PDF figures and two listings needed by `main.tex` are included.
 Old drafts, build directories, duplicate image formats, bundled TeX binaries and
 large MP4 files were excluded from the clean repository.
+
+## 简体中文
+
+[当前 PDF](JEV-Star.pdf) · [LaTeX 源码](main.tex) · [参考文献](references.bib) · [摘要](abstract.txt)
+
+这是已有的 NeurIPS 格式研究草稿，不代表一次新的投稿。公开仓库保留一份当前 PDF、编译所需资产以及分析使用的固定统计表。作者信息和最终投稿由作者负责。
+
+论文比较初始纯 JEV 微操批次与 P0 JEV＋GPT-6 批次：每种方法覆盖 35 张地图、105 局，两种方法合计 210 局。宏观样本包括初始单模型对局、四局分层控制胜利和一局压力测试失利。未合并进论文比较的中间版本和不完整试验，见 [实验与版本边界](../docs/experiments.md)。
+
+### 数据
+
+- [微观逐局结果](data/study/micro_episodes.csv)
+- [每局成本估算](data/study/game_costs.csv)
+- [方法汇总](data/study/method_summary.csv)
+- [选定运行记录](data/study/runs.json)
+- [响应延迟与用量记录](data/study/responses.csv)
+- [宏观动作记录](data/study/macro_actions.csv)
+- [宏观计划](data/study/macro_plans.csv)
+- [宏观对局轨迹](data/study/macro_trajectories.csv)
+
+这些是固定的派生统计表。完整的时间顺序事件、源 replay 和视频保留在原本地研究档案中；论文中的简短日志引用不替代原始日志。随仓库提供的派生快照已将路径转换为对应 `macro/` 或 `micro/` 模块的相对路径，源文件哈希仍用于识别原始归档文件。
+
+论文成本来自已知用量及文中记录的价格假设，其中包含 GPT-6 的 API 等价成本估算。这些不是账户账单，缺失用量也不按免费计算。
+
+### 编译
+
+原始 `neurips_2026.sty` 及其声明已保留。安装 TeX 发行版后，在本目录运行：
+
+```text
+pdflatex main.tex
+bibtex main
+pdflatex main.tex
+pdflatex main.tex
+```
+
+仓库包含 `main.tex` 所需的七张矢量 PDF 图和两份日志引用。旧草稿、构建目录、重复图片格式、打包的 TeX 程序和大型 MP4 文件已从整理后的仓库中排除。
