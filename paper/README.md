@@ -8,7 +8,7 @@
 
 ## English
 
-[Current PDF](JEV-Star.pdf) · [LaTeX source](main.tex) · [References](references.bib) · [Abstract](abstract.txt)
+[Read online](PAPER.md) ? [Current PDF](JEV-Star.pdf) · [LaTeX source](main.tex) · [References](references.bib) · [Abstract](abstract.txt)
 
 The current PDF is the **26-page edition supplied on September 23, 2026**,
 copied without changing its contents. [Version and SHA-256](pdf-version.json).

@@ -6,5 +6,217 @@
   "pages": 26,
   "sha256": "6b556106645a3ad95b4c948b02aa211b21d6b3e1bfa6b7cc3b3e17cc619c1669",
   "provenance": "User-provided PDF, copied without modifying its contents.",
-  "latex_source": "The existing LaTeX source is an earlier repository snapshot; a corresponding source update was not supplied with this PDF."
+  "latex_source": "The existing LaTeX source is an earlier repository snapshot; a corresponding source update was not supplied with this PDF.",
+  "online_reader": "PAPER.md",
+  "page_render_dpi": 144,
+  "rendered_pages": [
+    {
+      "page": 1,
+      "file": "pages/page-01.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 276595,
+      "sha256": "d44cbc5a8f07cd7fe9f115fafe3023e489c1377baa56a24cd43c3da80ee7cc5e"
+    },
+    {
+      "page": 2,
+      "file": "pages/page-02.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 331077,
+      "sha256": "b57cedd54499d89258764c26dec797e27f7d044121bd6706b5a07f36d753371a"
+    },
+    {
+      "page": 3,
+      "file": "pages/page-03.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 272870,
+      "sha256": "fb27b75b10eaa65d70420d871cc9cfcbb928b0d5b3bf474eba32a56b4f836d04"
+    },
+    {
+      "page": 4,
+      "file": "pages/page-04.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 330711,
+      "sha256": "1916f1852c431e5ad30f92b2bec56d8458dcd1b3a2cc3b6b19aaee493b8f9c51"
+    },
+    {
+      "page": 5,
+      "file": "pages/page-05.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 1075942,
+      "sha256": "b052be77938e7b47de2656943bfcccb5e6259b19d7bf547506e842f55f15ec5b"
+    },
+    {
+      "page": 6,
+      "file": "pages/page-06.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 226628,
+      "sha256": "b65600f2f45ec43378988819c57fce87d18f33aa238db1cc05bfb49fa61defff"
+    },
+    {
+      "page": 7,
+      "file": "pages/page-07.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 292655,
+      "sha256": "a90c823bede71888ff8340c1e2c283c669fc2fce2a3181f6894cb7c52077bb40"
+    },
+    {
+      "page": 8,
+      "file": "pages/page-08.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 288563,
+      "sha256": "9bc31bb59aca6a1d588c635dac8ca109215966d8fa83ebf7680f88a29d3cf4b2"
+    },
+    {
+      "page": 9,
+      "file": "pages/page-09.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 1260024,
+      "sha256": "20ed8fa5cb9464b9710c5d76e10d7285760b257199aa7c1b4ee05db416713fb5"
+    },
+    {
+      "page": 10,
+      "file": "pages/page-10.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 263791,
+      "sha256": "8863c726341c32ca051828082ba5127db2fcf67ca175ada44f9382eb0c69ec4f"
+    },
+    {
+      "page": 11,
+      "file": "pages/page-11.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 238817,
+      "sha256": "140ba5c922ff0c2eef91ace5feb3222e6cb8f5f169250511e50564afd3915eba"
+    },
+    {
+      "page": 12,
+      "file": "pages/page-12.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 280412,
+      "sha256": "919f44fcc28cc26b22cb4422cfd81c7cd7ed48259fbf7608eb857cfd66581bc7"
+    },
+    {
+      "page": 13,
+      "file": "pages/page-13.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 282896,
+      "sha256": "9dba7f9dabfabeb6a702fbe51e5e2e68d0fd5803ed8451007a5cf51bde375d97"
+    },
+    {
+      "page": 14,
+      "file": "pages/page-14.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 247164,
+      "sha256": "92919db46fc33f02d1d5786e6389b140974b66ae52bb9d58a2d1ab606ccec6bd"
+    },
+    {
+      "page": 15,
+      "file": "pages/page-15.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 287944,
+      "sha256": "89fd80aa2b090020d42cb4800ead994093646ca0e8ecfe0e4b45a8788145e632"
+    },
+    {
+      "page": 16,
+      "file": "pages/page-16.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 448831,
+      "sha256": "6b1d7014b04a4ffb11d1530af5cdbc9036fd71dc8bc4fefd9121d03a1ad89455"
+    },
+    {
+      "page": 17,
+      "file": "pages/page-17.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 909881,
+      "sha256": "2ecb26108166aee34360ac6399bc534d4fc4a6d9e450a3db92be77f5b2b30b7e"
+    },
+    {
+      "page": 18,
+      "file": "pages/page-18.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 110859,
+      "sha256": "c9352296a02157635c588f6f2acaa38f8c37e79bebe8a97e77d29824df3565d8"
+    },
+    {
+      "page": 19,
+      "file": "pages/page-19.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 201152,
+      "sha256": "bda328446361adaa8d9bcddf36e4adf95afc67c278da11c28772a0053b1530d6"
+    },
+    {
+      "page": 20,
+      "file": "pages/page-20.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 1149143,
+      "sha256": "8cd68277bf48ab93cf944e3b81a341503cac161b1e6f7ec6f760319b6d322fb2"
+    },
+    {
+      "page": 21,
+      "file": "pages/page-21.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 1067268,
+      "sha256": "944238990292a3ceac97ee598a32e039d63aed11126257caad6c103b60f7ba32"
+    },
+    {
+      "page": 22,
+      "file": "pages/page-22.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 975883,
+      "sha256": "362d188c46adc7348f306792f059754ae59ab002df95aafcfccca0f354eba7cf"
+    },
+    {
+      "page": 23,
+      "file": "pages/page-23.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 872568,
+      "sha256": "414f1831166c84694432ca9ef69510155bf617c9c097ad724ab91ea0393053a3"
+    },
+    {
+      "page": 24,
+      "file": "pages/page-24.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 243646,
+      "sha256": "934b7f5c5e8fcc6c7e6db9f6f6d17ec2cf5a09f2897ebceab4449c4545fe1878"
+    },
+    {
+      "page": 25,
+      "file": "pages/page-25.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 127043,
+      "sha256": "4c4c89cef6c8e2d775ce0dec1b38eb84b58d0ce0fe5f0b538dbcd4a0e4aeea72"
+    },
+    {
+      "page": 26,
+      "file": "pages/page-26.png",
+      "width": 1224,
+      "height": 1584,
+      "bytes": 246804,
+      "sha256": "83dc0a394dde93095434d56e31fd1170f576909649a0ca79179e520e628b5684"
+    }
+  ]
 }
