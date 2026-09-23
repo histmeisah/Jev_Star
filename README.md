@@ -6,7 +6,7 @@
 
 **由 JEV 选择动作、可选 GPT-6 Astra 规划的星际争霸 II 宏观控制与微操。**
 
-[Read the paper / 在线阅读论文](paper/JEV-Star.pdf) · [Video gallery / 视频展示](media/README.md)
+[Read the paper / 在线阅读论文](paper/PAPER.md) · [PDF](paper/JEV-Star.pdf) · [Video gallery / 视频展示](media/README.md)
 
 ## Videos / 视频
 

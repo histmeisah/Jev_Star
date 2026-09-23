@@ -61,9 +61,9 @@ large MP4 files were excluded from the clean repository.
 
 ## 简体中文
 
-[当前 PDF](JEV-Star.pdf) · [LaTeX 源码](main.tex) · [参考文献](references.bib) · [摘要](abstract.txt)
+[在线阅读全文](PAPER.md) · [当前 PDF](JEV-Star.pdf) · [LaTeX 源码](main.tex) · [参考文献](references.bib) · [摘要](abstract.txt)
 
-当前 PDF 为 **2026 年 9 月 23 日提供的 26 页版本**，原样收录，点击上方链接即可进入 GitHub 论文预览页。[版本与 SHA-256](pdf-version.json)。LaTeX 文件和分析资产仍为仓库先前的源码快照，重新编译的结果可能与这份 PDF 不同。
+当前 PDF 为 **2026 年 9 月 23 日提供的 26 页版本**，原样收录；上方“在线阅读全文”可在 GitHub 中逐页阅读，无需先下载。[版本与 SHA-256](pdf-version.json)。LaTeX 文件和分析资产仍为仓库先前的源码快照，重新编译的结果可能与这份 PDF 不同。
 
 论文比较初始纯 JEV 微操批次与 P0 JEV＋GPT-6 批次：每种方法覆盖 35 张地图、105 局，两种方法合计 210 局。宏观样本包括初始单模型对局、四局分层控制胜利和一局压力测试失利。未合并进论文比较的中间版本和不完整试验，见 [实验与版本边界](../docs/experiments.md)。
 

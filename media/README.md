@@ -1,6 +1,6 @@
 # Winning games and replays / 胜局视频与回放
 
-[English](#english) | [简体中文](#简体中文) · [Read the paper / 在线阅读论文](../paper/JEV-Star.pdf)
+[English](#english) | [简体中文](#简体中文) · [Read the paper / 在线阅读论文](../paper/PAPER.md) · [PDF](../paper/JEV-Star.pdf)
 
 ## Videos / 视频
 
