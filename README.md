@@ -6,6 +6,8 @@
 
 **由 JEV 选择动作、可选 GPT-6 Astra 规划的星际争霸 II 宏观控制与微操。**
 
+[Read the paper / 在线阅读论文](paper/JEV-Star.pdf) · [Video gallery / 视频展示](media/README.md)
+
 ## English
 
 JEV-Star brings full-game macro control and SMAC-Hard micromanagement into one repository. Each module has its own environment, action space, and experiment records:
@@ -35,6 +37,10 @@ Three reviewed victories are available at **22.4 fps, original speed**, with the
 | 12:48 · Astra + JEV v2.1 | 15:04 · Earlier Astra + JEV | 00:21 · P0 Astra + JEV |
 
 [Video gallery and 22 winning replays](media/README.md#english) · [Download release assets](https://github.com/histmeisah/Jev_Star/releases/tag/media-20260923). These are selected victories; the complete evaluation results are below.
+
+**Micro: P0 Astra + JEV, mmmt victory — play directly below.**
+
+https://github.com/user-attachments/assets/48b26ba0-63be-45c4-82a5-f4bb6814f73e
 
 ### Quick start
 

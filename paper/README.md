@@ -10,10 +10,10 @@
 
 [Current PDF](JEV-Star.pdf) · [LaTeX source](main.tex) · [References](references.bib) · [Abstract](abstract.txt)
 
-This is the existing NeurIPS-format research draft, not a record of a new
-submission. The public repository retains one current PDF, the assets needed
-to compile it, and the fixed tables used in its analysis. Author metadata and
-any final submission remain the authors' responsibility.
+The current PDF is the **26-page edition supplied on September 23, 2026**,
+copied without changing its contents. [Version and SHA-256](pdf-version.json).
+The LaTeX files and analysis assets retain the earlier repository snapshot;
+recompiling that snapshot may differ from this supplied PDF.
 
 The paper compares the initial JEV-only micro batch with the P0 JEV + GPT-6
 batch: 35 maps and 105 episodes per method, 210 episodes in total. Macro
@@ -63,7 +63,7 @@ large MP4 files were excluded from the clean repository.
 
 [当前 PDF](JEV-Star.pdf) · [LaTeX 源码](main.tex) · [参考文献](references.bib) · [摘要](abstract.txt)
 
-这是已有的 NeurIPS 格式研究草稿，不代表一次新的投稿。公开仓库保留一份当前 PDF、编译所需资产以及分析使用的固定统计表。作者信息和最终投稿由作者负责。
+当前 PDF 为 **2026 年 9 月 23 日提供的 26 页版本**，原样收录，点击上方链接即可进入 GitHub 论文预览页。[版本与 SHA-256](pdf-version.json)。LaTeX 文件和分析资产仍为仓库先前的源码快照，重新编译的结果可能与这份 PDF 不同。
 
 论文比较初始纯 JEV 微操批次与 P0 JEV＋GPT-6 批次：每种方法覆盖 35 张地图、105 局，两种方法合计 210 局。宏观样本包括初始单模型对局、四局分层控制胜利和一局压力测试失利。未合并进论文比较的中间版本和不完整试验，见 [实验与版本边界](../docs/experiments.md)。
 
