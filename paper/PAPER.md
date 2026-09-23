@@ -113,4 +113,3 @@
 ### Page 26 / ? 26 ?
 
 ![JEV-Star paper, page 26](pages/page-26.png)
-
