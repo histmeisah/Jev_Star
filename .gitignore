@@ -33,6 +33,7 @@ dist/
 
 # Reviewed winning replays published with the media manifest
 !/media/replays/**/*.SC2Replay
+!/media/videos/*.mp4
 
 # Paper compilation products (the curated PDF is tracked)
 paper/build*/

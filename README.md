@@ -8,6 +8,30 @@
 
 [Read the paper / 在线阅读论文](paper/JEV-Star.pdf) · [Video gallery / 视频展示](media/README.md)
 
+## Videos / 视频
+
+Play the full winning games directly below. **22.4 fps, original speed, complete matches.**
+
+点击下方播放器即可观看完整胜局，**22.4 fps、原速播放**。
+
+### M01 · Macro VeryHard / Elite victory / 宏观最高非作弊难度胜局
+
+macro-v2.1 / Astra + JEV · 12:47.90
+
+https://github.com/user-attachments/assets/5cab5e0a-e8c4-43b8-a504-96f916f73e2a
+
+### M02 · Macro Easy victory / 宏观 Easy 胜局
+
+earlier Astra + JEV macro · 15:04.20
+
+https://github.com/user-attachments/assets/2beaa558-67d5-4b7f-8a8d-c29f4359ab36
+
+### U01 · Micro mmmt victory / 微观 mmmt 胜局
+
+C / P0 Astra + JEV / schema 7 · 00:21.43
+
+https://github.com/user-attachments/assets/48b26ba0-63be-45c4-82a5-f4bb6814f73e
+
 ## English
 
 JEV-Star brings full-game macro control and SMAC-Hard micromanagement into one repository. Each module has its own environment, action space, and experiment records:
@@ -27,20 +51,9 @@ flowchart LR
     P --> G
 ```
 
-### Victory videos and replays
+### Videos and replays
 
-Three reviewed victories are available at **22.4 fps, original speed**, with their original replays:
-
-| Macro: VeryHard / Elite | Macro: Easy | Micro: P0 mmmt |
-| --- | --- | --- |
-| [![Macro VeryHard victory](media/posters/M01.jpg)](https://github.com/histmeisah/Jev_Star/releases/download/media-20260923/M01-macro-veryhard-seed1-22p4.mp4) | [![Macro Easy victory](media/posters/M02.jpg)](https://github.com/histmeisah/Jev_Star/releases/download/media-20260923/M02-macro-easy-seed1-22p4.mp4) | [![Micro mmmt victory](media/posters/U01.jpg)](https://github.com/histmeisah/Jev_Star/releases/download/media-20260923/U01-micro-mmmt-p0-episode1-22p4.mp4) |
-| 12:48 · Astra + JEV v2.1 | 15:04 · Earlier Astra + JEV | 00:21 · P0 Astra + JEV |
-
-[Video gallery and 22 winning replays](media/README.md#english) · [Download release assets](https://github.com/histmeisah/Jev_Star/releases/tag/media-20260923). These are selected victories; the complete evaluation results are below.
-
-**Micro: P0 Astra + JEV, mmmt victory — play directly below.**
-
-https://github.com/user-attachments/assets/48b26ba0-63be-45c4-82a5-f4bb6814f73e
+The players at the top of this README show three complete winning games. [Media details and 22 original winning replays](media/README.md#english). Selected victories are shown separately from the complete evaluation results below.
 
 ### Quick start
 
@@ -99,7 +112,7 @@ licenses/    Upstream licenses
 jev_star.py  Unified command entry point for the two isolated environments
 ```
 
-Run outputs are stored under each module's `jev_runs/` directory. Full events, generated replays and videos, virtual environments, credentials, and machine diagnostics are excluded from Git; the original research archives remain in the local workspace. The reviewed winning replays under `media/replays/` are explicitly included, with videos distributed as release assets. The repository also includes the paper's fixed statistical tables. Excerpts do not replace complete original logs.
+Run outputs are stored under each module's `jev_runs/` directory. Full events, generated replays and videos, virtual environments, credentials, and machine diagnostics are excluded from Git; the original research archives remain in the local workspace. Reviewed full-length videos under `media/videos/` and original winning replays under `media/replays/` are included. The README uses GitHub's native inline video players; original higher-bitrate recordings are also archived in Releases. The repository also includes the paper's fixed statistical tables. Excerpts do not replace complete original logs.
 
 ### Tests
 
@@ -139,15 +152,7 @@ flowchart LR
 
 ### 胜局视频与回放
 
-已公开 **3 部胜局视频，均为 22.4 fps、原速播放**，附对应原始 replay：
-
-| 视频 | 版本 | 时长 |
-| --- | --- | --- |
-| [M01 · 宏观 VeryHard / Elite 胜局](https://github.com/histmeisah/Jev_Star/releases/download/media-20260923/M01-macro-veryhard-seed1-22p4.mp4) | Astra + JEV v2.1 | 12:48 |
-| [M02 · 宏观 Easy 胜局](https://github.com/histmeisah/Jev_Star/releases/download/media-20260923/M02-macro-easy-seed1-22p4.mp4) | 早期 Astra + JEV | 15:04 |
-| [U01 · 微观 mmmt 第 1 局胜利](https://github.com/histmeisah/Jev_Star/releases/download/media-20260923/U01-micro-mmmt-p0-episode1-22p4.mp4) | P0 Astra + JEV | 00:21 |
-
-[视频预览与 22 份胜局 replay 清单](media/README.md#简体中文) · [下载全部发布附件](https://github.com/histmeisah/Jev_Star/releases/tag/media-20260923)。这里展示选定胜局，完整实验成绩见下文。
+本页上方可直接播放 3 场完整胜局。[视频说明与 22 份原始胜局 replay](media/README.md#简体中文)。这里展示选定胜局，完整实验成绩见下文。
 
 ### 快速开始
 
@@ -206,7 +211,7 @@ licenses/    上游许可证
 jev_star.py  两个独立环境的统一命令入口
 ```
 
-运行结果保存在各模块的 `jev_runs/` 下。完整事件、新生成的 replay 和视频、虚拟环境、密钥和本机诊断文件默认不进入 Git；已有原始研究档案保留在本地工作区。已核验并公开的胜局 replay 单独收录在 `media/replays/`，视频通过 Releases 分发。仓库也包含论文的固定统计表，完整原始日志不以节选代替。
+运行结果保存在各模块的 `jev_runs/` 下。完整事件、新生成的 replay 和视频、虚拟环境、密钥和本机诊断文件默认不进入 Git；已有原始研究档案保留在本地工作区。已核验的完整视频收录在 `media/videos/`，胜局 replay 收录在 `media/replays/`。README 使用 GitHub 原生播放器，原始高码率录像另存于 Releases。仓库也包含论文的固定统计表，完整原始日志不以节选代替。
 
 ### 测试
 

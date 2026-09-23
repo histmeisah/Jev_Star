@@ -37,7 +37,22 @@
       "termination": "replay_result",
       "replay_game_seconds": 767.9017857142858,
       "last_frame_game_seconds": 767.8571428571429,
-      "decoded_frames": 17201
+      "decoded_frames": 17201,
+      "inline": {
+        "url": "https://github.com/user-attachments/assets/5cab5e0a-e8c4-43b8-a504-96f916f73e2a",
+        "file": "videos/M01-full-22p4.mp4",
+        "sha256": "02b53739fa203711d17567c7888baecc32e60bf8caf0a6e3ec1669c3e6ef51c2",
+        "bytes": 75183710,
+        "resolution": [
+          1280,
+          720
+        ],
+        "fps": 22.4,
+        "playback_speed": 1,
+        "frames": 17201,
+        "duration_seconds": 767.9017857142858,
+        "complete_match": true
+      }
     },
     {
       "id": "M02",
@@ -69,7 +84,22 @@
       "termination": "replay_result",
       "replay_game_seconds": 904.3303571428572,
       "last_frame_game_seconds": 904.1517857142858,
-      "decoded_frames": 20254
+      "decoded_frames": 20254,
+      "inline": {
+        "url": "https://github.com/user-attachments/assets/2beaa558-67d5-4b7f-8a8d-c29f4359ab36",
+        "file": "videos/M02-full-22p4.mp4",
+        "sha256": "0fa4cf20cd379de51e9f7f2c14cbef665784c54f20590affeab078b1cf8e1cd0",
+        "bytes": 88501486,
+        "resolution": [
+          1280,
+          720
+        ],
+        "fps": 22.4,
+        "playback_speed": 1,
+        "frames": 20254,
+        "duration_seconds": 904.1964285714287,
+        "complete_match": true
+      }
     },
     {
       "id": "U01",
@@ -102,7 +132,22 @@
       "start_loop": 0,
       "end_loop": 480,
       "decoded_frames": 480,
-      "verified_decision_steps": 60
+      "verified_decision_steps": 60,
+      "inline": {
+        "url": "https://github.com/user-attachments/assets/48b26ba0-63be-45c4-82a5-f4bb6814f73e",
+        "file": "videos/U01-mmmt-22p4.mp4",
+        "sha256": "c6655c8fd1bb302a0ab9e730bc01cf2f0a787a8b0368a22e730365d8dbbd9a9b",
+        "bytes": 18692377,
+        "resolution": [
+          1600,
+          900
+        ],
+        "fps": 22.4,
+        "playback_speed": 1,
+        "frames": 480,
+        "duration_seconds": 21.42857142857143,
+        "complete_match": true
+      }
     }
   ],
   "replays": [
@@ -576,5 +621,6 @@
     "Micro replay files can include earlier episodes. Use each row's start_loop/end_loop or start_seconds/end_seconds to locate the winning episode.",
     "Micro A: JEV alone, B: earlier Astra + JEV, C: P0 Astra + JEV. The three B pvt_large wins are development-map results.",
     "SC2 can report a result slightly before the replay header duration. M02 ends at that result; all 20254 rendered frames are retained."
-  ]
+  ],
+  "viewing": "Native GitHub video players in the repository README and media README. Full-length 22.4 fps MP4 copies are also committed under media/videos. Release assets retain the original higher-bitrate recordings."
 }

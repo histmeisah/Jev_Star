@@ -1,3 +1,6 @@
+02b53739fa203711d17567c7888baecc32e60bf8caf0a6e3ec1669c3e6ef51c2  videos/M01-full-22p4.mp4
+0fa4cf20cd379de51e9f7f2c14cbef665784c54f20590affeab078b1cf8e1cd0  videos/M02-full-22p4.mp4
+c6655c8fd1bb302a0ab9e730bc01cf2f0a787a8b0368a22e730365d8dbbd9a9b  videos/U01-mmmt-22p4.mp4
 2657e5a34262cf307f478757c22e6d2d2bee6ea7b52fbaa92b614a86c5f936b9  replays/macro/astra-jev-20m-006.SC2Replay
 c4acada377c045fa350fea86620887f78380a2268db62e329dcb258e6e1eb6a2  replays/macro/astra-jev-20m-004.SC2Replay
 645d84ad3baafb5f02569af84884cfaa761c747fc46f723e6f751e854a93f72e  replays/macro/macro-v2-20260922-hard-002.SC2Replay
