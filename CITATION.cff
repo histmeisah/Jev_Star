@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use JEV-Star in your research, please cite the paper below."
+type: software
+title: "JEV-Star"
+authors:
+  - family-names: Ma
+    given-names: Weiyu
+  - family-names: Zhao
+    given-names: Liangbing
+  - family-names: Zeng
+    given-names: Yongcheng
+  - family-names: Zhao
+    given-names: Jian
+repository-code: "https://github.com/sc2musa/Jev_Star"
+url: "https://github.com/sc2musa/Jev_Star"
+date-released: "2026-09-23"
+preferred-citation:
+  type: generic
+  title: "JEV-Star: Fast, Low-Cost StarCraft II Control with Language-Model Planning"
+  authors:
+    - family-names: Ma
+      given-names: Weiyu
+    - family-names: Zhao
+      given-names: Liangbing
+    - family-names: Zeng
+      given-names: Yongcheng
+    - family-names: Zhao
+      given-names: Jian
+  year: 2026
+  month: 9
+  notes: "Preprint."
+  url: "https://github.com/sc2musa/Jev_Star/blob/main/paper/PAPER.md"

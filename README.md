@@ -6,7 +6,7 @@
 
 **由 JEV 选择动作、可选 GPT-6 Astra 规划的星际争霸 II 宏观控制与微操。**
 
-[Read the paper / 在线阅读论文](paper/PAPER.md) · [PDF](paper/JEV-Star.pdf) · [Video gallery / 视频展示](media/README.md)
+[Read the paper / 在线阅读论文](paper/PAPER.md) · [PDF](paper/JEV-Star.pdf) · [Video gallery / 视频展示](media/README.md) · [Citation / 引用](#citation)
 
 ## Videos / 视频
 
@@ -60,7 +60,7 @@ The players at the top of this README show three complete winning games. [Media 
 The validated setup is **Windows, Python 3.10, and SC2 5.0.16.97563 installed for the Asia region (`kr`)**. Install the SC2 client separately; matches are created through the local SC2 API. The two modules use separate virtual environments to keep their SC2 SDK dependencies isolated.
 
 ```powershell
-git clone https://github.com/histmeisah/Jev_Star.git
+git clone https://github.com/sc2musa/Jev_Star.git
 cd Jev_Star
 py -3.10 scripts/setup_environment.py macro
 py -3.10 scripts/setup_environment.py micro --video
@@ -129,7 +129,7 @@ Tests use mocked interfaces and do not launch the game or call paid models. GitH
 
 ### Upstream sources
 
-Macro is based on [LLM Play SC2](https://github.com/histmeisah/Large-Language-Models-play-StarCraftII). Micro is based on [SMAC-Hard](https://github.com/devindeng94/smac-hard) and its bundled PySC2. Original source notices and applicable licenses are retained; see [third-party notices](THIRD_PARTY_NOTICES.md) and the [source manifest](docs/source-manifest.json).
+Macro is based on [LLM Play SC2](https://github.com/sc2musa/Large-Language-Models-play-StarCraftII). Micro is based on [SMAC-Hard](https://github.com/devindeng94/smac-hard) and its bundled PySC2. Original source notices and applicable licenses are retained; see [third-party notices](THIRD_PARTY_NOTICES.md) and the [source manifest](docs/source-manifest.json).
 
 ## 简体中文
 
@@ -159,7 +159,7 @@ flowchart LR
 已验证环境为 **Windows、Python 3.10、SC2 5.0.16.97563 亚服 kr 安装**。SC2 客户端需自行安装；对局通过本地 SC2 API 创建。使用两个虚拟环境，避免不同 SC2 SDK 的依赖互相覆盖。
 
 ```powershell
-git clone https://github.com/histmeisah/Jev_Star.git
+git clone https://github.com/sc2musa/Jev_Star.git
 cd Jev_Star
 py -3.10 scripts/setup_environment.py macro
 py -3.10 scripts/setup_environment.py micro --video
@@ -228,4 +228,27 @@ Pop-Location
 
 ### 上游来源
 
-宏观基于 [LLM Play SC2](https://github.com/histmeisah/Large-Language-Models-play-StarCraftII)；微观基于 [SMAC-Hard](https://github.com/devindeng94/smac-hard) 及其 PySC2。保留对应源代码声明与许可证，详见 [第三方说明](THIRD_PARTY_NOTICES.md) 和 [源文件清单](docs/source-manifest.json)。
+宏观基于 [LLM Play SC2](https://github.com/sc2musa/Large-Language-Models-play-StarCraftII)；微观基于 [SMAC-Hard](https://github.com/devindeng94/smac-hard) 及其 PySC2。保留对应源代码声明与许可证，详见 [第三方说明](THIRD_PARTY_NOTICES.md) 和 [源文件清单](docs/source-manifest.json)。
+
+<a id="citation"></a>
+
+## Citation / 引用
+
+If you use JEV-Star in your research, please cite the paper below. You can also use **Cite this repository** in the GitHub sidebar to copy an APA or BibTeX citation.
+
+如果本项目对你的研究有帮助，请引用以下论文；也可以点击 GitHub 侧栏的 **Cite this repository**，复制 APA 或 BibTeX 引用。
+
+Weiyu Ma, Liangbing Zhao, Yongcheng Zeng, and Jian Zhao. 2026. *JEV-Star: Fast, Low-Cost StarCraft II Control with Language-Model Planning*. Preprint.
+
+```bibtex
+@misc{ma2026jevstar,
+  title = {{JEV-Star}: Fast, Low-Cost {StarCraft II} Control with Language-Model Planning},
+  author = {Ma, Weiyu and Zhao, Liangbing and Zeng, Yongcheng and Zhao, Jian},
+  year = {2026},
+  month = sep,
+  note = {Preprint},
+  url = {https://github.com/sc2musa/Jev_Star/blob/main/paper/PAPER.md}
+}
+```
+
+[BibTeX file / BibTeX 文件](CITATION.bib) · [Citation metadata / 引用元数据](CITATION.cff) · [Read the paper / 在线阅读论文](paper/PAPER.md)

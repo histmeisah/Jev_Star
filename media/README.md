@@ -28,7 +28,7 @@ https://github.com/user-attachments/assets/48b26ba0-63be-45c4-82a5-f4bb6814f73e
 
 ## English
 
-All three full matches play on this GitHub page. The committed MP4 files preserve the full duration, 22.4 fps cadence and original playback speed. Macro videos use 1280 × 720 for inline viewing; the micro video uses 1600 × 900. The original higher-bitrate recordings remain in the [media archive](https://github.com/histmeisah/Jev_Star/releases/tag/media-20260923).
+All three full matches play on this GitHub page. The committed MP4 files preserve the full duration, 22.4 fps cadence and original playback speed. Macro videos use 1280 × 720 for inline viewing; the micro video uses 1600 × 900. The original higher-bitrate recordings remain in the [media archive](https://github.com/sc2musa/Jev_Star/releases/tag/media-20260923).
 
 | Recording | Repository video | Original replay |
 | --- | --- | --- |
@@ -44,7 +44,7 @@ Micro replay files may include earlier episodes from the same client. Use the ta
 
 ## 简体中文
 
-上方 3 个播放器可在 GitHub 页面内直接播放完整胜局。视频文件同时收录于仓库 `media/videos/`，保留完整时长、22.4 fps 和原速。宏观在线播放版为 1280 × 720，微观为 1600 × 900；原始高码率录像保留在[媒体归档](https://github.com/histmeisah/Jev_Star/releases/tag/media-20260923)。
+上方 3 个播放器可在 GitHub 页面内直接播放完整胜局。视频文件同时收录于仓库 `media/videos/`，保留完整时长、22.4 fps 和原速。宏观在线播放版为 1280 × 720，微观为 1600 × 900；原始高码率录像保留在[媒体归档](https://github.com/sc2musa/Jev_Star/releases/tag/media-20260923)。
 
 另有 22 份原始胜局 replay：宏观 6 份，微观 A 纯 JEV 3 份、B 旧双模型 6 份、C P0 双模型 7 份。B 中 pvt_large 的 3 局为开发地图。完整实验成绩及版本边界见[实验记录](../docs/experiments.md)。
 

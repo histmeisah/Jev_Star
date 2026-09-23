@@ -2,11 +2,13 @@
 
 **JEV-Star: Fast, Low-Cost StarCraft II Control with Language-Model Planning**
 
-26-page edition supplied on September 23, 2026. The pages below are rendered directly from the original PDF so the paper can be read on GitHub.
+Weiyu Ma · Liangbing Zhao · Yongcheng Zeng · Jian Zhao
 
-2026 年 9 月 23 日提供的 26 页版本。下方页面直接由原始 PDF 渲染，可以在 GitHub 内阅读全文。
+Latest 26-page edition supplied on September 23, 2026. The pages below are rendered directly from the original PDF so the paper can be read on GitHub.
 
-[Original PDF / 原始 PDF](JEV-Star.pdf) · [Source and data / 源码与数据](README.md) · [Videos / 对局视频](../media/README.md)
+2026 年 9 月 23 日提供的最新 26 页版本。下方页面直接由原始 PDF 渲染，可以在 GitHub 内阅读全文。
+
+[Original PDF / 原始 PDF](JEV-Star.pdf) · [Citation / 引用](../README.md#citation) · [BibTeX](../CITATION.bib) · [Source and data / 源码与数据](README.md) · [Videos / 对局视频](../media/README.md)
 
 ---
 

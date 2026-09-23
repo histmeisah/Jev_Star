@@ -1,6 +1,6 @@
 # 公开仓库整理记录
 
-本次将原研究工作区整理为 `histmeisah/Jev_Star`，目录为 `macro/`、`micro/`、`scripts/`、`docs/`、`paper/` 和 `licenses/`。
+本次将原研究工作区整理为 `sc2musa/Jev_Star`，目录为 `macro/`、`micro/`、`scripts/`、`docs/`、`paper/` 和 `licenses/`。
 
 ## 保留
 

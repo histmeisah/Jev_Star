@@ -1,10 +1,10 @@
 {
-  "target_repository": "https://github.com/histmeisah/Jev_Star",
+  "target_repository": "https://github.com/sc2musa/Jev_Star",
   "macro_version": "macro-v2.2.1",
   "micro_version": "p0-v1/schema-7",
   "upstreams": {
     "Large-Language-Models-play-StarCraftII": {
-      "url": "https://github.com/histmeisah/Large-Language-Models-play-StarCraftII",
+      "url": "https://github.com/sc2musa/Large-Language-Models-play-StarCraftII",
       "commit": "48564d6647c9f39a44d11588f2b9cbefee940fdd"
     },
     "smac-hard": {

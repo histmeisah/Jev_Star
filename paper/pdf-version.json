@@ -1,10 +1,10 @@
 {
   "filename": "JEV-Star.pdf",
   "updated": "2026-09-23",
-  "source_filename": "JEV_Star__Fast__Low_Cost_StarCraft_II_Controlwith_Language_Model_Planning.pdf",
-  "bytes": 21874539,
+  "source_filename": "JEV_Star__Fast__Low_Cost_StarCraft_II_Controlwith_Language_Model_Planning(1).pdf",
+  "bytes": 21874532,
   "pages": 26,
-  "sha256": "6b556106645a3ad95b4c948b02aa211b21d6b3e1bfa6b7cc3b3e17cc619c1669",
+  "sha256": "3c9f275b1f2f3886f89f21457916acd610f0aa45f76e68c8a707c21eb39e563b",
   "provenance": "User-provided PDF, copied without modifying its contents.",
   "latex_source": "The existing LaTeX source is an earlier repository snapshot; a corresponding source update was not supplied with this PDF.",
   "online_reader": "PAPER.md",
@@ -15,8 +15,8 @@
       "file": "pages/page-01.png",
       "width": 1224,
       "height": 1584,
-      "bytes": 276595,
-      "sha256": "d44cbc5a8f07cd7fe9f115fafe3023e489c1377baa56a24cd43c3da80ee7cc5e"
+      "bytes": 276738,
+      "sha256": "272f3368107b983f6d24b1fedb53f24697b3018ad5af1d668f3fb619026f05b1"
     },
     {
       "page": 2,
