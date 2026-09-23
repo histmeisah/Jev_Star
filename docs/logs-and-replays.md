@@ -32,4 +32,4 @@ py -3.10 jev_star.py micro-video --help
 
 导出使用观察者相机，不影响已完成对局。一个微观 replay 可能包含同一客户端连续 reset 的多局；分析时用事件日志中的 episode 起止帧定位，不能假设每份文件只含单局。
 
-新导出的日志、视频和 replay 均保持本地产物；`.gitignore` 会排除它们。论文中的少量截图和固定图表属于明确保留的研究材料。
+新导出的日志、视频和 replay 默认保持本地产物；`.gitignore` 会排除它们。已核验并公开的 22 份胜局 replay 单独保存在 `media/replays/`，3 部胜局视频通过 GitHub Releases 分发，详见[中英双语媒体清单](../media/README.md)。清单包含版本、胜局区间和 SHA-256，原始 replay 未改写。论文中的少量截图和固定图表同样属于明确保留的研究材料。

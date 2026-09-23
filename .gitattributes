@@ -6,5 +6,7 @@
 *.yml text eol=lf
 *.ps1 text eol=crlf
 *.SC2Map binary
+*.SC2Replay binary
 *.pdf binary
 *.png binary
+*.jpg binary

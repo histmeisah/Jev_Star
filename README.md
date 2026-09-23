@@ -25,6 +25,17 @@ flowchart LR
     P --> G
 ```
 
+### Victory videos and replays
+
+Three reviewed victories are available at **22.4 fps, original speed**, with their original replays:
+
+| Macro: VeryHard / Elite | Macro: Easy | Micro: P0 mmmt |
+| --- | --- | --- |
+| [![Macro VeryHard victory](media/posters/M01.jpg)](https://github.com/histmeisah/Jev_Star/releases/download/media-20260923/M01-macro-veryhard-seed1-22p4.mp4) | [![Macro Easy victory](media/posters/M02.jpg)](https://github.com/histmeisah/Jev_Star/releases/download/media-20260923/M02-macro-easy-seed1-22p4.mp4) | [![Micro mmmt victory](media/posters/U01.jpg)](https://github.com/histmeisah/Jev_Star/releases/download/media-20260923/U01-micro-mmmt-p0-episode1-22p4.mp4) |
+| 12:48 · Astra + JEV v2.1 | 15:04 · Earlier Astra + JEV | 00:21 · P0 Astra + JEV |
+
+[Video gallery and 22 winning replays](media/README.md#english) · [Download release assets](https://github.com/histmeisah/Jev_Star/releases/tag/media-20260923). These are selected victories; the complete evaluation results are below.
+
 ### Quick start
 
 The validated setup is **Windows, Python 3.10, and SC2 5.0.16.97563 installed for the Asia region (`kr`)**. Install the SC2 client separately; matches are created through the local SC2 API. The two modules use separate virtual environments to keep their SC2 SDK dependencies isolated.
@@ -82,7 +93,7 @@ licenses/    Upstream licenses
 jev_star.py  Unified command entry point for the two isolated environments
 ```
 
-Run outputs are stored under each module's `jev_runs/` directory. Full events, replays, videos, virtual environments, credentials, and machine diagnostics are excluded from Git; the original research archives remain in the local workspace. The repository includes the paper's fixed statistical tables. Excerpts do not replace complete original logs.
+Run outputs are stored under each module's `jev_runs/` directory. Full events, generated replays and videos, virtual environments, credentials, and machine diagnostics are excluded from Git; the original research archives remain in the local workspace. The reviewed winning replays under `media/replays/` are explicitly included, with videos distributed as release assets. The repository also includes the paper's fixed statistical tables. Excerpts do not replace complete original logs.
 
 ### Tests
 
@@ -119,6 +130,18 @@ flowchart LR
     B --> G[StarCraft II]
     P --> G
 ```
+
+### 胜局视频与回放
+
+已公开 **3 部胜局视频，均为 22.4 fps、原速播放**，附对应原始 replay：
+
+| 视频 | 版本 | 时长 |
+| --- | --- | --- |
+| [M01 · 宏观 VeryHard / Elite 胜局](https://github.com/histmeisah/Jev_Star/releases/download/media-20260923/M01-macro-veryhard-seed1-22p4.mp4) | Astra + JEV v2.1 | 12:48 |
+| [M02 · 宏观 Easy 胜局](https://github.com/histmeisah/Jev_Star/releases/download/media-20260923/M02-macro-easy-seed1-22p4.mp4) | 早期 Astra + JEV | 15:04 |
+| [U01 · 微观 mmmt 第 1 局胜利](https://github.com/histmeisah/Jev_Star/releases/download/media-20260923/U01-micro-mmmt-p0-episode1-22p4.mp4) | P0 Astra + JEV | 00:21 |
+
+[视频预览与 22 份胜局 replay 清单](media/README.md#简体中文) · [下载全部发布附件](https://github.com/histmeisah/Jev_Star/releases/tag/media-20260923)。这里展示选定胜局，完整实验成绩见下文。
 
 ### 快速开始
 
@@ -177,7 +200,7 @@ licenses/    上游许可证
 jev_star.py  两个独立环境的统一命令入口
 ```
 
-运行结果保存在各模块的 `jev_runs/` 下。完整事件、replay、视频、虚拟环境、密钥和本机诊断文件不进入 Git；已有原始研究档案保留在本地工作区。仓库包含论文的固定统计表，完整原始日志不以节选代替。
+运行结果保存在各模块的 `jev_runs/` 下。完整事件、新生成的 replay 和视频、虚拟环境、密钥和本机诊断文件默认不进入 Git；已有原始研究档案保留在本地工作区。已核验并公开的胜局 replay 单独收录在 `media/replays/`，视频通过 Releases 分发。仓库也包含论文的固定统计表，完整原始日志不以节选代替。
 
 ### 测试
 

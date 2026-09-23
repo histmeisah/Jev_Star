@@ -31,6 +31,9 @@ dist/
 *.zip
 *.log
 
+# Reviewed winning replays published with the media manifest
+!/media/replays/**/*.SC2Replay
+
 # Paper compilation products (the curated PDF is tracked)
 paper/build*/
 *.aux
