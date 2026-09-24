@@ -26,7 +26,7 @@ from .macro_navigation import MacroNavigation
 
 class JevProtossBot(MacroExecution, MacroNavigation, Protoss_Bot):
     def __init__(self, jev_client, output_dir: Path, decision_interval=1.0,
-                 max_decision_age=4.0, max_requests=2000, run_log=None):
+                 max_decision_age=4.0, max_requests=2000, run_log=None, realtime=True):
         super().__init__({}, threading.Lock(), threading.Event())
         self.military_unit_types.update({U.SENTRY, U.MOTHERSHIP})
         # Derive IDs from the flattened registry, not the legacy category count (4).
@@ -36,8 +36,10 @@ class JevProtossBot(MacroExecution, MacroNavigation, Protoss_Bot):
         self.output_dir = output_dir
         self._owns_log = run_log is None
         self.log = run_log if run_log is not None else RunLog(output_dir)
+        self.run_realtime = realtime
         self.scheduler = DecisionScheduler(jev_client, self.log, decision_interval,
-                                           max_decision_age, max_requests)
+                                           max_decision_age, max_requests,
+                                           cadence_clock=None if realtime else lambda: self.time)
         self.recent_outcomes = deque(maxlen=8)
         self.cooldowns = {}
         self.army_intent = "defend"
@@ -62,7 +64,8 @@ class JevProtossBot(MacroExecution, MacroNavigation, Protoss_Bot):
         self.client.game_step = 4
         self._set_search_sites(self.expansion_locations_list)
         self._install_action_feedback()
-        self.log("start", model=self.scheduler.client.model, race="Protoss", realtime=True,
+        self.log("start", model=self.scheduler.client.model, race="Protoss", realtime=self.run_realtime,
+                 decision_timebase="wall" if self.run_realtime else "game",
                  action_count=len(self.action_dict), empty_action_id=self.empty_action,
                  map=self.game_info.map_name, base_build=self.base_build,
                  decision_interval_s=self.scheduler.interval,
@@ -437,7 +440,7 @@ class JevProtossBot(MacroExecution, MacroNavigation, Protoss_Bot):
             self._original_client_actions = None
         latencies = self.scheduler.latencies
         summary = {
-            "result": result, "realtime": True, "game_loop": self._last_game_loop,
+            "result": result, "realtime": self.run_realtime, "game_loop": self._last_game_loop,
             "game_seconds": self._last_game_loop / 22.4,
             "wall_seconds": time.monotonic() - self._started_at,
             "steps": self._steps, "steps_while_inflight": self._steps_while_inflight,

@@ -10,3 +10,4 @@ s2clientprotocol==5.0.11.90870.0
 scipy==1.11.3
 portpicker==1.6.0
 mpyq==0.2.5
+sc2reader==1.8.0

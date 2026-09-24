@@ -1,5 +1,7 @@
 # 公开仓库整理记录
 
+本页保留首次发布整理的历史检查。2026-09-24 版本的五种宏观配置及 140 项宏观、37 项微观测试见 [配置说明](macro-configurations.md) 和 [当前发布检查](release-validation.json)；不将本页的旧测试数量作为当前数量。
+
 本次将原研究工作区整理为 `sc2musa/Jev_Star`，目录为 `macro/`、`micro/`、`scripts/`、`docs/`、`paper/` 和 `licenses/`。
 
 ## 保留

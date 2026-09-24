@@ -46,6 +46,10 @@ Return only the requested JSON plan. All relevant facts are in the supplied JSON
 Do not use tools, inspect files, browse, write code, or ask questions.
 Jev makes individual macro choices about once per second; you plan the next 120-180
 game seconds. This is a REALTIME game: it continues while you think. Be concise.
+Text limits count characters, including spaces and punctuation, NOT tokens.
+Both objective and guidance must be nonempty and each MUST be at most 1200
+characters; exceeding either limit rejects the entire plan. Aim for objective
+at most 200 characters and guidance at most 900 characters to leave a margin.
 Normal refreshes are 60 game seconds apart, with a 30-second execution window
 after acceptance before ordinary events can refresh. Urgent threats bypass it.
 Set production headroom for this horizon: tiny worker/army caps will stall Jev.
@@ -113,6 +117,63 @@ Enemy memory respects fog; unexplored expansion sites are unknown.
 
 class PlannerError(Exception):
     """A bounded, credential-free planner failure."""
+
+
+ADVISORY_PLANNER_INSTRUCTIONS = """You provide strategic advice for a live StarCraft II Protoss bot.
+Return exactly the JSON schema, with no tools or extra text. JEV independently
+selects a macro action about once per second from the base executor's currently
+available actions. This is a REALTIME game that continues while you think.
+Plan the next 120-180 game seconds concisely. Normal refreshes are 60 game seconds
+apart, with a 30-second execution window; urgent threats may refresh sooner.
+Text limits count characters, including spaces and punctuation, NOT tokens.
+Both objective and guidance must be nonempty and each MUST be at most 1200
+characters; exceeding either limit rejects the entire plan. Aim for objective
+at most 200 characters and guidance at most 900 characters to leave a margin.
+
+Your plan is advice, not an action mask. Worker/base targets and goals are desired
+totals, not hard ceilings. The legacy field allowed_spending_actions is a list of
+suggested production/building/research actions, not an exclusive whitelist.
+reserve_for_action and its budget are suggested savings, not locked resources.
+army_posture, attack_min_army, retreat_below_army, min_posture_seconds,
+priority_action and production_priority are recommendations that JEV may override
+from current observations. No main order is enforced or automatically executed.
+army_target_id is a suggested location for context; when JEV chooses attack, the
+ordinary executor selects a destination using observed enemies and expansion search.
+
+Use action IDs from action_catalog (0-71 plus 72 MULTI-DEFEND). Keep the existing
+schema consistent: 1-12 distinct goals with TOTAL ready-plus-pending unit/building
+counts; research goals have target=1. Gateway counts include Warpgates. Each goal
+action must appear in allowed_spending_actions; both lists use IDs 0-59 only.
+worker_target is 0-76 and base_target 1-8; worker/base goals must fit those suggested
+targets. Do not exceed catalog target_limit. attack_min_army is 10-200;
+retreat_below_army is 0-199 and smaller than attack_min_army; min_posture_seconds
+is 5-60. reserve_for_action is null or a goal present in the spending list;
+reserve_after_workers controls when saving is suggested. priority_action is null
+or an available catalog action other than WAIT, and any production priority must
+appear in the spending list. production_priority is an ordered subset of goals.
+An army priority must agree with army_posture. army_target_id is null or a target
+in navigation.targets; a defend plan uses home. Correct last_plan_rejection.
+
+Explain your strategic objective, production direction, economy and reasons to
+advance, defend or withdraw. Account for actual mineral/gas saturation, depleted
+mineral patches, bases under construction, available technology and ready combat
+supply. Avoid many unrelated technologies and excessive early gas. An attainable
+attack need not wait for optional production goals or upgrades. A catalog item's
+reservation_blocked describes a prerequisite problem, not temporary affordability.
+Adapt to observed execution outcomes and changing enemy composition.
+
+There is no automatic build order or production. Local code distributes workers,
+morphs Warpgates, executes persistent army intent, continues assigned scouting,
+and escorts the army with one Observer. JEV chooses all new production, buildings,
+research and army intent. Enemy knowledge respects fog; historical sightings may
+include dead units. resource.ready_army_supply excludes pending/noncombat units.
+Capabilities are attack-move, observed-enemy target selection, expansion search,
+base defense, retreat and scouting. Formation control, spellcasting, specific-unit
+focus fire and Warp Prism transport are not implemented. Do not rely on Oracle or
+Disruptor spell attacks, Psi Storm casting, or transport. High/Dark Templar pairs
+can merge into Archons with action 18. Ordinary attack orders work for Carriers,
+Sentries and Motherships. Supply forecasting supports early Pylons and power repair.
+"""
 
 
 def validate_plan(value, catalog=None, target_ids=None):
@@ -215,7 +276,11 @@ def find_codex(path=None):
 class CodexPlannerClient:
     """Use saved Codex login; never read/copy auth.json or pass credentials to SC2."""
 
-    def __init__(self, output_dir, executable=None, model="gpt-6-astra", timeout=60, effort="low"):
+    def __init__(self, output_dir, executable=None, model="gpt-6-astra", timeout=60, effort="medium",
+                 plan_mode="constrained"):
+        if plan_mode not in {"constrained", "advisory"}:
+            raise ValueError("plan_mode must be constrained or advisory")
+        self.plan_mode = plan_mode
         self.executable = find_codex(executable)
         self.model, self.timeout, self.effort = model, timeout, effort
         self.directory = Path(output_dir) / "planner"
@@ -243,7 +308,11 @@ class CodexPlannerClient:
         result_path = self.directory / f"plan-{request_id:04d}.json"
         if result_path.exists():
             raise PlannerError("planner_output_already_exists")
-        prompt = PLANNER_INSTRUCTIONS + "\nINPUT JSON:\n" + json.dumps(payload, ensure_ascii=False)
+        instructions = ADVISORY_PLANNER_INSTRUCTIONS if self.plan_mode == "advisory" else PLANNER_INSTRUCTIONS
+        prompt = (instructions + "\nREQUIRED JSON SCHEMA (same schema supplied via --output-schema):\n"
+                  + json.dumps(PLAN_SCHEMA) + "\nINPUT JSON:\n" + json.dumps(payload, ensure_ascii=False))
+        # Store exactly the prompt sent to Codex next to its original JSON reply.
+        (self.directory / f"request-{request_id:04d}.txt").write_text(prompt, encoding="utf-8")
         try:
             with self._lock:
                 if self._closed:

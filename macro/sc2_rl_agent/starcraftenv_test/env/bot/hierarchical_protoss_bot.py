@@ -1,5 +1,6 @@
 """Astra strategy + Jev immediate macro choices + the original SC2 executor."""
 
+import math
 import statistics
 import time
 from collections import Counter, deque
@@ -20,7 +21,18 @@ from .jev_protoss_bot import JevProtossBot
 class HierarchicalProtossBot(JevProtossBot):
     def __init__(self, *args, planner_client, planner_interval=60, plan_ttl=180,
                  max_plan_age=60, max_planner_requests=80, planner_min_interval=10,
-                 planner_event_cooldown=30, planner_execution_window=30, **kwargs):
+                 planner_event_cooldown=30, planner_execution_window=30,
+                 plan_mode="constrained", advisory_posture_hold=20, **kwargs):
+        if plan_mode not in {"constrained", "advisory"}:
+            raise ValueError("plan_mode must be constrained or advisory")
+        if not math.isfinite(advisory_posture_hold) or advisory_posture_hold < 0:
+            raise ValueError("advisory_posture_hold must be finite and nonnegative")
+        self.plan_mode = plan_mode
+        self.advisory_posture_hold = float(advisory_posture_hold)
+        self._guard_attack_started_at = None
+        self._guard_reengage_after = 0.0
+        self._army_command_guard_blocks = Counter()
+        self._base_available_actions = []
         super().__init__(*args, **kwargs)
         self.planner = StrategicPlanner(planner_client, self.log, planner_interval, plan_ttl,
                                         max_plan_age, max_planner_requests, min_interval=planner_min_interval,
@@ -55,7 +67,42 @@ class HierarchicalProtossBot(JevProtossBot):
                  event_cooldown_wall_seconds=self.planner.event_cooldown,
                  execution_window_game_seconds=self.planner.execution_window,
                  timeout_wall_seconds=self.planner.client.timeout,
-                 reasoning_effort=self.planner.client.effort)
+                 reasoning_effort=self.planner.client.effort, plan_mode=self.plan_mode,
+                 army_command_guard=self._army_command_guard())
+
+    def _army_command_guard(self):
+        """Plan-independent debounce; a persistent base alarm cannot bypass it."""
+        enabled = self.plan_mode == "advisory" and self.advisory_posture_hold > 0
+        attack_remaining = reengage_remaining = 0.0
+        if enabled:
+            if self.army_intent == "attack" and self._guard_attack_started_at is not None:
+                attack_remaining = max(0.0, self._guard_attack_started_at + self.advisory_posture_hold - self.time)
+            elif self.army_intent != "attack" and self._guard_reengage_after > 0:
+                reengage_remaining = max(0.0, self._guard_reengage_after - self.time)
+        blocked = {}
+        if attack_remaining > 0:
+            blocked["72"] = "army_command_attack_hold"
+        if reengage_remaining > 0:
+            blocked["64"] = "army_command_reengage_cooldown"
+        return {"enabled": enabled, "hold_game_seconds": self.advisory_posture_hold,
+                "attack_hold_remaining_seconds": round(attack_remaining, 3),
+                "reengage_remaining_seconds": round(reengage_remaining, 3),
+                "blocked_actions": blocked, "retreat_action_65_exempt": True}
+
+    def _set_army_intent(self, intent):
+        previous = self.army_intent
+        super()._set_army_intent(intent)
+        if self.plan_mode != "advisory" or self.advisory_posture_hold == 0 or intent == previous:
+            return
+        # Only actual mission changes start timers. Production, WAIT, retargeting,
+        # plan acceptance/expiry and retreat -> defend cannot restart or evade them.
+        if intent == "attack":
+            self._guard_attack_started_at = self.time
+        elif previous == "attack":
+            self._guard_attack_started_at = None
+            self._guard_reengage_after = self.time + self.advisory_posture_hold
+        self.log("army_command_guard_changed", game_loop=self.state.game_loop,
+                 previous=previous, intent=intent, **self._army_command_guard())
 
     def _catalog(self):
         catalog = {}
@@ -108,6 +155,8 @@ class HierarchicalProtossBot(JevProtossBot):
     def _strategy_snapshot(self):
         state = super()._snapshot()
         state["execution_directive"] = self._execution_directive
+        state["plan_mode"] = self.plan_mode
+        state["army_command_guard"] = self._army_command_guard()
         score = self.state.score
         state["strategic_metrics"] = {
             "mineral_income_per_minute": round(score.collection_rate_minerals, 1),
@@ -156,7 +205,11 @@ class HierarchicalProtossBot(JevProtossBot):
         directive = self._execution_directive
         state["execution_directive"] = directive if directive and directive["plan_id"] == self._active_plan_id() else None
         state["strategy_status"] = {"mode": "astra_plan" if state["strategic_plan"] else "jev_fallback",
-                                    "planner_inflight": self.planner.task is not None}
+                                    "planner_inflight": self.planner.task is not None,
+                                    "plan_mode": self.plan_mode,
+                                    "astra_action_filter_enabled": self.plan_mode == "constrained",
+                                    "base_available_actions": list(self._base_available_actions)}
+        state["army_command_guard"] = self._army_command_guard()
         return state
 
     async def available_actions(self):
@@ -164,6 +217,18 @@ class HierarchicalProtossBot(JevProtossBot):
         # Ability queries await SC2; a new Astra result may have arrived during that wait.
         self.planner.poll(self.state.game_loop)
         self._last_legal_blocked = dict(blocked)
+        self._base_available_actions = sorted(choices)
+        if self.plan_mode == "advisory":
+            # Astra advice never filters actions. The separately logged, fixed
+            # command debounce only prevents rapid army reversals; 65 stays legal.
+            self._execution_directive = None
+            for key, reason in self._army_command_guard()["blocked_actions"].items():
+                action = int(key)
+                if action in choices:
+                    del choices[action]
+                    blocked[key] = reason
+                    self._army_command_guard_blocks[reason] += 1
+            return choices, blocked
         plan = self.planner.active
         if plan is None or self.time >= plan["expires_game_seconds"]:
             self._execution_directive = None
@@ -328,9 +393,20 @@ class HierarchicalProtossBot(JevProtossBot):
         return plan["plan_id"] if plan and self.time < plan["expires_game_seconds"] else None
 
     def _decision_context_rejection(self, decision):
+        if self.plan_mode == "advisory":
+            # The normal scheduler age check and live execution mask still apply.
+            # A changed recommendation alone does not invalidate Jev's choice.
+            return None
         if decision.plan_id != self._active_plan_id():
             return "plan_changed_during_inference"
         return None
+
+    def _planned_target(self):
+        if self.plan_mode == "advisory":
+            # JEV selects army intent; the existing non-planner navigator chooses
+            # its destination. Plan text cannot silently override that execution.
+            return None
+        return super()._planned_target()
 
     def _extra_summary(self):
         return {"planner": self._planner_summary}
@@ -341,6 +417,9 @@ class HierarchicalProtossBot(JevProtossBot):
         self._hybrid_closed = True
         await self.planner.close()
         self._planner_summary = {"backend": "codex_exec", "model": self.planner.client.model,
+                           "plan_mode": self.plan_mode,
+                           "army_command_guard": self._army_command_guard(),
+                           "army_command_guard_blocks": dict(self._army_command_guard_blocks),
                            "stats": dict(self.planner.stats), "steps_while_inflight": self._planner_steps_inflight,
                            "latency_median_ms": statistics.median(self.planner.latencies) if self.planner.latencies else None,
                            "latency_max_ms": max(self.planner.latencies, default=None),

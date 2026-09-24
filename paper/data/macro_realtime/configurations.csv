@@ -1,0 +1,6 @@
+configuration,label,planner,selector,plan_mode,evaluated_at_lv7,games,wins,losses,time_limits,win_rate,replay_verified_games,human_adjudicated_games,note
+random,Pure random,none,random,none,True,10,0,10,0,0.0,10,0,
+jev,JEV-only,none,jev,none,False,0,,,,,0,0,No matched Lv7 batch. The historical Lv2 JEV-only game is excluded.
+astra_constrained_random,Astra constrained + random,astra,random,constrained,True,10,0,10,0,0.0,9,1,Nine replay-verified losses and one human-adjudicated loss.
+astra_constrained_jev,Astra constrained + JEV,astra,jev,constrained,True,10,9,1,0,0.9,10,0,
+astra_advisory_jev,Astra advisory + JEV,astra,jev,advisory,True,10,3,3,4,0.3,10,0,

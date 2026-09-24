@@ -9,6 +9,7 @@ import sys
 ROOT = Path(__file__).resolve().parent
 COMMANDS = {
     "macro": ("macro", "sc2_rl_agent.starcraftenv_test.run_jev"),
+    "macro-random-suite": ("macro", "sc2_rl_agent.starcraftenv_test.run_random_ablation"),
     "macro-report": ("macro", "sc2_rl_agent.starcraftenv_test.run_report"),
     "macro-video": ("macro", "sc2_rl_agent.starcraftenv_test.export_replay_video"),
     "macro-serve": ("macro", "sc2_rl_agent.starcraftenv_test.serve_replays"),

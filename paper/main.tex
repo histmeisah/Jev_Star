@@ -12,6 +12,8 @@
 \makeatletter
 \newcommand{\tablerows}[1]{\@@input #1 }
 \makeatother
+% Use the same placement, type size, and spacing for figure and table captions.
+\newcommand{\captionbelowtable}{\normalsize\setlength{\abovecaptionskip}{7pt}\setlength{\belowcaptionskip}{0pt}}
 
 \title{JEV-Star: Fast, Low-Cost StarCraft II Control\\with Language-Model Planning}
 \author{%
@@ -25,7 +27,7 @@
 \maketitle
 
 \begin{abstract}
-We present JEV-Star, a StarCraft II controller that defeats the strongest non-cheating built-in AI, Lv7, by combining fast JEV action selection with persistent GPT-6 planning. The combined system wins four full games at Lv5--Lv7, including two Lv7 victories with different seeds, while retaining a median JEV response time of 0.422 seconds. Mean estimated model cost across these games is USD~3.71 per game: USD~0.15 for JEV and USD~3.56 for GPT-6. We compare this system with an initial JEV-only controller in full-game macro control and multi-unit micromanagement. The standalone controller reaches a 20-minute limit against Lv2 without expanding. Across 35 battle maps with three episodes per map, the combined system raises mean enemy elimination from 16.50\% to 37.69\% and wins from 3 to 7 out of 105. Replay frames and decision logs connect these gains to resource reservation, persistent economic goals, and stable army objectives. The results demonstrate a practical division between inexpensive, subsecond decisions and longer-horizon planning. The comparison evaluates complete systems; concurrent interface improvements mean that planning's contribution is not isolated by a controlled ablation.
+We present JEV-Star, a StarCraft II controller that combines frequent JEV action selection with persistent GPT-6 Astra planning. We distinguish five macro configurations: pure random, JEV-only, Astra-constrained random, Astra-constrained JEV, and Astra-advisory JEV. Four configurations have ten-game realtime evaluations against the strongest non-cheating built-in opponent, Lv7. Constrained JEV wins 9/10 games; advisory JEV wins 3/10, loses three, and reaches the 20-minute limit four times. Pure random and constrained random record no wins; the latter includes one human-adjudicated loss without a saved replay. A matched Lv7 JEV-only batch is not available. The game continues during inference: all 15,505 returned JEV decisions and 344 returned Astra plans in the two JEV-planner batches span advancing game frames. Median JEV latency is 0.375 seconds with constraints and 0.421 seconds with advisory plans. Across 35 micromanagement maps, the historical planned controller raises mean enemy elimination from 16.50\% to 37.69\% and wins from 3 to 7 out of 105 episodes. These development samples demonstrate successful realtime hierarchical control while leaving version differences, small samples, and the missing matched JEV-only baseline as limitations. Code and derived evidence are available at \url{https://github.com/sc2musa/Jev_Star}.
 \end{abstract}
 
 \section{Introduction}
@@ -34,7 +36,7 @@ StarCraft II requires both immediate decisions and commitments whose benefits ar
 
 We implement this separation with JEV, a hosted model that selects among structured alternatives \citep{typesafe2026jev}, and GPT-6, which supplies persistent strategic guidance. JEV remains responsible for frequent action selection. GPT-6 specifies goals, spending priorities, and conditions for changing army posture. The intended benefit is to preserve fast, low-cost interaction while using general-purpose planning where a single-step decision is insufficient.
 
-JEV-Star builds on LLM Play SC2 for full-game control and SMAC-Hard for micromanagement \citep{ma2023textsc2,deng2024smachard}. We compare JEV-only with JEV + GPT-6. The combined controller achieves two victories against Lv7, the highest non-cheating difficulty of StarCraft II's built-in AI \citep{blizzard2026sc2protocol}. Our experiments measure game outcomes, response latency, and the combined model cost of a complete game. Replay frames and decision logs show how persistent plans change economic development and army behavior while preserving a fast action loop.
+JEV-Star builds on LLM Play SC2 for full-game control and SMAC-Hard for micromanagement \citep{ma2023textsc2,deng2024smachard}. We separate planner presence, plan-based action constraints, and the action selector into five macro configurations. Ten-game realtime batches establish 9/10 wins for Astra-constrained JEV and 3/10 for Astra-advisory JEV against Lv7, the highest non-cheating built-in difficulty \citep{blizzard2026sc2protocol}. Two random-selector controls record no wins. We report the missing matched JEV-only evaluation explicitly. Alongside these outcomes, request-level timing verifies that the game advances during inference. Historical replay, behavior, and cost analyses are retained as separate case studies.
 
 \section{Related work}
 
@@ -52,7 +54,7 @@ At decision time \(t\), the adapter constructs a structured observation \(x_t\) 
 \begin{equation}
     a_t = \operatorname{JEV}(x_t,\mathcal{A}_t).
 \end{equation}
-The executor validates the identifier, attempts the associated command, and includes recent outcomes in subsequent observations. Both methods use this loop; their difference is whether an explicit plan accompanies it (Figure~\ref{fig:architecture}).
+The executor validates the identifier, attempts the associated command, and includes recent outcomes in subsequent observations. This interface supports either JEV or a local uniform-random selector. A separate Astra planner may provide persistent context and, in constrained mode, candidate rules (Figure~\ref{fig:architecture}).
 
 For macro control, the observation summarizes resources, workers, buildings, technology, army composition, visible enemies, and recent actions. Candidates represent high-level commands such as producing a unit, constructing a building, researching an upgrade, expanding, attacking, retreating, or waiting. Local game code handles placement and low-level order execution. Feasibility checks consider prerequisites, supply, resources, and available producers. JEV chooses one command per request.
 
@@ -63,23 +65,38 @@ The JEV-only method selects directly from current state and short execution hist
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{figures/architecture.pdf}
-\caption{Two controllers with the same action loop. (a) JEV-only chooses executable actions from the current observation and recent feedback. (b) JEV + GPT-6 adds a plan that persists across action decisions. The plan supplies context to JEV and constrains macro candidates through resource reservations and army-posture rules. Micro plans provide tactical context while retaining legal unit choices. Macro and micro use separate game adapters.}
+\caption{Five macro configurations on a shared action interface. The selector is either JEV or uniform random; Astra is absent, constrains candidates, or supplies advisory context. All paths use structured observations and the configured local executor. The five rows enumerate implemented configurations, not five completed Lv7 batches.}
 \label{fig:architecture}
 \end{figure}
 
-\subsection{Persistent planning with GPT-6}
+\subsection{Persistent planning with Astra}
 
-In the combined method, a planner reads a state summary and, when available, the previous plan. It returns structured guidance \(z_k\), which remains active across multiple action decisions:
+When enabled, Astra reads a state summary and, when available, the previous plan. The following expression describes constrained JEV; the other selector and planning combinations are defined below. Let \(s_k\) denote the observation index used for planning and \(t_k\geq s_k\) the first decision that can use the validated result. The guidance \(z_k\) remains active across multiple action decisions:
 \begin{equation}
-    z_k=\operatorname{GPT\text{-}6}(x_{t_k},z_{k-1}), \qquad
+    z_k=\operatorname{GPT\text{-}6}(x_{s_k},z_{k-1}), \qquad
     a_t=\operatorname{JEV}(x_t,z_k,\widetilde{\mathcal{A}}_t), \quad
     t_k\leq t<t_{k+1}.
 \end{equation}
 The planner proposes goals rather than individual engine commands. Its output is checked before becoming active. A failed or delayed planning request leaves the previous valid plan available.
 
-A macro plan specifies an economic objective, worker and base targets, production priorities, resource reservations, and an army posture. Resource reservation connects a future purchase to present action availability: when saving for an expansion, the adapter can suppress lower-priority spending until the required minerals accumulate. Emergency supply or defense actions can override these restrictions. Army guidance includes separate thresholds for starting and ending an attack and a minimum commitment interval, reducing repeated reversals near a single threshold. The plan enters both JEV's context and the adapter's candidate rules; the latter makes strategic commitments operational.
+A macro plan specifies an economic objective, worker and base targets, production priorities, resource reservations, and an army posture. Resource reservation connects a future purchase to present action availability: when saving for an expansion, the adapter can suppress lower-priority spending until the required minerals accumulate. Emergency supply or defense actions can override these restrictions. Army guidance includes separate thresholds for starting and ending an attack and a minimum commitment interval, reducing repeated reversals near a single threshold. In constrained mode, the plan enters both the selector context and the adapter's candidate rules. In advisory mode, it enters JEV's context without plan-derived candidate masks or mandatory army orders. Executor availability and command-lifecycle rules remain active in both modes.
 
 A micro plan describes conditional tactics and roles, such as which units should absorb pressure, which targets deserve priority, and when ranged units should reposition. One plan is generated for each map and reused for its three episodes. The legal action set remains available to JEV. A common plan provides shared intent, but independently chosen unit actions still lack a joint reservation mechanism for damage or healing targets.
+
+\subsection{Five macro configurations}
+\label{sec:configurations}
+
+Let $\mathcal{B}_t$ be the candidate set after the configured executor's availability and command-lifecycle rules, and let $\mathcal{C}_t=F(\mathcal{B}_t,z_k)$ apply Astra's plan-dependent budgets, goals, and posture rules. These rules are distinct from prerequisites such as resources, technology, supply, and production capacity. The five configurations are:
+
+\begin{enumerate}
+\item \textbf{Pure random}: $a_t\sim\operatorname{Uniform}(\mathcal{B}_t)$, with neither Astra nor JEV called.
+\item \textbf{JEV-only}: $a_t=\operatorname{JEV}(x_t,\mathcal{B}_t)$, without an Astra plan.
+\item \textbf{Astra constrained + random}: $a_t\sim\operatorname{Uniform}(\mathcal{C}_t)$. Astra remains active; random choice replaces JEV within the filtered candidates.
+\item \textbf{Astra constrained + JEV}: $a_t=\operatorname{JEV}(x_t,z_k,\mathcal{C}_t)$. Both the plan context and plan-dependent candidate rules guide execution.
+\item \textbf{Astra advisory + JEV}: $a_t=\operatorname{JEV}(x_t,z_k,\mathcal{B}_t)$. The plan supplies context but does not impose plan-based masks or invalidate a choice solely because a new plan arrives.
+\end{enumerate}
+
+Random selection uses a separate seeded generator, samples uniformly from the current candidates including WAIT, and does not rank plan text. All configurations preserve local worker allocation, placement, production, scouting, and army execution. A wait choice can coexist with continued execution of existing orders. ``Unconstrained'' refers specifically to the absence of Astra plan constraints; it does not mean that all 73 commands are available at every time.
 
 \subsection{Control timing}
 
@@ -87,25 +104,64 @@ Full-game control is asynchronous: the game continues while requests are in flig
 
 Micromanagement uses fixed-step interaction. The environment advances eight game loops only after a complete team decision has returned. Concurrent batching reduces waiting compared with sequential unit requests, but the slowest required response determines the next step. Consequently, model response latency and whole-episode wall time measure different parts of this system.
 
-Neither method fine-tunes JEV or GPT-6. Both rely on the same division of responsibilities: game code determines observations and executable commands, JEV chooses actions, and the combined method adds GPT-6's persistent goals.
+None of the configurations fine-tunes model weights. Game code determines observations and executable commands; JEV or random sampling chooses actions; optional Astra plans supply persistent goals. Random policies have no artificial model or network delay.
 
 \section{Experiments}
 
 \subsection{Setup and measurements}
 
-We compare the initial JEV-only controller with the completed JEV + GPT-6 system. The runs use JEV 1.13, GPT-6 Astra with medium reasoning effort, and StarCraft II 5.0.16. Full-game experiments play Protoss against the built-in Zerg opponent on AltitudeLE, with eight starting workers. We report difficulty as Lv2, Lv5, Lv6, Lv7, or Lv8, following the ordered levels used by LLM Play SC2 \citep{ma2023textsc2}. The main sample contains one JEV-only game and four combined-system games; a completed Lv8 stress test is reported separately.
+The primary macro evaluation contains four ten-seed realtime batches selected from the five configurations in Section~\ref{sec:configurations}. Each uses Altitude LE, Protoss versus built-in Zerg VeryHard / Lv7, RandomBuild, handicap 100, seeds 1--10, at most four concurrent processes, a minimum one-wall-second decision interval, and a 1,200-game-second limit. Model-enabled batches use JEV 1.13.0 where applicable and GPT-6 Astra with medium effort on SC2 5.0.16.97563. A matched Lv7 JEV-only batch has not been run. Each selected seed has one original attempt; losses and time limits are not replaced.
+
+We retain a separate historical case-study selection: one initial JEV-only game at Lv2, four planned wins at Lv5--Lv7, and one Lv8 stress-test loss. The historical games use eight starting workers and earlier interfaces. They support the original replay, build-order, and cost analyses but are not pooled into the new Lv7 win-rate table. Difficulty labels follow the ordered levels used by LLM Play SC2 \citep{ma2023textsc2}. The primary batches have archived source and service-transport differences; this is a comparison of recorded systems, not a single-variable causal ablation.
 
 Micromanagement covers 35 local SMAC-Hard maps, with three episodes per map and method: 105 episodes each. Both methods use the same map configurations, game version, opponent controls, shared-vision setting, and disabled optional special abilities. Two local development maps are also excluded in a separate 33-map summary. There is one shared plan per map, so the three combined-method episodes do not represent independent planner samples. Candidate descriptions and execution handling also improved between the two controllers; these experiments measure the implemented systems rather than an isolated planner ablation.
 
 We report wins, draws, losses, and mean enemy elimination, defined per episode as the fraction of initial enemy units eliminated. Each episode receives equal weight. For efficiency, we measure recorded response latency, total wall time, and model cost per complete episode. Macro outcomes and game durations are checked against replays. Cost estimates include recorded calls with known token usage, whether or not a returned plan was accepted.
 
-\subsection{Full-game performance: defeating the strongest non-cheating AI}
+\subsection{Realtime Lv7 evaluation across configurations}
+\label{sec:lv7}
 
-Table~\ref{tab:macro} shows that JEV + GPT-6 wins all four completed ordinary-difficulty matches, including two victories against Lv7, the strongest built-in opponent without cheating advantages. These wins take 10:49--15:55 of game time. The first attacks occur between 7:22 and 8:11, following an economic and production buildup. JEV-only reaches its 20-minute game-time limit without a win. The two Lv7 seeds establish successful play at the highest non-cheating difficulty, although the sample is too small to estimate a reliable win rate.
+Table~\ref{tab:macroconfigs} reports all selected attempts. Astra constrained + JEV wins nine games and loses one. Astra advisory + JEV wins three, loses three, and reaches the time limit four times. Pure random and Astra constrained + random record no victories. JEV-only remains a defined, executable configuration without a matched Lv7 result; its early Lv2 time-limit game is not substituted for that missing evaluation.
 
 \begin{table}[t]
-\caption{Completed full-game experiments (times in minutes:seconds). The first five rows form the main comparison. The final Lv8 row is a separate stress test against an opponent with an information advantage. A time limit is not a victory.}
-\label{tab:macro}
+\centering\small
+\begin{tabular}{lrrrr}
+\toprule
+Configuration & Wins & Losses & Time limits & Win rate \\
+\midrule
+Pure random & 0 & 10 & 0 & 0\% \\
+JEV-only & --- & --- & --- & Not evaluated \\
+Astra constrained + random & 0 & 10$^{*}$ & 0 & 0\%$^{*}$ \\
+Astra constrained + JEV & 9 & 1 & 0 & 90\% \\
+Astra advisory + JEV & 3 & 3 & 4 & 30\% \\
+\bottomrule
+\end{tabular}
+\captionbelowtable
+\caption{Realtime Lv7 development evaluation. Each evaluated configuration uses seeds 1--10 and a 20-minute game-time limit. $^{*}$Nine replay-verified losses and one human-adjudicated loss without a saved replay. Missing JEV-only results are not zeros.}
+\label{tab:macroconfigs}
+\end{table}
+
+There are 40 selected attempts and 39 independently verified replays. In the constrained-random batch, seed 5 encountered a terminal runtime error before the player result and replay were saved; it is reported as a loss under an explicit human adjudication, while the original technical audit remains unconfirmed. The replay-only subset is 0/9. No replacement game was inserted. Pure random, constrained JEV, and advisory JEV each have ten verified replays. The archived accelerated random batch and earlier advisory batch are not pooled into this selection.
+
+The observed difference between constrained and advisory JEV is 60 percentage points. This supports the practical value of the complete constrained configuration in these runs, but does not isolate plan filtering from prompt semantics, execution rules, service timing, and source-version differences. Shared seeds do not imply identical game trajectories. Wilson 95\% intervals are 59.6--98.2\% for 9/10 and 10.8--60.3\% for 3/10, reflecting the limited sample. No win was observed under random selection, with or without Astra; this does not establish that JEV's net contribution equals the full difference without the missing matched JEV-only control.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/macro_realtime_outcomes.pdf}
+\caption{Outcomes across the five configurations. JEV-only has no matched Lv7 batch; its empty row does not represent ten losses. Hatching marks the single human-adjudicated loss in the constrained-random batch. Counts cover every selected attempt.}
+\label{fig:macrorealtime}
+\end{figure}
+
+\paragraph{The game continues during inference.}
+The primary batches run with \texttt{realtime=True}; game callbacks poll completed asynchronous work instead of waiting for a response before advancing the simulation. Across constrained and advisory JEV, all 15,505 returned JEV decisions and all 344 returned Astra plans have a response game-loop index greater than their request index. The two JEV response medians are 0.375 and 0.421 seconds, respectively, with a 0.516-second 95th percentile in both. Astra medians are 31.531 and 33.094 seconds. These are measured response durations, not paused game time. In the pure-random batch, heartbeat game/wall elapsed-time ratios are 0.982--0.998 and all 3,904 choices reproduce the recorded seeded random sequence. The four advisory time limits are match outcomes, distinct from model-request timeouts.
+
+\subsection{Historical full-game case studies}
+
+
+
+Table~\ref{tab:macro} retains the four selected historical planned victories, including two against Lv7. These are case studies, not a new four-game win-rate denominator. These wins take 10:49--15:55 of game time. The first attacks occur between 7:22 and 8:11, following an economic and production buildup. JEV-only reaches its 20-minute game-time limit without a win. The two Lv7 seeds establish successful play at the highest non-cheating difficulty, although the sample is too small to estimate a reliable win rate.
+
+\begin{table}[t]
 \centering\small
 \begin{tabular}{llclrr}
 \toprule
@@ -114,6 +170,9 @@ Method & Difficulty & Seed & Outcome & Game time & Wall time \\
 \tablerows{tables/study_macro_results.tex}
 \bottomrule
 \end{tabular}
+\captionbelowtable
+\caption{Completed full-game experiments (times in minutes:seconds). The first five rows are the historical case-study selection. The final Lv8 row is a separate stress test against an opponent with an information advantage. A time limit is not a victory.}
+\label{tab:macro}
 \end{table}
 
 Figure~\ref{fig:lv7replay} shows four moments from the Lv7 seed-1 victory: expansion, army movement, pressure on a Zerg base, and the final push. The frames come from the evaluated replay, rendered afterward with an observer camera. This viewing perspective supplies illustrations only; the controller acts on structured observations, not these images.
@@ -130,13 +189,55 @@ LLM Play SC2 reports its main evaluation at Lv5 (12 wins in 20 games for GPT-4-T
 \paragraph{Stress test with privileged vision.}
 We additionally test Lv8, whose built-in opponent has a vision advantage. This game ends in defeat at 10:14. At five minutes, the agent's army resource value is 900 versus the opponent's 1,525; its first Immortal appears only at 6:25. It never issues an attack command. This failure illustrates a remaining economic--military imbalance when facing a stronger, privileged opponent; it is separate from the non-cheating difficulty milestone.
 
-\subsection{Micromanagement: better damage, limited conversion to wins}
+\subsection{Historical decisions: build order, technology, and unit allocation}
+\label{sec:macrochoices}
+
+\paragraph{What does JEV choose?}
+Figure~\ref{fig:macrochoices} accounts for every JEV decision forwarded to the executor in the five historical case-study games. The standalone run contains 1,020 such decisions; the combined runs contain 737, 583, 701, and 850. Each action event is joined to its original model response and candidate set. We count an explicit wait as a decision, and separate model choices from the engine orders they submit. Local worker distribution, automatic Gateway morphing, and continued execution of army intent are outside this count. Responses discarded before execution are also excluded.
+
+JEV-only chooses to wait in 800 of 1,020 decisions (78.4\%); the combined controller waits in 1,955 of 2,871 (68.1\%). Non-worker production accounts for 6.7\% versus 13.3\% of processed choices. The remaining decisions allocate attention to workers, construction, research, scouting, abilities, and army commands. A wait is not necessarily a mistake: saving resources, occupied producers, and ongoing army orders can all justify it. These frequencies describe complete games of different lengths and difficulties, rather than a matched measure of action quality.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/macro_action_profile.pdf}
+\caption{Full-game JEV decisions and production. (a) Action categories across all processed model choices in each historical game, including explicit waits; gray segments label the wait percentage. (b) Submitted production orders for every non-worker unit type produced in these games. Counts are model-directed engine orders, not completed units or surviving army composition. No air combat unit is ordered in any of these five games. Candidate availability and game duration differ across runs; unit counts therefore describe the implemented controllers' allocation, not an intrinsic model preference.}
+\label{fig:macrochoices}
+\end{figure}
+
+\paragraph{From technology purchases to usable forces.}
+The standalone controller submits 29 Zealot, 17 Sentry, eight Stalker, six Adept, and eight Observer production orders, but no Immortal orders. The combined runs instead submit 156 Zealot, 149 Stalker, 30 Adept, 26 Immortal, five Colossus, nine High Templar, and six Observer orders in total. Each of the four wins includes Immortals. This is a shift toward a ground army with sustained basic-unit production and higher-tier support, rather than simply a larger variety of purchases.
+
+Availability matters when interpreting these choices. In the standalone run, Immortal production is offered at only three processed decisions and never selected; the combined runs select it in 26 of 34 opportunities. Sentries appear in 58 standalone candidate sets and are chosen 17 times, but never appear in the combined candidate sets. Thus, the absence of combined-system Sentries cannot be attributed to JEV rejecting them. The plan, spending rules, available producers, and model selection jointly determine the observed unit allocation. Appendix~\ref{app:macrochoices} reports these counts explicitly.
+
+\paragraph{Opening order and technology progression.}
+Table~\ref{tab:technology} gives the first submitted construction, research, and production orders. All four combined games follow Gateway, Cybernetics Core, early expansion, and Robotics development. Their Core orders occur at 2:01--2:09 and Robotics Facility orders at 3:31--4:01, compared with 2:41 and 4:50 for JEV-only. Warp Gate research starts at 2:42--2:52 in the combined runs versus 3:20 for JEV-only; its first observed completion is at 4:18--4:24 versus 5:00. These are distinct milestones: ordering research does not make it immediately available.
+
+The standalone controller constructs a Forge at 1:41, before its Core, and later builds a Stargate and completes air-weapons and air-armor upgrades without ordering an air combat unit. Its Robotics Facility produces only Observers. These investments broaden the technology tree without yielding an expansion or higher-tier combat force. The combined games prioritize expansion and Robotics before adding optional branches: two reach Colossus production, while one Lv7 game adds High Templars. The latter still initiates no Psionic Storm research, illustrating that a winning trajectory need not use every technology investment well.
+
+\begin{table}[t]
+\centering\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{lrrrrr}
+\toprule
+& JEV-only & \multicolumn{4}{c}{JEV + GPT-6} \\
+\cmidrule(lr){3-6}
+First submitted order & Lv2 & Lv5, s1 & Lv6, s1 & Lv7, s1 & Lv7, s2 \\
+\midrule
+\tablerows{tables/macro_technology.tex}
+\bottomrule
+\end{tabular}
+\captionbelowtable
+\caption{Technology and production milestones in game time (minutes:seconds), rounded to the nearest second. Each entry is the first order with a positive submitted-order count; a dash means no such order in that game. Times are submission times, not building completion, upgrade completion, or unit birth. Nexus refers to the first expansion beyond the starting base.}
+\label{tab:technology}
+\end{table}
+
+The complete opening construction sequence for JEV-only and the Lv7 seed-1 win appears in Appendix~\ref{app:macrochoices}. Their first Pylon, gas, and Gateway timings are similar; the subsequent investment order diverges. The Lv7 controller builds its Core before expanding at 2:57, then adds another Gateway and Assimilator. The expansion order uses an observation with 22 workers, although the plan suggests expanding around 19. This gap distinguishes strategic guidance from the executed build order and shows why both must be inspected.
+
+\subsection{Micromanagement: greater enemy elimination, limited wins}
 
 Table~\ref{tab:micro} summarizes the complete 35-map comparison. Mean enemy elimination rises from 16.50\% to 37.69\%, an increase of 21.19 percentage points, or 2.28 times the initial value. Wins increase from 3 to 7 out of 105. Excluding the two development maps retains the same win counts and increases mean elimination from 15.55\% to 39.17\%. The improvement is therefore not driven by those maps.
 
 \begin{table}[t]
-\caption{Micromanagement outcomes. Elimination is the episode-average fraction of enemy units eliminated. The 33-map subset excludes two local development maps. Both methods use three episodes per map.}
-\label{tab:micro}
 \centering\small
 \begin{tabular}{lrrrr}
 \toprule
@@ -147,13 +248,34 @@ Method & W/D/L & Elimination & Wins & Elimination \\
 \tablerows{tables/study_micro_results.tex}
 \bottomrule
 \end{tabular}
+\captionbelowtable
+\caption{Micromanagement outcomes. Elimination is the episode-average fraction of enemy units eliminated. The 33-map subset excludes two local development maps. Both methods use three episodes per map.}
+\label{tab:micro}
 \end{table}
 
 The combined system improves mean elimination on 25 maps, ties on seven, and declines on three (Figure~\ref{fig:micro}). On \texttt{mmmt}, elimination increases from 3.03\% to 87.88\% and wins from zero to two. On \texttt{MMM}, it rises from 10.00\% to 73.33\%, with one win; \texttt{8m} and \texttt{2c\_vs\_64zg} also acquire wins. These cases indicate a useful change in tactical behavior beyond merely issuing valid actions.
 
-Nevertheless, the combined system still loses 98 episodes. On \texttt{3m}, elimination increases from zero to 66.67\% without a win. On \texttt{2s3z}, wins decline from two to one; on \texttt{bane\_vs\_bane}, elimination declines from 100\% to 77.78\%. Planning helps many battles but does not consistently convert local damage into team survival and victory.
+Nevertheless, the combined system still loses 98 episodes. On \texttt{3m}, elimination increases from zero to 66.67\% without a win. On \texttt{2s3z}, wins decline from two to one; on \texttt{bane\_vs\_bane}, elimination declines from 100\% to 77.78\%. The combined controller improves many battles but does not consistently convert enemy elimination into team survival and victory.
 
-Appendix~\ref{app:replays} presents paired frames from the first \texttt{mmmt} episode of each method, together with the combined controller's tactical guidance and recorded outcome. These examples illustrate the quantitative results; they are not additional evaluation episodes.
+Figure~\ref{fig:outcomes} shows the distribution behind these averages. Episodes with no enemies eliminated fall from 55 to 18, while episodes eliminating at least half the enemy units increase from 14 to 39. Victories remain concentrated: JEV-only wins on two maps and JEV + GPT-6 on six. Elimination and victory are distinct outcomes; a simultaneous wipeout can be a draw, while eliminating all attacking opponents can yield a win with enemy support units still alive.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/micro_outcomes.pdf}
+\caption{Distribution of micromanagement outcomes. (a) Empirical cumulative distributions over all 105 episodes per method; a lower curve at an elimination threshold indicates fewer episodes at or below that threshold. (b) Wins on every map where either method wins at least once; both methods have zero wins on the remaining 29 maps. Each map has three episodes per method. These are descriptive distributions; the three combined-method episodes share a map-specific plan.}
+\label{fig:outcomes}
+\end{figure}
+
+Figure~\ref{fig:winningmaps} shows real in-game combat on all six maps with recorded victories: \texttt{2c\_vs\_64zg}, \texttt{8m}, \texttt{MMM}, \texttt{2s3z}, \texttt{bane\_vs\_bane}, and \texttt{mmmt}. Each panel comes from the first winning combined-system episode on that map. The examples include asymmetric Colossus--Zergling combat, infantry battles, mixed ground forces, and explosive engagements. Appendix~\ref{app:allwins} shows engagement and terminal frames for all ten recorded wins: three JEV-only and seven combined-system episodes. Outcomes come from the episode summaries, and all displayed clocks restart at the corresponding episode boundary.
+
+\begin{figure}[tp]
+\centering
+\includegraphics[width=\linewidth]{figures/micro_victory_maps.pdf}
+\caption{In-game views of all six maps on which a controller wins. Each panel shows combat at 40\% of the first winning JEV + GPT-6 episode on that map, with map name, episode number, and elapsed episode time below the image. These are decoded SC2 replay frames, not generated illustrations. Allied units are red and enemies blue. The full 105-episode comparison determines performance; these panels document the situations behind the wins. Engagement and terminal views of every recorded winning episode appear in Appendix~\ref{app:allwins}.}
+\label{fig:winningmaps}
+\end{figure}
+
+Appendix~\ref{app:replays} also retains the paired first \texttt{mmmt} episodes, including the JEV-only defeat, alongside tactical guidance and decision traces. These images and the victory galleries illustrate existing evaluation episodes; they do not increase the sample size.
 
 \begin{figure}[t]
 \centering
@@ -162,21 +284,19 @@ Appendix~\ref{app:replays} presents paired frames from the first \texttt{mmmt} e
 \label{fig:micro}
 \end{figure}
 
-\subsection{Why does planning help?}
+\subsection{Behavioral mechanisms in historical case studies}
 \label{sec:behavior}
 
 \paragraph{Saving for a future goal.}
-The initial JEV-only full game illustrates a failure of longer-horizon resource allocation. It grows to 68 workers but remains on one base for the entire 20 minutes. Across 1,024 requests, the largest observed mineral balance is 335, below the 400 required for a Nexus. Expansion is consequently absent from every candidate set. Repeated affordable purchases prevent the saving needed to make the strategic action available.
+The historical initial JEV-only full game illustrates a failure of longer-horizon resource allocation; it does not characterize the unmeasured Lv7 JEV-only configuration. It grows to 68 workers but remains on one base for the entire 20 minutes. Across 1,024 requests, the largest observed mineral balance is 335, below the 400 required for a Nexus. Expansion is consequently absent from every candidate set. Repeated affordable purchases prevent the saving needed to make the strategic action available.
 
-The first accepted plan in a combined-system game requests two bases and instructs the controller to stop worker growth near 19 workers while saving for the natural expansion. The adapter turns this instruction into a spending reservation. Across the four wins, a second Nexus is first observed at 2:50--3:05, and peak observed base counts reach four to six. Figure~\ref{fig:planning} contrasts the economic and army trajectories. The useful contribution of planning is an explicit future target plus a mechanism that protects the resources needed to reach it.
+In the Lv7 seed-1 game, the first accepted plan requests two bases and prioritizes the natural expansion around 19 workers. The adapter implements the expansion priority through a spending reservation. Figure~\ref{fig:commitments}(a) shows the request-time mineral balance reaching 400 before JEV selects the build action. Across the four wins, a second Nexus is first observed at 2:50--3:05, and peak observed base counts reach four to six. Figure~\ref{fig:planning} contrasts the economic and army trajectories. The combined controller thus couples an explicit future target with a mechanism that protects the resources needed to reach it.
 
 This evidence diagnoses the initial controller's planning limitation, rather than showing that JEV can never reason about expansion. The affordability filter and one-step objective interact: neither exposes the value of temporarily refusing purchases. The combined system supplies that missing context and commitment.
 
-Table~\ref{tab:replaytrace} follows the same Lv7 game shown in Figure~\ref{fig:lv7replay}. The log connects a request to prioritize the natural expansion, JEV's choice when 400 minerals become available, and the subsequent appearance of a second Nexus. An attack plan later produces 24 unit orders within one game second. This trace distinguishes model intent, command submission, and observed game state. Selected original fields appear in Appendix~\ref{app:replays}.
+Table~\ref{tab:replaytrace} follows the same Lv7 game shown in Figure~\ref{fig:lv7replay}. The log connects a request to prioritize the natural expansion, JEV's choice when 400 minerals become available, and the subsequent appearance of a second Nexus. A later attack plan is followed by 24 submitted unit attack orders within one game second. This trace distinguishes model intent, command submission, and observed game state. Selected original fields appear in Appendix~\ref{app:replays}.
 
 \begin{table}[t]
-\caption{Plan--decision--execution trace from the Lv7 seed-1 victory. Rows summarize contemporaneous logs; time is minutes:seconds.milliseconds. A submitted building order is followed by an independent observation of construction.}
-\label{tab:replaytrace}
 \centering\small
 \setlength{\tabcolsep}{4pt}
 \begin{tabularx}{\linewidth}{llX}
@@ -186,10 +306,20 @@ Game time & Source & Recorded behavior \\
 \tablerows{tables/replay_macro_trace.tex}
 \bottomrule
 \end{tabularx}
+\captionbelowtable
+\caption{Plan--decision--execution trace from the Lv7 seed-1 victory. Rows summarize contemporaneous logs; time is minutes:seconds.milliseconds. A submitted building order is followed by an independent observation of construction.}
+\label{tab:replaytrace}
 \end{table}
 
 \paragraph{Maintaining an army objective.}
-In the same JEV-only game, six attack commands and seven retreat commands include five attack-to-retreat reversals within two game seconds. Such rapid reversals leave little time for an attack to make progress. None of the four combined-system wins contains a reversal within that interval. Persistent posture, separate attack and retreat thresholds, and a commitment window stabilize the objective across JEV calls. Peak observed army supply rises from 58 in the standalone run to 79--129 in the combined games. Different opponents and other controller changes preclude a causal estimate, but the traces are consistent with better strategic continuity.
+In the same JEV-only game, six attack commands and seven retreat commands include five attack-to-retreat reversals within two game seconds. Such rapid reversals leave little time for an attack to make progress. None of the four combined-system wins contains a reversal within that interval (Figure~\ref{fig:commitments}(b)). The combined controller uses persistent posture, separate attack and retreat thresholds, and a commitment window to maintain the objective across JEV calls. Peak observed army supply rises from 58 in the standalone run to 79--129 in the combined games. Different opponents and other controller changes preclude a causal estimate, but the traces are consistent with better strategic continuity.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/macro_commitments.pdf}
+\caption{Recorded economic and army commitments. (a) Mineral observations from JEV requests during the first four game minutes: JEV-only at Lv2 and JEV + GPT-6 at Lv7, seed 1. The combined controller accepts an expansion plan at 1:34 and submits a Nexus order at 2:57. The horizontal line marks the 400-mineral requirement. (b) Attack and retreat commands across the five historical full games; the right column counts attack-to-retreat reversals within two game seconds. Horizontal segments end at each game's termination. These examples use different opponents and compare complete controllers.}
+\label{fig:commitments}
+\end{figure}
 
 \begin{figure}[t]
 \centering
@@ -203,15 +333,15 @@ Micromanagement reveals a different boundary. In the combined system, 2,629 of 2
 
 Healing exposes resource conflicts between units. Execution records contain 500 healing rejections because a target is already targeted and ten for insufficient energy. Among 378 subsequent decisions that expose a previously rejected healing target together with an alternative legal target, 243 repeat the previous target. These conditional counts identify recurring behavior, not optimal-action labels. They suggest that planning alone cannot replace precise cooldown control, updated execution feedback, or joint allocation of healing targets.
 
-\subsection{Response time and cost per game}
+\subsection{Historical response time and cost per game}
 \label{sec:efficiency}
+
+This section retains the historical macro case-study accounting and the 210 micro episodes. The primary Lv7 latency measurements are reported in Section~\ref{sec:lv7}. The USD figures below do not estimate total expenditure for the new ten-game batches: their Astra account cost is unknown, not zero.
 
 \paragraph{Frequent actions remain subsecond.}
 Table~\ref{tab:latency} and Figure~\ref{fig:latency} report response distributions. Median JEV latency is 0.406 seconds for standalone macro control and 0.422 seconds with planning; corresponding micro medians are 0.485 and 0.500 seconds. In the combined system, macro and micro JEV 95th percentiles are 0.531 and 0.594 seconds. GPT-6 planning is less frequent but slower: median latency is 27.60 seconds in macro control and 37.17 seconds in micromanagement. These are different computational roles and inputs, so their ratio is not a same-task model speedup. The practical benefit is that most actions proceed through the faster decision layer.
 
 \begin{table}[t]
-\caption{Pooled latency over recorded responses with known usage. Macro JEV + GPT-6 statistics cover the four ordinary-difficulty wins; the Lv8 stress test is excluded. Micro statistics cover 105 episodes per method and 35 shared plans for the combined method.}
-\label{tab:latency}
 \centering\small
 \begin{tabular}{llrrrr}
 \toprule
@@ -222,6 +352,9 @@ Setting & Method & \(n\) & P50/P95 (s) & \(n\) & P50/P95 (s) \\
 \tablerows{tables/study_latency.tex}
 \bottomrule
 \end{tabular}
+\captionbelowtable
+\caption{Pooled latency over recorded responses with known usage. Macro JEV + GPT-6 statistics cover the four non-cheating wins; the Lv8 stress test is excluded. Micro statistics cover 105 episodes per method and 35 shared plans for the combined method.}
+\label{tab:latency}
 \end{table}
 
 \begin{figure}[t]
@@ -235,8 +368,6 @@ Setting & Method & \(n\) & P50/P95 (s) & \(n\) & P50/P95 (s) \\
 Figure~\ref{fig:costs} shows the cost of each full game and the average micro episode, separating JEV, GPT-6, and their total. Across the four full-game wins, combined cost ranges from USD~2.83 to USD~4.52 and averages USD~3.7103. JEV accounts for USD~0.1499 per game and GPT-6 for USD~3.5604: planning contributes 96.0\% of the total. JEV's recorded macro usage costs approximately USD~0.21 per 1,000 responses. Cheap action selection therefore supports frequent interaction, while the planning schedule determines most of the game's model expenditure.
 
 \begin{table}[t]
-\caption{Mean model cost and elapsed wall time per completed episode. Macro averages use the main full-game sample. Micro planner cost and setup time are amortized over three episodes per map. Costs are known-usage standard-API-equivalent estimates, not billing statements.}
-\label{tab:costs}
 \centering\small
 \setlength{\tabcolsep}{4pt}
 \begin{tabular}{llrrrrr}
@@ -248,6 +379,9 @@ Setting & Method & Episodes & JEV & GPT-6 & Total & (s/episode) \\
 \tablerows{tables/study_costs.tex}
 \bottomrule
 \end{tabular}
+\captionbelowtable
+\caption{Mean model cost and elapsed wall time per completed episode. Macro averages use the historical case-study sample. Micro planner cost and setup time are amortized over three episodes per map. Costs are known-usage standard-API-equivalent estimates, not billing statements.}
+\label{tab:costs}
 \end{table}
 
 \begin{figure}[t]
@@ -259,22 +393,31 @@ Setting & Method & Episodes & JEV & GPT-6 & Total & (s/episode) \\
 
 For micromanagement, standalone JEV costs USD~0.0448 per episode. The combined method costs USD~0.1486, consisting of USD~0.0588 for JEV and USD~0.0898 for planning. Excluding the two development maps gives USD~0.0243 and USD~0.1168, respectively. The combined method thus spends more than JEV-only while producing better aggregate combat outcomes. Its advantage is improved capability with an inexpensive action layer, not a reduction in the total charge relative to the standalone controller.
 
-Mean micro wall time increases from 25.78 to 46.23 seconds per episode. This includes amortized planning, environment setup, stepping, and cleanup. Macro games run in real time while inference overlaps game execution, and their durations also depend on when a match ends. Neither shorter successful games nor the difference between action and planning latency alone establishes a full-game speedup over prior systems.
+Mean micro wall time increases from 25.78 to 46.23 seconds per episode. This includes amortized planning, environment setup, stepping, and cleanup. Figure~\ref{fig:runtime} separates the wait for a complete team action from total elapsed time. Across 3,374 standalone and 4,089 combined-method decisions, median team waiting times are 0.484 and 0.469 seconds; their 95th percentiles are 1.537 and 1.954 seconds. Similar medians therefore do not imply similar total runtime. The combined method also runs longer battles on average (13.91 versus 11.48 game seconds), in addition to invoking the planner. The available timing records do not isolate how much each factor contributes to the total increase.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{figures/runtime_comparison.pdf}
+\caption{Decision waiting time and total micromanagement runtime, shown directly for the two methods. (a) Median time to collect and decode all concurrent JEV batches for one team decision; planner calls are outside this timer. (b) Mean elapsed time per episode, calculated from each map's complete run divided by its three episodes, including planning, initialization, game interaction, and cleanup. All 35 maps and 105 episodes per method are included. Both panels use linear axes and seconds, with different ranges; each bar is labeled with its value.}
+\label{fig:runtime}
+\end{figure}
+
+Macro games run in real time while inference overlaps game execution, and their durations also depend on when a match ends. Neither shorter successful games nor the difference between action and planning latency alone establishes a full-game speedup over prior systems.
 
 \paragraph{Accounting basis.}
 We price recorded token usage at the providers' standard rates on September 22, 2026 \citep{typesafe2026models,openai2026gpt6astra}. JEV charges for input; GPT-6 accounting separates cached from uncached input and includes output tokens. Reasoning output is a subset of output, not an additional charge. GPT-6 runs use Codex, so the reported amount is an equivalent API estimate. Calls without usage remain unpriced; Appendix~\ref{app:costs} gives token totals, missing-call counts, and per-game figures.
 
 \section{Discussion and limitations}
 
-The experiments support a specific explanation for the standalone controller's weakness: local action selection does not reliably create and preserve a future objective. Saving for an expansion requires declining immediately feasible actions; coordinated attacks require maintaining posture despite short-term fluctuations. GPT-6 supplies these commitments, and the adapter makes them affect action selection. This explains a substantial part of the observed behavior more directly than treating every game failure as an inability to choose legal commands.
+The traces support a specific hypothesis about the standalone controller's weakness: local action selection does not reliably create and preserve a future objective. Saving for an expansion requires declining immediately feasible actions; coordinated attacks require maintaining posture despite short-term fluctuations. GPT-6 supplies these commitments, and the adapter makes them affect action selection. The logged progression from accepted goals to submitted actions supports this mechanism, without establishing what fraction of the performance gain is attributable to planning alone.
 
-The comparison remains observational. The standalone and combined controllers also differ in candidate descriptions and execution handling, and the macro opponents are not matched. Four successful macro games and three micro episodes per map cannot establish broad reliability. A controlled next experiment should use the same executor and seeds with the planner enabled or disabled, followed by separate tests of resource reservation and posture persistence. The current data motivate the planning hypothesis without isolating its entire contribution.
+The primary Lv7 batches align map, matchup, difficulty, seed set, realtime operation, and game-time limit. They still differ in archived source and service transport, and the two planning modes change more than a single filter. The missing matched JEV-only batch prevents a complete five-way outcome comparison. One constrained-random loss is human-adjudicated rather than replay-verified. Ten seeds per evaluated configuration cannot establish broad reliability; a future complete factorial comparison should freeze the same runtime and service settings before collecting every configuration. Historical macro and micro analyses have their own interface differences and remain separate evidence.
 
 The scope is also restricted: one macro race and matchup, one macro map, a custom starting-worker count, centralized micro observations, and separate macro and micro implementations. Low battle win counts remain a material weakness. Finally, inexpensive JEV inference does not make the combined system's planning free. Reducing unnecessary replanning or sharing plans more effectively is important because GPT-6 dominates observed full-game cost.
 
 \section{Conclusion}
 
-JEV-Star defeats Lv7, StarCraft II's strongest non-cheating built-in AI, through a combination of rapid structured decisions and persistent planning. Compared with the initial JEV-only controller, it also raises mean enemy elimination from 16.50\% to 37.69\% across 35 battle maps. Resource reservation and stable army objectives help explain the improvement. The four full-game wins retain a 0.422-second median JEV response and cost an estimated USD~3.71 per game. JEV provides inexpensive action selection, while GPT-6 improves strategic organization and accounts for most model expenditure.
+JEV-Star exposes five configurations that separate action selection, persistent planning, and plan-based constraints. In the recorded realtime Lv7 batches, constrained JEV wins 9/10 games and advisory JEV wins 3/10; the two random-selector configurations record no wins. The game advances throughout returned JEV and Astra requests, with subsecond median JEV latency. A matched Lv7 JEV-only evaluation is still missing. The separate historical micro comparison raises mean enemy elimination from 16.50\% to 37.69\% across 35 maps. Together these results establish working realtime hierarchical control and a reproducible configuration interface, while leaving broader reliability and isolated component effects for further evaluation.
 
 \begingroup
 \small
@@ -295,8 +438,20 @@ Figure~\ref{fig:microreplay} compares the first \texttt{mmmt} episode for each m
 \begin{figure}[H]
 \centering
 \includegraphics[width=\linewidth]{figures/micro_replay.pdf}
-\caption{Replay frames from \texttt{mmmt}, episode 1. The top row shows both methods at the same game time, 5.98 seconds. The bottom row shows each episode's terminal state, at different times. Allied units are blue and opponents orange. Counts include surviving non-attacking support units, so a benchmark victory can leave enemy Medivacs alive. The same camera settings and fixed image crop are used for both columns.}
+\caption{Replay frames from \texttt{mmmt}, episode 1. The top row shows both methods at the same game time, 5.98 seconds. The bottom row shows each episode's terminal state, at different times. Allied units are red and opponents blue. Counts include surviving non-attacking support units, so a benchmark victory can leave enemy Medivacs alive. The same camera settings and fixed image crop are used for both columns.}
 \label{fig:microreplay}
+\end{figure}
+
+\clearpage
+\subsection{Battle progression in the paired replay}
+
+Figure~\ref{fig:attrition} reconstructs surviving-unit counts from the same two replays. Both start with 22 units on each side. The standalone controller ends with two allied and 20 enemy units; the combined controller ends with nine allied and two enemy units. Each curve ends at its own episode boundary. These trajectories describe this pair of battles, while the aggregate evaluation remains the full 35-map comparison.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{figures/micro_attrition.pdf}
+\caption{Surviving units in the paired \texttt{mmmt} replays. The panels use identical axes and include all units, including non-attacking support units. Counts come from 272 and 480 decoded replay frames, respectively, and agree with the recorded battle states. Vertical dotted lines mark the terminal times, 12.14 and 21.43 seconds; the shorter episode is not extrapolated to the longer duration. This is one episode per controller, not a win-rate estimate.}
+\label{fig:attrition}
 \end{figure}
 
 \clearpage
@@ -312,39 +467,113 @@ These sentences are quoted from the accepted tactical plan for \texttt{mmmt}; th
 
 \lstinputlisting{listings/micro_trace.txt}
 
+\section{All recorded micromanagement victories}
+\label{app:allwins}
+
+These galleries cover all ten recorded wins across six maps. Each row pairs combat at 40\% of the episode duration with its terminal state. Clocks restart at the episode boundary. Camera distance is shared; crops are fixed within maps, with a wider view for \texttt{2c\_vs\_64zg}. Terminal counts match the episode summaries and include non-attacking support units.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{figures/micro_victories_ranged.pdf}
+\caption{Three JEV + GPT-6 victories on distinct maps: \texttt{2c\_vs\_64zg}, episode 2; \texttt{8m}, episode 3; and \texttt{MMM}, episode 2. Left: combat. Right: terminal state. The final allied/enemy counts are 1/0, 3/0, and 6/1; the remaining enemy in \texttt{MMM} is a non-attacking support unit. Each row identifies its map, controller, and episode.}
+\label{fig:winsranged}
+\end{figure}
+
+\clearpage
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{figures/micro_victories_2s3z.pdf}
+\caption{All three \texttt{2s3z} victories: JEV-only episodes 2 and 3, and JEV + GPT-6 episode 2. Each row shows engagement and terminal frames from the same episode. Final allied/enemy counts are 3/0, 1/0, and 2/0. The standalone controller wins twice on this map while the combined controller wins once; the gallery retains this unfavorable comparison.}
+\label{fig:wins2s3z}
+\end{figure}
+
+\clearpage
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{figures/micro_victories_banelings.pdf}
+\caption{Both \texttt{bane\_vs\_bane} victories: JEV-only episode 2 and JEV + GPT-6 episode 1. Engagement frames precede the terminal states at 7.14 and 6.07 episode seconds. Three and one allied units survive, respectively, with no enemies remaining. Earlier episodes contained in the replay files are excluded from the displayed episode clocks.}
+\label{fig:winsbane}
+\end{figure}
+
+\clearpage
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{figures/micro_victories_mmmt.pdf}
+\caption{Both JEV + GPT-6 victories on \texttt{mmmt}, episodes 1 and 2. Final allied/enemy counts are 9/2 and 11/2; the two surviving enemies are non-attacking support units. The second episode lasts 25.36 seconds, independently of the preceding battle's clock. The first row corresponds to the combined-system episode in the paired comparison of Figure~\ref{fig:microreplay}.}
+\label{fig:winsmmmt}
+\end{figure}
+
+\clearpage
+\section{Opening construction and conditional unit choices}
+\label{app:macrochoices}
+
+Table~\ref{tab:opening} lists every submitted construction order in the first four game minutes of the standalone run and the Lv7 seed-1 win, including repeated Pylons and Gateways. Probe production and research are excluded from this construction sequence and analyzed separately in Section~\ref{sec:macrochoices}. The worker column records the original request observation, which can precede the asynchronous order. These games start with eight workers.
+
+\begin{table}[H]
+\centering\small
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{rrlrrl}
+\toprule
+\multicolumn{3}{c}{JEV-only, Lv2} & \multicolumn{3}{c}{JEV + GPT-6, Lv7 seed 1} \\
+\cmidrule(lr){1-3}\cmidrule(lr){4-6}
+Time & Workers & Construction & Time & Workers & Construction \\
+\midrule
+\tablerows{tables/macro_opening.tex}
+\bottomrule
+\end{tabular}
+\captionbelowtable
+\caption{Opening build order through 4:00 game time. All rows are submitted construction commands; times do not denote completion. Repeated structures remain in the sequence.}
+\label{tab:opening}
+\end{table}
+
+Table~\ref{tab:unitchoices} conditions unit selection on the options actually offered to JEV. An exposure is one processed decision whose original candidate set includes that unit; several units can be offered together. Consequently, denominators differ by row and cannot be added as disjoint opportunities. The combined column pools the four historical wins. Differences in resource reservation, production priorities, prerequisites, and idle producers affect these candidate sets, so the table describes the complete controller rather than measuring preference under identical alternatives.
+
+\begin{table}[H]
+\centering\small
+\begin{tabular}{lrr}
+\toprule
+Production choice & JEV-only: selected / offered & JEV + GPT-6: selected / offered \\
+\midrule
+\tablerows{tables/macro_unit_choices.tex}
+\bottomrule
+\end{tabular}
+\captionbelowtable
+\caption{Conditional non-worker unit choices in the historical full-game samples. A dash means the candidate was never offered. Each selected action in these rows submits one production order; this does not establish that every unit finishes production.}
+\label{tab:unitchoices}
+\end{table}
+
+The action profile contains 1,020 standalone and 2,871 combined-system action events. Three standalone and 34 combined-system response records have no corresponding action event and are excluded from that profile. The source-linked analysis retains all per-game counts, the offered choices, order submission times, and observed research completion times. The independent Lv8 game remains outside the main action and technology comparison.
+
 \clearpage
 \section{Per-map micromanagement results}
 \label{app:maps}
 
 Each map has three episodes per method. The table reports wins and mean enemy elimination; daggers identify the two local development maps. All 35 maps are included in the main 105-episode result.
 
-\small
-\begin{longtable}{lrrrr}
-\caption{Complete comparison of the two methods on the same maps.}\\
+\begin{table}[H]
+\centering\small
+\begin{tabular}{lrrrr}
 \toprule
 & \multicolumn{2}{c}{Wins / 3} & \multicolumn{2}{c}{Enemy elimination (\%)} \\
 \cmidrule(lr){2-3}\cmidrule(lr){4-5}
 Map & JEV-only & JEV + GPT-6 & JEV-only & JEV + GPT-6 \\
 \midrule
-\endfirsthead
-\toprule
-Map & JEV-only wins & Combined wins & JEV-only (\%) & Combined (\%) \\
-\midrule
-\endhead
+
 \tablerows{tables/study_micro_maps.tex}
 \bottomrule
-\end{longtable}
-\normalsize
+\end{tabular}
+\captionbelowtable
+\caption{Complete comparison of the two methods on the same maps.}
+\label{tab:allmaps}
+\end{table}
 
 \clearpage
 \section{Cost accounting and reproducibility}
 \label{app:costs}
 
-Table~\ref{tab:individualcosts} lists the charges underlying Figure~\ref{fig:costs}. Each total is the sum of the two model components. The main combined macro average includes only the four Lv5--Lv7 games; the Lv8 stress test remains a separate completed result.
+Table~\ref{tab:individualcosts} lists the charges underlying Figure~\ref{fig:costs}. Each total is the sum of the two model components. The historical combined macro average includes only the four Lv5--Lv7 games; the Lv8 stress test remains a separate completed result.
 
 \begin{table}[h]
-\caption{Individual full-game costs estimated from known token usage.}
-\label{tab:individualcosts}
 \centering\small
 \begin{tabular}{llcrrr}
 \toprule
@@ -353,13 +582,14 @@ Method & Difficulty & Seed & JEV (USD) & GPT-6 (USD) & Total (USD) \\
 \tablerows{tables/study_macro_costs.tex}
 \bottomrule
 \end{tabular}
+\captionbelowtable
+\caption{Individual full-game costs estimated from known token usage.}
+\label{tab:individualcosts}
 \end{table}
 
 The rates are USD~0.042 per million JEV input tokens with no output charge, and USD~10, 1, and 50 per million GPT-6 uncached input, cached input, and output tokens, respectively \citep{typesafe2026models,openai2026gpt6astra}. Cache-write input, if present, uses USD~12.50 per million. Requests exceeding 272,000 input tokens use the published long-context multipliers of two for input and 1.5 for output. We apply rates to each response before aggregation. These rates serve only to reconstruct game expenditure; the main comparison uses actual workload totals.
 
 \begin{table}[h]
-\caption{Recorded token totals for the main samples. Cached input is included in GPT-6 input. Unpriced J/G counts identify JEV/GPT-6 attempts without recorded usage; their unknown cost is omitted from the known-usage estimate.}
-\label{tab:tokens}
 \centering\scriptsize
 \setlength{\tabcolsep}{3.5pt}
 \begin{tabular}{llrrrrr}
@@ -369,6 +599,9 @@ Setting & Method & JEV input & GPT-6 input & Cached input & GPT-6 output & Unpri
 \tablerows{tables/study_tokens.tex}
 \bottomrule
 \end{tabular}
+\captionbelowtable
+\caption{Recorded token totals for the historical samples. Cached input is included in GPT-6 input. Unpriced J/G counts identify JEV/GPT-6 attempts without recorded usage; their unknown cost is omitted from the known-usage estimate.}
+\label{tab:tokens}
 \end{table}
 
 The Lv8 stress test additionally contains one GPT-6 attempt without usage. A canceled planning attempt before the selected micro run also lacks usage and falls outside the completed-episode totals. Neither is treated as free. Micro planning costs are divided by three because each map's plan is reused for three episodes; they would be higher per game without reuse.
@@ -376,5 +609,13 @@ The Lv8 stress test additionally contains one GPT-6 attempt without usage. A can
 The accompanying analysis files contain 210 battle-episode records, response-level latency and usage, full-game action and state trajectories, and accepted plans. A selection manifest links these records to frozen source summaries and hashed event-log prefixes. Later appends to logs do not alter the selected data. Request latency is measured over responses with known usage; wall time comes from complete run summaries and includes setup and cleanup.
 
 Reproduction requires the stated StarCraft II build, map files, shared-vision and ability settings, and the recorded action adapters. The initial macro catalog has 72 commands and the combined controller has 73; candidate and execution improvements are part of the system comparison. No model weights are trained.
+
+\clearpage
+\section{Primary macro evidence and configuration provenance}
+\label{app:macroprovenance}
+
+The repository's \texttt{paper/data/macro\_realtime/} directory contains a forty-row game table, a five-row configuration summary, and a manifest with batch protocol fields, source fingerprints, and SHA256 hashes for every event log and available replay. The export script rechecks these hashes, counts all original attempts, and recomputes response timing directly from events. It does not launch games or call models. Historical micro and case-study tables remain under \texttt{paper/data/study/}.
+
+All selected macro batches use realtime play. The current release consolidates the five command-line configurations, while the manifest retains each experiment's original source identity. Thus, releasing the final planner does not relabel earlier measurements as newly rerun on a single source revision. Executor command-availability parameters are retained in the machine-readable protocol; advisory means no Astra-plan candidate filtering. The constrained-random terminal adjudication remains explicitly distinguished from replay evidence. Excluded accelerated runs, earlier advisory trials, and constrained transport pilots are not included in the primary forty-game table.
 
 \end{document}

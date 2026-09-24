@@ -4,11 +4,15 @@
 
 Weiyu Ma · Liangbing Zhao · Yongcheng Zeng · Jian Zhao
 
-Latest 26-page edition supplied on September 23, 2026. The pages below are rendered directly from the original PDF so the paper can be read on GitHub.
+2026-09-24 edition · 29 pages · five macro configurations and realtime Lv7 evidence.
 
-2026 年 9 月 23 日提供的最新 26 页版本。下方页面直接由原始 PDF 渲染，可以在 GitHub 内阅读全文。
+2026-09-24 版，共 29 页。新增五种宏观配置、实时 Lv7 结果及逐请求时序证据。
 
-[Original PDF / 原始 PDF](JEV-Star.pdf) · [Citation / 引用](../README.md#citation) · [BibTeX](../CITATION.bib) · [Source and data / 源码与数据](README.md) · [Videos / 对局视频](../media/README.md)
+[PDF](JEV-Star.pdf) · [Source and data / 源码与数据](README.md) · [Configuration guide / 配置说明](../docs/macro-configurations.md) · [Citation / 引用](../README.md#citation)
+
+This PDF is compiled from the accompanying source. Pages below are rendered directly from it.
+
+PDF 与随附源码同步，下方页面直接由本版 PDF 渲染。
 
 ---
 
@@ -115,3 +119,15 @@ Latest 26-page edition supplied on September 23, 2026. The pages below are rende
 ### Page 26 / 第 26 页
 
 ![JEV-Star paper, page 26](pages/page-26.png)
+
+### Page 27 / 第 27 页
+
+![JEV-Star paper, page 27](pages/page-27.png)
+
+### Page 28 / 第 28 页
+
+![JEV-Star paper, page 28](pages/page-28.png)
+
+### Page 29 / 第 29 页
+
+![JEV-Star paper, page 29](pages/page-29.png)

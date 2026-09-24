@@ -2,9 +2,9 @@
 
 [English](#english) | [简体中文](#简体中文)
 
-**StarCraft II macro and micromanagement with JEV action selection and optional GPT-6 Astra planning.**
+**Realtime StarCraft II macro control in five configurations, plus JEV and Astra micromanagement.**
 
-**由 JEV 选择动作、可选 GPT-6 Astra 规划的星际争霸 II 宏观控制与微操。**
+**五种配置的实时星际争霸 II 宏观控制，以及 JEV 与 Astra 微操。**
 
 [Read the paper / 在线阅读论文](paper/PAPER.md) · [PDF](paper/JEV-Star.pdf) · [Video gallery / 视频展示](media/README.md) · [Citation / 引用](#citation)
 
@@ -38,17 +38,20 @@ JEV-Star brings full-game macro control and SMAC-Hard micromanagement into one r
 
 | Module | Game interface | Model responsibilities | Current implementation |
 | --- | --- | --- | --- |
-| [Macro](macro/README.md#english) | LLM Play SC2 / BurnySC2 | Astra plans strategic phases; JEV selects economy, technology, production, and army actions | `macro-v2.2.1`; Protoss; 73 actions; real-time games |
+| [Macro](macro/README.md#english) | LLM Play SC2 / BurnySC2 | Optional Astra constraints or advice; JEV or random action selection | `macro-v2.2.1`; Protoss; 73 actions; real-time games |
 | [Micro](micro/README.md#english) | PySC2 bundled with SMAC-Hard | Astra creates one plan per map; JEV selects actions for living units | `p0-v1`; 35 maps; fixed stepping with `realtime=False` |
 
 ```mermaid
 flowchart LR
-    A[Astra planning] --> M[JEV macro decisions]
-    A --> U[JEV unit decisions]
-    M --> B[BurnySC2 executor]
-    U --> P[SMAC-Hard / PySC2]
-    B --> G[StarCraft II]
-    P --> G
+    S[Structured state] --> C[Available candidates]
+    S --> A[Optional Astra plan]
+    A -->|Constrained mode| F[Plan filtering]
+    C --> F
+    F --> D[JEV or uniform random]
+    C -->|No plan filtering| D
+    A -->|Context| D
+    D --> E[Local executor]
+    E --> G[Realtime StarCraft II]
 ```
 
 ### Videos and replays
@@ -96,7 +99,21 @@ Use `py -3.10 jev_star.py macro --help` or `micro --help` for all options. Relat
 
 Each micro version was evaluated on 35 maps with three episodes per map. JEV alone achieved **3 wins, 2 draws, and 100 losses**; the earlier Astra + JEV version achieved **6 wins, 1 draw, and 98 losses**; P0 Astra + JEV achieved **7 wins and 98 losses**. Excluding the two development maps, the three versions achieved **3/99, 3/99, and 7/99 wins**, respectively.
 
-Earlier macro versions won two games against the non-cheating VeryHard/Elite AI. The subsequent version with expanded action coverage lost one game each against CheatVision and CheatMoney. The current `macro-v2.2.1` adds termination on permanent billing errors and has passed **102 offline regression tests**; no additional game results have been recorded since that change while awaiting restored API credit. Micro has passed **37 offline regression tests**. These are small samples, not estimates of a stable win rate.
+Macro supports five configurations, separating planner presence, plan-based constraints, and the action selector. The selected Lv7 batches use **realtime play**, Altitude LE, Protoss versus Zerg, seeds 1–10, and a 20-minute game-time limit.
+
+| Configuration | Astra plan constraints | Action selector | Wins / losses / time limits |
+|---|---|---|---|
+| Pure random | No Astra | Uniform random | 0 / 10 / 0 |
+| JEV-only | No Astra | JEV | Not evaluated at Lv7 |
+| Astra constrained + random | Enabled | Uniform random | 0 / 10* / 0 |
+| Astra constrained + JEV | Enabled | JEV | **9 / 1 / 0** |
+| Astra advisory + JEV | Disabled; plan is context | JEV | **3 / 3 / 4** |
+
+\* Nine replay-verified losses and one human-adjudicated loss without a saved replay. There are 40 selected attempts and 39 verified replays. The earlier JEV-only Lv2 time-limit game is separate. These are development samples with archived version and service-timing differences, not a complete controlled five-way evaluation.
+
+The game advances during inference: all **15,505 JEV responses and 344 Astra responses** in the two JEV-planner batches span advancing game frames. JEV median response times are **0.375 s** (constrained) and **0.421 s** (advisory). Advisory means Astra does not filter actions; executor availability and command-lifecycle rules still apply. Micro remains fixed-step.
+
+[Five configurations and runnable commands](docs/macro-configurations.md) · [Per-game evidence](paper/data/macro_realtime/games.csv). The consolidated release uses the final Astra implementation. **140 macro and 37 micro offline tests pass**; no paid games are required by the test suites.
 
 [Experiments and version boundaries](docs/experiments.md) · [Architecture and data flow](docs/architecture.md) · [Logs and replays](docs/logs-and-replays.md) · [Paper PDF](paper/JEV-Star.pdf) · [Paper source and data](paper/README.md#english)
 
@@ -137,17 +154,20 @@ JEV-Star 将完整对局的宏观控制与 SMAC-Hard 微操放在同一个仓库
 
 | 模块 | 游戏接口 | 模型职责 | 当前实现 |
 | --- | --- | --- | --- |
-| [宏观 macro](macro/README.md#简体中文) | LLM Play SC2 / BurnySC2 | Astra 阶段规划，JEV 选择经济、科技、生产和军队动作 | `macro-v2.2.1`；Protoss；73 个动作；实时对局 |
+| [宏观 macro](macro/README.md#简体中文) | LLM Play SC2 / BurnySC2 | 可选 Astra 约束或建议，JEV 或随机选择底层动作 | `macro-v2.2.1`；Protoss；73 个动作；实时对局 |
 | [微观 micro](micro/README.md#简体中文) | SMAC-Hard 自带的 PySC2 | Astra 每图一份计划，JEV 为存活单位选择动作 | `p0-v1`；35 张图；固定步进 `realtime=False` |
 
 ```mermaid
 flowchart LR
-    A[Astra planning] --> M[JEV macro decisions]
-    A --> U[JEV unit decisions]
-    M --> B[BurnySC2 executor]
-    U --> P[SMAC-Hard / PySC2]
-    B --> G[StarCraft II]
-    P --> G
+    S[Structured state] --> C[Available candidates]
+    S --> A[Optional Astra plan]
+    A -->|Constrained mode| F[Plan filtering]
+    C --> F
+    F --> D[JEV or uniform random]
+    C -->|No plan filtering| D
+    A -->|Context| D
+    D --> E[Local executor]
+    E --> G[Realtime StarCraft II]
 ```
 
 ### 胜局视频与回放
@@ -195,7 +215,21 @@ py -3.10 jev_star.py micro --map 3m --episodes 3 --planner codex --planner-effor
 
 微观每版 35 图 × 3 局：纯 JEV 为 **3 胜、2 平、100 负**，旧 Astra＋JEV 为 **6 胜、1 平、98 负**，P0 Astra＋JEV 为 **7 胜、98 负**。排除两张开发地图后，三版分别为 **3/99、3/99、7/99 胜**。
 
-宏观历史版本已在非作弊的 VeryHard/Elite 难度取得两局胜利；随后动作补全版本在 CheatVision、CheatMoney 各一局失利。当前 `macro-v2.2.1` 增加永久计费错误的停止机制，已有 **102 项离线回归通过**，尚未有额度恢复后的新增实战成绩。微观已有 **37 项离线回归通过**。这些是有限样本，不是稳定胜率估计。
+宏观按规划、计划约束和底层选择器分成五种配置。选定 Lv7 批次均为 **实时运行**：Altitude LE、Protoss 对 Zerg、种子 1–10、每局 20 分钟游戏时限。
+
+| 配置 | Astra 计划约束 | 底层选择 | 胜 / 负 / 到时限 |
+|---|---|---|---|
+| 纯随机 | 无 Astra | 均匀随机 | 0 / 10 / 0 |
+| 纯 JEV | 无 Astra | JEV | Lv7 尚未评估 |
+| Astra 约束＋随机 | 启用 | 均匀随机 | 0 / 10* / 0 |
+| Astra 约束＋JEV | 启用 | JEV | **9 / 1 / 0** |
+| Astra 建议＋JEV | 不启用，计划作为上下文 | JEV | **3 / 3 / 4** |
+
+\* Astra＋随机含 9 局回放验证败北和 1 局人工确认败北，该局没有保存回放。共 40 次选定对局、39 份已验证回放。早期纯 JEV 的 Lv2 到时限样本另列，不能当作 Lv7 成绩。固定种子开发样本仍有源码版本和服务时序差异，不称为完全受控的五组消融。
+
+两组 Astra＋JEV 的 **15,505 次 JEV 回复与 344 次 Astra 回复**均跨越了持续推进的游戏帧。JEV 响应中位数为约束模式 **0.375 秒**、建议模式 **0.421 秒**。“建议模式不限制动作”专指 Astra 不按计划过滤，执行器可用性及命令生命周期规则保留。微观仍使用固定步进。
+
+[五种配置和运行命令](docs/macro-configurations.md) · [逐局证据](paper/data/macro_realtime/games.csv)。当前代码统一采用最终 Astra 实现，**140 项宏观、37 项微观离线测试通过**，测试不启动付费对局。
 
 [实验与版本边界](docs/experiments.md) · [架构与数据流](docs/architecture.md) · [日志和回放](docs/logs-and-replays.md) · [论文 PDF](paper/JEV-Star.pdf) · [论文源码及统计表](paper/README.md#简体中文)
 

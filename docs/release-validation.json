@@ -1,15 +1,14 @@
 {
-  "checked_at_utc": "2026-09-22T15:52:02.294371+00:00",
-  "scope": "Clean initial publication tree; no new SC2 matches or paid model requests.",
+  "checked_at_utc": "2026-09-24T09:41:08.807594+00:00",
+  "scope": "September 24 five-configuration code and paper release; no new games or paid model calls.",
   "offline_tests": {
     "macro": {
-      "passed": 102
+      "passed": 140
     },
     "micro": {
       "passed": 37
     },
-    "environments": "Two freshly installed isolated Python 3.10 environments",
-    "existing_warning": "Macro event-loop tests emit an existing ResourceWarning."
+    "existing_warning": "Macro suite reports an existing unclosed-event-loop ResourceWarning."
   },
   "pip_check": {
     "macro": "passed",
@@ -17,34 +16,39 @@
   },
   "dispatcher_help_commands_passed": [
     "macro",
-    "macro-report",
-    "macro-video",
-    "macro-serve",
-    "micro",
-    "micro-suite",
-    "micro-video",
-    "micro-realtime"
+    "macro-random-suite"
   ],
-  "original_map_byte_hashes_verified": 41,
-  "map_install_dry_run": "All 41 target files already matched the installed local map files; no game files replaced.",
-  "protoss_base_class_ast_unchanged": true,
-  "python_files_parsed": 173,
-  "local_markdown_links_verified": 53,
-  "paper_figure_and_listing_paths_verified": 9,
+  "python_files_parsed": 16,
+  "local_markdown_links_verified": 112,
   "paper_pdf": {
-    "pages": 16,
-    "compiled": "Tectonic; compilation succeeded after refreshing author metadata",
-    "first_page_visually_checked": true
+    "pages": 29,
+    "sha256": "dd56c7c29ed29754440b9b6215dabe960f3de5ea29bc168f83a44db924ac3ef2",
+    "source_sha256": "60e55e26e754e734948b73ff7d6762f4c4209b1e0e2285585fb64d5a351de13a",
+    "compiled": "Tectonic",
+    "source_and_reader_synchronized": true,
+    "focused_visual_qa_pages": [
+      1,
+      3,
+      5,
+      28,
+      29
+    ],
+    "tex_warnings": "Underfull boxes and non-fatal Fontconfig notice; no overfull boxes or unresolved references."
+  },
+  "primary_macro_evidence": {
+    "configurations": 5,
+    "evaluated_configurations": 4,
+    "attempts": 40,
+    "replay_verified": 39,
+    "human_adjudicated": 1,
+    "matched_jev_only_lv7": false,
+    "raw_hashes_rechecked": true,
+    "jev_responses_with_frame_advance": 15505,
+    "astra_responses_with_frame_advance": 344
   },
   "secret_scan": {
     "findings": [],
-    "checks": [
-      "provider_token",
-      "private_key",
-      "credential_url",
-      "known_local_api_key"
-    ],
-    "limitation": "Targeted source scan, not a guarantee against every possible secret format."
+    "scope": "Intended text files; common credential formats."
   },
-  "original_source_files_changed_since_import": []
+  "historical_validation_preserved_in_git": true
 }

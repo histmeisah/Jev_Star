@@ -1,15 +1,17 @@
-"""Run the Jev Protoss macro agent against the built-in SC2 AI in realtime."""
+"""Run Jev or a uniform-random Protoss macro policy against the built-in SC2 AI."""
 
 import argparse
 import asyncio
 import hashlib
 import os
+import random
 import sys
 from datetime import datetime
 from pathlib import Path
 
 from .agent.jev_agent import JevClient, load_api_key
 from .agent.macro_contract import VERSION
+from .agent.random_macro import RandomMacroClient
 from .utils.run_logging import RunLog, atomic_json
 
 
@@ -20,6 +22,13 @@ def positive_float(value):
     return number
 
 
+def nonnegative_float(value):
+    number = float(value)
+    if not 0 <= number < float("inf"):
+        raise argparse.ArgumentTypeError("must be finite and nonnegative")
+    return number
+
+
 def main():
     repo = Path(__file__).resolve().parents[2]
     parser = argparse.ArgumentParser(description=__doc__)
@@ -27,7 +36,13 @@ def main():
     parser.add_argument("--opponent-race", choices=["Zerg", "Terran", "Protoss", "Random"], default="Zerg")
     parser.add_argument("--difficulty", choices=["VeryEasy", "Easy", "Medium", "MediumHard", "Hard", "Harder", "VeryHard", "CheatVision", "CheatMoney", "CheatInsane"], default="Easy")
     parser.add_argument("--model", default="jev-1.13.0")
-    parser.add_argument("--decision-interval", type=positive_float, default=1.0, help="Minimum wall seconds between request starts")
+    parser.add_argument("--policy", choices=["jev", "random"], default="jev",
+                        help="random replaces JEV with uniform sampling, including wait; Astra planning is optional")
+    parser.add_argument("--policy-seed", type=int, help="Random-policy RNG seed; defaults to --seed")
+    parser.add_argument("--realtime", action=argparse.BooleanOptionalAction, default=True,
+                        help="Use --no-realtime to accelerate a local random policy")
+    parser.add_argument("--decision-interval", type=positive_float, default=1.0,
+                        help="Minimum seconds between choices: wall time in realtime, game time with --no-realtime")
     parser.add_argument("--request-timeout", type=positive_float, default=2.5)
     parser.add_argument("--max-decision-age", type=positive_float, default=4.0, help="Maximum age in both wall and game seconds")
     parser.add_argument("--max-requests", type=int, default=2000)
@@ -37,9 +52,13 @@ def main():
     parser.add_argument("--config-file", type=Path, default=repo.parent / "config.md", help="Fallback for api: entry; TYPESAFE_API_KEY takes precedence")
     parser.add_argument("--output-dir", type=Path)
     parser.add_argument("--planner", choices=["none", "codex"], default="none")
+    parser.add_argument("--plan-mode", choices=["constrained", "advisory"], default="constrained",
+                        help="constrained applies Astra plan filters; advisory supplies plan context to the selector")
+    parser.add_argument("--advisory-posture-hold", type=nonnegative_float, default=20,
+                        help="Advisory army-command hold in game seconds; retreat 65 remains available")
     parser.add_argument("--planner-model", default="gpt-6-astra")
     parser.add_argument("--codex-path", type=Path, help="Optional native Codex executable; uses saved Codex login")
-    parser.add_argument("--planner-effort", choices=["low", "medium", "high", "xhigh", "max"], default="low")
+    parser.add_argument("--planner-effort", choices=["low", "medium", "high", "xhigh", "max"], default="medium")
     parser.add_argument("--planner-interval", type=positive_float, default=60, help="Game seconds between periodic strategic requests")
     parser.add_argument("--planner-execution-window", type=positive_float, default=30, help="Game seconds to execute an accepted plan before ordinary events refresh it")
     parser.add_argument("--planner-min-interval", type=positive_float, default=10, help="Minimum wall seconds between planner requests, including events")
@@ -53,27 +72,49 @@ def main():
         parser.error("--max-requests must be positive")
     if args.max_planner_requests < 1:
         parser.error("--max-planner-requests must be positive")
-    try:
-        key = load_api_key(args.config_file)
-    except ValueError as exc:
-        parser.error(str(exc))
+    if args.plan_mode == "advisory" and args.planner != "codex":
+        parser.error("--plan-mode advisory requires --planner codex")
+    key = None
+    if args.policy == "random":
+        if args.planner != "none" and not args.realtime:
+            parser.error("Astra planning requires realtime to preserve asynchronous planner timing")
+        args.policy_seed = args.seed if args.policy_seed is None else args.policy_seed
+        args.model = RandomMacroClient.model
+        # Legacy placement helpers use Python's global RNG. Keep it independent
+        # from the policy RNG, and record both seeds for this baseline.
+        random.seed(args.seed)
+    else:
+        if not args.realtime:
+            parser.error("--no-realtime is currently supported only with --policy random")
+        try:
+            key = load_api_key(args.config_file)
+        except ValueError as exc:
+            parser.error(str(exc))
     if args.sc2_path:
         os.environ["SC2PATH"] = str(args.sc2_path.resolve())
     elif not os.environ.get("SC2PATH") and Path(r"C:\game\StarCraft II").is_dir():
         os.environ["SC2PATH"] = r"C:\game\StarCraft II"
+    random.seed(args.seed)
 
     output = args.output_dir or repo / "jev_runs" / datetime.now().strftime("%Y%m%d-%H%M%S-%f")
     output = output.resolve()
     output.mkdir(parents=True, exist_ok=False)  # Never silently overwrite another run.
     settings = {k: str(v) if isinstance(v, Path) else v for k, v in vars(args).items()
                 if k != "config_file"}
-    settings.update(realtime=True, player_race="Protoss", output_dir=str(output), macro_contract=VERSION)
+    settings.update(player_race="Protoss", output_dir=str(output), macro_contract=VERSION,
+                    decision_timebase="wall" if args.realtime else "game", executor_random_seed=args.seed,
+                    configuration=(f"astra_{args.plan_mode}_{args.policy}" if args.planner == "codex" else args.policy),
+                    decision_model_api_calls=args.policy == "jev", planner_model_api_calls=args.planner == "codex",
+                    model_api_calls=args.policy == "jev" or args.planner == "codex")
+    if args.policy == "random":
+        settings.update(decision_backend="local_uniform_random",
+                        executor_random_seed=args.seed, sampling="uniform_over_legal_actions_including_wait")
     source_dir = Path(__file__).resolve().parent
     sources = [source_dir / name for name in (
         "agent/astra_planner.py", "agent/jev_agent.py", "agent/strategic_policy.py", "agent/macro_contract.py",
         "env/bot/Protoss_bot.py", "env/bot/jev_protoss_bot.py", "env/bot/hierarchical_protoss_bot.py",
         "env/bot/macro_execution.py", "env/bot/macro_navigation.py", "run_jev.py", "utils/run_logging.py",
-        "utils/sc2_runtime.py", "utils/action_info.py")]
+        "utils/sc2_runtime.py", "utils/action_info.py", "agent/random_macro.py")]
     atomic_json(output / "source-fingerprints.json", {str(p.relative_to(repo)): hashlib.sha256(p.read_bytes()).hexdigest() for p in sources})
     log = RunLog(output, settings, secrets=(key,), console=sys.stdout)
     client = planner_client = bot = None
@@ -92,26 +133,30 @@ def main():
                 game_map = maps.get(args.map)
                 log("environment", map_path=str(game_map.path), map_sha256=hashlib.sha256(game_map.data).hexdigest(),
                     macro_contract=VERSION)
-                client = JevClient(key, args.model, args.request_timeout)
+                client = (RandomMacroClient(args.policy_seed) if args.policy == "random"
+                          else JevClient(key, args.model, args.request_timeout))
                 if args.planner == "codex":
                     from .agent.astra_planner import CodexPlannerClient
                     from .env.bot.hierarchical_protoss_bot import HierarchicalProtossBot
                     planner_client = CodexPlannerClient(output, args.codex_path, args.planner_model,
-                                                       args.planner_timeout, args.planner_effort)
+                                                       args.planner_timeout, args.planner_effort,
+                                                       plan_mode=args.plan_mode)
                     bot = HierarchicalProtossBot(client, output, args.decision_interval, args.max_decision_age,
                                                  args.max_requests, planner_client=planner_client, run_log=log,
                                                  planner_interval=args.planner_interval, plan_ttl=args.plan_ttl,
                                                  planner_min_interval=args.planner_min_interval,
                                                  planner_event_cooldown=args.planner_event_cooldown,
                                                  planner_execution_window=args.planner_execution_window,
-                                                 max_plan_age=args.max_plan_age, max_planner_requests=args.max_planner_requests)
+                                                 max_plan_age=args.max_plan_age, max_planner_requests=args.max_planner_requests,
+                                                 plan_mode=args.plan_mode, advisory_posture_hold=args.advisory_posture_hold,
+                                                 realtime=args.realtime)
                 else:
                     bot = JevProtossBot(client, output, args.decision_interval, args.max_decision_age,
-                                       args.max_requests, run_log=log)
+                                       args.max_requests, run_log=log, realtime=args.realtime)
                 log.phase = "launching"
                 result = run_windowed_game(game_map, [Bot(Race.Protoss, bot),
                                            Computer(Race[args.opponent_race], Difficulty[args.difficulty])],
-                                           realtime=True, game_time_limit=args.game_time_limit,
+                                           realtime=args.realtime, game_time_limit=args.game_time_limit,
                                            random_seed=args.seed, save_replay_as=str(output / "game.SC2Replay"),
                                            event_sink=log)
                 result_name, status = result.name, "completed"

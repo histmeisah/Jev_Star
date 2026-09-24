@@ -38,6 +38,29 @@ INSTRUCTIONS = (
     "army order. Return only a choice from the supplied criteria."
 )
 
+ADVISORY_INSTRUCTIONS = (
+    "You choose immediate Protoss macro actions in real-time StarCraft II. Select ONE "
+    "action from the supplied criteria using the current observation. Astra's "
+    "strategic_plan is advisory context: its objective, production goals, worker/base "
+    "targets, spending list, resource reserves, priorities, army posture and attack "
+    "thresholds are suggestions, not permissions, ceilings or prerequisites. You may "
+    "choose any supplied action, including actions outside that plan, when current "
+    "conditions justify it. Judge survival, supply/power, sustainable income, combat "
+    "production and opportunities to attack from the observation. Do not wait solely "
+    "because a suggested goal or army threshold is unfinished. Reconsider outdated "
+    "advice when enemies, resources or available units change. Each train/build "
+    "choice starts at most one unit/building; no automatic production or build order "
+    "exists. Workers are assigned automatically. Attack/retreat/defend sets persistent "
+    "army intent; destinations use the ordinary executor's observed-enemy/search "
+    "navigation, not the plan's army_target_id. Action 72 restores base defense "
+    "after retreat. Scouts continue searching after assignment, and one Observer "
+    "escorts the army. Missing enemies are unknown, not absent. Research values "
+    "mean 0=not started, between 0 and 1=in progress, 1=completed. Account for "
+    "pending production and recent execution feedback. Use EMPTY ACTION for a "
+    "concrete resource/production wait or when no useful action is available. "
+    "Return only a choice from the supplied criteria."
+)
+
 
 def load_api_key(config_file: Optional[Path] = None) -> str:
     key = os.environ.get("TYPESAFE_API_KEY", "").strip()
@@ -72,8 +95,18 @@ class JevClient:
     def payload(self, state: dict, choices: dict) -> dict:
         if not 1 <= len(choices) <= 255:
             raise ValueError("Jev requires between 1 and 255 choices.")
-        instructions = INSTRUCTIONS
-        if state.get("strategic_plan"):
+        advisory = state.get("strategy_status", {}).get("plan_mode") == "advisory"
+        instructions = ADVISORY_INSTRUCTIONS if advisory else INSTRUCTIONS
+        if advisory and state.get("army_command_guard", {}).get("enabled"):
+            instructions += (
+                " army_command_guard is a fixed executor rule, independent of Astra: "
+                "after starting an attack, ordinary defense 72 is briefly unavailable; "
+                "retreat 65 remains available when withdrawal is needed. After leaving "
+                "an attack, reattack 64 waits for the recorded cooldown. A continuing "
+                "base alarm alone does not show that danger increased. Production "
+                "and EMPTY ACTION keep the current army mission running."
+            )
+        if state.get("strategic_plan") and not advisory:
             instructions += (
                 " Follow strategic_plan and execution_directive. Goals are total production "
                 "ceilings for replenishment, not prerequisites for army movement. Respect "
@@ -152,10 +185,11 @@ class DecisionScheduler:
     """Game callbacks poll finished work; they never await an in-flight model call."""
 
     def __init__(self, client, emit: Callable, interval=1.0, max_age=4.0,
-                 max_requests=2000, clock=time.monotonic):
+                 max_requests=2000, clock=time.monotonic, cadence_clock=None):
         if interval <= 0 or max_age <= 0 or max_requests < 1:
             raise ValueError("Decision interval, max age and request budget must be positive.")
         self.client, self.emit, self.clock = client, emit, clock
+        self.cadence_clock = clock if cadence_clock is None else cadence_clock
         self.interval, self.max_age, self.max_requests = interval, max_age, max_requests
         self.task = None
         self.request_id = 0
@@ -172,7 +206,7 @@ class DecisionScheduler:
     @property
     def ready(self):
         return (not self.closed and not self.disabled and self.task is None
-                and self.request_id < self.max_requests and self.clock() >= self.next_request_at)
+                and self.request_id < self.max_requests and self.cadence_clock() >= self.next_request_at)
 
     def submit(self, game_loop: int, state: dict, choices: dict) -> bool:
         if not self.ready:
@@ -184,7 +218,7 @@ class DecisionScheduler:
         self.last_game_loop = game_loop
         self.request_id += 1
         request_id, started_at = self.request_id, self.clock()
-        self.next_request_at = started_at + self.interval
+        self.next_request_at = self.cadence_clock() + self.interval
         self.stats["requests"] += 1
         self.emit("request", request_id=request_id, game_loop=game_loop, plan_id=plan_id, payload=payload)
 
@@ -208,7 +242,7 @@ class DecisionScheduler:
             self.stats["api_errors"] += 1
             self.consecutive_errors += 1
             # Never retry an old state. Back off and later submit a fresh observation.
-            self.next_request_at = self.clock() + max(
+            self.next_request_at = self.cadence_clock() + max(
                 exc.retry_after, min(30, 2 ** min(self.consecutive_errors, 5)))
             self.disabled = exc.status in (400, 401, 402, 403, 404, 422)
             self.disabled_status = exc.status if self.disabled else None
@@ -216,7 +250,7 @@ class DecisionScheduler:
                       game_loop=game_loop, plan_id=self.pending_plan_id,
                       status=exc.status, disabled=self.disabled,
                       error_category="billing" if exc.status == 402 else "configuration" if self.disabled else "transient",
-                      retry_in_seconds=0 if self.disabled else max(0, self.next_request_at - self.clock()))
+                      retry_in_seconds=0 if self.disabled else max(0, self.next_request_at - self.cadence_clock()))
             return None
         self.consecutive_errors = 0
         self.stats["responses"] += 1
