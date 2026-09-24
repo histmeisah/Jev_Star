@@ -65,7 +65,7 @@ The JEV-only method selects directly from current state and short execution hist
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{figures/architecture.pdf}
-\caption{Five macro configurations on a shared action interface. The selector is either JEV or uniform random; Astra is absent, constrains candidates, or supplies advisory context. All paths use structured observations and the configured local executor. The five rows enumerate implemented configurations, not five completed Lv7 batches.}
+\caption{Five macro configurations on a shared action interface. The selector is either JEV or uniform random; Astra is absent, constrains candidates, or supplies advisory context. All paths use structured observations and the configured local executor. All five configurations have ten-seed realtime Lv7 evaluations in Table~\ref{tab:macroconfigs}.}
 \label{fig:architecture}
 \end{figure}
 
@@ -97,6 +97,8 @@ Let $\mathcal{B}_t$ be the candidate set after the configured executor's availab
 \end{enumerate}
 
 Random selection uses a separate seeded generator, samples uniformly from the current candidates including WAIT, and does not rank plan text. All configurations preserve local worker allocation, placement, production, scouting, and army execution. A wait choice can coexist with continued execution of existing orders. ``Unconstrained'' refers specifically to the absence of Astra plan constraints; it does not mean that all 73 commands are available at every time.
+
+The evaluated advisory candidate set also includes a plan-independent 20-second army-command guard, described in Appendix~\ref{app:macroprovenance}; retreat remains available under base rules.
 
 \subsection{Control timing}
 
@@ -137,7 +139,7 @@ Astra advisory + JEV & 3 & 3 & 4 & 30\% \\
 \bottomrule
 \end{tabular}
 \captionbelowtable
-\caption{Realtime Lv7 development evaluation. Each evaluated configuration uses seeds 1--10 and a 20-minute game-time limit. $^{*}$Nine replay-verified losses and one human-adjudicated loss without a saved replay.}
+\caption{Realtime Lv7 development evaluation. Each configuration uses seeds 1--10 and a 20-minute game-time limit. Advisory includes the independent 20-second command guard. $^{*}$Nine replay-verified losses and one human-adjudicated loss without a saved replay.}
 \label{tab:macroconfigs}
 \end{table}
 
@@ -622,5 +624,12 @@ The repository's \texttt{paper/data/macro\_realtime/} directory contains a fifty
 All selected macro batches use realtime play. The current release consolidates the five command-line configurations, while the manifest retains each experiment's original source identity. Thus, releasing the final planner does not relabel earlier measurements as newly rerun on a single source revision. Executor command-availability parameters are retained in the machine-readable protocol; advisory means no Astra-plan candidate filtering. The constrained-random terminal adjudication remains explicitly distinguished from replay evidence. Excluded accelerated runs, earlier advisory trials, and constrained transport pilots are not included in the primary fifty-game table.
 
 The JEV-only evaluation follows an excluded four-attempt technical pilot: its newly created Python environment retained SC2 SDK enum tables for 4.11.4.78285 while the client was 5.0.16.97563. Two games failed on shield-battery ability ID 4113 and two ended in replay-verified losses; the entire pilot is retained separately. The existing ID-synchronization tool produced SDK Python files identical to the prior research environment. The same published gameplay source and prompt were then used for a fresh ten-seed batch, with no within-batch replacements. Four failed request-timeout preflights and one successful preflight are also unscored. The manifest retains the SDK hashes, excluded-pilot evidence, and all formal trial hashes.
+
+\paragraph{Advisory configuration and remaining failures.}
+The independent command guard temporarily removes ordinary defense (action 72) for 20 game seconds after starting an attack and re-attack (64) for 20 game seconds after leaving attack posture. Retreat (65) remains available under base rules. The guard is part of the configured $\mathcal{B}_t$, is independent of Astra's plan, and is disabled with \texttt{-{}-advisory-posture-hold 0}. It is absent from the other four configurations.
+
+The selected advisory batch combines the 20-second guard with prompt targets of at most 200 characters for the objective and 900 for guidance; validation still allows 1,200 characters per field. Of 206 Astra requests, 193 return plans, none rejected for text length. Battlefield changes invalidate 77 replies, leaving 116 accepted plans. The guard removes 476 candidate entries across requests, all involving actions 64 or 72; this counts candidate removals, not blocked selected actions. Compared with the earlier advisory batch, attack-to-defense reversals within five seconds fall from 88 to zero, while three rapid attack-to-retreat reversals remain. Prompt, guard, and service differences prevent attributing the change from 2/10 to 3/10 wins to one intervention.
+
+Postgame navigation auditing finds a 142.41-second continuous observation window in seed 1 with the army near an already destroyed target and at least 114 ready combat supply. This is evidence of execution stagnation, not guaranteed time saved by a repair. Seeds 1 and 7 reach the limit with substantial advantages; seeds 2 and 6 do not. All four remain time-limit outcomes. Replay truth is used only for postgame analysis. The repository's advisory experiment report records per-seed diagnostics and distinguishes proposed navigation and decision improvements from implemented changes.
 
 \end{document}

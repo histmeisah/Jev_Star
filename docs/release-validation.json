@@ -1,6 +1,6 @@
 {
-  "checked_at_utc": "2026-09-24T13:48:26.430931+00:00",
-  "scope": "Add the completed JEV-only experiment to the September 24 five-configuration publication; no new games or model calls during publication.",
+  "checked_at_utc": "2026-09-24T14:47:00.235786+00:00",
+  "scope": "Complete experiment-report publication and advisory protocol disclosure; all 50 outcomes preserved, no gameplay changes or model calls.",
   "offline_tests": {
     "macro": {
       "passed": 140
@@ -18,20 +18,20 @@
     "macro": "passed",
     "micro": "previously passed; unchanged requirements"
   },
-  "python_files_parsed": 3,
-  "local_markdown_links_verified": 101,
+  "python_files_parsed": 0,
+  "local_markdown_links_verified": 113,
   "paper_pdf": {
-    "pages": 29,
-    "sha256": "e73ec2ae22879b91e183d7aedabdbcd1bbdc9f8cca48d2e6989a89e6d89451ab",
-    "source_sha256": "561d4ebc9ab361d9065b55db36fa22acd9341b4fe127e65c66dfed9c2411ea35",
+    "pages": 30,
+    "sha256": "814379370739c42e23389813943138e5ad24b2adce2007b7f8836eac879d9835",
+    "source_sha256": "bf3f90ea7b528c349c28b46e0a111e80ddf1ba6d3fab7df522035d6488ffc8d7",
     "compiled": "Tectonic",
     "source_and_reader_synchronized": true,
-    "rendered_page_hashes_verified": 29,
+    "rendered_page_hashes_verified": 30,
     "focused_visual_qa_pages": [
-      1,
+      3,
+      4,
       5,
-      6,
-      29
+      30
     ],
     "tex_warnings": "Underfull boxes and non-fatal Fontconfig notice; no overfull boxes or unresolved references."
   },
@@ -65,5 +65,23 @@
     "findings": [],
     "scope": "Intended public text files; common credential formats and private Windows paths."
   },
-  "historical_validation_preserved_in_git": true
+  "historical_validation_preserved_in_git": true,
+  "publication_completion": {
+    "baseline_commit": "47bc761983d4ac4615fda2195a19007553f8bf00",
+    "raw_protocol_result_event_replay_files_rechecked": 109,
+    "all_fifty_rows_unchanged": true,
+    "gameplay_and_tests_unchanged": true,
+    "advisory_checks_passed_per_game": 27,
+    "advisory_diagnostic_sources_crosschecked": true,
+    "newly_published_reports": [
+      "docs/advisory-guard20-experiment-20260924.md",
+      "docs/random-realtime-experiment-20260924.md"
+    ],
+    "diagnostic_source_sha256": {
+      "summary.json": "7a8f0b6331665f186ef59982372160074bbf48dcd768d18742221b58eba99137",
+      "behavior-audit.json": "a17a7b0f2c876e87600291735f44721e84f8d3ecf5c7a4031ecc521d040569f9",
+      "navigation-audit.json": "5503fe30469ab858ffa1b728730839c2a7f2435ac0534783a97ba64908608b52",
+      "verification.json": "bb1644fb7311aa40c02820aef6bf0e84f3165072ae2917f40482b9d21002f086"
+    }
+  }
 }

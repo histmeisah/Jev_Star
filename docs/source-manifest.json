@@ -1674,8 +1674,8 @@
       "path": "paper/main.tex",
       "source_sha256": "1f1f85b8418bdeda93225931831caaf09c212b5cab16bbf078f3c39d7a41e61d",
       "bytes": 35248,
-      "release_sha256": "561d4ebc9ab361d9065b55db36fa22acd9341b4fe127e65c66dfed9c2411ea35",
-      "release_bytes": 62353
+      "release_sha256": "bf3f90ea7b528c349c28b46e0a111e80ddf1ba6d3fab7df522035d6488ffc8d7",
+      "release_bytes": 64461
     },
     {
       "source": "paper/arxiv/references.bib",
@@ -1706,9 +1706,9 @@
       "path": "paper/JEV-Star.pdf",
       "source_sha256": "fd8224a08421927c0a7a82e3c91a24271c368bd3c681fbf957777bddccada906",
       "bytes": 5049219,
-      "release_sha256": "e73ec2ae22879b91e183d7aedabdbcd1bbdc9f8cca48d2e6989a89e6d89451ab",
-      "release_bytes": 22090584,
-      "transformation": "Recompiled from the release LaTeX and assets with all five ten-seed realtime macro evaluations."
+      "release_sha256": "814379370739c42e23389813943138e5ad24b2adce2007b7f8836eac879d9835",
+      "release_bytes": 22092851,
+      "transformation": "Recompiled from release LaTeX and assets; five realtime batches, explicit advisory guard and diagnostic appendix."
     },
     {
       "source": "paper/arxiv/figures/architecture.pdf",
@@ -2206,6 +2206,7 @@
     "Add uniform-random selector, realtime baseline runner, and model-layer accounting.",
     "Publish 50 selected realtime macro attempts with 49 replay hashes and one explicit adjudication.",
     "Complete the ten-seed JEV-only Lv7 baseline; disclose the excluded SDK pilot and unscored preflight calls.",
-    "Synchronize manuscript, figures, compiled PDF, and online page reader."
+    "Synchronize manuscript, figures, compiled PDF, and online page reader.",
+    "Publish random/advisory experiment reports; clarify the advisory command guard and complete manuscript/PDF/reader synchronization."
   ]
 }

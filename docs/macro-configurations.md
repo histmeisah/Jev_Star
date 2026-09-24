@@ -28,6 +28,10 @@ The configurations separate three choices: whether Astra supplies a plan, whethe
 
 “不限制”指 **Astra 不限制底层动作空间**，不是全部 73 项动作始终可用。当前发布采用最终 Astra 实现，历史实验源码版本另行记录，不把代码整合当作旧批次在新版本重跑。
 
+The evaluated advisory batch uses `--advisory-posture-hold 20`: an independent guard temporarily removes ordinary defense (72) after attack starts and re-attack (64) after leaving attack; retreat (65) remains available under base rules. It also includes concise Astra prompt targets. The other four configurations do not use this guard. Setting the flag to `0` disables it, producing a different condition from the reported advisory row.
+
+主表建议组使用 `--advisory-posture-hold 20`：进攻后暂时移除普通回防 72，退出进攻后暂时移除重新进攻 64；撤退 65 保持基础合法性。该组同时包含 Astra 简洁文本提示；其他四组不使用这项独立防抖。设为 `0` 可关闭，但不再是主表建议组的配置。详见[建议组实战与诊断](advisory-guard20-experiment-20260924.md)。
+
 ## Realtime Lv7 results / 实时 Lv7 结果
 
 Altitude LE; Protoss versus Zerg VeryHard / Lv7; RandomBuild; handicap 100; seeds 1–10; realtime; minimum 1 wall-clock second between decisions; 1200-game-second limit.
@@ -68,7 +72,7 @@ python jev_star.py macro --policy random --planner codex --plan-mode constrained
 python jev_star.py macro --policy jev --planner codex --plan-mode constrained --planner-effort medium --realtime --difficulty VeryHard --seed 1 --game-time-limit 1200
 
 # 5. Astra advisory + JEV / Astra 建议＋JEV
-python jev_star.py macro --policy jev --planner codex --plan-mode advisory --planner-effort medium --realtime --difficulty VeryHard --seed 1 --game-time-limit 1200
+python jev_star.py macro --policy jev --planner codex --plan-mode advisory --advisory-posture-hold 20 --planner-effort medium --realtime --difficulty VeryHard --seed 1 --game-time-limit 1200
 ```
 
 Defaults: Altitude LE, Zerg, JEV policy, no planner. Random uses a separate RNG, defaulting to the game seed. Model-enabled games require realtime. Pure random needs no API key; Astra＋random needs Astra authentication but no JEV key.

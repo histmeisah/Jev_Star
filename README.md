@@ -113,6 +113,8 @@ Macro supports five configurations, separating planner presence, plan-based cons
 
 The game advances during inference: all **19,605 JEV responses and 509 Astra responses** across the primary batches span advancing game frames. JEV median response times are **0.391 s** (JEV-only), **0.375 s** (constrained), and **0.421 s** (advisory). Advisory means Astra does not filter actions; executor availability and command-lifecycle rules still apply. Micro remains fixed-step.
 
+The advisory row includes concise Astra prompt targets and an independent **20-second army-command guard**; retreat remains available under base rules. [Advisory experiment and diagnostics](docs/advisory-guard20-experiment-20260924.md) · [Pure-random realtime experiment](docs/random-realtime-experiment-20260924.md).
+
 [Five configurations and runnable commands](docs/macro-configurations.md) · [Per-game evidence](paper/data/macro_realtime/games.csv). The consolidated release uses the final Astra implementation. **140 macro and 37 micro offline tests pass**; no paid games are required by the test suites.
 
 [Experiments and version boundaries](docs/experiments.md) · [Architecture and data flow](docs/architecture.md) · [Logs and replays](docs/logs-and-replays.md) · [Paper PDF](paper/JEV-Star.pdf) · [Paper source and data](paper/README.md#english)
@@ -228,6 +230,8 @@ py -3.10 jev_star.py micro --map 3m --episodes 3 --planner codex --planner-effor
 \* Astra＋随机含 9 局回放验证败北和 1 局人工确认败北，该局没有保存回放。共 50 次选定对局、49 份已验证回放。纯 JEV 已补齐实时 Lv7 十局；早期 Lv2 案例与整批四次 SDK 兼容性试跑均不计入主表。固定种子开发样本仍有源码版本和服务时序差异，不称为完全受控的五组消融。
 
 主表各组的 **19,605 次 JEV 回复与 509 次 Astra 回复**均跨越了持续推进的游戏帧。JEV 响应中位数为纯 JEV **0.391 秒**、约束模式 **0.375 秒**、建议模式 **0.421 秒**。“建议模式不限制动作”专指 Astra 不按计划过滤，执行器可用性及命令生命周期规则保留。微观仍使用固定步进。
+
+建议组包含 Astra 简洁文本提示与独立的 **20 秒军队指令防抖**，撤退保持基础合法性。[建议组实验与诊断](docs/advisory-guard20-experiment-20260924.md) · [纯随机实时实验](docs/random-realtime-experiment-20260924.md)。
 
 [五种配置和运行命令](docs/macro-configurations.md) · [逐局证据](paper/data/macro_realtime/games.csv)。当前代码统一采用最终 Astra 实现，**140 项宏观、37 项微观离线测试通过**，测试不启动付费对局。
 
