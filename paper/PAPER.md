@@ -4,9 +4,9 @@
 
 Weiyu Ma · Liangbing Zhao · Yongcheng Zeng · Jian Zhao
 
-2026-09-24 edition · 29 pages · five macro configurations and realtime Lv7 evidence.
+2026-09-24 edition · 29 pages · five ten-seed macro configurations and realtime Lv7 evidence.
 
-2026-09-24 版，共 29 页。新增五种宏观配置、实时 Lv7 结果及逐请求时序证据。
+2026-09-24 版，共 29 页。五种宏观配置均有实时 Lv7 十局结果，含纯 JEV 补测与逐请求时序证据。
 
 [PDF](JEV-Star.pdf) · [Source and data / 源码与数据](README.md) · [Configuration guide / 配置说明](../docs/macro-configurations.md) · [Citation / 引用](../README.md#citation)
 

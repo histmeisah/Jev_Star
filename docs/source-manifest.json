@@ -1674,8 +1674,8 @@
       "path": "paper/main.tex",
       "source_sha256": "1f1f85b8418bdeda93225931831caaf09c212b5cab16bbf078f3c39d7a41e61d",
       "bytes": 35248,
-      "release_sha256": "60e55e26e754e734948b73ff7d6762f4c4209b1e0e2285585fb64d5a351de13a",
-      "release_bytes": 60694
+      "release_sha256": "561d4ebc9ab361d9065b55db36fa22acd9341b4fe127e65c66dfed9c2411ea35",
+      "release_bytes": 62353
     },
     {
       "source": "paper/arxiv/references.bib",
@@ -1706,16 +1706,16 @@
       "path": "paper/JEV-Star.pdf",
       "source_sha256": "fd8224a08421927c0a7a82e3c91a24271c368bd3c681fbf957777bddccada906",
       "bytes": 5049219,
-      "release_sha256": "dd56c7c29ed29754440b9b6215dabe960f3de5ea29bc168f83a44db924ac3ef2",
-      "release_bytes": 22089644,
-      "transformation": "Recompiled from the release paper source after refreshing author metadata."
+      "release_sha256": "e73ec2ae22879b91e183d7aedabdbcd1bbdc9f8cca48d2e6989a89e6d89451ab",
+      "release_bytes": 22090584,
+      "transformation": "Recompiled from the release LaTeX and assets with all five ten-seed realtime macro evaluations."
     },
     {
       "source": "paper/arxiv/figures/architecture.pdf",
       "path": "paper/figures/architecture.pdf",
       "source_sha256": "8f6c9d88217a8a177ee05ceb6042ecc31bfbc8d1d9b8f297097388f5fc8752b8",
       "bytes": 23445,
-      "release_sha256": "b82c4bb3ee7adb9d7762f2bc3a4790731e662cb9c8fafbaea5714dd0e3a770c6",
+      "release_sha256": "ce20805339000af0573246e6ac59e2d27a546617a2175218d07e4e4c815cb954",
       "release_bytes": 30367
     },
     {
@@ -2204,7 +2204,8 @@
   "publication_changes": [
     "Consolidate five macro configurations and final Astra implementation.",
     "Add uniform-random selector, realtime baseline runner, and model-layer accounting.",
-    "Publish 40 selected realtime macro attempts with 39 replay hashes and one explicit adjudication.",
+    "Publish 50 selected realtime macro attempts with 49 replay hashes and one explicit adjudication.",
+    "Complete the ten-seed JEV-only Lv7 baseline; disclose the excluded SDK pilot and unscored preflight calls.",
     "Synchronize manuscript, figures, compiled PDF, and online page reader."
   ]
 }

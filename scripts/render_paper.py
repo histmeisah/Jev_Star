@@ -52,8 +52,8 @@ def main():
         '# JEV-Star — Read the paper / 在线阅读论文', '',
         '**JEV-Star: Fast, Low-Cost StarCraft II Control with Language-Model Planning**', '',
         'Weiyu Ma · Liangbing Zhao · Yongcheng Zeng · Jian Zhao', '',
-        f'{args.date} edition · {len(doc)} pages · five macro configurations and realtime Lv7 evidence.', '',
-        f'{args.date} 版，共 {len(doc)} 页。新增五种宏观配置、实时 Lv7 结果及逐请求时序证据。', '',
+        f'{args.date} edition · {len(doc)} pages · five ten-seed macro configurations and realtime Lv7 evidence.', '',
+        f'{args.date} 版，共 {len(doc)} 页。五种宏观配置均有实时 Lv7 十局结果，含纯 JEV 补测与逐请求时序证据。', '',
         '[PDF](JEV-Star.pdf) · [Source and data / 源码与数据](README.md) · '
         '[Configuration guide / 配置说明](../docs/macro-configurations.md) · '
         '[Citation / 引用](../README.md#citation)', '',

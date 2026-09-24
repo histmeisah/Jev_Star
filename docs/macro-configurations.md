@@ -35,14 +35,14 @@ Altitude LE; Protoss versus Zerg VeryHard / Lv7; RandomBuild; handicap 100; seed
 | Configuration / 配置 | Wins / 胜 | Losses / 负 | Time limit / 到时限 | Sample win rate / 样本胜率 |
 |---|---:|---:|---:|---:|
 | Pure random / 纯随机 | 0 | 10 | 0 | 0% |
-| JEV-only / 纯 JEV | — | — | — | Not evaluated / 未评估 |
+| JEV-only / 纯 JEV | 0 | 10 | 0 | 0% |
 | Astra constrained + random / Astra 约束＋随机 | 0 | 10* | 0 | 0%* |
 | Astra constrained + JEV / Astra 约束＋JEV | 9 | 1 | 0 | 90% |
 | Astra advisory + JEV / Astra 建议＋JEV | 3 | 3 | 4 | 30% |
 
-\* Nine replay-verified losses and one human-adjudicated loss (seed 5), whose terminal error prevented replay capture. There are **40 selected attempts and 39 verified replays**, not 50 completed trials. The historical JEV-only Lv2 time-limit sample is not a Lv7 result.
+\* Nine replay-verified losses and one human-adjudicated loss (seed 5), whose terminal error prevented replay capture. There are **50 selected attempts and 49 verified replays**. JEV-only contributes ten replay-verified realtime Lv7 losses. Its historical Lv2 case and the entire four-attempt pilot with unsynchronized SDK IDs are excluded.
 
-\* Astra＋随机组含 9 局回放验证败北和 1 局人工确认败北（种子 5），该局因终局错误未保存回放，原始技术核验仍为未确认。纯 JEV 只有早期 Lv2 到时限样本，不能混入 Lv7 主表。
+\* Astra＋随机组含 9 局回放验证败北和 1 局人工确认败北（种子 5），该局因终局错误未保存回放，原始技术核验仍为未确认。主表共 50 局、49 份已验证回放。纯 JEV 新增十局均由回放确认败北；早期 Lv2 案例及 SDK 编号未同步的整批四次试跑不计入主表。详见[补测报告](jev-only-realtime-experiment-20260924.md)。
 
 Win rates include all ten attempts per evaluated configuration. Game-time limits differ from model-request timeouts. These fixed-seed development samples have version and service-timing differences and do not isolate a single causal effect.
 

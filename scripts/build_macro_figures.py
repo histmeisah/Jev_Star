@@ -61,11 +61,9 @@ def architecture():
 def outcomes():
     manifest = json.loads((ROOT/'paper/data/macro_realtime/manifest.json').read_text(encoding='utf-8'))
     rows = manifest['configurations']
+    assert len(rows) == 5 and all(row['evaluated_at_lv7'] and row['games'] == 10 for row in rows)
     fig, ax = plt.subplots(figsize=(7.0, 3.3))
     for i, row in enumerate(rows):
-        if not row['evaluated_at_lv7']:
-            ax.text(.08, i, 'Not evaluated at Lv7', va='center', color='#666666', fontsize=9)
-            continue
         left = 0
         for key, color, label in [('wins', BLUE, 'Win'), ('losses', GRAY, 'Loss'), ('time_limits', AMBER, 'Time limit')]:
             value = row[key]
@@ -80,7 +78,7 @@ def outcomes():
     ax.invert_yaxis()
     ax.set_xlim(0, 10)
     ax.set_xticks(range(0,11,2))
-    ax.set_xlabel('Games (ten seeds per evaluated configuration)')
+    ax.set_xlabel('Games (ten seeds per configuration)')
     ax.spines[['left','right','top']].set_visible(False)
     ax.tick_params(axis='y', length=0)
     ax.xaxis.grid(True, color='#E8E8E8', linewidth=.6)

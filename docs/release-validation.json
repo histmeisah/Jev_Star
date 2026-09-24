@@ -1,6 +1,6 @@
 {
-  "checked_at_utc": "2026-09-24T09:41:08.807594+00:00",
-  "scope": "September 24 five-configuration code and paper release; no new games or paid model calls.",
+  "checked_at_utc": "2026-09-24T13:48:26.430931+00:00",
+  "scope": "Add the completed JEV-only experiment to the September 24 five-configuration publication; no new games or model calls during publication.",
   "offline_tests": {
     "macro": {
       "passed": 140
@@ -8,47 +8,62 @@
     "micro": {
       "passed": 37
     },
-    "existing_warning": "Macro suite reports an existing unclosed-event-loop ResourceWarning."
+    "existing_warning": "Macro suite reports an existing unclosed-event-loop ResourceWarning.",
+    "provenance": {
+      "source_commit": "9c2605ca30a0389b60d21eb80a48c708768658a3",
+      "scope": "Previously passed offline regression baseline; gameplay and regression-test files are unchanged by this publication."
+    }
   },
   "pip_check": {
     "macro": "passed",
-    "micro": "passed"
+    "micro": "previously passed; unchanged requirements"
   },
-  "dispatcher_help_commands_passed": [
-    "macro",
-    "macro-random-suite"
-  ],
-  "python_files_parsed": 16,
-  "local_markdown_links_verified": 112,
+  "python_files_parsed": 3,
+  "local_markdown_links_verified": 101,
   "paper_pdf": {
     "pages": 29,
-    "sha256": "dd56c7c29ed29754440b9b6215dabe960f3de5ea29bc168f83a44db924ac3ef2",
-    "source_sha256": "60e55e26e754e734948b73ff7d6762f4c4209b1e0e2285585fb64d5a351de13a",
+    "sha256": "e73ec2ae22879b91e183d7aedabdbcd1bbdc9f8cca48d2e6989a89e6d89451ab",
+    "source_sha256": "561d4ebc9ab361d9065b55db36fa22acd9341b4fe127e65c66dfed9c2411ea35",
     "compiled": "Tectonic",
     "source_and_reader_synchronized": true,
+    "rendered_page_hashes_verified": 29,
     "focused_visual_qa_pages": [
       1,
-      3,
       5,
-      28,
+      6,
       29
     ],
     "tex_warnings": "Underfull boxes and non-fatal Fontconfig notice; no overfull boxes or unresolved references."
   },
   "primary_macro_evidence": {
     "configurations": 5,
-    "evaluated_configurations": 4,
-    "attempts": 40,
-    "replay_verified": 39,
+    "evaluated_configurations": 5,
+    "attempts": 50,
+    "replay_verified": 49,
     "human_adjudicated": 1,
-    "matched_jev_only_lv7": false,
+    "matched_jev_only_lv7": true,
     "raw_hashes_rechecked": true,
-    "jev_responses_with_frame_advance": 15505,
-    "astra_responses_with_frame_advance": 344
+    "previous_40_rows_preserved": true,
+    "jev_responses_with_frame_advance": 19605,
+    "astra_responses_with_frame_advance": 509
+  },
+  "jev_only_evidence": {
+    "trials": 10,
+    "checks_passed_per_trial": 23,
+    "wins": 0,
+    "losses": 10,
+    "game_time_limits": 0,
+    "requests": 4127,
+    "responses": 4100,
+    "request_timeouts": 24,
+    "game_end_cancellations": 3,
+    "behavior_crosschecked_with_original_audit": true,
+    "excluded_pilot_attempts": 4,
+    "unscored_preflight_attempts": 5
   },
   "secret_scan": {
     "findings": [],
-    "scope": "Intended text files; common credential formats."
+    "scope": "Intended public text files; common credential formats and private Windows paths."
   },
   "historical_validation_preserved_in_git": true
 }

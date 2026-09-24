@@ -1,8 +1,8 @@
 {
   "edition": "2026-09-24",
-  "scope": "Five configurations; four recorded realtime Lv7 batches.",
-  "games": 40,
-  "replay_verified_games": 39,
+  "scope": "Five configurations; five recorded ten-seed realtime Lv7 batches.",
+  "games": 50,
+  "replay_verified_games": 49,
   "human_adjudicated_games": 1,
   "source_events_and_replay_hashes_rechecked": true,
   "configurations": [
@@ -28,15 +28,15 @@
       "planner": "none",
       "selector": "jev",
       "plan_mode": "none",
-      "evaluated_at_lv7": false,
-      "games": 0,
-      "wins": null,
-      "losses": null,
-      "time_limits": null,
-      "win_rate": null,
-      "replay_verified_games": 0,
+      "evaluated_at_lv7": true,
+      "games": 10,
+      "wins": 0,
+      "losses": 10,
+      "time_limits": 0,
+      "win_rate": 0.0,
+      "replay_verified_games": 10,
       "human_adjudicated_games": 0,
-      "note": "No matched Lv7 batch. The historical Lv2 JEV-only game is excluded."
+      "note": ""
     },
     {
       "configuration": "astra_constrained_random",
@@ -137,11 +137,14 @@
         "sc2_rl_agent\\starcraftenv_test\\utils\\sc2_runtime.py": "b185ff67a6117aeac6a6255aa71818327b3bc7bc418d1054a69374780e84c59e",
         "sc2_rl_agent\\starcraftenv_test\\utils\\action_info.py": "5cb8b8969b45cf260835e8df95c34ff9227b684027d94741c8bceab6c5db79d5"
       },
+      "sdk_fingerprints": {},
       "runtime_revisions": [],
       "transport_evidence": {},
       "metrics": {
         "requests": 3904,
         "responses": 3904,
+        "api_errors": 0,
+        "request_cancellations": 0,
         "planner_requests": 0,
         "planner_responses": 0,
         "accepted_plans": 0,
@@ -152,6 +155,145 @@
         "planner_latency_s_p50": null,
         "planner_latency_s_p95": null,
         "candidate_count_mean": 3.434938524590164,
+        "win_rate_95pct_wilson": [
+          0.0,
+          0.2775327998628892
+        ],
+        "minimum_request_interval_wall_s": 1.0
+      }
+    },
+    {
+      "configuration": "jev",
+      "batch": "jev-only-realtime-lv7-20260924-10-seeds-r2",
+      "results_sha256": "884f907fa0894b11e215f290d2a9679bdbeba2cb397e5c6aa42c1283f46dd135",
+      "protocol_sha256": "3e26b295d8841fb19ee4561ed9afb96626144c09788f80f380e7b585fda402b1",
+      "protocol": {
+        "map": "Altitude LE",
+        "map_sha256": "9a9fd7701f2663bf5cf121082c12fa33e61eaa4d2225a3d0040399046a6eb266",
+        "difficulty": "VeryHard",
+        "opponent_race": "Zerg",
+        "realtime": true,
+        "seeds": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "decision_timebase": "wall",
+        "decision_interval": 1.0,
+        "game_time_limit": 1200,
+        "max_requests": 2000,
+        "parallel": 4,
+        "planner": "none",
+        "policy": "jev",
+        "model": "jev-1.13.0",
+        "request_timeout": 2.5,
+        "max_decision_age": 4,
+        "source_commit": "9c2605ca30a0389b60d21eb80a48c708768658a3",
+        "sc2_id_version": "5.0.16.97563"
+      },
+      "source_fingerprints": {
+        "sc2_rl_agent/__init__.py": "27160de8061bab6618e7ba0c3a32a36a58a497022524d906f9bf25bdfe8a078f",
+        "sc2_rl_agent/starcraftenv_test/__init__.py": "27160de8061bab6618e7ba0c3a32a36a58a497022524d906f9bf25bdfe8a078f",
+        "sc2_rl_agent/starcraftenv_test/agent/__init__.py": "27160de8061bab6618e7ba0c3a32a36a58a497022524d906f9bf25bdfe8a078f",
+        "sc2_rl_agent/starcraftenv_test/agent/astra_planner.py": "002bf58046c46fcbbaf87c9fef345b7e58a2d6431c1caa6d4f59d61b7c9c20cc",
+        "sc2_rl_agent/starcraftenv_test/agent/jev_agent.py": "ae348f657a04ee591e7bb29fd0465821f4a189e9c153182c3728273f8e0bbd31",
+        "sc2_rl_agent/starcraftenv_test/agent/macro_contract.py": "de72eb1563f7f12d27c30ecdf5913ef73a01c9dfbdf5412aea1e92b4482b56ed",
+        "sc2_rl_agent/starcraftenv_test/agent/random_macro.py": "ba57b8fb14bcd839e62c29e653113c568916b563e306be072c481010d1311432",
+        "sc2_rl_agent/starcraftenv_test/agent/strategic_policy.py": "32376b1d89b43912ca63f807b9bc02eb5229bac4a786f4e00e09e395cd5d6466",
+        "sc2_rl_agent/starcraftenv_test/env/__init__.py": "27160de8061bab6618e7ba0c3a32a36a58a497022524d906f9bf25bdfe8a078f",
+        "sc2_rl_agent/starcraftenv_test/env/bot/Protoss_bot.py": "b4be8a84e13fe33248b29955b6fc36998e98ed9874a12b1f9878a21a6a0db036",
+        "sc2_rl_agent/starcraftenv_test/env/bot/__init__.py": "27160de8061bab6618e7ba0c3a32a36a58a497022524d906f9bf25bdfe8a078f",
+        "sc2_rl_agent/starcraftenv_test/env/bot/hierarchical_protoss_bot.py": "b770e657475572ab8cbd47b0f17071fbe13449c71f8eb6da4e49d41d4472eab3",
+        "sc2_rl_agent/starcraftenv_test/env/bot/jev_protoss_bot.py": "3409cfb20fa49928067d021c1a25b81fe2c1bf9b3986b741f4823439c2c87d43",
+        "sc2_rl_agent/starcraftenv_test/env/bot/macro_execution.py": "cd00a723477e4305b22c74da82a7a5cdee2b6bce3f88c0ee472885fb1a70f6d3",
+        "sc2_rl_agent/starcraftenv_test/env/bot/macro_navigation.py": "9cb367ae857703b179892de9d9d425eb35d5eaf48cbfcdf0c05e6ce796bc1cbf",
+        "sc2_rl_agent/starcraftenv_test/export_replay_video.py": "e22591159a6d255f320b614c1a07dd802745d9847ca34630a2f24ecf1ad28df2",
+        "sc2_rl_agent/starcraftenv_test/run_jev.py": "5881a8862c08a93ff29a1f034ae64ed7fac51c8c839fd624d50b05929065af3e",
+        "sc2_rl_agent/starcraftenv_test/run_random_ablation.py": "58e7743889771949df6a24198b6abe96420ff03c55b896188e7ee0c433ada918",
+        "sc2_rl_agent/starcraftenv_test/run_report.py": "6e6402919074b2c42c6276d0923129eef15ef5d88848401156342c6478829bfc",
+        "sc2_rl_agent/starcraftenv_test/serve_replays.py": "aed24244d1c971cdaed1c50fefe78deeeccaeee10b842428115bbb5df77950d3",
+        "sc2_rl_agent/starcraftenv_test/utils/__init__.py": "27160de8061bab6618e7ba0c3a32a36a58a497022524d906f9bf25bdfe8a078f",
+        "sc2_rl_agent/starcraftenv_test/utils/action_info.py": "8d508f5e9b2487afadc8f4fb6c488df3d22b703a0c48a800f57406cfb8af4891",
+        "sc2_rl_agent/starcraftenv_test/utils/replay_camera.py": "064f5fdc1017676da21027691b9f2e8f1ead346731a549ec771472795a96f08a",
+        "sc2_rl_agent/starcraftenv_test/utils/run_logging.py": "395f0640c3a9de160b7c9efa7f05a57c85d6f4701634a041ab4ae4add470a7ab",
+        "sc2_rl_agent/starcraftenv_test/utils/run_report.html": "9b5944b694f04db700d84fca13b6bfc42f9a7480e145fecfaac5669d27ba0c8c",
+        "sc2_rl_agent/starcraftenv_test/utils/sc2_runtime.py": "b185ff67a6117aeac6a6255aa71818327b3bc7bc418d1054a69374780e84c59e"
+      },
+      "sdk_fingerprints": {
+        "action.py": "5dfb354a57045415b2dbef12a742961460a81cb7f9b82b254ad35131974f8665",
+        "bot_ai.py": "3500e793a52aaa01fae4f3c21a95428cfdf8872fcd2a6fb4deab7b770bc28a57",
+        "bot_ai_internal.py": "18c212b763c02d5cc872e3c914f1fe6b1080cf73c2294bf6195eca41fb4046cd",
+        "cache.py": "46a27c964f49eec5624e3be58ed7f8347e521e4fa1991cc7bb299fe2a7105d87",
+        "client.py": "40c7074f2c277fb060c5642d2ad8975a83614f1ef30fc9873b3a23fc67918857",
+        "constants.py": "ed78fbf50f2c2dae0e0330bf541eb246acb70ad9e3831d4c87a0fb21ae06b61a",
+        "controller.py": "fcfe86c24da134fbfea68ee3712461c9c3e3915834679023889f5129dda9f2bc",
+        "data.py": "4e7e243dff4a50d8e4bee39f445e6b79916f6d534bd9bb89a65684fe13eabe3c",
+        "expiring_dict.py": "b919194373132861e2eb1dcbafbf20c6534a7e4ff90ae1b444adb0c2e44f6934",
+        "game_data.py": "7f4f609452f8a528d17f0a9bdaaac463876e189eb0fbd63cb90be7031d839b24",
+        "game_info.py": "dcfca6bc74783865c4594175e8e3ca14763f57095b25b1b3cc8ef02387c9b28c",
+        "game_state.py": "47753f8601c0c9f31a75fb73f75c3c42cf841aa7b6ecf7cab8c52b9f3d1e8609",
+        "generate_ids.py": "90830987be55eba7785c05a46d8154d781ed35bcafa27d255a4bd2dfc8040739",
+        "main.py": "bebd82e901857bd0d0485753f81e7fecef77457bea146db631119f42829a5563",
+        "maps.py": "19ff166b8eea76ec11bbb900ef8c8f5b4e61cb3408f4f50d60c0287f419a5121",
+        "observer_ai.py": "19efd074ed314112a8aca081c3343dd9a7c9e421ffb25aa23b5ad039088aa29e",
+        "paths.py": "3422868d0bded409783fce179c66f2a2d2cd6a22bdfd3dfcff3c42bd4a0aafe2",
+        "pixel_map.py": "5a19359544bbe4fc1bee9d5afd8e14b42013bfda15420136929be2f4460dc1b0",
+        "player.py": "da19596b8fccaeb4a8e8cfa3f28dbf3275b897393e10528d321c67e142fb805b",
+        "portconfig.py": "8fbf916468de6af4e978de0d86eeaadb23d0bcbca1a059c9078869bc800f3440",
+        "position.py": "f48cea984cd9fe741d73b792da9297a6fb3657a77bb6b0480ac0cf2c177c2651",
+        "power_source.py": "f0f91a2c1519938bf4fde3f0e0e3b347e510eb10fd4075622c8bd04a8ba7fb09",
+        "protocol.py": "c5081b2f4c1d2f0d0461fcf723c6e71ab3e289d4114fcfebd1634ea169d4e7a3",
+        "proxy.py": "83095ab5374cec1fa0d074e6709344dd4a0bb4b8b7b0108d2ae65f3f64eea4f8",
+        "renderer.py": "ad8c64086d0902f40bffa515248033d23ca0d9d7592dfe79f79bf61eb525102c",
+        "sc2process.py": "632c241e60dd07e6c95fef435a2d555363027e9ab9e922ba6cfa90db49f3ce72",
+        "score.py": "cfd812eb1939d66aed523e9892bc9ea9a4bc3929abba459a7e5ece78e7702aa5",
+        "unit.py": "a6f777a629b8745534df26d4e328a25c110bf75bcd17b6fdae1f993f9a001d3b",
+        "units.py": "43058a4b04db759e69185700397b3f175823571bdd18230e9178d7a0885e5728",
+        "unit_command.py": "045907e932817c2fafc29796c87a9e3219d5be0334c5ab36ca8a158c84710049",
+        "versions.py": "6f5e81eaee6286a80bc5b0f95405113cf4c86eb13b8b803036427e37c0619edf",
+        "wsl.py": "42e910f9aa8a7b9c41faccbff2c36f9ec9ba42d51f4a892ee81031de799080ec",
+        "__init__.py": "a0ea9f6fa9c1afe8fcdf54cd1cef572869b9a28c30a5d8767e744d2e2435a19c",
+        "dicts/generic_redirect_abilities.py": "7a0202a1ca4771007a8619b1c4d19b9edb4b72e70fea35d3d237b84c6fb2179b",
+        "dicts/unit_abilities.py": "32b31ab7c0e9bb7305777324d4731dc82eb91f501309e4afee5dc407bd35169d",
+        "dicts/unit_research_abilities.py": "a3f54fe45e95c4147903034a1f7a7f82b578402c7cd797bdaa64c3abe7fccfdf",
+        "dicts/unit_tech_alias.py": "a5334704807b1259460cb890cffeae46ba7324dfb30489096e0799b836a87ffa",
+        "dicts/unit_trained_from.py": "8a862b8f482cdba9de57402a1c806d23bec833d8fc3e88692067021584e37f13",
+        "dicts/unit_train_build_abilities.py": "34d7c0e91962416e2cf9ca120d5bdc6723aaf8eff798f5933113111c84dc957b",
+        "dicts/unit_unit_alias.py": "2f7f8d8eda3512af8c4811904a1fab771d5a1573819e3806691974e97e90feda",
+        "dicts/upgrade_researched_from.py": "fbbc661bca3e2e9b66dc8158b6353a250d4fa1dd867e5bd610fff0ddba4fb3bd",
+        "dicts/__init__.py": "59068fa66c203cd8b4100c41994d2bf4e245949229ef8b13820dee7b799a6da5",
+        "ids/ability_id.py": "0f272ed66d91dd4af9d7ed22151884fc511185f7bb62cf839f310889d89f8ecc",
+        "ids/buff_id.py": "e203c3a9f29e015ad07be650b6e886e03656acc7cc58a38f88b7b425293eefab",
+        "ids/effect_id.py": "dfc86025407ca40e4d623a03bd6fbbb77e8267b268d08be167a8a16187c3caec",
+        "ids/id_version.py": "9670f244fe94d0d5c54437e1d64de2586c60d547fdc9ff8ee221de9ee8e7771f",
+        "ids/unit_typeid.py": "e2db7d19ec2ddd7122450877b025be508e6822905fe59ac128de1db751c6310f",
+        "ids/upgrade_id.py": "2a51d360d0859abcc9879b8a87fe771ca4f6acea441ae915f415f757e1e75e2c",
+        "ids/__init__.py": "e8dfa3064a6d5a7b72d236ce5dac38167046e2693a02b23f88aa31a14f9dfbba"
+      },
+      "runtime_revisions": [],
+      "transport_evidence": {},
+      "metrics": {
+        "requests": 4127,
+        "responses": 4100,
+        "api_errors": 24,
+        "request_cancellations": 3,
+        "planner_requests": 0,
+        "planner_responses": 0,
+        "accepted_plans": 0,
+        "decision_responses_with_game_advance": 4100,
+        "planner_responses_with_game_advance": 0,
+        "decision_latency_s_p50": 0.391,
+        "decision_latency_s_p95": 0.468,
+        "planner_latency_s_p50": null,
+        "planner_latency_s_p95": null,
+        "candidate_count_mean": 6.8645505209595346,
         "win_rate_95pct_wilson": [
           0.0,
           0.2775327998628892
@@ -212,6 +354,7 @@
         "sc2_rl_agent\\starcraftenv_test\\utils\\sc2_runtime.py": "171e79fc78b81dd4cbe17726b58c262bd44914c38f639f753a5a129955d68ec6",
         "sc2_rl_agent\\starcraftenv_test\\utils\\action_info.py": "5cb8b8969b45cf260835e8df95c34ff9227b684027d94741c8bceab6c5db79d5"
       },
+      "sdk_fingerprints": {},
       "runtime_revisions": [
         {
           "name": "terminal-observation-fix",
@@ -266,6 +409,8 @@
       "metrics": {
         "requests": 3149,
         "responses": 3149,
+        "api_errors": 0,
+        "request_cancellations": 0,
         "planner_requests": 171,
         "planner_responses": 165,
         "accepted_plans": 125,
@@ -495,6 +640,7 @@
         "tests/test_jev_runtime.py": "19f85a3cbf287b3d192e0f107a867fc0bb2a24e0e844ebec252c71356e826f84",
         "tests/test_jev_terminal_observation.py": "909020e7b219c358a57ff62bd5317009203850b3d61ba491db7f8a4311ae2bb4"
       },
+      "sdk_fingerprints": {},
       "runtime_revisions": [],
       "transport_evidence": {
         "sha256": "2f80b11349445cf926cdab13b255ddff6eb861db353e2ba3bd92b67f2c9dfda4",
@@ -504,6 +650,8 @@
       "metrics": {
         "requests": 6802,
         "responses": 6793,
+        "api_errors": 5,
+        "request_cancellations": 4,
         "planner_requests": 155,
         "planner_responses": 151,
         "accepted_plans": 112,
@@ -736,6 +884,7 @@
         "tests/test_jev_runtime.py": "19f85a3cbf287b3d192e0f107a867fc0bb2a24e0e844ebec252c71356e826f84",
         "tests/test_jev_terminal_observation.py": "909020e7b219c358a57ff62bd5317009203850b3d61ba491db7f8a4311ae2bb4"
       },
+      "sdk_fingerprints": {},
       "runtime_revisions": [],
       "transport_evidence": {
         "sha256": "2f80b11349445cf926cdab13b255ddff6eb861db353e2ba3bd92b67f2c9dfda4",
@@ -745,6 +894,8 @@
       "metrics": {
         "requests": 8728,
         "responses": 8712,
+        "api_errors": 12,
+        "request_cancellations": 4,
         "planner_requests": 206,
         "planner_responses": 193,
         "accepted_plans": 116,
@@ -768,6 +919,89 @@
     "Historical accelerated random batch",
     "Earlier advisory batch",
     "Constrained transport pilots r1/r2",
-    "Historical Lv2 JEV-only game"
+    "Historical Lv2 JEV-only game",
+    "Entire four-attempt JEV-only pilot with unsynchronized SC2 SDK IDs; unscored service preflight calls"
+  ],
+  "excluded_jev_pilot": {
+    "batch": "jev-only-realtime-lv7-20260924-10-seeds",
+    "classification": "excluded_technical_pilot",
+    "reason": "New publication macro environment had unsynchronized SC2 enums (4.11.4.78285) against client 5.0.16.97563. Two KeyError 4113 crashes; all four attempts excluded as one incompatible batch, including two replay-verified losses. No game behavior was tuned in response. Existing scripts/sync_sc2_ids.py restores identical SDK Python files to the prior research environment. A new ten-seed batch uses the same published source commit and synced SDK.",
+    "trials": [
+      {
+        "run": "seed-001-attempt-01",
+        "status": "completed",
+        "result": "Defeat",
+        "failure": null,
+        "events_sha256": "2432d3fe7c4f37edcba9e92078bd6ff36fe63a0f0dcd65902dfbbda89b13217a",
+        "replay_sha256": "c483accd4b39ba324c50c2a2d0bb55885d297affe0df2860aa7840b2576e4ce3"
+      },
+      {
+        "run": "seed-002-attempt-01",
+        "status": "completed",
+        "result": "Defeat",
+        "failure": null,
+        "events_sha256": "f1f4837819aeaff343090971225e643d6a6b390f431125be2bcb1dff5470074f",
+        "replay_sha256": "8a49714b75c95d99aaf94a6f5e7a279946d89735bf720bfce7e4dfef33df2db2"
+      },
+      {
+        "run": "seed-003-attempt-01",
+        "status": "failed",
+        "result": "interrupted",
+        "failure": {
+          "type": "KeyError",
+          "message": "4113",
+          "phase": "playing"
+        },
+        "events_sha256": "7a89df02655e1ee6ee43614f7a99f5378573f1dd01cf5b94f23bd6c39e764a96",
+        "replay_sha256": null
+      },
+      {
+        "run": "seed-004-attempt-01",
+        "status": "failed",
+        "result": "interrupted",
+        "failure": {
+          "type": "KeyError",
+          "message": "4113",
+          "phase": "playing"
+        },
+        "events_sha256": "37c727d7b94c7028f2124dc0b4bc132051561f74b577275556481fe0d3548fdc",
+        "replay_sha256": null
+      }
+    ],
+    "disclosure_sha256": "55dafe483a752d0cf21614baa7c76efe114a1c457199e2f32d8edbe97780366b",
+    "protocol_sha256": "40ab305ba5e099545780f41f279bfedeef564db89855e0621bc60799a044f2d2",
+    "results_sha256": "010c607767fb75481c97c065e73f4617e336f47544c6703f360287b68326af10"
+  },
+  "unscored_jev_preflights": [
+    {
+      "file": "preflight-unscored-attempt-01.json",
+      "success": false,
+      "error": "request_timeout",
+      "sha256": "d8109f45b2d13b101f432406a54028eee0b142b2db7a47a3573177aaa3633f7c"
+    },
+    {
+      "file": "preflight-unscored-attempt-02.json",
+      "success": false,
+      "error": "request_timeout",
+      "sha256": "2f8fedd6247c14d402004d36fcd46695bda40eb7f5e9f9de17e058514a65a4bb"
+    },
+    {
+      "file": "preflight-unscored-attempt-03.json",
+      "success": false,
+      "error": "request_timeout",
+      "sha256": "a77091153b5cffc1460fe51574f201f0fd45bae39b79d2663e916498fc9c597a"
+    },
+    {
+      "file": "preflight-unscored-attempt-04.json",
+      "success": false,
+      "error": "request_timeout",
+      "sha256": "de6dba9301d2a6cf6737c5731cd884a80af3db81bb92db9be50f022a2837a699"
+    },
+    {
+      "file": "preflight-unscored-attempt-05.json",
+      "success": true,
+      "error": null,
+      "sha256": "c9e3b0320fde52f837a690182b00dea0daf300f24e8b31db4fb3e64d7bb2fbfa"
+    }
   ]
 }

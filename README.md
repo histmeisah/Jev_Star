@@ -104,14 +104,14 @@ Macro supports five configurations, separating planner presence, plan-based cons
 | Configuration | Astra plan constraints | Action selector | Wins / losses / time limits |
 |---|---|---|---|
 | Pure random | No Astra | Uniform random | 0 / 10 / 0 |
-| JEV-only | No Astra | JEV | Not evaluated at Lv7 |
+| JEV-only | No Astra | JEV | 0 / 10 / 0 |
 | Astra constrained + random | Enabled | Uniform random | 0 / 10* / 0 |
 | Astra constrained + JEV | Enabled | JEV | **9 / 1 / 0** |
 | Astra advisory + JEV | Disabled; plan is context | JEV | **3 / 3 / 4** |
 
-\* Nine replay-verified losses and one human-adjudicated loss without a saved replay. There are 40 selected attempts and 39 verified replays. The earlier JEV-only Lv2 time-limit game is separate. These are development samples with archived version and service-timing differences, not a complete controlled five-way evaluation.
+\* Nine replay-verified losses and one human-adjudicated loss without a saved replay. There are 50 selected attempts and 49 verified replays. The JEV-only row now includes ten realtime Lv7 games; its earlier Lv2 case and the entire four-attempt SDK-compatibility pilot are excluded. Archived version and service-timing differences prevent a single-variable causal interpretation.
 
-The game advances during inference: all **15,505 JEV responses and 344 Astra responses** in the two JEV-planner batches span advancing game frames. JEV median response times are **0.375 s** (constrained) and **0.421 s** (advisory). Advisory means Astra does not filter actions; executor availability and command-lifecycle rules still apply. Micro remains fixed-step.
+The game advances during inference: all **19,605 JEV responses and 509 Astra responses** across the primary batches span advancing game frames. JEV median response times are **0.391 s** (JEV-only), **0.375 s** (constrained), and **0.421 s** (advisory). Advisory means Astra does not filter actions; executor availability and command-lifecycle rules still apply. Micro remains fixed-step.
 
 [Five configurations and runnable commands](docs/macro-configurations.md) · [Per-game evidence](paper/data/macro_realtime/games.csv). The consolidated release uses the final Astra implementation. **140 macro and 37 micro offline tests pass**; no paid games are required by the test suites.
 
@@ -220,14 +220,14 @@ py -3.10 jev_star.py micro --map 3m --episodes 3 --planner codex --planner-effor
 | 配置 | Astra 计划约束 | 底层选择 | 胜 / 负 / 到时限 |
 |---|---|---|---|
 | 纯随机 | 无 Astra | 均匀随机 | 0 / 10 / 0 |
-| 纯 JEV | 无 Astra | JEV | Lv7 尚未评估 |
+| 纯 JEV | 无 Astra | JEV | 0 / 10 / 0 |
 | Astra 约束＋随机 | 启用 | 均匀随机 | 0 / 10* / 0 |
 | Astra 约束＋JEV | 启用 | JEV | **9 / 1 / 0** |
 | Astra 建议＋JEV | 不启用，计划作为上下文 | JEV | **3 / 3 / 4** |
 
-\* Astra＋随机含 9 局回放验证败北和 1 局人工确认败北，该局没有保存回放。共 40 次选定对局、39 份已验证回放。早期纯 JEV 的 Lv2 到时限样本另列，不能当作 Lv7 成绩。固定种子开发样本仍有源码版本和服务时序差异，不称为完全受控的五组消融。
+\* Astra＋随机含 9 局回放验证败北和 1 局人工确认败北，该局没有保存回放。共 50 次选定对局、49 份已验证回放。纯 JEV 已补齐实时 Lv7 十局；早期 Lv2 案例与整批四次 SDK 兼容性试跑均不计入主表。固定种子开发样本仍有源码版本和服务时序差异，不称为完全受控的五组消融。
 
-两组 Astra＋JEV 的 **15,505 次 JEV 回复与 344 次 Astra 回复**均跨越了持续推进的游戏帧。JEV 响应中位数为约束模式 **0.375 秒**、建议模式 **0.421 秒**。“建议模式不限制动作”专指 Astra 不按计划过滤，执行器可用性及命令生命周期规则保留。微观仍使用固定步进。
+主表各组的 **19,605 次 JEV 回复与 509 次 Astra 回复**均跨越了持续推进的游戏帧。JEV 响应中位数为纯 JEV **0.391 秒**、约束模式 **0.375 秒**、建议模式 **0.421 秒**。“建议模式不限制动作”专指 Astra 不按计划过滤，执行器可用性及命令生命周期规则保留。微观仍使用固定步进。
 
 [五种配置和运行命令](docs/macro-configurations.md) · [逐局证据](paper/data/macro_realtime/games.csv)。当前代码统一采用最终 Astra 实现，**140 项宏观、37 项微观离线测试通过**，测试不启动付费对局。
 
